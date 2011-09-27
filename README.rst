@@ -5,16 +5,16 @@ Emacs Configuration
 Instalation
 -----------
 
-1. Clone this repository with the command::
+#. Clone this repository with the command::
 
    cd ~
    git clone git://github.com/humitos/emacs-configuration.git
 
-1. You can rename it with the `standard` emacs name for this folder::
+#. You can rename it with the `standard` emacs name for this folder::
 
    mv emacs-configuration .emacs.d
 
-1. Put in your `~/.emacs`::
+#. Put in your `~/.emacs`::
 
    (load "~/.emacs.d/emacs-init-file.el")
 
