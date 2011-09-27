@@ -1,0 +1,13 @@
+Pymacs==0.24-beta2
+cssutils==0.9.8a3
+distribute==0.6.15
+logilab-astng==0.22.0
+logilab-common==0.56.2
+pep8==0.6.1
+pyflakes==0.5.0
+pylint==0.24.0
+rope==0.9.3
+ropemacs==0.6
+ropemode==0.1-rc2
+unittest2==0.5.1
+wsgiref==0.1.2
