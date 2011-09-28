@@ -80,7 +80,7 @@
       (zenburn-blue-4 "#4c7073")
       (zenburn-blue-5 "#366060")
       (zenburn-magenta "#dc8cc3"))
-  (custom-theme-set-faces 
+  (custom-theme-set-faces
    'zenburn
    '(link ((t (:foreground "#f0dfaf" :underline t))))
    '(link-visited ((t (:foreground "#8b008b" :underline t))))
@@ -177,8 +177,8 @@
    `(eshell-ls-symlink ((,class (:foreground ,zenburn-cyan :weight bold))))
 
    ;; flymake
-   `(flymake-errline ((,class (:foreground ,zenburn-red-1 :weight bold :underline t))))
-   `(flymake-warnline ((,class (:foreground ,zenburn-yellow-1 :weight bold :underline t))))
+   `(flymake-errline ((,class (:foreground ,zenburn-red-1 :weight bold))))
+   `(flymake-warnline ((,class (:foreground ,zenburn-yellow-1 :weight bold))))
 
    ;; flyspell
    `(flyspell-duplicate ((,class (:foreground ,zenburn-yellow-1 :weight bold :underline t))))
@@ -435,7 +435,7 @@
 
 (custom-theme-set-variables
  'zenburn
- '(ansi-color-names-vector [zenburn-bg zenburn-red zenburn-green zenburn-yellow 
+ '(ansi-color-names-vector [zenburn-bg zenburn-red zenburn-green zenburn-yellow
                                        zenburn-blue zenburn-magenta zenburn-cyan zenburn-fg]))
 
 (provide-theme 'zenburn)
