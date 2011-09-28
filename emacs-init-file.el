@@ -1,3 +1,5 @@
+;; Emacs INIT configuration file
+
 (setenv "PYMACS_PYTHON" "python2.7")
 
 ;; Load all emacs modules from a folder
@@ -51,26 +53,33 @@
 (setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
 (multi-web-global-mode 1)
 
-;; pyflakes: check the python code on the fly
-;; http://plope.com/Members/chrism/flymake-mode
-;; http://cvs.savannah.gnu.org/viewvc/*checkout*/emacs/emacs/lisp/progmodes/flymake.el?revision=1.63
-(when (load "flymake" t) 
-  (defun flymake-pyflakes-init () 
-    (let* ((temp-file (flymake-init-create-temp-buffer-copy 
-		       'flymake-create-temp-inplace)) 
-	   (local-file (file-relative-name 
-			temp-file 
-			(file-name-directory buffer-file-name)))) 
-      (list "pyflakes" (list local-file)))) 
-  
-  (add-to-list 'flymake-allowed-file-name-masks 
-	       '("\\.py\\'" flymake-pyflakes-init))) 
+;; Flymake for Python : checks your code on-the-fly
+;; https://github.com/akaihola/flymake-python
+(when (load "flymake" t)
+  (defun flymake-pylint-init ()
+    (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                       'flymake-create-temp-inplace))
+           (local-file (file-relative-name
+                        temp-file
+                        (file-name-directory buffer-file-name))))
+      (list "~/.emacs.d/pyflymake.py" (list local-file))))
+  (add-to-list 'flymake-allowed-file-name-masks
+               '("\\.py\\'" flymake-pylint-init)))
+
+;; automatically load flymake
+(add-hook 'find-file-hook 'flymake-find-file-hook)
+
+;; Adding to the variable the regexps that matches warning messages
+(setq flymake-log-level 3)
 
 ;; disable flymake for HTML
 ;; http://stackoverflow.com/questions/4095153/how-to-disable-emacs-flymake-for-html-mode
 (delete '("\\.html?\\'" flymake-xml-init) flymake-allowed-file-name-masks)
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 
+;; Key binding to go to Next and Previous error with Flymake
+(global-set-key [f10] 'flymake-goto-prev-error)
+(global-set-key [f11] 'flymake-goto-next-error)
 
 ;; Using ERC as IRC Client inside Emacs
 ;; http://www.emacswiki.org/emacs/ERC
@@ -197,9 +206,6 @@
 ;; Disable Native VC
 (setq vc-handled-backends nil)
 
-
-
-
 ;; Autocomplete
 ;; http://www.emacswiki.org/emacs/download/auto-complete.el
 (require 'auto-complete)
@@ -210,8 +216,6 @@
 (require 'yasnippet)
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/snippets")
-
-
 
 ;; http://www.enigmacurry.com/2009/01/21/autocompleteel-python-code-completion-in-emacs/
 ;; Initialize Pymacs                                                                                           
@@ -230,14 +234,12 @@
 ;we'll only ever trigger it indirectly.                                                                        
 (setq yas/trigger-key (kbd "C-c <kp-multiply>"))
 
-
 ;; http://www.emacswiki.org/SmartOperator
 ;; (require 'smart-operator)
 ;; (smart-operator-mode 1)
 
 ;; http://www.emacswiki.org/emacs/AutoPairs
 (require 'autopair)
-
 
 ;; http://www.emacswiki.org/emacs/FlymakeCSS
 ;; README: look at the bottom of the page, where talk about 'cssutils'
@@ -258,11 +260,6 @@
 (add-hook 'css-mode-hook
 	  (lambda () (flymake-mode t)))
 
-
-;; A new theme for emacs
-;; http://slinky.imukuppi.org/zenburnpage/
-;; (require 'zenburn)
-
 ;; Changing the Title's Window
 ;; http://emacs-fu.blogspot.com/2011/01/setting-frame-title.html
 (setq frame-title-format
@@ -274,15 +271,13 @@
 ;;   views.py:schedule and views.py:client
 ;; http://emacs-fu.blogspot.com/2009/11/making-buffer-names-unique.html
 ;; http://www.gnu.org/software/emacs/manual/html_node/emacs/Uniquify.html
-(require 'uniquify) 
-(setq 
+(require 'uniquify)
+(setq
   uniquify-buffer-name-style 'post-forward
   uniquify-separator ":")
 
-
 ;; Showing Popups
 ;; http://emacs-fu.blogspot.com/2009/11/showing-pop-ups.html
-
 
 ;; Highlight current line
 ;; http://www.gnu.org/software/emacs/manual/html_node/emacs/Cursor-Display.html#index-highlight-current-line-613
@@ -300,11 +295,6 @@
 ;; Line numbering
 (setq linum-format "%4d")
 (global-linum-mode 1)
-
-
-;; Key binding to go to Next and Previous error with Flymake
-(global-set-key [f10] 'flymake-goto-prev-error)
-(global-set-key [f11] 'flymake-goto-next-error)
 
 ;; Adding hook to automatically open a rope project if there is one
 ;; in the current or in the upper level directory

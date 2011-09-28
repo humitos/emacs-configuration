@@ -705,7 +705,7 @@ It's flymake process filter."
 
 (defun flymake-get-line-err-count (line-err-info-list type)
   "Return number of errors of specified TYPE.
-Value of TYPE is either \"e\" or \"w\"."
+Value of TYPE is \"e\", \"w\" or \"i\"."
   (let* ((idx        0)
 	 (count      (length line-err-info-list))
 	 (err-count  0))
@@ -802,6 +802,13 @@ Return t if it has at least one flymake overlay, nil if no overlay."
   "Face used for marking warning lines."
   :group 'flymake)
 
+(defface flymake-infoline
+  '((((class color) (background dark)) (:background "DarkGreen"))
+    (((class color) (background light)) (:background "LightGreen"))
+    (t (:bold t)))
+  "Face used for marking warning lines."
+  :group 'flymake)
+
 (defun flymake-highlight-line (line-no line-err-info-list)
   "Highlight line LINE-NO in current buffer.
 Perhaps use text from LINE-ERR-INFO-LIST to enhance highlighting."
@@ -837,7 +844,9 @@ Perhaps use text from LINE-ERR-INFO-LIST to enhance highlighting."
 
     (if (> (flymake-get-line-err-count line-err-info-list "e") 0)
 	(setq face 'flymake-errline)
-      (setq face 'flymake-warnline))
+      (if (> (flymake-get-line-err-count line-err-info-list "w") 0)
+	  (setq face 'flymake-warnline)
+	(setq face 'flymake-infoline)))
 
     (flymake-make-overlay beg end tooltip-text face nil)))
 
@@ -960,10 +969,13 @@ Return its components if so, nil otherwise."
 				  (match-string (nth 4 (car patterns)) line)
 				(flymake-patch-err-text (substring line (match-end 0)))))
 	  (or err-text (setq err-text "<no error text>"))
-	  (if (and err-text (string-match "^[wW]arning" err-text))
-	      (setq err-type "w")
+	  (if err-text
+	      (if (string-match "^[wW]arning" err-text)
+		  (setq err-type "w")
+		(if (string-match "^[iI]nfo" err-text)
+		    (setq err-type "i")))
 	    )
-	  (flymake-log 3 "parse line: file-idx=%s line-idx=%s file=%s line=%s text=%s" file-idx line-idx
+	  (flymake-log 3 "parse line: type=%s file-idx=%s line-idx=%s file=%s line=%s text=%s" err-type file-idx line-idx
 		       raw-file-name line-no err-text)
 	  (setq matched t)))
       (setq patterns (cdr patterns)))
@@ -1115,7 +1127,7 @@ For the format of LINE-ERR-INFO, see `flymake-ler-make-ler'."
   :group 'flymake
   :type 'boolean)
 
-(defun flymake-start-syntax-check ()
+(defun flymake-start-syntax-check (&optional trigger-type)
   "Start syntax checking for current buffer."
   (interactive)
   (flymake-log 3 "flymake is running: %s" flymake-is-running)
@@ -1131,7 +1143,14 @@ For the format of LINE-ERR-INFO, see `flymake-ler-make-ler'."
       (let* ((source-file-name  buffer-file-name)
              (init-f (flymake-get-init-function source-file-name))
              (cleanup-f (flymake-get-cleanup-function source-file-name))
-             (cmd-and-args (funcall init-f))
+             (real-trigger-type (or trigger-type "force"))
+             (cmd-and-args (condition-case nil
+                               (funcall init-f real-trigger-type)
+                             ;; if the init function doesn't support
+                             ;; trigger types, try to call it again
+                             ;; and omit the trigger type
+                             (wrong-number-of-arguments
+                              (funcall init-f))))
              (cmd          (nth 0 cmd-and-args))
              (args         (nth 1 cmd-and-args))
              (dir          (nth 2 cmd-and-args)))
@@ -1215,7 +1234,7 @@ For the format of LINE-ERR-INFO, see `flymake-ler-make-ler'."
 
 	(setq flymake-last-change-time nil)
 	(flymake-log 3 "starting syntax check as more than 1 second passed since last change")
-	(flymake-start-syntax-check)))))
+	(flymake-start-syntax-check "edit")))))
 
 (defun flymake-current-line-no ()
   "Return number of current line in current buffer."
@@ -1345,7 +1364,7 @@ With arg, turn Flymake mode on if and only if arg is positive."
             (run-at-time nil 1 'flymake-on-timer-event (current-buffer)))
 
       (when flymake-start-syntax-check-on-find-file
-        (flymake-start-syntax-check))))
+        (flymake-start-syntax-check "open"))))
 
    ;; Turning the mode OFF.
    (t
@@ -1385,14 +1404,14 @@ With arg, turn Flymake mode on if and only if arg is positive."
   (let((new-text (buffer-substring start stop)))
     (when (and flymake-start-syntax-check-on-newline (equal new-text "\n"))
       (flymake-log 3 "starting syntax check as new-line has been seen")
-      (flymake-start-syntax-check))
+      (flymake-start-syntax-check "edit"))
     (setq flymake-last-change-time (flymake-float-time))))
 
 (defun flymake-after-save-hook ()
   (if (local-variable-p 'flymake-mode (current-buffer))	; (???) other way to determine whether flymake is active in buffer being saved?
       (progn
 	(flymake-log 3 "starting syntax check as buffer was saved")
-	(flymake-start-syntax-check)))) ; no more mode 3. cannot start check if mode 3 (to temp copies) is active - (???)
+	(flymake-start-syntax-check "save")))) ; no more mode 3. cannot start check if mode 3 (to temp copies) is active - (???)
 
 (defun flymake-kill-buffer-hook ()
   (when flymake-timer
@@ -1757,7 +1776,7 @@ Use CREATE-TEMP-F for creating temp copy."
 
 ;;;; xml-specific init-cleanup routines
 (defun flymake-xml-init ()
-  (list "xml" (list "val" (flymake-init-create-temp-buffer-copy 'flymake-create-temp-inplace))))
+  (list "xmlstarlet" (list "val" (flymake-init-create-temp-buffer-copy 'flymake-create-temp-inplace))))
 
 (provide 'flymake)
 
