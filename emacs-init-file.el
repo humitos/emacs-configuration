@@ -7,6 +7,15 @@
 (setq startupd-path "/home/humitos/.emacs.d/modules/")
 (startupd-load-files)
 
+;; Set the color theme
+;; https://github.com/bbatsov/zenburn-emacs
+;; http://www.emacswiki.org/emacs/ColorThemeZenburn
+
+;; FIXME: I need to auto-accept the question about "Are you sure that
+;; you want to excecute the theme Lisp code?"
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'zenburn)
+
 ;; Python Mode
 ;; python.el ; Fabian Ezequiel Gallina
 ;; https://github.com/fgallina/python.el
@@ -180,8 +189,8 @@
 ;; change magit diff colors
 (eval-after-load 'magit
   '(progn
-     (set-face-foreground 'magit-diff-add "green3")
-     (set-face-foreground 'magit-diff-del "red3")
+     (set-face-foreground 'magit-diff-add "green")
+     (set-face-foreground 'magit-diff-del "#700000")
      (when (not window-system)
        (set-face-background 'magit-item-highlight "black"))))
 
@@ -311,11 +320,4 @@
 		  ((file-exists-p "../../../.ropeproject")
 		   (rope-open-project (concat default-directory "../../../")))
 		  )))
-
-;; Set the color theme
-;; https://github.com/bbatsov/zenburn-emacs
-;; http://www.emacswiki.org/emacs/ColorThemeZenburn
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'zenburn)
-
 
