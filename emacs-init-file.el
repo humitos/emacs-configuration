@@ -70,7 +70,7 @@
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 
 ;; Adding to the variable the regexps that matches warning messages
-(setq flymake-log-level 3)
+;; (setq flymake-log-level 1)
 
 ;; disable flymake for HTML
 ;; http://stackoverflow.com/questions/4095153/how-to-disable-emacs-flymake-for-html-mode
@@ -155,9 +155,9 @@
 ;; Group ibuffers
 ;; http://emacs-fu.blogspot.com/2010/02/dealing-with-many-buffers-ibuffer.html
 (setq ibuffer-saved-filter-groups
-      (quote (("default"      
+      (quote (("default"
 	       ("Org" ;; all org-related buffers
-		(mode . org-mode))  
+		(mode . org-mode))
 	       ("Mail"
 		(or  ;; mail-related buffers
 		 (mode . message-mode)
@@ -181,7 +181,7 @@
 	       ;; 	 (mode . python-mode)
 	       ;; 	 (mode . emacs-lisp-mode)
 	       ;; 	 ;; etc
-	       ;; 	 )) 
+	       ;; 	 ))
 	       ("ERC"   (mode . erc-mode))
 	       ))))
 
@@ -218,20 +218,20 @@
 (yas/load-directory "~/.emacs.d/snippets")
 
 ;; http://www.enigmacurry.com/2009/01/21/autocompleteel-python-code-completion-in-emacs/
-;; Initialize Pymacs                                                                                           
+;; Initialize Pymacs
 (autoload 'pymacs-apply "pymacs")
 (autoload 'pymacs-call "pymacs")
 (autoload 'pymacs-eval "pymacs" nil t)
 (autoload 'pymacs-exec "pymacs" nil t)
 (autoload 'pymacs-load "pymacs" nil t)
-;; Initialize Rope                                                                                             
+;; Initialize Rope
 (pymacs-load "ropemacs" "rope-")
 (setq ropemacs-enable-autoimport t)
 
-;; Initialize Yasnippet                                                                                        
-;Don't map TAB to yasnippet                                                                                    
-;In fact, set it to something we'll never use because                                                          
-;we'll only ever trigger it indirectly.                                                                        
+;; Initialize Yasnippet
+;Don't map TAB to yasnippet
+;In fact, set it to something we'll never use because
+;we'll only ever trigger it indirectly.
 (setq yas/trigger-key (kbd "C-c <kp-multiply>"))
 
 ;; http://www.emacswiki.org/SmartOperator
@@ -240,6 +240,7 @@
 
 ;; http://www.emacswiki.org/emacs/AutoPairs
 (require 'autopair)
+(autopair-global-mode) ;; to enable in all buffers
 
 ;; http://www.emacswiki.org/emacs/FlymakeCSS
 ;; README: look at the bottom of the page, where talk about 'cssutils'
