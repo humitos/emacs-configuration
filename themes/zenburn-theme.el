@@ -177,8 +177,10 @@
    `(eshell-ls-symlink ((,class (:foreground ,zenburn-cyan :weight bold))))
 
    ;; flymake
-   `(flymake-errline ((,class (:foreground ,zenburn-red-1 :weight bold))))
-   `(flymake-warnline ((,class (:foreground ,zenburn-yellow-1 :weight bold))))
+   ;; `(flymake-errline ((,class (:foreground ,zenburn-red-1 :weight bold))))
+   `(flymake-errline ((,class (:background , "#795510"))))
+   ;; `(flymake-warnline ((,class (:foreground ,zenburn-yellow-1 :weight bold))))
+   `(flymake-warnline ((,class (:background , "#5c7057"))))
 
    ;; flyspell
    `(flyspell-duplicate ((,class (:foreground ,zenburn-yellow-1 :weight bold :underline t))))
