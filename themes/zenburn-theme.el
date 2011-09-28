@@ -139,7 +139,7 @@
 
    ;;; font lock
    `(font-lock-builtin-face ((,class (:foreground ,zenburn-blue))))
-   `(font-lock-comment-face ((,class (:foreground ,zenburn-green))))
+   `(font-lock-comment-face ((,class (:foreground ,zenburn-green :slant italic))))
    `(font-lock-comment-delimiter-face ((,class (:foreground ,zenburn-green))))
    `(font-lock-constant-face ((,class (:foreground ,zenburn-green+4))))
    `(font-lock-doc-face ((,class (:foreground ,zenburn-green+1))))
