@@ -102,7 +102,11 @@
 
 (setq erc-autojoin-channels-alist
       '(("freenode.net" "#logn-ar"))) ; "#logn" "#pyar")))
-(erc-tls :server "chat.freenode.net" :port 7000 :nick freenode-nick :password freenode-password :full-name freenode-full-name)
+;; (erc-tls :server "chat.freenode.net"
+;; 	 :port 7000
+;; 	 :nick freenode-nick
+;; 	 :password freenode-password
+;; 	 :full-name freenode-full-name)
 
 
 ;; Ibuffer
@@ -303,5 +307,8 @@
 		   (rope-open-project default-directory))
 		  ((file-exists-p "../.ropeproject")
 		   (rope-open-project (concat default-directory "..")))
+		  ((file-exists-p "../../.ropeproject")
+		   (rope-open-project (concat default-directory "../../")))
+		  ((file-exists-p "../../../.ropeproject")
+		   (rope-open-project (concat default-directory "../../../")))
 		  )))
-)
