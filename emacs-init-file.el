@@ -278,7 +278,6 @@
 ;; Highlight current line
 ;; http://www.gnu.org/software/emacs/manual/html_node/emacs/Cursor-Display.html#index-highlight-current-line-613
 (global-hl-line-mode 1)
-(set-face-background 'hl-line "seashell2") ;; Nice color
 
 ;; Highlight brackets
 ;; http://www.emacswiki.org/emacs/ShowParenMode
@@ -312,3 +311,11 @@
 		  ((file-exists-p "../../../.ropeproject")
 		   (rope-open-project (concat default-directory "../../../")))
 		  )))
+
+;; Set the color theme
+;; https://github.com/bbatsov/zenburn-emacs
+;; http://www.emacswiki.org/emacs/ColorThemeZenburn
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'zenburn)
+
+
