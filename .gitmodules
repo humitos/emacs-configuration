@@ -1,0 +1,6 @@
+[submodule "vendor/elpastebin"]
+	path = vendor/elpastebin
+	url = https://github.com/nicferrier/elpastebin.git
+[submodule "vendor/zenburn-emacs"]
+	path = vendor/zenburn-emacs
+	url = https://github.com/bbatsov/zenburn-emacs
