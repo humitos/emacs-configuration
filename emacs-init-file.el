@@ -9,6 +9,24 @@
 (setq startupd-path "/home/humitos/.emacs.d/modules/")
 (startupd-load-files)
 
+;; Those script are downloaded from
+;; https://github.com/errge/emacs-goodies-el
+(setq startupd-path "/home/humitos/.emacs.d/modules/emacs-goodies/debian-el/")
+(startupd-load-files)
+;; (setq startupd-path "/home/humitos/.emacs.d/modules/emacs-goodies/devscripts-el/")
+;; (startupd-load-files)
+(setq startupd-path "/home/humitos/.emacs.d/modules/emacs-goodies/dpkg-dev-el/")
+(startupd-load-files)
+;; (setq startupd-path "/home/humitos/.emacs.d/modules/emacs-goodies/gnus-bonus-el/")
+;; (startupd-load-files)
+;; (setq startupd-path "/home/humitos/.emacs.d/modules/emacs-goodies/vm-bonus-el/")
+;; (startupd-load-files)
+
+;; Disabled because casuse an error on Emacs exit
+;; (setq startupd-path "/home/humitos/.emacs.d/modules/emacs-goodies/emacs-goodies-el/")
+;; (startupd-load-files)
+
+
 ;; Set the color theme
 ;; https://github.com/bbatsov/zenburn-emacs
 ;; http://www.emacswiki.org/emacs/ColorThemeZenburn
@@ -312,3 +330,19 @@
 		   (rope-open-project (concat default-directory "../../../")))
 		  )))
 
+
+;; Vimrc generic mode
+;; http://stackoverflow.com/questions/4236808/syntax-highlight-a-vimrc-file-in-emacs
+(define-generic-mode 'vimrc-generic-mode
+    '()
+    '()
+    '(("^[\t ]*:?\\(!\\|ab\\|map\\|unmap\\)[^\r\n\"]*\"[^\r\n\"]*\\(\"[^\r\n\"]*\"[^\r\n\"]*\\)*$"
+       (0 font-lock-warning-face))
+      ("\\(^\\|[\t ]\\)\\(\".*\\)$"
+      (2 font-lock-comment-face))
+      ("\"\\([^\n\r\"\\]\\|\\.\\)*\""
+       (0 font-lock-string-face)))
+    '("/vimrc\\'" "\\.vim\\(rc\\)?\\'")
+    '((lambda ()
+        (modify-syntax-entry ?\" ".")))
+    "Generic mode for Vim configuration files.")
