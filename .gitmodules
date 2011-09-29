@@ -4,3 +4,21 @@
 [submodule "vendor/zenburn-emacs"]
 	path = vendor/zenburn-emacs
 	url = https://github.com/bbatsov/zenburn-emacs
+[submodule "vendor/python.el"]
+	path = vendor/python.el
+	url = https://github.com/fgallina/python.el
+[submodule "vendor/multi-web-mode"]
+	path = vendor/multi-web-mode
+	url = https://github.com/fgallina/multi-web-mode
+[submodule "vendor/magit"]
+	path = vendor/magit
+	url = https://github.com/magit/magit.git
+[submodule "vendor/auto-complete"]
+	path = vendor/auto-complete
+	url = https://github.com/m2ym/auto-complete.git
+[submodule "vendor/highlight-indentation"]
+	path = vendor/highlight-indentation
+	url = https://github.com/antonj/Highlight-Indentation-for-Emacs.git
+[submodule "vendor/autopair"]
+	path = vendor/autopair
+	url = https://github.com/emacsmirror/autopair
