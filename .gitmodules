@@ -34,3 +34,6 @@
 [submodule "vendor/flymake-cursor"]
 	path = vendor/flymake-cursor
 	url = https://github.com/illusori/emacs-flymake-cursor.git
+[submodule "vendor/rainbow-delimiters"]
+	path = vendor/rainbow-delimiters
+	url = https://github.com/jlr/rainbow-delimiters
