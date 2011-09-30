@@ -22,3 +22,15 @@
 [submodule "vendor/autopair"]
 	path = vendor/autopair
 	url = https://github.com/emacsmirror/autopair
+[submodule "vendor/yaml-mode"]
+	path = vendor/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode.git
+[submodule "vendor/Pymacs"]
+	path = vendor/Pymacs
+	url = https://github.com/pinard/Pymacs
+[submodule "vendor/flymake-python"]
+	path = vendor/flymake-python
+	url = https://github.com/akaihola/flymake-python
+[submodule "vendor/flymake-cursor"]
+	path = vendor/flymake-cursor
+	url = https://github.com/illusori/emacs-flymake-cursor.git
