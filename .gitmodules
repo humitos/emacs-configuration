@@ -37,3 +37,6 @@
 [submodule "vendor/rainbow-delimiters"]
 	path = vendor/rainbow-delimiters
 	url = https://github.com/jlr/rainbow-delimiters
+[submodule "vendor/anything-config"]
+	path = vendor/anything-config
+	url = git://repo.or.cz/anything-config.git

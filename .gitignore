@@ -3,3 +3,5 @@ auto-save-list
 ac-comphist.dat
 /tramp
 /.pyflymakercc
+/savehist
+/.venv
