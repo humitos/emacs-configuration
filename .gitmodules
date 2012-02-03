@@ -46,3 +46,9 @@
 [submodule "vendor/rainbow-mode"]
 	path = vendor/rainbow-mode
 	url = https://github.com/emacsmirror/rainbow-mode.git
+[submodule "vendor/deft"]
+	path = vendor/deft
+	url = git://jblevins.org/git/deft.git
+[submodule "vendor/full-ack"]
+	path = vendor/full-ack
+	url = https://github.com/nschum/full-ack.git
