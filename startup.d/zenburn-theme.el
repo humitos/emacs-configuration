@@ -8,5 +8,5 @@
 ;; you want to excecute the theme Lisp code?"
 (add-to-list 'custom-theme-load-path "~/.emacs.d/vendor/zenburn-emacs")
 ;; (color-theme-zenburn)
-(load-theme 'zenburn)
+(load-theme 'zenburn t)
 ;; (funcall 'zenburn)
