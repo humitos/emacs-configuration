@@ -16,7 +16,7 @@ Installation
 
 #. Put in your `~/.emacs`::
 
-   (load "~/.emacs.d/emacs-init-file.el")
+   (load "~/.emacs.d/init.el")
 
 
 ERC
@@ -43,7 +43,7 @@ depending on the system configuration and its modules.
 These modules are related with `Rope`, `ropemacs`, `rope-mode`,
 `Pymacs`, `pep8`, `pyflakes`, `pylint` and `cssutils`.
 
-Those modules are used by some emacs modules as `flymake`,
+Those modules are used by some emacs modules like `flymake`,
 `python-mode`, etc.
 
 I have `virtualenvwrapper` configured, so the following command are
