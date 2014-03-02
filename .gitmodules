@@ -15,13 +15,13 @@
 	url = https://github.com/magit/magit.git
 [submodule "vendor/auto-complete"]
 	path = vendor/auto-complete
-	url = https://github.com/m2ym/auto-complete.git
+	url = https://github.com/auto-complete/auto-complete.git
 [submodule "vendor/highlight-indentation"]
 	path = vendor/highlight-indentation
 	url = https://github.com/antonj/Highlight-Indentation-for-Emacs.git
 [submodule "vendor/autopair"]
 	path = vendor/autopair
-	url = https://github.com/emacsmirror/autopair
+	url = https://github.com/emacsmirror/autopair.git
 [submodule "vendor/yaml-mode"]
 	path = vendor/yaml-mode
 	url = https://github.com/yoshiki/yaml-mode.git
@@ -52,3 +52,6 @@
 [submodule "vendor/full-ack"]
 	path = vendor/full-ack
 	url = https://github.com/nschum/full-ack.git
+[submodule "vendor/cl-lib"]
+	path = vendor/cl-lib
+	url = https://github.com/emacsmirror/cl-lib.git
