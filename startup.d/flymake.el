@@ -20,3 +20,5 @@
 
 ;; Load flymake automatically
 (add-hook 'find-file-hook 'flymake-find-file-hook)
+
+(delete '("\\.html?\\'" flymake-xml-init) flymake-allowed-file-name-masks)
