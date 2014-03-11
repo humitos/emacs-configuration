@@ -52,6 +52,9 @@
 [submodule "vendor/cl-lib"]
 	path = vendor/cl-lib
 	url = https://github.com/emacsmirror/cl-lib.git
+[submodule "vendor/emacs-color-theme-solarized"]
+	path = vendor/emacs-color-theme-solarized
+	url = git@github.com:sellout/emacs-color-theme-solarized.git
 [submodule "vendor/helm"]
 	path = vendor/helm
 	url = https://github.com/emacs-helm/helm.git
