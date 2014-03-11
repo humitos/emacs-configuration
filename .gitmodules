@@ -37,9 +37,6 @@
 [submodule "vendor/rainbow-delimiters"]
 	path = vendor/rainbow-delimiters
 	url = https://github.com/jlr/rainbow-delimiters
-[submodule "vendor/anything-config"]
-	path = vendor/anything-config
-	url = git://repo.or.cz/anything-config.git
 [submodule "vendor/twittering-mode"]
 	path = vendor/twittering-mode
 	url = https://github.com/hayamiz/twittering-mode.git
@@ -55,3 +52,6 @@
 [submodule "vendor/cl-lib"]
 	path = vendor/cl-lib
 	url = https://github.com/emacsmirror/cl-lib.git
+[submodule "vendor/helm"]
+	path = vendor/helm
+	url = https://github.com/emacs-helm/helm.git
