@@ -55,6 +55,9 @@
 [submodule "vendor/emacs-color-theme-solarized"]
 	path = vendor/emacs-color-theme-solarized
 	url = git@github.com:sellout/emacs-color-theme-solarized.git
+[submodule "vendor/python-django"]
+	path = vendor/python-django
+	url = https://github.com/fgallina/python-django.el.git
 [submodule "vendor/helm"]
 	path = vendor/helm
 	url = https://github.com/emacs-helm/helm.git
