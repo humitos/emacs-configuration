@@ -67,3 +67,9 @@
 [submodule "vendor/flymake-easy"]
 	path = vendor/flymake-easy
 	url = git@github.com:purcell/flymake-easy.git
+[submodule "vendor/popup-el"]
+	path = vendor/popup-el
+	url = https://github.com/auto-complete/popup-el
+[submodule "vendor/git-modes"]
+	path = vendor/git-modes
+	url = https://github.com/magit/git-modes
