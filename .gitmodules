@@ -1,6 +1,3 @@
-[submodule "vendor/elpastebin"]
-	path = vendor/elpastebin
-	url = https://github.com/nicferrier/elpastebin.git
 [submodule "vendor/zenburn-emacs"]
 	path = vendor/zenburn-emacs
 	url = https://github.com/bbatsov/zenburn-emacs
@@ -61,3 +58,12 @@
 [submodule "vendor/helm"]
 	path = vendor/helm
 	url = https://github.com/emacs-helm/helm.git
+[submodule "vendor/haml-mode"]
+	path = vendor/haml-mode
+	url = git@github.com:nex3/haml-mode.git
+[submodule "vendor/flymake-haml"]
+	path = vendor/flymake-haml
+	url = git@github.com:purcell/flymake-haml.git
+[submodule "vendor/flymake-easy"]
+	path = vendor/flymake-easy
+	url = git@github.com:purcell/flymake-easy.git
