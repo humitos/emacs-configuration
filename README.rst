@@ -57,3 +57,8 @@ related with this script.
 
    pip install -r python-pip-requeriments.txt
 
+
+Packages needed
+---------------
+
+   sudo apt-get install pylint
