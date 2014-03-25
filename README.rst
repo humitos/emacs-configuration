@@ -7,16 +7,25 @@ Installation
 
 #. Clone this repository with the command::
 
-   cd ~
-   git clone git://github.com/humitos/emacs-configuration.git
+     cd ~
+     git clone git://github.com/humitos/emacs-configuration.git
 
 #. You can rename it with the `standard` emacs name for this folder::
 
-   mv emacs-configuration .emacs.d
+     mv emacs-configuration .emacs.d
+
+#. Update git submodules::
+
+     cd .emacs.d
+     git submodule init
+     git submodule sync
+     git submodule update
 
 #. Put in your `~/.emacs`::
 
-   (load "~/.emacs.d/init.el")
+     (load "~/.emacs.d/init.el")
+
+#. Run emacs
 
 
 ERC
@@ -49,16 +58,18 @@ Those modules are used by some emacs modules like `flymake`,
 I have `virtualenvwrapper` configured, so the following command are
 related with this script.
 
-#. Create a new virtualenv
+#. Create a new virtualenv::
 
-   mkvirtualenv --no-site-packages --python=python2.7
+     mkvirtualenv --no-site-packages --python=python2.7
 
-#. Install necessary packages
+#. Install necessary packages::
 
-   pip install -r python-pip-requeriments.txt
+     pip install -r python-pip-requeriments.txt
 
 
 Packages needed
 ---------------
 
-   sudo apt-get install pylint
+::
+
+     sudo apt-get install pylint
