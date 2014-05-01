@@ -76,3 +76,6 @@
 [submodule "vendor/markdown-mode"]
 	path = vendor/markdown-mode
 	url = https://github.com/defunkt/markdown-mode
+[submodule "vendor/fill-column-indicator"]
+	path = vendor/fill-column-indicator
+	url = git@github.com:alpaker/Fill-Column-Indicator.git
