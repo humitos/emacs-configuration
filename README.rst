@@ -5,6 +5,13 @@ Emacs Configuration
 Installation
 -----------
 
+#. Install some dependencies::
+
+     sudo pip install -e git://github.com/davidhalter/jedi.git#egg=jedi
+     sudo pip install pychecker pylint pyflakes
+     sudo pip install -e git://github.com/davidhalter/jedi.git@4ff8b921a3b252895ed43b9598a5a40f0cbd487c#egg=jedi-master
+     sudo pip install emacs-jedi/
+
 #. Clone this repository with the command::
 
      cd ~

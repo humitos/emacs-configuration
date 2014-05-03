@@ -79,3 +79,18 @@
 [submodule "vendor/fill-column-indicator"]
 	path = vendor/fill-column-indicator
 	url = git@github.com:alpaker/Fill-Column-Indicator.git
+[submodule "vendor/emacs-epc"]
+	path = vendor/emacs-epc
+	url = git@github.com:kiwanami/emacs-epc.git
+[submodule "vendor/emacs-jedi"]
+	path = vendor/emacs-jedi
+	url = git@github.com:tkf/emacs-jedi.git
+[submodule "vendor/emacs-deferred"]
+	path = vendor/emacs-deferred
+	url = git@github.com:kiwanami/emacs-deferred.git
+[submodule "vendor/emacs-ctable"]
+	path = vendor/emacs-ctable
+	url = git@github.com:kiwanami/emacs-ctable.git
+[submodule "vendor/emacs-python-environment"]
+	path = vendor/emacs-python-environment
+	url = git@github.com:tkf/emacs-python-environment.git
