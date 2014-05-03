@@ -16,7 +16,7 @@
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pylint-init)))
 ;; Set logging for DEBUG
-(setq flymake-log-level 3)
+(setq flymake-log-level 1)
 
 ;; Load flymake automatically
 (add-hook 'find-file-hook 'flymake-find-file-hook)

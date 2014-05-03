@@ -8,7 +8,7 @@
 ;; following custom variables directly:
 
 ;; sets the delay before an error is displayed in the minibuffer.
-(setq flymake-cursor-error-display-delay 0)
+(setq flymake-cursor-error-display-delay 3)
 ;; sets how many errors to display in the minibuffer at once.
 (setq flymake-cursor-number-of-errors-to-display 2)
 ;; sets whether flymake-cursor should automatically enable itself whenever flymake is enabled.
