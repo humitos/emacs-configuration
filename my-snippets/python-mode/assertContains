@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: assertContains
+# key: ac
+# group: testing
+# --
+self.assertContains(response, $1)

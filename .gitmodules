@@ -94,3 +94,33 @@
 [submodule "vendor/emacs-python-environment"]
 	path = vendor/emacs-python-environment
 	url = git@github.com:tkf/emacs-python-environment.git
+[submodule "vendor/emacs-websocket"]
+	path = vendor/emacs-websocket
+	url = git@github.com:ahyatt/emacs-websocket.git
+[submodule "vendor/emacs-request"]
+	path = vendor/emacs-request
+	url = git@github.com:tkf/emacs-request.git
+[submodule "vendor/emacs-ipython-notebook"]
+	path = vendor/emacs-ipython-notebook
+	url = git@github.com:tkf/emacs-ipython-notebook.git
+[submodule "vendor/emacs-jedi-direx"]
+	path = vendor/emacs-jedi-direx
+	url = git@github.com:tkf/emacs-jedi-direx.git
+[submodule "vendor/direx-el"]
+	path = vendor/direx-el
+	url = git@github.com:m2ym/direx-el.git
+[submodule "vendor/virtualenvwrapper.el"]
+	path = vendor/virtualenvwrapper.el
+	url = git@github.com:porterjamesj/virtualenvwrapper.el.git
+[submodule "vendor/dash.el"]
+	path = vendor/dash.el
+	url = git@github.com:magnars/dash.el.git
+[submodule "vendor/s.el"]
+	path = vendor/s.el
+	url = git@github.com:magnars/s.el.git
+[submodule "vendor/monky"]
+	path = vendor/monky
+	url = git@github.com:ananthakumaran/monky.git
+[submodule "vendor/yasnippet"]
+	path = vendor/yasnippet
+	url = git@github.com:capitaomorte/yasnippet.git

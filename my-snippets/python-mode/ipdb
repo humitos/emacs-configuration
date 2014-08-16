@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: ipdb
+# key: ipdb
+# group: debug
+# --
+import ipdb;ipdb.set_trace()

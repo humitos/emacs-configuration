@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: assertNotTemplateUsed
+# key: atnu
+# group: testing
+# --
+self.assertTemplateNotUsed(response, '$1')

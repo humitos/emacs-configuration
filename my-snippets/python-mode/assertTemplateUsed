@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: assertTemplateUsed
+# key: atu
+# group: testing
+# --
+self.assertTemplateUsed(response, '$1')
