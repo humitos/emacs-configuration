@@ -18,6 +18,11 @@
 ;; Set logging for DEBUG
 (setq flymake-log-level 1)
 
+;; Only run flymake if I've not been typing for 5 seconds
+(setq flymake-no-changes-timeout 5)
+
+(setq flymake-start-syntax-check-on-find-file nil)
+
 ;; Load flymake automatically
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 

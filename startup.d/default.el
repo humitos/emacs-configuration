@@ -10,6 +10,6 @@
 
 ;; http://gastonramos.wordpress.com/2014/10/09/emacs-show-trailing-whitespace
 ;; show trailing whitespaces
-(show-ws-toggle-show-trailing-whitespace)
+;; (show-ws-toggle-show-trailing-whitespace)
 ;; remove trailing whitespaces
-(global-set-key (kbd "C-c x") 'whitespace-cleanup)
+;; (global-set-key (kbd "C-c x") 'whitespace-cleanup)
