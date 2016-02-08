@@ -1,0 +1,1 @@
+../vendor/swiper/colir.el

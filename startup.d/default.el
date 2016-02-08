@@ -13,3 +13,22 @@
 ;; (show-ws-toggle-show-trailing-whitespace)
 ;; remove trailing whitespaces
 ;; (global-set-key (kbd "C-c x") 'whitespace-cleanup)
+
+(global-linum-mode t) ;; enable line numbers globally
+
+
+;; saves the location of the point when you kill a buffer and returns
+;; to it next time you visit the associated file.
+(require 'saveplace)
+(setq-default save-place t)
+
+;; Mouse yanking inserts at the point instead of the location of the
+;; click.
+(setq mouse-yank-at-point t)
+
+;; require-final-newline is set to avoid problems with crontabs, etc.
+(setq require-final-newline t)
+
+;; prevents stale elisp bytecode from shadowing more up-to-date source
+;; files.
+(setq load-prefer-newer t)

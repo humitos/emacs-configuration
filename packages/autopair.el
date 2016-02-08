@@ -1,0 +1,1 @@
+../vendor/autopair/autopair.el

@@ -6,3 +6,4 @@ ac-comphist.dat
 /savehist
 /.venv
 *.elc
+session.*
