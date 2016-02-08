@@ -148,3 +148,6 @@
 [submodule "vendor/with-editor"]
 	path = vendor/with-editor
 	url = https://github.com/magit/with-editor
+[submodule "vendor/web-mode"]
+	path = vendor/web-mode
+	url = https://github.com/fxbois/web-mode
