@@ -1,0 +1,1 @@
+../vendor/magit/lisp/magit-bisect.el

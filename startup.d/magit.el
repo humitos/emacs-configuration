@@ -5,7 +5,6 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 ;; Magit requires at least GNU Emacs 24.4 and Git 1.9.4.
-;; :(
 
 ;; change magit diff colors
 ;; (eval-after-load 'magit

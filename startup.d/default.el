@@ -32,3 +32,7 @@
 ;; prevents stale elisp bytecode from shadowing more up-to-date source
 ;; files.
 (setq load-prefer-newer t)
+
+;; starts emacs maximized
+(custom-set-variables
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))

@@ -151,3 +151,6 @@
 [submodule "vendor/web-mode"]
 	path = vendor/web-mode
 	url = https://github.com/fxbois/web-mode
+[submodule "vendor/startupd.el"]
+	path = vendor/startupd.el
+	url = https://github.com/fgallina/startupd.el

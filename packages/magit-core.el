@@ -1,0 +1,1 @@
+../vendor/magit/lisp/magit-core.el

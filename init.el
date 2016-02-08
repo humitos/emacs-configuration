@@ -10,7 +10,7 @@
   (normal-top-level-add-subdirs-to-load-path))
 
 ;; Set path for startup.d
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/vendor/startupd.el")
 
 ;; Load all my personal configurations
 (require 'startupd)
