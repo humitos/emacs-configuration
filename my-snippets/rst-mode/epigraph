@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: epi:
+# key: epi:
+# expand-env: ((yas/indent-line 'fixed))
+# --
+.. epigraph::
+
+   $1
+
+   -- $2

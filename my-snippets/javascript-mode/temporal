@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: temp
+# key: temp
+# --
+{callback: $1, arg1: $2, arg2: $3}

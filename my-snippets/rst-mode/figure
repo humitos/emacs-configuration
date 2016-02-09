@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: figure
+# key: fig:
+# expand-env: ((yas/indent-line 'fixed))
+# --
+.. figure:: $1.thumbnail.jpg
+   :target: $1.jpg
+
+   $2

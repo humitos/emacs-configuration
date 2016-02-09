@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: pimg:
+# key: pimg:
+# expand-env: ((yas/indent-line 'fixed))
+# --
+.. template:: prensa-image
+   :title: $1
+   :description: $2
+   :src: $3
+   :href: $4
