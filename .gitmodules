@@ -154,3 +154,6 @@
 [submodule "vendor/startupd.el"]
 	path = vendor/startupd.el
 	url = https://github.com/fgallina/startupd.el
+[submodule "vendor/dockerfile-mode"]
+	path = vendor/dockerfile-mode
+	url = https://github.com/spotify/dockerfile-mode
