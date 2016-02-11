@@ -20,4 +20,4 @@
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 
 ;; enable newline-and-indent on return
-(define-key global-map (kbd "RET") 'newline-and-indent)
+;; (define-key global-map (kbd "RET") 'newline-and-indent)
