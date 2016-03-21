@@ -36,3 +36,6 @@
 ;; starts emacs maximized
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
+
+;; show column number in the status bar
+(setq column-number-mode t)
