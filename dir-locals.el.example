@@ -1,0 +1,11 @@
+;; This .dir-locals.el is the one that I used at Mozio.com where they
+;; decided to use 120 columns, among others personal settings
+
+;; This is used to fill the paragraph in 120 columns when pressing M-q
+;; because in the Mozio project we use 120 columns
+(add-hook 'elpy-mode-hook (setq-default fill-column 120))
+
+(setq py-autopep8-options '("--ignore=E501"))
+(setq py-autopep8-options '("--max-line-length=120"))
+;; FlyCheck allows 120 columns when using flake8
+(setq flycheck-flake8-maximum-line-length 120)
