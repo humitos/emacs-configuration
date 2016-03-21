@@ -16,8 +16,9 @@
 ;; - W391 - Remove trailing blank lines.
 ;; - W690 - Fix various deprecated code (via lib2to3).
 (require 'py-autopep8)
-;; (setq py-autopep8-options '("--ignore=E501,W293,W391,W690"))
+(setq py-autopep8-options '("--ignore=E501,W391"))
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 
 ;; enable newline-and-indent on return
 ;; (define-key global-map (kbd "RET") 'newline-and-indent)
+
