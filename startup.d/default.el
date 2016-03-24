@@ -37,5 +37,11 @@
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
-;; show column number in the status bar
+;; show line and column number in the status bar
+(setq line-number-mode t)
 (setq column-number-mode t)
+
+;; disable C-z (minimize window)
+(global-unset-key "\^z")
+
+;; '(show-paren-mode t)

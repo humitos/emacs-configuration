@@ -36,5 +36,6 @@ I'm working on, so you should run this command in your venvs
 
 #. Install necessary packages::
 
-     pip install -r python-pip-requeriments.txt
+     mkvirtualenv emacs-elpy
+     pip-sync requeriments.txt
 
