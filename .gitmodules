@@ -157,3 +157,12 @@
 [submodule "vendor/dockerfile-mode"]
 	path = vendor/dockerfile-mode
 	url = https://github.com/spotify/dockerfile-mode
+[submodule "vendor/any-ini-mode"]
+	path = vendor/any-ini-mode
+	url = git@github.com:emacsmirror/any-ini-mode.git
+[submodule "vendor/powerline"]
+	path = vendor/powerline
+	url = git@github.com:milkypostman/powerline.git
+[submodule "vendor/py-isort"]
+	path = vendor/py-isort
+	url = https://github.com/paetzke/py-isort.el

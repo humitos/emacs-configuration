@@ -1,0 +1,1 @@
+../vendor/powerline/powerline.el

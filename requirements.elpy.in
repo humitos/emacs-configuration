@@ -1,0 +1,15 @@
+autopep8
+elpy
+epc
+flake8
+importmagic
+ipdb
+ipython
+isort
+jedi
+path.py
+pep8
+pyflakes
+pylint
+rope
+yapf
