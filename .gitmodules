@@ -169,3 +169,6 @@
 [submodule "vendor/py-docformatter"]
 	path = vendor/py-docformatter
 	url = https://github.com/humitos/py-docformatter.el
+[submodule "vendor/py-docformatter.el"]
+	path = vendor/py-docformatter.el
+	url = https://github.com/humitos/py-docformatter.el
