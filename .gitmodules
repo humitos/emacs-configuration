@@ -166,3 +166,6 @@
 [submodule "vendor/py-isort"]
 	path = vendor/py-isort
 	url = https://github.com/paetzke/py-isort.el
+[submodule "vendor/py-docformatter"]
+	path = vendor/py-docformatter
+	url = https://github.com/humitos/py-docformatter.el

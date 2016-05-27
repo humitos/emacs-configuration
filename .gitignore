@@ -7,3 +7,4 @@ ac-comphist.dat
 /.venv
 *.elc
 session.*
+*#
