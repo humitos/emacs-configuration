@@ -34,8 +34,6 @@ Install Python necessary modules
 I'm installing all the necesary package for `elpy` in each venv that
 I'm working on, so you should run this command in your venvs
 
-#. Install necessary packages::
+Install necessary packages::
 
-     mkvirtualenv emacs-elpy
-     pip-sync requeriments.txt
-
+      pip install -U -r requirements.elpy.in
