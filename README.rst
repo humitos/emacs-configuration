@@ -37,3 +37,33 @@ I'm working on, so you should run this command in your venvs
 Install necessary packages::
 
       pip install -U -r requirements.elpy.in
+
+
+Modules included in this configuration
+--------------------------------------
+
+* ace-jump-mode
+* any-ini-mode
+* auto-complete
+* company
+* dockerfile-mode
+* elpy
+* expand-region
+* fill-column-indicator
+* find-file-in-project
+* flycheck
+* highlight-indentation
+* jedi
+* magit
+* paredit
+* powerline
+* projectile
+* py-autopep8
+* py-docformatter
+* py-isort
+* python-environment
+* rainbow-delimiters
+* solarized-theme
+* undohist
+* web-mode
+* yasnippet
