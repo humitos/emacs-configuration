@@ -1,30 +1,24 @@
-((python-mode
-  ;; BUG HERE: https://github.com/jorgenschaefer/elpy/issues/842#issuecomment-200933803
-  ;; This is used to fill the paragraph in 120 columns when pressing M-q
-  ;; because in the Mozio project we use 120 columns
-  ;; (setq-default fill-column 120)
-  ;; Use 4 spaces to indent in Python
-  ;; (python-indent-offset 4)
+((python-mode . (
+		 ;; This is used to fill the paragraph in 120 columns when pressing M-q
+		 ;; because in the Mozio project we use 120 columns
+		 (fill-column . 120)
 
-  ;; E501 - Try to make lines fit within --max-line-length characters.
-  ;; E701 - Put colon-separated compound statement on separate lines.
-  ;; E70  - Put semicolon-separated compound statement on separate lines.
-  ;; E125 - Indent to distinguish line from next logical line.
-  (eval . (setq py-autopep8-options '("--ignore=E501,E701,E702,E70,E125")))
-  (eval . (setq py-autopep8-options '("--max-line-length=120")))
-  ;; FlyCheck allows 120 columns when using flake8
-  ;; (eval . (setq flycheck-flake8-maximum-line-length 120))
-  (eval . (setq flycheck-flake8rc "~/mozio/flake8rc"))
+		 ;; Use 4 spaces to indent in Python
+		 (python-indent-offset . 4)
+		 ;; autopep8 global configurations
+		 (py-autopep8-options . ("--global-config=/home/humitos/mozio/autopep8rc"))
+		 ;; FlyCheck global configurations
+		 (flycheck-flake8rc . "/home/humitos/mozio/flake8rc")
 
-  ;; use our own virtualenv for this project
-  (eval . (pyvenv-workon 'emacs-mozio))
+		 ;; docformatter global options
+		 (eval . (setq py-docformatter-options '("--wrap-summaries=120" "--wrap-descriptions=120" "--pre-summary-newline" "--no-blank")))
 
-  ;; run proper test when hitting C-c C-t
-  (eval . (setq elpy-test-runner 'elpy-test-django-runner))
-  (eval . (setq elpy-test-django-runner-command
-	'("/home/humitos/mozio/mozio/manage.py" "test" "--no-mock" "--noinput" "--keepdb" "--failfast")))
+		 ;; use our own virtualenv for this project
+		 (eval . (pyvenv-workon 'mozio-ondemand))
 
-  ;; README: it's optional, it should work out of the box
-  ;; set the proper project root for find-file-in-project
-  (eval . (setq ffip-project-root "~/mozio/mozio"))
-  ))
+		 ;; run proper test when hitting C-c C-t
+		 (elpy-test-runner . 'elpy-test-django-runner)
+		 (eval . (setq elpy-test-django-runner-command '("/home/humitos/mozio/ondemand/manage.py" "test" "--noinput" "--keepdb" "--failfast")))
+
+		 ;; (debug-on-error . t)
+		 )))
