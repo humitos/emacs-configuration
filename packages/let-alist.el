@@ -1,1 +1,1 @@
-../vendor/let-alist/let-alist.el
+../vendor/let-alist/let-alist-1.0.4.el
