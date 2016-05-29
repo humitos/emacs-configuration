@@ -172,3 +172,18 @@
 [submodule "vendor/py-docformatter.el"]
 	path = vendor/py-docformatter.el
 	url = https://github.com/humitos/py-docformatter.el
+[submodule "vendor/projectile"]
+	path = vendor/projectile
+	url = git@github.com:bbatsov/projectile.git
+[submodule "vendor/expand-region.el"]
+	path = vendor/expand-region.el
+	url = git@github.com:magnars/expand-region.el.git
+[submodule "vendor/ace-jump-mode"]
+	path = vendor/ace-jump-mode
+	url = git@github.com:winterTTr/ace-jump-mode.git
+[submodule "vendor/paredit"]
+	path = vendor/paredit
+	url = git@github.com:emacsmirror/paredit.git
+[submodule "vendor/undohist-el"]
+	path = vendor/undohist-el
+	url = git@github.com:m2ym/undohist-el.git

@@ -8,3 +8,8 @@ ac-comphist.dat
 *.elc
 session.*
 *#
+
+projectile.cache
+projectile-bookmarks.eld
+undohist/
+.emacs.desktop.lock

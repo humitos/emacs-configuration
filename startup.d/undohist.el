@@ -1,0 +1,2 @@
+(require 'undohist)
+(undohist-initialize)
