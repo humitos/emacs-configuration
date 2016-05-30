@@ -39,17 +39,12 @@ Install necessary packages::
       pip install -U -r requirements.elpy.in
 
 
-Modules included in this configuration
+Main modules included in this configuration
 --------------------------------------
 
 * ace-jump-mode
-* any-ini-mode
-* auto-complete
-* company
-* dockerfile-mode
 * elpy
 * expand-region
-* fill-column-indicator
 * find-file-in-project
 * flycheck
 * highlight-indentation
@@ -67,3 +62,39 @@ Modules included in this configuration
 * undohist
 * web-mode
 * yasnippet
+
+
+ace-jump-mode
+~~~~~~~~~~~~~
+
+* https://github.com/winterTTr/ace-jump-mode
+
+:C-c SPC: jump to any place in the buffer with just a hotkey plus a
+          position key
+
+
+expand-region
+~~~~~~~~~~~~~
+
+* https://github.com/magnars/expand-region.el
+
+:C-=: mark region based on semantics
+
+      
+find-file-in-project
+~~~~~~~~~~~~~~~~~~~~
+
+* https://github.com/technomancy/find-file-in-project
+
+:C-c C-f: Find a file in the current project. This uses a
+          search-as-you-type interface for all files under the project
+          root.
+
+(this hotkey comes from `elpy`)
+
+
+flycheck
+~~~~~~~~
+
+* http://www.flycheck.org/
+

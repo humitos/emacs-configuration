@@ -1,0 +1,10 @@
+(require 'fill-column-indicator)
+
+(setq fci-rule-column 80)
+
+;; There is a problem with company and auto-complete
+;; https://github.com/jorgenschaefer/elpy/issues/365
+
+;; http://stackoverflow.com/a/25171290
+(define-globalized-minor-mode my-global-fci-mode fci-mode turn-on-fci-mode)
+(my-global-fci-mode 1)

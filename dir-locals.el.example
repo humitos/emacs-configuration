@@ -20,5 +20,8 @@
 		 (elpy-test-runner . 'elpy-test-django-runner)
 		 (eval . (setq elpy-test-django-runner-command '("/home/humitos/mozio/ondemand/manage.py" "test" "--noinput" "--keepdb" "--failfast")))
 
+		 ;; fill-column-indicator at 120 characters
+		 ;; (fci-rule-column . 120)
+
 		 ;; (debug-on-error . t)
 		 )))
