@@ -40,9 +40,10 @@ Install necessary packages::
 
 
 Main modules included in this configuration
---------------------------------------
+-------------------------------------------
 
 * ace-jump-mode
+* autopair
 * elpy
 * expand-region
 * find-file-in-project
@@ -50,7 +51,6 @@ Main modules included in this configuration
 * highlight-indentation
 * jedi
 * magit
-* paredit
 * powerline
 * projectile
 * py-autopep8
@@ -63,6 +63,7 @@ Main modules included in this configuration
 * web-mode
 * yasnippet
 
+These are the hotkeys that I use most.
 
 ace-jump-mode
 ~~~~~~~~~~~~~
@@ -71,6 +72,23 @@ ace-jump-mode
 
 :C-c SPC: jump to any place in the buffer with just a hotkey plus a
           position key
+
+elpy
+~~~~
+
+* https://github.com/jorgenschaefer/elpy
+
+:M-down:
+:M-up:
+:M-left:
+:M-right: move the selected region by indentation
+:C-c C-s: performs a `grep -r` in the current project
+:M-.: go to definition (class, function, variable, etc)
+:M.*: go back where we was
+
+:C-c C-z: switch to a Python shell
+:C-c C-d: open Python documentation (class, function, etc)
+:C-c C-t: run test depending on cursor position
 
 
 expand-region
@@ -86,7 +104,7 @@ find-file-in-project
 
 * https://github.com/technomancy/find-file-in-project
 
-:C-c C-f: Find a file in the current project. This uses a
+:C-c C-f: find a file in the current project. This uses a
           search-as-you-type interface for all files under the project
           root.
 
@@ -98,3 +116,25 @@ flycheck
 
 * http://www.flycheck.org/
 
+:C-c C-n: go to the next Flycheck error
+:C-c C-p: go to the previous Flycheck error
+
+(`elpy` already has some hotkeys for this, but I'm using Flycheck
+instead of Flymake, which is the default for elpy)
+
+
+magit
+~~~~~
+
+* https://magit.vc/
+
+:C-c g: open the Magit Status buffer
+
+Once on this buffer
+
+:s: stage the selected file / chunk / directory
+:k: discart the selected file / chunk / directory
+:u: unstage the selected file / chunk / directory
+:g: refresh buffer
+:c c: commit current staged changes
+:c a: amend current staged changes to previous commit
