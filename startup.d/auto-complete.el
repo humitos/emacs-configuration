@@ -8,6 +8,7 @@
 ;; Disable auto-complete mode on python-mode because it cause problems
 ;; with company-mode that it's used in elpy
 (setq ac-modes (delq 'python-mode ac-modes))
+(setq ac-modes (delq 'elpy-mode ac-modes))
 
 ;; auto-complete for .rst files
 (defun my-ac-rst-mode ()
