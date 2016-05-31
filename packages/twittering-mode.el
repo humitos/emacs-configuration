@@ -1,0 +1,1 @@
+../vendor/twittering-mode/twittering-mode.el

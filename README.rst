@@ -59,6 +59,7 @@ Main modules included in this configuration
 * python-environment
 * rainbow-delimiters
 * solarized-theme
+* twittering-mode
 * undohist
 * web-mode
 * yasnippet
@@ -138,3 +139,18 @@ Once on this buffer
 :g: refresh buffer
 :c c: commit current staged changes
 :c a: amend current staged changes to previous commit
+
+
+twittering-mode
+~~~~~~~~~~~~~~~
+
+* https://github.com/hayamiz/twittering-mode/
+
+:g: fetch new tweets
+:RET: reply
+:u: post a new tweet
+:C-c C-c: send the tweet once we finish writting
+:C-c C-k: cancel the current tweet
+:r: show replies
+:j: navigate to next tweet
+:k: navigate previous tweet
