@@ -48,6 +48,7 @@ Main modules included in this configuration
 * expand-region
 * find-file-in-project
 * flycheck
+* helm
 * highlight-indentation
 * jedi
 * magit
@@ -111,6 +112,7 @@ find-file-in-project
 
 (this hotkey comes from `elpy`)
 
+  This hotkey is replaced by the helm one if you have it active.
 
 flycheck
 ~~~~~~~~
@@ -132,6 +134,7 @@ helm
 :C-x r b: files position bookmark listing
 
 Commands:
+
 :helm-firefox-bookmarks: filter among Firefox bookmarks
 
 
