@@ -45,3 +45,6 @@
 (global-unset-key "\^z")
 
 ;; '(show-paren-mode t)
+
+;; remove tool bar
+(tool-bar-mode -1)
