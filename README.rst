@@ -84,7 +84,7 @@ elpy
 :M-up:
 :M-left:
 :M-right: move the selected region by indentation
-:C-c C-s: performs a `grep -r` in the current project
+.. :C-c C-s: performs a `grep -r` in the current project
 :M-.: go to definition (class, function, variable, etc)
 :M.*: go back where we was
 
@@ -169,6 +169,9 @@ projectile
 :C-p p: switch between projects
 :C-c p k: kill all the buffer related to the current project
 :C-c p f: find file in current project
+:C-c C-s: perform a grep on the current project
+:C-c p h: all together
+.. :C-c p s g: perform a grep on the current project
 
   This is also integrated with helm
 
