@@ -129,6 +129,7 @@ instead of Flymake, which is the default for elpy)
 helm
 ~~~~
 
+:M-x: the beginning is here :)
 :C-x f: all files in repository (ls-git)
 :M-y: kill ring
 :C-x r b: files position bookmark listing
@@ -136,6 +137,13 @@ helm
 Commands:
 
 :helm-firefox-bookmarks: filter among Firefox bookmarks
+:helm-google-suggest: search in google
+:helm-wikipedia-suggest: search in wikipedia
+
+Once in the helm session / buffer:
+
+:C-SPC: mark the current selection
+:M-D: kill the selection
 
 
 magit
@@ -153,6 +161,16 @@ Once on this buffer
 :g: refresh buffer
 :c c: commit current staged changes
 :c a: amend current staged changes to previous commit
+
+
+projectile
+~~~~~~~~~~
+
+:C-p p: switch between projects
+:C-c p k: kill all the buffer related to the current project
+:C-c p f: find file in current project
+
+  This is also integrated with helm
 
 
 twittering-mode

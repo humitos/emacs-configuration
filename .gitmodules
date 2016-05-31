@@ -193,3 +193,6 @@
 [submodule "vendor/helm-firefox"]
 	path = vendor/helm-firefox
 	url = git@github.com:emacs-helm/helm-firefox.git
+[submodule "vendor/helm-projectile"]
+	path = vendor/helm-projectile
+	url = git@github.com:bbatsov/helm-projectile.git

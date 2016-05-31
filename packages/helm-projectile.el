@@ -1,0 +1,1 @@
+../vendor/helm-projectile/helm-projectile.el

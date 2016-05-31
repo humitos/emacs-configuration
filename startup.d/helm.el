@@ -31,3 +31,7 @@
       helm-ff-file-name-history-use-recentf t)
 
 (helm-mode 1)
+
+;; helm-projectile integration
+(require 'helm-projectile)
+(helm-projectile-on)
