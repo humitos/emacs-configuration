@@ -187,3 +187,9 @@
 [submodule "vendor/undohist-el"]
 	path = vendor/undohist-el
 	url = git@github.com:m2ym/undohist-el.git
+[submodule "vendor/helm-ls-git"]
+	path = vendor/helm-ls-git
+	url = git@github.com:emacs-helm/helm-ls-git.git
+[submodule "vendor/helm-firefox"]
+	path = vendor/helm-firefox
+	url = git@github.com:emacs-helm/helm-firefox.git

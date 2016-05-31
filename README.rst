@@ -124,6 +124,17 @@ flycheck
 instead of Flymake, which is the default for elpy)
 
 
+helm
+~~~~
+
+:C-x f: all files in repository (ls-git)
+:M-y: kill ring
+:C-x r b: files position bookmark listing
+
+Commands:
+:helm-firefox-bookmarks: filter among Firefox bookmarks
+
+
 magit
 ~~~~~
 

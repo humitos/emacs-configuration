@@ -28,3 +28,6 @@
 ;; disable the old ones
 (define-key elpy-mode-map (kbd "C-c n") nil)
 (define-key elpy-mode-map (kbd "C-c p") nil)
+
+;; disable find-file-in-project because of helm
+(define-key elpy-mode-map (kbd "C-c C-f") nil)
