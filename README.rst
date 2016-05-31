@@ -46,7 +46,6 @@ Main modules included in this configuration
 * autopair
 * elpy
 * expand-region
-* find-file-in-project
 * flycheck
 * helm
 * highlight-indentation
@@ -57,7 +56,6 @@ Main modules included in this configuration
 * py-autopep8
 * py-docformatter
 * py-isort
-* python-environment
 * rainbow-delimiters
 * solarized-theme
 * twittering-mode
@@ -133,6 +131,7 @@ helm
 :C-x f: all files in repository (ls-git)
 :M-y: kill ring
 :C-x r b: files position bookmark listing
+:C-c h e: etags
 
 Commands:
 

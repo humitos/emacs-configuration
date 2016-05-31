@@ -196,3 +196,6 @@
 [submodule "vendor/helm-projectile"]
 	path = vendor/helm-projectile
 	url = git@github.com:bbatsov/helm-projectile.git
+[submodule "vendor/etags-update"]
+	path = vendor/etags-update
+	url = git@github.com:mattkeller/etags-update.git

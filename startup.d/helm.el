@@ -42,3 +42,6 @@
 ;; enable regex search using projectile and helm
 (define-key elpy-mode-map (kbd "C-c C-s") 'helm-projectile-grep)
 (define-key global-map (kbd "C-c C-s") 'helm-projectile-grep)
+
+;; firefox bookmarks in helm
+(require 'helm-firefox)
