@@ -47,6 +47,7 @@ Main modules included in this configuration
 * elpy
 * expand-region
 * flycheck
+* gist.el
 * helm
 * highlight-indentation
 * jedi
@@ -122,6 +123,16 @@ flycheck
 
 (`elpy` already has some hotkeys for this, but I'm using Flycheck
 instead of Flymake, which is the default for elpy)
+
+
+gist.el
+~~~~~~~
+
+* https://github.com/defunkt/gist.el
+
+:gist-list: show the list of all our gist
+:gist-region-or-buffer-private: create a new private gist with the
+                                selection
 
 
 helm
