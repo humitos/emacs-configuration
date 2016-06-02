@@ -49,6 +49,8 @@ Main modules included in this configuration
 * flycheck
 * gist.el
 * helm
+* help-fuzzier
+* helm-swoop
 * highlight-indentation
 * jedi
 * magit
@@ -138,17 +140,25 @@ gist.el
 helm
 ~~~~
 
+* https://github.com/emacs-helm/helm
+* https://github.com/EphramPerdition/helm-fuzzier
+* https://github.com/ShingoFukuyama/helm-swoop
+
 :M-x: the beginning is here :)
 :C-x f: all files in repository (ls-git)
 :M-y: kill ring
 :C-x r b: files position bookmark listing
 :C-c h e: etags
 
+
 Commands:
 
 :helm-firefox-bookmarks: filter among Firefox bookmarks
 :helm-google-suggest: search in google
 :helm-wikipedia-suggest: search in wikipedia
+:helm-swoop: search inside the current buffer and jump to them
+:helm-multi-swoop: search in multiples buffer and jump to them
+
 
 Once in the helm session / buffer:
 
@@ -196,6 +206,7 @@ twittering-mode
 :u: post a new tweet
 :C-c C-c: send the tweet once we finish writting
 :C-c C-k: cancel the current tweet
+:C-u C-c RET: retweet current
 :r: show replies
 :j: navigate to next tweet
 :k: navigate previous tweet

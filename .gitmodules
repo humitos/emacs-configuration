@@ -211,3 +211,18 @@
 [submodule "vendor/logito"]
 	path = vendor/logito
 	url = git@github.com:sigma/logito.git
+[submodule "vendor/helm-swoop"]
+	path = vendor/helm-swoop
+	url = git@github.com:ShingoFukuyama/helm-swoop.git
+[submodule "vendor/smex"]
+	path = vendor/smex
+	url = git@github.com:nonsequitur/smex.git
+[submodule "vendor/helm-flx"]
+	path = vendor/helm-flx
+	url = git@github.com:PythonNut/helm-flx.git
+[submodule "vendor/flx"]
+	path = vendor/flx
+	url = git@github.com:lewang/flx.git
+[submodule "vendor/helm-fuzzier"]
+	path = vendor/helm-fuzzier
+	url = git@github.com:EphramPerdition/helm-fuzzier.git

@@ -15,3 +15,6 @@ undohist/
 .emacs.desktop.lock
 url/
 bookmarks
+var/
+eshell/
+smex-items
