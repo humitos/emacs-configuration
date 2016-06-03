@@ -238,3 +238,6 @@
 [submodule "vendor/git-timemachine"]
 	path = vendor/git-timemachine
 	url = git@github.com:pidu/git-timemachine.git
+[submodule "vendor/helm-dash"]
+	path = vendor/helm-dash
+	url = git@github.com:areina/helm-dash.git

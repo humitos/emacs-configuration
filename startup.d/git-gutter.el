@@ -11,7 +11,7 @@
  '(git-gutter:verbosity 0))
 
 ;; If you would like to use git-gutter.el and linum-mode
-(git-gutter:linum-setup)
+;; (git-gutter:linum-setup)
 
 (custom-set-variables
  '(git-gutter:modified-sign "MM") ;; two space

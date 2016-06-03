@@ -56,6 +56,7 @@ Main modules included in this configuration
 * gist.el
 * git-gutter.el 
 * helm
+* helm-dash
 * help-fuzzier
 * helm-swoop
 * highlight-indentation
@@ -188,7 +189,7 @@ Commands:
 :helm-wikipedia-suggest: search in wikipedia
 :helm-swoop: search inside the current buffer and jump to them
 :helm-multi-swoop: search in multiples buffer and jump to them
-
+:helm-dash: search in dash documentation (https://kapeli.com/dash)
 
 Once in the helm session / buffer:
 
