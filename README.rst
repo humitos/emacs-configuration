@@ -25,6 +25,11 @@ Installation
 
      (load "~/.emacs.d/init.el")
 
+#. Compile helm::
+
+     cd vendor/helm
+     make
+
 #. Run emacs
 
 

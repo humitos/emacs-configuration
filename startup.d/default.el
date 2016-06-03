@@ -48,3 +48,9 @@
 
 ;; remove tool bar
 (tool-bar-mode -1)
+
+;; replace text on selected region
+(delete-selection-mode 1)
+
+;; highlight current line
+(global-hl-line-mode 1)

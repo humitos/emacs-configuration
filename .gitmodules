@@ -103,9 +103,6 @@
 [submodule "vendor/monky"]
 	path = vendor/monky
 	url = git@github.com:ananthakumaran/monky.git
-[submodule "vendor/yasnippet"]
-	path = vendor/yasnippet
-	url = git@github.com:capitaomorte/yasnippet.git
 [submodule "vendor/rainbow-delimiters"]
 	path = vendor/rainbow-delimiters
 	url = https://github.com/Fanael/rainbow-delimiters
@@ -226,3 +223,6 @@
 [submodule "vendor/helm-fuzzier"]
 	path = vendor/helm-fuzzier
 	url = git@github.com:EphramPerdition/helm-fuzzier.git
+[submodule "vendor/yasnippet"]
+	path = vendor/yasnippet
+	url = https://github.com/joaotavora/yasnippet
