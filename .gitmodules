@@ -241,3 +241,6 @@
 [submodule "vendor/helm-dash"]
 	path = vendor/helm-dash
 	url = git@github.com:areina/helm-dash.git
+[submodule "vendor/restclient.el"]
+	path = vendor/restclient.el
+	url = git@github.com:pashky/restclient.el.git
