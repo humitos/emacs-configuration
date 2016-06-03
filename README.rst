@@ -2,8 +2,12 @@
 Emacs Configuration
 ===================
 
+  NOTE: do not installing it if you are not sure what you are doing... :)
+
+
 Installation
------------
+------------
+
 
 #. Clone this repository with the command::
 
@@ -21,14 +25,14 @@ Installation
      git submodule sync
      git submodule update
 
-#. Put in your `~/.emacs`::
-
-     (load "~/.emacs.d/init.el")
-
 #. Compile helm::
 
      cd vendor/helm
      make
+
+#. Put in your `~/.emacs`::
+
+     (load "~/.emacs.d/init.el")
 
 #. Run emacs
 
@@ -142,8 +146,8 @@ flycheck
 :C-c C-n: go to the next Flycheck error
 :C-c C-p: go to the previous Flycheck error
 
-(`elpy` already has some hotkeys for this, but I'm using Flycheck
-instead of Flymake, which is the default for elpy)
+  `elpy` already has some hotkeys for this, but I'm using Flycheck
+  instead of Flymake, which is the default for elpy)
 
 
 gist.el
@@ -221,6 +225,8 @@ Commands:
 
 projectile
 ~~~~~~~~~~
+
+* https://github.com/bbatsov/projectile
 
 :C-p p: switch between projects
 :C-c p k: kill all the buffer related to the current project
