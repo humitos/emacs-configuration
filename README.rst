@@ -53,6 +53,7 @@ Main modules included in this configuration
 * expand-region
 * flycheck
 * gist.el
+* git-gutter.el 
 * helm
 * help-fuzzier
 * helm-swoop
@@ -154,6 +155,7 @@ helm
 :M-y: kill ring
 :C-x r b: files position bookmark listing
 :C-c h e: etags
+:C-c h i: all function and variable names in the current buffer
 
 
 Commands:

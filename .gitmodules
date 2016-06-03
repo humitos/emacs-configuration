@@ -226,3 +226,6 @@
 [submodule "vendor/yasnippet"]
 	path = vendor/yasnippet
 	url = https://github.com/joaotavora/yasnippet
+[submodule "vendor/emacs-git-gutter"]
+	path = vendor/emacs-git-gutter
+	url = git@github.com:syohex/emacs-git-gutter.git
