@@ -86,6 +86,8 @@ ace-jump-mode
 browse-at-remote
 ~~~~~~~~~~~~~~~~
 
+* https://github.com/rmuslimov/browse-at-remote
+
 :C-c g g: show the file / selected region into remote web page (Github, for example)
 
 Once on `magit-status` or `magit-log` hitting the shortcut goes to the proper URL
@@ -151,6 +153,18 @@ gist.el
 :gist-region-or-buffer-private: create a new private gist with the
                                 selection
 
+git-timemachine
+~~~~~~~~~~~~~~~
+
+* https://github.com/pidu/git-timemachine
+
+:git-timemachine: browse all versions of the current file
+
+Once with that mode activated:
+
+:p: previous version
+:n: next version
+:q: quit
 
 helm
 ~~~~
@@ -230,3 +244,13 @@ twittering-mode
 :r: show replies
 :j: navigate to next tweet
 :k: navigate previous tweet
+
+
+References
+----------
+
+* http://emacswiki.org/
+* http://emacsrocks.com/
+* https://www.quora.com/What-are-some-of-the-most-useful-extensions-for-Emacs
+* https://github.com/emacs-tw/awesome-emacs
+* https://github.com/fisadev/fisa-vim-config

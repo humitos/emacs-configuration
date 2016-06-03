@@ -235,3 +235,6 @@
 [submodule "vendor/f.el"]
 	path = vendor/f.el
 	url = git@github.com:rejeep/f.el.git
+[submodule "vendor/git-timemachine"]
+	path = vendor/git-timemachine
+	url = git@github.com:pidu/git-timemachine.git
