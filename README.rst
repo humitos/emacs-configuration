@@ -68,6 +68,7 @@ Main modules included in this configuration
 * py-docformatter
 * py-isort
 * rainbow-delimiters
+* restclient-mode
 * solarized-theme
 * twittering-mode
 * undohist
@@ -229,6 +230,15 @@ projectile
 .. :C-c p s g: perform a grep on the current project
 
   This is also integrated with helm
+
+
+restclient-mode
+~~~~~~~~~~~~~~~
+
+* https://github.com/pashky/restclient.el
+
+:C-c C-c: execute the current request
+:C-c C-g: browse the queries / variables / etc with helm
 
 
 twittering-mode

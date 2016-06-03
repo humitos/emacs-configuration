@@ -1,3 +1,5 @@
+(require 'git-gutter)
+
 ;; show git status (add, remove, etc lines) next to the row numbers
 (global-git-gutter-mode +1)
 
@@ -11,7 +13,7 @@
  '(git-gutter:verbosity 0))
 
 ;; If you would like to use git-gutter.el and linum-mode
-;; (git-gutter:linum-setup)
+(git-gutter:linum-setup)
 
 (custom-set-variables
  '(git-gutter:modified-sign "MM") ;; two space
@@ -24,8 +26,9 @@
  '(git-gutter:lighter " GG"))
 
 
-(custom-set-variables
- '(git-gutter:unchanged-sign "  "))
+;; (custom-set-variables
+;;  '(git-gutter:unchanged-sign "  "))
+
 ;; background for solarized theme
 (set-face-background 'git-gutter:unchanged "#263238")
 (set-face-background 'git-gutter:added "#263238")
