@@ -49,6 +49,7 @@ Main modules included in this configuration
 
 * ace-jump-mode
 * autopair
+* browse-at-remote
 * elpy
 * expand-region
 * flycheck
@@ -81,6 +82,14 @@ ace-jump-mode
 
 :C-c SPC: jump to any place in the buffer with just a hotkey plus a
           position key
+
+browse-at-remote
+~~~~~~~~~~~~~~~~
+
+:C-c g g: show the file / selected region into remote web page (Github, for example)
+
+Once on `magit-status` or `magit-log` hitting the shortcut goes to the proper URL
+
 
 elpy
 ~~~~
@@ -188,6 +197,10 @@ Once on this buffer
 :g: refresh buffer
 :c c: commit current staged changes
 :c a: amend current staged changes to previous commit
+
+Commands:
+
+:magit-log: show the git log
 
 
 projectile

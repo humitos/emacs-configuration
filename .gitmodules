@@ -229,3 +229,9 @@
 [submodule "vendor/emacs-git-gutter"]
 	path = vendor/emacs-git-gutter
 	url = git@github.com:syohex/emacs-git-gutter.git
+[submodule "vendor/browse-at-remote"]
+	path = vendor/browse-at-remote
+	url = git@github.com:rmuslimov/browse-at-remote.git
+[submodule "vendor/f.el"]
+	path = vendor/f.el
+	url = git@github.com:rejeep/f.el.git
