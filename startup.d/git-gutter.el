@@ -15,12 +15,11 @@
  '(git-gutter:unchanged-sign "  ") ;; two spaces
  '(git-gutter:modified-sign "MM")
  '(git-gutter:added-sign "++")     ;; multiple character is OK
- '(git-gutter:deleted-sign "--"))
-
-;; change name of minor-mode in mode line. first character should be a
-;; space
-(custom-set-variables
- '(git-gutter:lighter " GG"))
+ '(git-gutter:deleted-sign "--")
+ ;; change name of minor-mode in mode line. first character should be a
+ ;; space
+ '(git-gutter:lighter " GG")
+ )
 
 ;; background for solarized theme
 (set-face-background 'git-gutter:unchanged "#263238")
