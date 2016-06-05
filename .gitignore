@@ -18,3 +18,5 @@ bookmarks
 var/
 eshell/
 smex-items
+places
+.emacs.desktop

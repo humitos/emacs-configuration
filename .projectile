@@ -1,0 +1,12 @@
+-/vendor
+-/*~
+-/#*
+-/*#
+-/.dir-locals.el
+-/TAGS
+-/locate.db
+-/*.orig
+-/.venv
+-/.gitmodules
+-/places
+-/.emacs.desktop
