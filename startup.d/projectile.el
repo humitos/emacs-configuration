@@ -17,3 +17,7 @@
 	"bak"
 	"gitignore"
 	))
+
+;; https://github.com/bbatsov/projectile/issues/133#issuecomment-97118653
+;; sudo apt-get install exuberant-ctags
+(setq projectile-tags-command "ctags-exuberant -Re -f \"%s\" %s")
