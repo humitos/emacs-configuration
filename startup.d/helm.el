@@ -1,3 +1,4 @@
+
 ;; http://tuhdo.github.io/helm-intro.html
 
 (require 'helm)
@@ -179,3 +180,7 @@
 ;;   (apply f args))
 
 ;; (advice-add 'helm-make-source :around 'my-helm-make-source)
+
+;; show relative path when using helm-grep (C-c C-s)
+(setq helm-grep-file-path-style 'relative)
+(setq helm-grep-ignored-directories (add-to-list 'helm-grep-ignored-directories "undohist"))
