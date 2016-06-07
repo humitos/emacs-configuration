@@ -1,12 +1,12 @@
-===================
-Emacs Configuration
-===================
+=====================
+ Emacs Configuration
+=====================
 
   NOTE: do not installing it if you are not sure what you are doing... :)
 
 
 Installation
-------------
+============
 
 
 #. Clone this repository with the command::
@@ -38,7 +38,7 @@ Installation
 
 
 Install Python necessary modules
---------------------------------
+================================
 
 I'm installing all the necesary package for `elpy` in each venv that
 I'm working on, so you should run this command in your venvs
@@ -49,7 +49,7 @@ Install necessary packages::
 
 
 Main modules included in this configuration
--------------------------------------------
+===========================================
 
 * ace-jump-mode
 * autopair
@@ -58,7 +58,8 @@ Main modules included in this configuration
 * expand-region
 * flycheck
 * gist.el
-* git-gutter.el 
+* git-gutter.el
+* git-timemachine
 * helm
 * helm-dash
 * help-fuzzier
@@ -82,7 +83,7 @@ Main modules included in this configuration
 These are the hotkeys that I use most.
 
 ace-jump-mode
-~~~~~~~~~~~~~
+-------------
 
 * https://github.com/winterTTr/ace-jump-mode
 
@@ -90,7 +91,7 @@ ace-jump-mode
           position key
 
 browse-at-remote
-~~~~~~~~~~~~~~~~
+----------------
 
 * https://github.com/rmuslimov/browse-at-remote
 
@@ -100,7 +101,7 @@ Once on `magit-status` or `magit-log` hitting the shortcut goes to the proper UR
 
 
 elpy
-~~~~
+----
 
 * https://github.com/jorgenschaefer/elpy
 
@@ -118,7 +119,7 @@ elpy
 
 
 expand-region
-~~~~~~~~~~~~~
+-------------
 
 * https://github.com/magnars/expand-region.el
 
@@ -126,7 +127,7 @@ expand-region
 
       
 find-file-in-project
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 * https://github.com/technomancy/find-file-in-project
 
@@ -139,19 +140,21 @@ find-file-in-project
   This hotkey is replaced by the helm one if you have it active.
 
 flycheck
-~~~~~~~~
+--------
 
 * http://www.flycheck.org/
 
 :C-c C-n: go to the next Flycheck error
 :C-c C-p: go to the previous Flycheck error
 
+(these hotkeys comes from `elpy`)
+
   `elpy` already has some hotkeys for this, but I'm using Flycheck
   instead of Flymake, which is the default for elpy)
 
 
 gist.el
-~~~~~~~
+-------
 
 * https://github.com/defunkt/gist.el
 
@@ -160,7 +163,7 @@ gist.el
                                 selection
 
 git-timemachine
-~~~~~~~~~~~~~~~
+---------------
 
 * https://github.com/pidu/git-timemachine
 
@@ -173,7 +176,7 @@ Once with that mode activated:
 :q: quit
 
 helm
-~~~~
+----
 
 * https://github.com/emacs-helm/helm
 * https://github.com/EphramPerdition/helm-fuzzier
@@ -203,11 +206,11 @@ Once in the helm session / buffer:
 
 
 magit
-~~~~~
+-----
 
 * https://magit.vc/
 
-:C-c g: open the Magit Status buffer
+:C-x g: open the Magit Status buffer
 
 Once on this buffer
 
@@ -217,6 +220,7 @@ Once on this buffer
 :g: refresh buffer
 :c c: commit current staged changes
 :c a: amend current staged changes to previous commit
+:P u: push to the current branch
 
 Commands:
 
@@ -224,7 +228,7 @@ Commands:
 
 
 projectile
-~~~~~~~~~~
+----------
 
 * https://github.com/bbatsov/projectile
 
@@ -239,7 +243,7 @@ projectile
 
 
 restclient-mode
-~~~~~~~~~~~~~~~
+---------------
 
 * https://github.com/pashky/restclient.el
 
@@ -248,7 +252,7 @@ restclient-mode
 
 
 twittering-mode
-~~~~~~~~~~~~~~~
+---------------
 
 * https://github.com/hayamiz/twittering-mode/
 
@@ -264,7 +268,7 @@ twittering-mode
 
 
 References
-----------
+==========
 
 * http://emacswiki.org/
 * http://emacsrocks.com/
