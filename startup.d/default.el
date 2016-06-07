@@ -54,3 +54,7 @@
 
 ;; highlight current line
 (global-hl-line-mode 1)
+
+;; WARNING: this is dangerous, but I'm tired of the messages :)
+;; https://www.gnu.org/software/emacs/manual/html_node/elisp/File-Local-Variables.html
+(setq enable-local-variables :safe)
