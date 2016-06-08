@@ -67,6 +67,7 @@ Main modules included in this configuration
 * highlight-indentation
 * jedi
 * magit
+* material-theme
 * powerline
 * projectile
 * py-autopep8
@@ -74,7 +75,6 @@ Main modules included in this configuration
 * py-isort
 * rainbow-delimiters
 * restclient-mode
-* solarized-theme
 * twittering-mode
 * undohist
 * web-mode
