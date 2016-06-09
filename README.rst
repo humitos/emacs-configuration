@@ -77,6 +77,7 @@ Main modules included in this configuration
 * ace-jump-mode
 * autopair
 * browse-at-remote
+* discover-my-major
 * elpy
 * expand-region
 * flycheck
@@ -118,9 +119,20 @@ browse-at-remote
 
 * https://github.com/rmuslimov/browse-at-remote
 
-:C-c g g: show the file / selected region into remote web page (Github, for example)
+:C-c g g: show the file / selected region into remote web page
+          (Github, for example)
 
-Once on `magit-status` or `magit-log` hitting the shortcut goes to the proper URL
+Once on `magit-status` or `magit-log` hitting the shortcut goes to the
+proper URL
+
+
+discover-my-major
+-----------------
+
+* https://github.com/steckerhalter/discover-my-major
+
+:discover-my-major: show help with all the all the hotkeys for this
+                    major mode
 
 
 elpy

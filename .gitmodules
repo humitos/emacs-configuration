@@ -244,3 +244,9 @@
 [submodule "vendor/restclient.el"]
 	path = vendor/restclient.el
 	url = git@github.com:pashky/restclient.el.git
+[submodule "vendor/discover-my-major"]
+	path = vendor/discover-my-major
+	url = git@github.com:steckerhalter/discover-my-major.git
+[submodule "vendor/makey"]
+	path = vendor/makey
+	url = git@github.com:mickeynp/makey.git
