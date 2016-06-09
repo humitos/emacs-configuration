@@ -9,14 +9,10 @@ Installation
 ============
 
 
-#. Clone this repository with the command::
+#. Clone this repository on the standard `.emacs.d` settings directory::
 
      cd ~
-     git clone git://github.com/humitos/emacs-configuration.git
-
-#. You can rename it with the `standard` emacs name for this folder::
-
-     mv emacs-configuration .emacs.d
+     git clone git://github.com/humitos/emacs-configuration.git .emacs.d
 
 #. Update git submodules::
 
@@ -24,6 +20,8 @@ Installation
      git submodule init
      git submodule sync
      git submodule update
+
+  Wait a couple of minutes...
 
 #. Compile helm::
 
@@ -47,6 +45,31 @@ Install necessary packages::
 
       pip install -U -r requirements.elpy.in
 
+
+Install required system packages
+================================
+
+::
+      sudo apt-get install emacs exuberant-ctags git
+
+
+Configure Firefox to export bookmarks automatically
+===================================================
+
+Open your Firefox and go to `about:config` in firefox url
+toolbar. Search for this line::
+
+      user_pref("browser.bookmarks.autoExportHTML", false);
+
+Double click on this line to enable its value to true, you should have
+now::
+
+      user_pref("browser.bookmarks.autoExportHTML", true);
+
+
+  This is needed for `helm-firefox` to find your bookmarks and keep
+  them updated.
+      
 
 Main modules included in this configuration
 ===========================================
