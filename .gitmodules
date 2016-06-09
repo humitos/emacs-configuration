@@ -250,3 +250,9 @@
 [submodule "vendor/makey"]
 	path = vendor/makey
 	url = git@github.com:mickeynp/makey.git
+[submodule "vendor/company-quickhelp"]
+	path = vendor/company-quickhelp
+	url = git@github.com:expez/company-quickhelp.git
+[submodule "vendor/pos-tip"]
+	path = vendor/pos-tip
+	url = git@github.com:pitkali/pos-tip.git
