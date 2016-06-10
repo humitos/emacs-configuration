@@ -12,13 +12,10 @@
                                       -cert /etc/ssl/certs" ))
 
 ;; Save logs here
-(setq erc-log-channels-directory "~/.erc/logs/")
-
-;; Save log on part channel
-(setq erc-save-buffer-on-part t)
+(setq erc-log-channels-directory "~/.emacs.d/erc/logs/")
 
 ;; Save log on channel activity
-(setq erc-save-buffer-on-part nil
+(setq erc-save-buffer-on-part t
       erc-save-queries-on-quit nil
       erc-log-write-after-send t
       erc-log-write-after-insert t)
@@ -38,9 +35,35 @@
 ;; (setq freenode-full-name "your-password-goes-here")
 
 (setq erc-autojoin-channels-alist
-      '(("freenode.net" "#logn-ar"))) ; "#logn" "#pyar")))
-;; (erc-tls :server "chat.freenode.net"
-;; 	 :port 7000
-;; 	 :nick freenode-nick
-;; 	 :password freenode-password
-;; 	 :full-name freenode-full-name)
+      '(("freenode.net" "#pyar"))) ; "#logn" "#pyar")))
+
+(erc-tls :server "irc.freenode.net"
+	 :port 7000
+	 :nick freenode-nick
+	 :password freenode-password
+	 :full-name freenode-full-name)
+
+;; https://www.emacswiki.org/emacs/ErcConfiguration
+;; use a different prompt
+(setq erc-prompt ">>> ")
+
+;; disable linum-mode in erc-mode
+(add-hook 'erc-mode-hook
+	  '(lambda () (linum-mode -1)))
+
+;; connect to channels in background instead of showing the buffer
+;; immediately
+(setq erc-join-buffer 'bury)
+
+;; buttonize unproper URLs
+(setq erc-button-url-regexp
+      "\\([-a-zA-Z0-9_=!?#$@~`%&*+\\/:;,]+\\.\\)+[-a-zA-Z0-9_=!?#$@~`%&*+\\/:;,]*[-a-zA-Z0-9\\/]")
+
+
+;; https://www.emacswiki.org/emacs/ErcFilling
+;; use a width of 120 lines
+(setq erc-fill-column 120)
+
+;; colorize nicknames
+;; https://github.com/leathekd/erc-hl-nicks
+(require 'erc-hl-nicks)

@@ -256,3 +256,6 @@
 [submodule "vendor/pos-tip"]
 	path = vendor/pos-tip
 	url = git@github.com:pitkali/pos-tip.git
+[submodule "vendor/erc-hl-nicks"]
+	path = vendor/erc-hl-nicks
+	url = git@github.com:leathekd/erc-hl-nicks.git
