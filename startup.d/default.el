@@ -49,12 +49,36 @@
 ;; remove tool bar
 (tool-bar-mode -1)
 
+;; remove scroll bar
+(scroll-bar-mode -1)
+
+;; do not show tooltips for mouse
+(tooltip-mode -1)
+
 ;; replace text on selected region
 (delete-selection-mode 1)
 
 ;; highlight current line
 (global-hl-line-mode 1)
 
-;; WARNING: this is dangerous, but I'm tired of the messages :)
-;; https://www.gnu.org/software/emacs/manual/html_node/elisp/File-Local-Variables.html
-(setq enable-local-variables :safe)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(initial-frame-alist (quote ((fullscreen . maximized))))
+ '(safe-local-variable-values
+   (quote
+    ((py-autopep8-options "--global-config=~/mozio/autopep8rc")
+     (eval pyvenv-workon
+	   (quote mozio))
+     (eval pyvenv-workon
+	   (quote mozio-ondemand))
+     (eval setq py-docformatter-options
+	   (quote
+	    ("--wrap-summaries=120" "--wrap-descriptions=120" "--pre-summary-newline" "--no-blank")))
+     (py-autopep8-options "--global-config=/home/humitos/mozio/autopep8rc")
+     (elpy-test-django-runner-command quote
+				      ("~/mozio/mozio/manage.py" "test" "--noinput" "--keepdb" "--failfast"))
+     (elpy-test-django-runner-command quote
+				      ("~/mozio/ondemand/manage.py" "test" "--noinput" "--keepdb" "--failfast"))))))
