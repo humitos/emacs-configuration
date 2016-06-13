@@ -12,16 +12,7 @@ Installation
 #. Clone this repository on the standard `.emacs.d` settings directory::
 
      cd ~
-     git clone git://github.com/humitos/emacs-configuration.git .emacs.d
-
-#. Update git submodules::
-
-     cd .emacs.d
-     git submodule init
-     git submodule sync
-     git submodule update
-
-  Wait a couple of minutes...
+     git clone --recursive git://github.com/humitos/emacs-configuration.git .emacs.d
 
 #. Compile helm::
 
@@ -33,6 +24,16 @@ Installation
      (load "~/.emacs.d/init.el")
 
 #. Run emacs
+
+----
+
+  NOTE: all of this configuration was tested in
+   * Xubuntu 14.04 LTS
+   * Emacs 24.4.1
+   * exuberant-ctags 5.9~svn20110310
+   * git 2.8.4
+   * Python 2.7.6
+   * Firefox 46.0.1
 
 
 Install Python necessary modules
@@ -49,28 +50,29 @@ Install necessary packages::
 Install required system packages
 ================================
 
+
 ::
-      sudo apt-get install emacs exuberant-ctags git
+
+   sudo apt-get install emacs exuberant-ctags git
 
 
 Configure Firefox to export bookmarks automatically
 ===================================================
 
+  This is needed for `helm-firefox` to find your bookmarks and keep
+  them updated.
+
 Open your Firefox and go to `about:config` in firefox url
 toolbar. Search for this line::
 
-      user_pref("browser.bookmarks.autoExportHTML", false);
+  user_pref("browser.bookmarks.autoExportHTML", false);
 
 Double click on this line to enable its value to true, you should have
 now::
 
-      user_pref("browser.bookmarks.autoExportHTML", true);
+  user_pref("browser.bookmarks.autoExportHTML", true);
 
-
-  This is needed for `helm-firefox` to find your bookmarks and keep
-  them updated.
-      
-
+  
 Main modules included in this configuration
 ===========================================
 
@@ -144,7 +146,6 @@ elpy
 :M-up:
 :M-left:
 :M-right: move the selected region by indentation
-.. :C-c C-s: performs a `grep -r` in the current project
 :M-.: go to definition (class, function, variable, etc)
 :M.*: go back where we was
 
@@ -272,7 +273,6 @@ projectile
 :C-c p f: find file in current project
 :C-c C-s: perform a grep on the current project
 :C-c p h: all together
-.. :C-c p s g: perform a grep on the current project
 
   This is also integrated with helm
 
