@@ -1,5 +1,0 @@
-# .pyflymakerc
-# This file could be inside the proyect that you want to customize
-
-# pep8/E501: line too long (more than 80 characters)
-IGNORE_CODES = ('E501', )
