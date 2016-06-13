@@ -1,6 +1,0 @@
-#!/bin/bash
-
-pylint --msg-template="{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}" --reports=n --disable=E1101 "$1" 2>/dev/null
-pyflakes "$1" 2>/dev/null
-pep8 "$1" 2>/dev/null
-true
