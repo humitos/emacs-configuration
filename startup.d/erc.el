@@ -12,7 +12,7 @@
                                       -cert /etc/ssl/certs" ))
 
 ;; Save logs here
-(setq erc-log-channels-directory "~/.emacs.d/erc/logs/")
+(setq erc-log-channels-directory(concat user-emacs-directory "erc/logs/"))
 
 ;; Save log on channel activity
 (setq erc-save-buffer-on-part t

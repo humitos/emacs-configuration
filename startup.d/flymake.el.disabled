@@ -1,8 +1,6 @@
 ;; Personal configuration for flymake-python
 ;; https://github.com/akaihola/flymake-python
 
-(add-to-list 'load-path "~/.emacs.d") ;; check path
-
 (when (load "flymake" t)
   (defun flymake-pylint-init ()
     (let* ((temp-file (flymake-init-create-temp-buffer-copy
@@ -10,7 +8,7 @@
            (local-file (file-relative-name
                         temp-file
                         (file-name-directory buffer-file-name))))
-      (list "~/.emacs.d/vendor/flymake-python/pyflymake.py" (list local-file))))
+      (list (concat emacs-user-directory "vendor/flymake-python/pyflymake.py") (list local-file))))
       ;;     check path
 
   (add-to-list 'flymake-allowed-file-name-masks
