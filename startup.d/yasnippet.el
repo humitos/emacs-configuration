@@ -8,7 +8,7 @@
 
 (setq yas-snippet-dirs
       (list (concat emacs-user-directory "my-snippets")  ;; personal snippets
-	    (concat emacs-user-directory "snippets")     ;; default snippet collection
+	    (concat emacs-user-directory "vendor/yasnippet/snippets")     ;; default snippet collection
 	    ))
 
 (yas-global-mode 1)
