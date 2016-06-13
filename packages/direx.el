@@ -1,1 +1,0 @@
-../vendor/direx-el/direx.el

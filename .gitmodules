@@ -1,18 +1,9 @@
-[submodule "vendor/zenburn-emacs"]
-	path = vendor/zenburn-emacs
-	url = https://github.com/bbatsov/zenburn-emacs
-[submodule "vendor/python.el"]
-	path = vendor/python.el
-	url = https://github.com/fgallina/python.el
 [submodule "vendor/multi-web-mode"]
 	path = vendor/multi-web-mode
 	url = https://github.com/fgallina/multi-web-mode
 [submodule "vendor/magit"]
 	path = vendor/magit
 	url = https://github.com/magit/magit.git
-[submodule "vendor/auto-complete"]
-	path = vendor/auto-complete
-	url = https://github.com/auto-complete/auto-complete.git
 [submodule "vendor/highlight-indentation"]
 	path = vendor/highlight-indentation
 	url = https://github.com/antonj/Highlight-Indentation-for-Emacs.git
@@ -22,36 +13,15 @@
 [submodule "vendor/yaml-mode"]
 	path = vendor/yaml-mode
 	url = https://github.com/yoshiki/yaml-mode.git
-[submodule "vendor/Pymacs"]
-	path = vendor/Pymacs
-	url = https://github.com/pinard/Pymacs
 [submodule "vendor/twittering-mode"]
 	path = vendor/twittering-mode
 	url = https://github.com/hayamiz/twittering-mode.git
 [submodule "vendor/rainbow-mode"]
 	path = vendor/rainbow-mode
 	url = https://github.com/emacsmirror/rainbow-mode.git
-[submodule "vendor/deft"]
-	path = vendor/deft
-	url = git://jblevins.org/git/deft.git
-[submodule "vendor/full-ack"]
-	path = vendor/full-ack
-	url = https://github.com/nschum/full-ack.git
-[submodule "vendor/emacs-color-theme-solarized"]
-	path = vendor/emacs-color-theme-solarized
-	url = git@github.com:sellout/emacs-color-theme-solarized.git
-[submodule "vendor/python-django"]
-	path = vendor/python-django
-	url = https://github.com/fgallina/python-django.el.git
 [submodule "vendor/helm"]
 	path = vendor/helm
 	url = https://github.com/emacs-helm/helm.git
-[submodule "vendor/haml-mode"]
-	path = vendor/haml-mode
-	url = git@github.com:nex3/haml-mode.git
-[submodule "vendor/popup-el"]
-	path = vendor/popup-el
-	url = https://github.com/auto-complete/popup-el
 [submodule "vendor/git-modes"]
 	path = vendor/git-modes
 	url = https://github.com/magit/git-modes
@@ -85,12 +55,6 @@
 [submodule "vendor/emacs-ipython-notebook"]
 	path = vendor/emacs-ipython-notebook
 	url = git@github.com:tkf/emacs-ipython-notebook.git
-[submodule "vendor/emacs-jedi-direx"]
-	path = vendor/emacs-jedi-direx
-	url = git@github.com:tkf/emacs-jedi-direx.git
-[submodule "vendor/direx-el"]
-	path = vendor/direx-el
-	url = git@github.com:m2ym/direx-el.git
 [submodule "vendor/virtualenvwrapper.el"]
 	path = vendor/virtualenvwrapper.el
 	url = git@github.com:porterjamesj/virtualenvwrapper.el.git
@@ -178,9 +142,6 @@
 [submodule "vendor/ace-jump-mode"]
 	path = vendor/ace-jump-mode
 	url = git@github.com:winterTTr/ace-jump-mode.git
-[submodule "vendor/paredit"]
-	path = vendor/paredit
-	url = git@github.com:emacsmirror/paredit.git
 [submodule "vendor/undohist-el"]
 	path = vendor/undohist-el
 	url = git@github.com:m2ym/undohist-el.git

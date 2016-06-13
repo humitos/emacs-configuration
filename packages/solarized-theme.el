@@ -1,1 +1,0 @@
-../vendor/emacs-color-theme-solarized/solarized-theme.el
