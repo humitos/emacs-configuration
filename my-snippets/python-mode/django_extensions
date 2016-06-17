@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: install django extensions
+# key: ide
+# group: testing
+# --
+INSTALLED_APPS += [
+    'django_extensions',
+]
