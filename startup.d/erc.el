@@ -35,13 +35,7 @@
 ;; (setq freenode-full-name "your-password-goes-here")
 
 (setq erc-autojoin-channels-alist
-      '(("freenode.net" "#pyar"))) ; "#logn" "#pyar")))
-
-(erc-tls :server "irc.freenode.net"
-	 :port 7000
-	 :nick freenode-nick
-	 :password freenode-password
-	 :full-name freenode-full-name)
+      '(("freenode.net" "#pyar")))
 
 ;; https://www.emacswiki.org/emacs/ErcConfiguration
 ;; use a different prompt
@@ -67,3 +61,15 @@
 ;; colorize nicknames
 ;; https://github.com/leathekd/erc-hl-nicks
 (require 'erc-hl-nicks)
+
+;; do not bother me with useless notifications
+;; https://www.emacswiki.org/emacs/ErcChannelTracking
+(setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT"))
+(setq erc-track-exclude-server-buffer t)
+
+;; connect to the server
+(erc-tls :server "irc.freenode.net"
+	 :port 7000
+	 :nick freenode-nick
+	 :password freenode-password
+	 :full-name freenode-full-name)
