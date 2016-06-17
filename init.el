@@ -1,10 +1,5 @@
 ;; init.el configuration file
 
-;; Load all extra libraries from externals
-;; (add-to-list 'load-path "~/.emacs.d/vendor")
-;; (let ((default-directory "~/.emacs.d/vendor"))
-;;  (normal-top-level-add-subdirs-to-load-path))
-
 (add-to-list 'load-path (concat user-emacs-directory "packages"))
 (let ((default-directory (concat user-emacs-directory "packages")))
   (normal-top-level-add-subdirs-to-load-path))
