@@ -9,7 +9,7 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 
 (setq jedi:environment-root "jedi")  ; name of the virtualenv
-(setq jedi:server-command '("/home/humitos/.emacs.d/vendor/emacs-jedi/jediepcserver.py"))
+(setq jedi:server-command '((concat emacs-user-directory "vendor/emacs-jedi/jediepcserver.py")))
 (setq jedi:server-args 
       '("--virtual-env" "~/.virtualenvs/emacs-jedi"
 	"--log" "/tmp/jediepcserver.log"
