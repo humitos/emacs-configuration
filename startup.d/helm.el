@@ -184,3 +184,7 @@
 ;; show relative path when using helm-grep (C-c C-s)
 (setq helm-grep-file-path-style 'relative)
 (setq helm-grep-ignored-directories (add-to-list 'helm-grep-ignored-directories "undohist"))
+
+
+;; search in dash documentation locally
+(require 'helm-dash)
