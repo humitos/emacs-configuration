@@ -8,6 +8,9 @@
 -/*.orig
 -/.venv
 -/.gitmodules
+-/.git/COMMIT_EDITMSG
+-/.github
+-/.tx
 -/places
 -/.emacs.desktop
 -/undohist
