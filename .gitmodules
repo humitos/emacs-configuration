@@ -220,3 +220,6 @@
 [submodule "vendor/erc-hl-nicks"]
 	path = vendor/erc-hl-nicks
 	url = git@github.com:leathekd/erc-hl-nicks.git
+[submodule "vendor/emacs-helm-ag"]
+	path = vendor/emacs-helm-ag
+	url = git@github.com:syohex/emacs-helm-ag.git
