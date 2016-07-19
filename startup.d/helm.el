@@ -23,7 +23,16 @@
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x b") 'helm-mini)
 (setq helm-buffers-fuzzy-matching t
-      helm-recentf-fuzzy-match    t)
+      helm-recentf-fuzzy-match    t
+      helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match    t
+      helm-locate-fuzzy-match     t
+      helm-M-x-fuzzy-match        t
+      helm-semantic-fuzzy-match   t
+      helm-imenu-fuzzy-match      t
+      helm-apropos-fuzzy-match    t
+      helm-lisp-fuzzy-completion  t
+      )
 
 (when (executable-find "curl")
   (setq helm-google-suggest-use-curl-p t))
@@ -69,7 +78,7 @@
 (require 'smex)
 (require 'helm-swoop)
 (require 'helm-flx)
-(helm-flx-mode 1)
+(helm-flx-mode +1)
 (require 'helm-fuzzier)
 (helm-fuzzier-mode 1)
 ;; (require 'helm-smex)
