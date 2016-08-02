@@ -223,3 +223,6 @@
 [submodule "vendor/emacs-helm-ag"]
 	path = vendor/emacs-helm-ag
 	url = git@github.com:syohex/emacs-helm-ag.git
+[submodule "vendor/marshal.el"]
+	path = vendor/marshal.el
+	url = https://github.com/sigma/marshal.el
