@@ -1,9 +1,13 @@
 (require 'elpy)
 (elpy-enable)
 
+;; Remove flymake and use flycheck
 (when (require 'flycheck nil t)
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+;; Run flycheck only when the file is saved
+(setq flycheck-check-syntax-automatically '(save))
 
 (pyvenv-workon 'emacs-jedi)
 
