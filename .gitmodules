@@ -226,3 +226,6 @@
 [submodule "vendor/marshal.el"]
 	path = vendor/marshal.el
 	url = https://github.com/sigma/marshal.el
+[submodule "vendor/ht.el"]
+	path = vendor/ht.el
+	url = git@github.com:Wilfred/ht.el.git
