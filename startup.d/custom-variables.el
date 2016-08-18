@@ -16,6 +16,7 @@
      (py-docformatter-options "--wrap-summaries=120 --wrap-descriptions=120 --pre-summary-newline --no-blank")
      (py-docformatter-options "--wrap-summaries=120" "--wrap-descriptions=120" "--pre-summary-newline" "--no-blank")
      (py-docformatter-options "--wrap-summaries=120" "--wrap-descriptions=120" "--pre-summary-newline" "--no-blank" "--make-summary-multiline")
+     (py-docformatter-options "--wrap-summaries=120" "--wrap-descriptions=120" "--pre-summary-newline" "--no-blank" "--make-summary-multi-line")
      (py-autopep8-options "--global-config=/home/humitos/.autopep8rc")
      (py-autopep8-options "--global-config=/home/humitos/mozio/autopep8rc")
      (elpy-test-django-runner-command "/home/humitos/mozio/mozio/manage.py" "test" "--noinput" "--keepdb" "--failfast")
