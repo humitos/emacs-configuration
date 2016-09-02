@@ -12,10 +12,10 @@
      (flycheck-flake8rc . "/home/humitos/mozio/flake8rc")
 
      ;; docformatter global options
-     (py-docformatter-options . ("--wrap-summaries=120" "--wrap-descriptions=120" "--pre-summary-newline" "--no-blank"))
+     (py-docformatter-options . ("--wrap-summaries=120" "--wrap-descriptions=120" "--pre-summary-newline" "--no-blank" "--make-summary-multi-line"))
 
      ;; use our own virtualenv for this project
-     (eval . (pyvenv-workon 'mozio-ondemand))
+     (pyvenv-workon . "mozio-ondemand")
 
      ;; run proper test when hitting C-c C-t
      (elpy-test-runner . elpy-test-django-runner)
