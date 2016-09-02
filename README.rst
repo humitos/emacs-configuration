@@ -22,8 +22,7 @@ use it as it is :)
 
      sudo apt-get install emacs python3-venv git
 
-*NOTE: if `python3-venv` is not available in your Ubuntu you should
- install `python-virtualenv`*
+*NOTE: if `python3-venv` is not available in your Ubuntu you should install `python-virtualenv`*
 
 #. Clone this repository::
 
