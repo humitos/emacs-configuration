@@ -24,19 +24,46 @@
 # Useful to start quickly an emacs -Q with this configuration.
 # Run it from this directory or symlink it somewhere in your PATH.
 
+# version comparison
+# http://stackoverflow.com/a/4024263
+verlte() {
+    [  "$1" = "`echo -e "$1\n$2" | sort -V | head -n1`" ]
+}
+
+verlt() {
+    [ "$1" = "$2" ] && return 1 || verlte $1 $2
+}
+
 # If TEMP env var exists use it otherwise declare it.
 [ -z $TEMP ] && declare TEMP="/tmp"
 
 CONF_FILE="$TEMP/humitos-cfg.el"
 
 # check if we have emacs-snapshot installed first
-which emacs-snapshot
+which emacs-snapshot > /dev/null
 EMACS_SNAPSHOT_CMD=$?
 
 if [ $EMACS_SNAPSHOT_CMD -eq 0 ]; then
   EMACS=emacs-snapshot
 else
   EMACS=emacs
+fi
+
+EMACS_USER_VERSION=`$EMACS --version | awk '{print $3}' | head -n 1`
+EMACS_MIN_REQUIRED_VERSION="24.4"
+
+verlt $EMACS_USER_VERSION $EMACS_MIN_REQUIRED_VERSION
+EMACS_ENOUGH_VERSION=$?
+
+if [ $EMACS_ENOUGH_VERSION -eq 0 ]; then
+  echo "*** ERROR ***"
+  echo "*** ERROR *** Emacs 24.4 or greater is needed and you have: ${EMACS_USER_VERSION}"
+  echo "*** ERROR ***"
+  echo "  In Ubuntu you can add a PPA repository and install \`emacs-snapshot\` package:"
+  echo "    $ sudo add-apt-repository ppa:ubuntu-elisp/ppa"
+  echo "    $ sudo apt-get update"
+  echo "    $ sudo apt-get install emacs-snapshot"
+  exit 1
 fi
 
 # stop the script if something goes wrong
@@ -85,7 +112,7 @@ EOF
 
 
 # download default yasnippets
-cd vendor/yasnippet; git submodule init; git submodule update ; cd -
+cd vendor/yasnippet; git submodule init; git submodule update ; cd - > /dev/null
 # disable erc for tryit.sh
 if [ -e startup.d/erc.el ]; then
   mv --force startup.d/erc.el startup.d/erc.el.disabled > /dev/null
@@ -96,7 +123,7 @@ if [ -e startup.d/which-func-mode.el ]; then
 fi
 # configure helm
 if [ ! -e vendor/helm/helm-autoloads.el ]; then
-  cd vendor/helm ; make ; cd -
+  cd vendor/helm ; make ; cd - > /dev/null
 fi
 # create venv
 if [ ! -d emacsenv ]; then
@@ -114,20 +141,4 @@ else
   source emacsenv/bin/activate
 fi
 
-EMACS_24_4=`$EMACS --version | grep -E "(24.4|25.)" | wc -l`
-
-if [ $EMACS_24_4 -eq 1 ]; then
-  $EMACS -Q -l $CONF_FILE $@
-else
-  echo
-  echo
-  echo "*** ERROR ***"
-  echo "*** ERROR ***: Emacs 24.4 or greater is needed and you have: `$EMACS --version | head -n 1`"
-  echo "*** ERROR ***"
-  echo "  In Ubuntu you can add a PPA repository and install \`emacs-snapshot\` package:"
-  echo "    $ sudo add-apt-repository ppa:ubuntu-elisp/ppa"
-  echo "    $ sudo apt-get update"
-  echo "    $ sudo apt-get install emacs-snapshot"
-  echo
-  echo
-fi
+$EMACS -Q -l $CONF_FILE $@
