@@ -87,7 +87,9 @@ if [ ! -e vendor/helm/helm-autoloads.el ]; then
 fi
 # create venv
 if [ ! -d emacsenv ]; then
+  set +e
   python3 -m venv emacsenv
+  set -e
   if [ $? -ne 0 ]; then
       rm -rf emacsenv
       virtualenv -p python3 emacsenv
