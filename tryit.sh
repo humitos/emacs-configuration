@@ -88,6 +88,10 @@ fi
 # create venv
 if [ ! -d emacsenv ]; then
   python3 -m venv emacsenv
+  if [ $? -ne 0]; then
+      rm -rf emacsenv
+      virtualenv -p python3 emacsenv
+  fi
   source emacsenv/bin/activate
   pip install -U pip
   pip install -r requirements.elpy.in

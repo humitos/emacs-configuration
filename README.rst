@@ -20,6 +20,9 @@ use it as it is :)
 
      sudo apt-get install emacs python3-venv git
 
+*NOTE: if `python3-venv` is not available in your Ubuntu you should
+ install `python-virtualenv`*
+
 #. Clone this repository::
 
      git clone --recursive --depth 1 https://github.com/humitos/emacs-configuration.git
