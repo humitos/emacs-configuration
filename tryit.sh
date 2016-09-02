@@ -89,8 +89,8 @@ fi
 if [ ! -d emacsenv ]; then
   set +e
   python3 -m venv emacsenv
-  set -e
   if [ $? -ne 0 ]; then
+      set -e
       rm -rf emacsenv
       virtualenv -p python3 emacsenv
   fi
