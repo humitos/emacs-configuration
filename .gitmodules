@@ -30,43 +30,34 @@
 	url = https://github.com/defunkt/markdown-mode
 [submodule "vendor/fill-column-indicator"]
 	path = vendor/fill-column-indicator
-	url = git@github.com:alpaker/Fill-Column-Indicator.git
+	url = https://github.com/alpaker/Fill-Column-Indicator.git
 [submodule "vendor/emacs-epc"]
 	path = vendor/emacs-epc
-	url = git@github.com:kiwanami/emacs-epc.git
+	url = https://github.com/kiwanami/emacs-epc.git
 [submodule "vendor/emacs-jedi"]
 	path = vendor/emacs-jedi
-	url = git@github.com:tkf/emacs-jedi.git
+	url = https://github.com/tkf/emacs-jedi.git
 [submodule "vendor/emacs-deferred"]
 	path = vendor/emacs-deferred
-	url = git@github.com:kiwanami/emacs-deferred.git
+	url = https://github.com/kiwanami/emacs-deferred.git
 [submodule "vendor/emacs-ctable"]
 	path = vendor/emacs-ctable
-	url = git@github.com:kiwanami/emacs-ctable.git
+	url = https://github.com/kiwanami/emacs-ctable.git
 [submodule "vendor/emacs-python-environment"]
 	path = vendor/emacs-python-environment
-	url = git@github.com:tkf/emacs-python-environment.git
-[submodule "vendor/emacs-websocket"]
-	path = vendor/emacs-websocket
-	url = git@github.com:ahyatt/emacs-websocket.git
-[submodule "vendor/emacs-request"]
-	path = vendor/emacs-request
-	url = git@github.com:tkf/emacs-request.git
-[submodule "vendor/emacs-ipython-notebook"]
-	path = vendor/emacs-ipython-notebook
-	url = git@github.com:tkf/emacs-ipython-notebook.git
+	url = https://github.com/tkf/emacs-python-environment.git
 [submodule "vendor/virtualenvwrapper.el"]
 	path = vendor/virtualenvwrapper.el
-	url = git@github.com:porterjamesj/virtualenvwrapper.el.git
+	url = https://github.com/porterjamesj/virtualenvwrapper.el.git
 [submodule "vendor/dash.el"]
 	path = vendor/dash.el
-	url = git@github.com:magnars/dash.el.git
+	url = https://github.com/magnars/dash.el.git
 [submodule "vendor/s.el"]
 	path = vendor/s.el
-	url = git@github.com:magnars/s.el.git
+	url = https://github.com/magnars/s.el.git
 [submodule "vendor/monky"]
 	path = vendor/monky
-	url = git@github.com:ananthakumaran/monky.git
+	url = https://github.com/ananthakumaran/monky.git
 [submodule "vendor/rainbow-delimiters"]
 	path = vendor/rainbow-delimiters
 	url = https://github.com/Fanael/rainbow-delimiters
@@ -120,10 +111,10 @@
 	url = https://github.com/spotify/dockerfile-mode
 [submodule "vendor/any-ini-mode"]
 	path = vendor/any-ini-mode
-	url = git@github.com:emacsmirror/any-ini-mode.git
+	url = https://github.com/emacsmirror/any-ini-mode.git
 [submodule "vendor/powerline"]
 	path = vendor/powerline
-	url = git@github.com:milkypostman/powerline.git
+	url = https://github.com/milkypostman/powerline.git
 [submodule "vendor/py-isort"]
 	path = vendor/py-isort
 	url = https://github.com/paetzke/py-isort.el
@@ -135,97 +126,97 @@
 	url = https://github.com/humitos/py-docformatter.el
 [submodule "vendor/projectile"]
 	path = vendor/projectile
-	url = git@github.com:bbatsov/projectile.git
+	url = https://github.com/bbatsov/projectile.git
 [submodule "vendor/expand-region.el"]
 	path = vendor/expand-region.el
-	url = git@github.com:magnars/expand-region.el.git
+	url = https://github.com/magnars/expand-region.el.git
 [submodule "vendor/ace-jump-mode"]
 	path = vendor/ace-jump-mode
-	url = git@github.com:winterTTr/ace-jump-mode.git
+	url = https://github.com/winterTTr/ace-jump-mode.git
 [submodule "vendor/undohist-el"]
 	path = vendor/undohist-el
-	url = git@github.com:m2ym/undohist-el.git
+	url = https://github.com/m2ym/undohist-el.git
 [submodule "vendor/helm-ls-git"]
 	path = vendor/helm-ls-git
-	url = git@github.com:emacs-helm/helm-ls-git.git
+	url = https://github.com/emacs-helm/helm-ls-git.git
 [submodule "vendor/helm-firefox"]
 	path = vendor/helm-firefox
-	url = git@github.com:emacs-helm/helm-firefox.git
+	url = https://github.com/emacs-helm/helm-firefox.git
 [submodule "vendor/helm-projectile"]
 	path = vendor/helm-projectile
-	url = git@github.com:bbatsov/helm-projectile.git
+	url = https://github.com/bbatsov/helm-projectile.git
 [submodule "vendor/etags-update"]
 	path = vendor/etags-update
-	url = git@github.com:mattkeller/etags-update.git
+	url = https://github.com/mattkeller/etags-update.git
 [submodule "vendor/gist.el"]
 	path = vendor/gist.el
-	url = git@github.com:defunkt/gist.el.git
+	url = https://github.com/defunkt/gist.el.git
 [submodule "vendor/gh.el"]
 	path = vendor/gh.el
-	url = git@github.com:sigma/gh.el.git
+	url = https://github.com/sigma/gh.el.git
 [submodule "vendor/pcache"]
 	path = vendor/pcache
-	url = git@github.com:sigma/pcache.git
+	url = https://github.com/sigma/pcache.git
 [submodule "vendor/logito"]
 	path = vendor/logito
-	url = git@github.com:sigma/logito.git
+	url = https://github.com/sigma/logito.git
 [submodule "vendor/helm-swoop"]
 	path = vendor/helm-swoop
-	url = git@github.com:ShingoFukuyama/helm-swoop.git
+	url = https://github.com/ShingoFukuyama/helm-swoop.git
 [submodule "vendor/smex"]
 	path = vendor/smex
-	url = git@github.com:nonsequitur/smex.git
+	url = https://github.com/nonsequitur/smex.git
 [submodule "vendor/helm-flx"]
 	path = vendor/helm-flx
-	url = git@github.com:PythonNut/helm-flx.git
+	url = https://github.com/PythonNut/helm-flx.git
 [submodule "vendor/flx"]
 	path = vendor/flx
-	url = git@github.com:lewang/flx.git
+	url = https://github.com/lewang/flx.git
 [submodule "vendor/helm-fuzzier"]
 	path = vendor/helm-fuzzier
-	url = git@github.com:EphramPerdition/helm-fuzzier.git
+	url = https://github.com/EphramPerdition/helm-fuzzier.git
 [submodule "vendor/yasnippet"]
 	path = vendor/yasnippet
 	url = https://github.com/joaotavora/yasnippet
 [submodule "vendor/emacs-git-gutter"]
 	path = vendor/emacs-git-gutter
-	url = git@github.com:syohex/emacs-git-gutter.git
+	url = https://github.com/syohex/emacs-git-gutter.git
 [submodule "vendor/browse-at-remote"]
 	path = vendor/browse-at-remote
-	url = git@github.com:rmuslimov/browse-at-remote.git
+	url = https://github.com/rmuslimov/browse-at-remote.git
 [submodule "vendor/f.el"]
 	path = vendor/f.el
-	url = git@github.com:rejeep/f.el.git
+	url = https://github.com/rejeep/f.el.git
 [submodule "vendor/git-timemachine"]
 	path = vendor/git-timemachine
-	url = git@github.com:pidu/git-timemachine.git
+	url = https://github.com/pidu/git-timemachine.git
 [submodule "vendor/helm-dash"]
 	path = vendor/helm-dash
-	url = git@github.com:areina/helm-dash.git
+	url = https://github.com/areina/helm-dash.git
 [submodule "vendor/restclient.el"]
 	path = vendor/restclient.el
-	url = git@github.com:pashky/restclient.el.git
+	url = https://github.com/pashky/restclient.el.git
 [submodule "vendor/discover-my-major"]
 	path = vendor/discover-my-major
-	url = git@github.com:steckerhalter/discover-my-major.git
+	url = https://github.com/steckerhalter/discover-my-major.git
 [submodule "vendor/makey"]
 	path = vendor/makey
-	url = git@github.com:mickeynp/makey.git
+	url = https://github.com/mickeynp/makey.git
 [submodule "vendor/company-quickhelp"]
 	path = vendor/company-quickhelp
-	url = git@github.com:expez/company-quickhelp.git
+	url = https://github.com/expez/company-quickhelp.git
 [submodule "vendor/pos-tip"]
 	path = vendor/pos-tip
-	url = git@github.com:pitkali/pos-tip.git
+	url = https://github.com/pitkali/pos-tip.git
 [submodule "vendor/erc-hl-nicks"]
 	path = vendor/erc-hl-nicks
-	url = git@github.com:leathekd/erc-hl-nicks.git
+	url = https://github.com/leathekd/erc-hl-nicks.git
 [submodule "vendor/emacs-helm-ag"]
 	path = vendor/emacs-helm-ag
-	url = git@github.com:syohex/emacs-helm-ag.git
+	url = https://github.com/syohex/emacs-helm-ag.git
 [submodule "vendor/marshal.el"]
 	path = vendor/marshal.el
 	url = https://github.com/sigma/marshal.el
 [submodule "vendor/ht.el"]
 	path = vendor/ht.el
-	url = git@github.com:Wilfred/ht.el.git
+	url = https://github.com/Wilfred/ht.el.git
