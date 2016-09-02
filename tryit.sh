@@ -90,6 +90,10 @@ cd vendor/yasnippet; git submodule init; git submodule update ; cd -
 if [ -e startup.d/erc.el ]; then
   mv --force startup.d/erc.el startup.d/erc.el.disabled > /dev/null
 fi
+# disable which-func-mode for tryit.sh because it doesn't work in Emacs 25.1
+if [ -e startup.d/which-func-mode.el ]; then
+  mv --force startup.d/which-func-mode.el startup.d/which-func-mode.el.disabled > /dev/null
+fi
 # configure helm
 if [ ! -e vendor/helm/helm-autoloads.el ]; then
   cd vendor/helm ; make ; cd -
