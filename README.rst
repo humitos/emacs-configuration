@@ -299,6 +299,8 @@ projectile
 :C-c p f: find file in current project
 :C-c C-s: perform a grep on the current project
 :C-c p h: all together
+:C-c p j: search in TAGS on current project
+:C-c p R: regenerate TAGS for current project
 
   This is also integrated with helm
 
