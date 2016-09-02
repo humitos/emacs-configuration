@@ -16,6 +16,8 @@ The idea is that you can try all the features and then copy those ones
 that you like most by reading all the configuration scripts or just
 use it as it is :)
 
+**Important: emacs 24.4 or greater is needed**
+
 #. Install all the dependencies (e.g. in Ubuntu)::
 
      sudo apt-get install emacs python3-venv git
