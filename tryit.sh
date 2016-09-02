@@ -24,9 +24,6 @@
 # Useful to start quickly an emacs -Q with this configuration.
 # Run it from this directory or symlink it somewhere in your PATH.
 
-# stop the script if something goes wrong
-set -e
-
 # If TEMP env var exists use it otherwise declare it.
 [ -z $TEMP ] && declare TEMP="/tmp"
 
@@ -41,6 +38,9 @@ if [ $EMACS_SNAPSHOT_CMD -eq 0 ]; then
 else
   EMACS=emacs
 fi
+
+# stop the script if something goes wrong
+set -e
 
 case $1 in
     -P)
