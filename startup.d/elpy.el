@@ -36,6 +36,13 @@
 ;; disable find-file-in-project because of helm
 (define-key elpy-mode-map (kbd "C-c C-f") nil)
 
+;; https://masteringemacs.org/article/compiling-running-scripts-emacs
+(defun python--add-debug-highlight ()
+  "Adds a highlighter for use by `python--pdb-breakpoint-string'"
+  (highlight-lines-matching-regexp "# DEBUG #\\s-*$" 'hi-red-b))
+
+(add-hook 'python-mode-hook 'python--add-debug-highlight)
+
 ;; https://github.com/jorgenschaefer/elpy/wiki/Customizations#an-alternative-to-elpy-goto-definition
 (defun elpy-goto-definition-or-rgrep ()
   "Go to the definition of the symbol at point, if found. Otherwise, run `elpy-rgrep-symbol'."
