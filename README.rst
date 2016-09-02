@@ -5,6 +5,29 @@
   NOTE: do not installing it if you are not sure what you are doing... :)
 
 
+Try it!
+=======
+
+If you want to try all this configuration without changing anything in
+your computer, you can do it. Even if you already have your own emacs
+configuration and without modifying it!
+
+The idea is that you can try all the features and then copy those ones
+that you like most by reading all the configuration scripts or just
+use it as it is :)
+
+#. Install all the dependencies (e.g. in Ubuntu)::
+
+     sudo apt-get install emacs python3-venv git
+
+#. Clone this repository::
+
+     git clone --recursive --depth 1 https://github.com/humitos/emacs-configuration.git
+     cd emacs-configuration
+     ./tryit.sh
+
+#. Enjoy!
+
 Installation
 ============
 
@@ -12,7 +35,7 @@ Installation
 #. Clone this repository on the standard `.emacs.d` settings directory::
 
      cd ~
-     git clone --recursive git://github.com/humitos/emacs-configuration.git .emacs.d
+     git clone --recursive --depth 1 https://github.com/humitos/emacs-configuration.git .emacs.d
 
 #. Compile helm::
 
