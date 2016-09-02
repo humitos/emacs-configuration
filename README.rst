@@ -318,7 +318,8 @@ restclient-mode
 
 * https://github.com/pashky/restclient.el
 
-:C-c C-c: execute the current request
+:C-c C-v: execute the current request
+:C-c C-u: copy the CURL command to the clipboard
 :C-c C-g: browse the queries / variables / etc with helm
 
 
