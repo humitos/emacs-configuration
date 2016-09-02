@@ -283,6 +283,14 @@ Once on this buffer
 :c c: commit current staged changes
 :c a: amend current staged changes to previous commit
 :P u: push to the current branch
+:b b: checkout another branch
+:b c: checkout a new branch
+:b n: create new branch
+:z z: stash current changes
+:z p: pop stashed changes
+:f u: fetch from origin
+:F e: pulll from elsewhere
+
 
 Commands:
 
