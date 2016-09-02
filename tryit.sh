@@ -31,7 +31,16 @@ set -e
 [ -z $TEMP ] && declare TEMP="/tmp"
 
 CONF_FILE="$TEMP/humitos-cfg.el"
-EMACS=emacs
+
+# check if we have emacs-snapshot installed first
+which emacs-snapshot
+EMACS_SNAPSHOT_CMD=$?
+
+if [ $EMACS_SNAPSHOT_CMD -eq 0 ]; then
+  EMACS=emacs-snapshot
+else
+  EMACS=emacs
+fi
 
 case $1 in
     -P)
@@ -101,14 +110,20 @@ else
   source emacsenv/bin/activate
 fi
 
-EMACS_24_4=`$EMACS --version | grep 24.4 | wc -l`
+EMACS_24_4=`$EMACS --version | grep -E "(24.4|25.)" | wc -l`
 
 if [ $EMACS_24_4 -eq 1 ]; then
   $EMACS -Q -l $CONF_FILE $@
 else
-  echo "ERROR: Emacs 24.4 or greater is needed"
+  echo
+  echo
+  echo "*** ERROR ***"
+  echo "*** ERROR ***: Emacs 24.4 or greater is needed and you have: `$EMACS --version | head -n 1`"
+  echo "*** ERROR ***"
   echo "  In Ubuntu you can add a PPA repository and install \`emacs-snapshot\` package:"
   echo "    $ sudo add-apt-repository ppa:ubuntu-elisp/ppa"
   echo "    $ sudo apt-get update"
   echo "    $ sudo apt-get install emacs-snapshot"
+  echo
+  echo
 fi
