@@ -11,10 +11,13 @@
                                       -CAfile /etc/ssl/certs
                                       -cert /etc/ssl/certs" ))
 
-(setq erc-modules '(log spelling hl-nicks completion netsplit
-			fill button match track readonly networks
-			ring autojoin noncommands irccontrols
-			move-to-prompt stamp menu list))
+(setq erc-modules '(autojoin completion log move-to-prompt
+		    netsplit scrolltobottom spelling hl-nicks
+		    keep-place fill button match track readonly
+		    networks notifications ring noncommands
+		    irccontrols stamp menu list))
+
+(setq erc-input-line-position -2)
 
 ;; Save logs here
 (setq erc-log-channels-directory(concat user-emacs-directory "erc/logs/"))
@@ -27,6 +30,11 @@
       erc-save-queries-on-quit nil
       erc-log-write-after-send t
       erc-log-write-after-insert t)
+
+(setq erc-timestamp-only-if-changed-flag nil
+      erc-timestamp-format "%H:%M "
+      erc-fill-prefix "      "
+      erc-insert-timestamp-function 'erc-insert-timestamp-left)
 
 ;; Don't ask me if I want to save the logs when I leave emacs
 (defadvice save-buffers-kill-emacs (before save-logs (arg) activate)
