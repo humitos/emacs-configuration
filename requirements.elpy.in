@@ -11,6 +11,7 @@ isort
 jedi
 path.py
 pep8
+pycodestyle
 pyflakes
 pylint
 rope
