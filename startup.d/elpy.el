@@ -9,8 +9,6 @@
 ;; Run flycheck only when the file is saved
 (setq flycheck-check-syntax-automatically '(save))
 
-(pyvenv-workon 'emacs-jedi)
-
 ;; https://github.com/kpurdon/kp-emacs/blob/master/development/_python.el
 ;; enable autopep8 formatting on save
 ;; ignoring:
@@ -25,7 +23,6 @@
 ;; enable newline-and-indent on return
 ;; (define-key global-map (kbd "RET") 'newline-and-indent)
 
-
 ;; navigate between Flycheck errors (I'm not using Flymake)
 (define-key elpy-mode-map (kbd "C-c C-n") 'flycheck-next-error)
 (define-key elpy-mode-map (kbd "C-c C-p") 'flycheck-previous-error)
@@ -38,9 +35,8 @@
 
 ;; https://masteringemacs.org/article/compiling-running-scripts-emacs
 (defun python--add-debug-highlight ()
-  "Adds a highlighter for use by `python--pdb-breakpoint-string'"
+  "Adds a highlighter for '# DEBUG #' string"
   (highlight-lines-matching-regexp "# DEBUG #\\s-*$" 'hi-red-b))
-
 (add-hook 'python-mode-hook 'python--add-debug-highlight)
 
 ;; https://github.com/jorgenschaefer/elpy/wiki/Customizations#an-alternative-to-elpy-goto-definition
