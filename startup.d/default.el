@@ -7,7 +7,6 @@
 ;; Save the session
 (desktop-save-mode 1)
 
-
 ;; http://gastonramos.wordpress.com/2014/10/09/emacs-show-trailing-whitespace
 ;; show trailing whitespaces
 ;; (show-ws-toggle-show-trailing-whitespace)
@@ -46,11 +45,12 @@
 
 ;; '(show-paren-mode t)
 
-;; remove tool bar
-(tool-bar-mode -1)
+;; remove menu bar
+(menu-bar-mode -1)
 
 ;; remove scroll bar
 (scroll-bar-mode -1)
+(horizontal-scroll-bar-mode -1)
 
 ;; do not show tooltips for mouse
 (tooltip-mode -1)
@@ -60,3 +60,6 @@
 
 ;; highlight current line
 (global-hl-line-mode 1)
+
+;; remove tool bar
+(tool-bar-mode -1)
