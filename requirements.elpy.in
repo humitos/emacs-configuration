@@ -3,6 +3,7 @@ docformatter
 elpy
 epc
 flake8
+flake8-docstrings
 importmagic
 ipdb
 ipython
