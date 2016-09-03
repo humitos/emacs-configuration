@@ -130,6 +130,7 @@ if [ ! -d emacsenv ]; then
       rm -rf emacsenv
       virtualenv -p python3 emacsenv
   fi
+  # install all the python dependencies
   source emacsenv/bin/activate
   pip install -U pip
   pip install -r requirements.elpy.in
