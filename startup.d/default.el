@@ -63,3 +63,6 @@
 
 ;; remove tool bar
 (tool-bar-mode -1)
+
+;; do not ask for "yes" or "no" but "y" and "n" instead
+(defalias 'yes-or-no-p 'y-or-n-p)
