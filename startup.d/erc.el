@@ -11,8 +11,16 @@
                                       -CAfile /etc/ssl/certs
                                       -cert /etc/ssl/certs" ))
 
+(setq erc-modules '(log spelling hl-nicks completion netsplit
+			fill button match track readonly networks
+			ring autojoin noncommands irccontrols
+			move-to-prompt stamp menu list))
+
 ;; Save logs here
 (setq erc-log-channels-directory(concat user-emacs-directory "erc/logs/"))
+
+;; Enable logging
+(setq erc-enable-logging 'erc-log-all-but-server-buffers)
 
 ;; Save log on channel activity
 (setq erc-save-buffer-on-part t
@@ -40,6 +48,12 @@
 ;; https://www.emacswiki.org/emacs/ErcConfiguration
 ;; use a different prompt
 (setq erc-prompt ">>> ")
+
+;; use "_" at the end if the nick is already taken
+(setq erc-nick-uniquifier "_")
+
+;; try to connect using a different nickname
+(setq erc-try-new-nick-p t)
 
 ;; disable linum-mode in erc-mode
 (add-hook 'erc-mode-hook
@@ -115,3 +129,9 @@ erc-modified-channels-alist. Should be executed on window change."
        (add-hook 'window-configuration-change-hook 'erc-bar-update-overlay))
      (add-hook 'erc-send-completed-hook (lambda (str)
 					  (erc-bar-update-overlay)))))
+
+;; Rename server buffers to reflect the current network name instead
+;; of SERVER:PORT. (e.g. "freenode" instead of "irc.freenode.net:6667"). This
+;; is useful when using a bouncer like ZNC where you have multiple
+;; connections to the same server.
+(setq erc-rename-buffers t)
