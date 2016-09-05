@@ -1,8 +1,7 @@
 ;; init.el configuration file
 
+;; Set path for all the libraries/plugins/packages installed
 (add-to-list 'load-path (concat user-emacs-directory "packages"))
-(let ((default-directory (concat user-emacs-directory "packages")))
-  (normal-top-level-add-subdirs-to-load-path))
 
 ;; Set path for startup.d
 (add-to-list 'load-path (concat user-emacs-directory "vendor/startupd.el"))
