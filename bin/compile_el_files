@@ -1,0 +1,7 @@
+# -*- mode: sh; -*-
+#!/bin/bash
+
+set -e
+
+emacs -Q --batch -l "~/.emacs" -f batch-byte-compile packages/*.el 2>&1 | grep -C 4 "Error"
+

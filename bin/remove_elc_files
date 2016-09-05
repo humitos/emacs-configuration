@@ -1,0 +1,4 @@
+# -*- mode: sh; -*-
+#!/bin/bash
+
+find . -name "*.elc" -exec rm {} \;

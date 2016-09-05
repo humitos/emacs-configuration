@@ -1,0 +1,10 @@
+# -*- mode: sh; -*-
+#!/bin/bash
+
+set -e
+
+# Update all git repositories
+git submodule foreach git pull
+
+# Compile all new packages
+./bin/compile_el_files

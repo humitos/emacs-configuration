@@ -53,6 +53,10 @@ Installation
 
      (load (concat emacs-user-directory "init.el"))
 
+#. Compile all `packages` (optional)::
+
+     ./bin/compile_el_files
+
 #. Run emacs
 
 ----
