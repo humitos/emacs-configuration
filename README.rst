@@ -303,6 +303,7 @@ Once on this buffer
 Commands:
 
 :magit-log: show the git log
+:magit-blame: show the author of each chunk of code
 
 
 projectile
