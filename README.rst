@@ -140,6 +140,7 @@ Main modules included in this configuration
 * visual-regexp-steroids
 * web-mode
 * yasnippet
+* zzz-to-char
 
 These are the hotkeys that I use most.
 
@@ -355,6 +356,14 @@ visual-regexp-steroids
 * https://github.com/benma/visual-regexp-steroids.el/
 
 :vr/replace: search and replace using regex (visual and interactive results)
+
+
+zzz-to-char
+-----------
+
+* https://github.com/mrkkrp/zzz-to-char
+
+:M-z: zap up to one of the characters in the current paragraph
 
 
 References

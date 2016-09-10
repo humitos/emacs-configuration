@@ -226,3 +226,9 @@
 [submodule "vendor/visual-regexp-steroids.el"]
 	path = vendor/visual-regexp-steroids.el
 	url = https://github.com/benma/visual-regexp-steroids.el.git
+[submodule "vendor/zzz-to-char"]
+	path = vendor/zzz-to-char
+	url = https://github.com/mrkkrp/zzz-to-char.git
+[submodule "vendor/avy"]
+	path = vendor/avy
+	url = https://github.com/abo-abo/avy.git
