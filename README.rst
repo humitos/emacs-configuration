@@ -137,6 +137,7 @@ Main modules included in this configuration
 * restclient-mode
 * twittering-mode
 * undohist
+* visual-regexp-steroids
 * web-mode
 * yasnippet
 
@@ -346,6 +347,14 @@ twittering-mode
 :r: show replies
 :j: navigate to next tweet
 :k: navigate previous tweet
+
+
+visual-regexp-steroids
+----------------------
+
+* https://github.com/benma/visual-regexp-steroids.el/
+
+:vr/replace: search and replace using regex (visual and interactive results)
 
 
 References

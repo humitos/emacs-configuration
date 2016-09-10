@@ -220,3 +220,9 @@
 [submodule "vendor/ht.el"]
 	path = vendor/ht.el
 	url = https://github.com/Wilfred/ht.el.git
+[submodule "vendor/visual-regexp.el"]
+	path = vendor/visual-regexp.el
+	url = https://github.com/benma/visual-regexp.el.git
+[submodule "vendor/visual-regexp-steroids.el"]
+	path = vendor/visual-regexp-steroids.el
+	url = https://github.com/benma/visual-regexp-steroids.el.git
