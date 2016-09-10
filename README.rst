@@ -106,7 +106,7 @@ now::
 
   user_pref("browser.bookmarks.autoExportHTML", true);
 
-  
+
 Main modules included in this configuration
 ===========================================
 
@@ -139,6 +139,7 @@ Main modules included in this configuration
 * undohist
 * visual-regexp-steroids
 * web-mode
+* whitespace-cleanup-mode
 * yasnippet
 * zzz-to-char
 
@@ -197,7 +198,7 @@ expand-region
 
 :C-=: mark region based on semantics
 
-      
+
 find-file-in-project
 --------------------
 

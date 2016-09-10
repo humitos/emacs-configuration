@@ -232,3 +232,6 @@
 [submodule "vendor/avy"]
 	path = vendor/avy
 	url = https://github.com/abo-abo/avy.git
+[submodule "vendor/whitespace-cleanup-mode"]
+	path = vendor/whitespace-cleanup-mode
+	url = https://github.com/purcell/whitespace-cleanup-mode.git
