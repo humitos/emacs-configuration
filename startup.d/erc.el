@@ -143,3 +143,9 @@ erc-modified-channels-alist. Should be executed on window change."
 ;; is useful when using a bouncer like ZNC where you have multiple
 ;; connections to the same server.
 (setq erc-rename-buffers t)
+
+;; Hide JOIN PART and QUIT server messages from the channel buffer since they are annoying and not so useful
+;; http://wiki.xkcd.com/irc/Hide_join_part_messages
+;; (setq erc-hide-list '("JOIN" "PART" "QUIT"))
+(setq erc-lurker-hide-list '("JOIN" "PART" "QUIT"))
+(setq erc-lurker-threshold-time 3600)  ;; hide only if the user was idle for this time
