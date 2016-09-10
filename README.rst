@@ -128,6 +128,7 @@ Main modules included in this configuration
 * jedi
 * magit
 * material-theme
+* origami.el
 * powerline
 * projectile
 * py-autopep8
@@ -307,6 +308,15 @@ Commands:
 
 :magit-log: show the git log
 :magit-blame: show the author of each chunk of code
+
+
+origami.el
+----------
+
+* https://github.com/gregsexton/origami.el
+
+:C-c f a: toggle (folding) all the regions
+:C-c f e: toggle the fold selected
 
 
 projectile
