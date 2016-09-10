@@ -183,7 +183,7 @@ elpy
 :M-left:
 :M-right: move the selected region by indentation
 :M-.: go to definition (class, function, variable, etc)
-:M.*: go back where we was
+:M-,: go back where we was
 
 :C-c C-z: switch to a Python shell
 :C-c C-d: open Python documentation (class, function, etc)
