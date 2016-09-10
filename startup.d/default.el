@@ -66,3 +66,10 @@
 
 ;; do not ask for "yes" or "no" but "y" and "n" instead
 (defalias 'yes-or-no-p 'y-or-n-p)
+
+;; use spaces by default to indent
+(setq-default indent-tabs-mode nil)
+
+;; set maximun number of kills
+;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Kill-Ring.html
+(setq kill-ring-max 100)
