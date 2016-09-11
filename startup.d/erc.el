@@ -149,3 +149,22 @@ erc-modified-channels-alist. Should be executed on window change."
 ;; (setq erc-hide-list '("JOIN" "PART" "QUIT"))
 (setq erc-lurker-hide-list '("JOIN" "PART" "QUIT"))
 (setq erc-lurker-threshold-time 3600)  ;; hide only if the user was idle for this time
+
+;; switch between current buffer and ERC channel
+(defun switch-erc-channel-and-back (channel)
+  "Switch to ERC CHANNEL buffer and back"
+  (let ((current-buffer (current-buffer))
+        (channel-buffer (get-buffer channel)))
+    (if (eq current-buffer channel-buffer)
+        (progn
+        (pop-global-mark)
+        (deactivate-mark))
+      (progn
+        (push-mark)
+        (switch-to-buffer channel-buffer)))))
+
+(defun switch-erc-pyar-and-back ()
+  (interactive)
+  (switch-erc-channel-and-back "#pyar"))
+
+(global-set-key (kbd "<f12>") 'switch-erc-pyar-and-back)
