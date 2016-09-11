@@ -11,13 +11,40 @@
                                       -CAfile /etc/ssl/certs
                                       -cert /etc/ssl/certs" ))
 
-(setq erc-modules '(autojoin completion log move-to-prompt
-		    netsplit scrolltobottom spelling hl-nicks
-		    keep-place fill button match track readonly
-		    networks notifications ring noncommands
-		    irccontrols stamp menu list))
+(setq erc-modules '(autoaway autojoin completion log move-to-prompt
+		    netsplit spelling hl-nicks keep-place fill
+		    button match track readonly networks
+		    notifications ring noncommands irccontrols
+		    stamp menu list scrolltobottom))
 
 (setq erc-input-line-position -2)
+
+;; Kill the ERC buffers after /quit
+(setq erc-kill-server-buffer-on-quit t)
+(setq erc-kill-queries-on-quit t)
+
+;; If I post while status is "away", set me as back. (i.e. unset /away)
+;; http://home.thep.lu.se/~karlf/emacs.html
+(setq erc-auto-discard-away t)
+
+;; https://www.emacswiki.org/emacs/ErcAutoAway
+(setq erc-autoaway-idle-seconds 600)
+
+;; Always reconnect
+;; https://github.com/vikraman/.emacs.d/blob/master/elisp/erc-init.el
+(setq erc-server-auto-reconnect t)
+(setq erc-server-reconnect-attempts t)
+
+;; Open query buffers in the current window
+(setq erc-query-display 'buffer)
+
+;; Do not ask "Active processes exist; kill them and exit anyway? (yes
+;; or no)" for ERC server buffer
+;; https://github.com/hendrikvanantwerpen/.emacs.d/blob/master/el-get-user/inits/init-erc.el
+;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Query-Before-Exit.html
+(add-hook 'erc-after-connect
+          '(lambda (server nick)
+             (set-process-query-on-exit-flag (get-buffer-process (current-buffer)) nil)))
 
 ;; Save logs here
 (setq erc-log-channels-directory(concat user-emacs-directory "erc/logs/"))
@@ -38,7 +65,7 @@
 
 ;; Don't ask me if I want to save the logs when I leave emacs
 (defadvice save-buffers-kill-emacs (before save-logs (arg) activate)
-(save-some-buffers t (lambda () (when (eq major-mode 'erc-mode) t))))
+  (save-some-buffers t (lambda () (when (eq major-mode 'erc-mode) t))))
 
 ;; Auto-connect / Join to IRC
 ;; load nick and password from another file
@@ -168,3 +195,10 @@ erc-modified-channels-alist. Should be executed on window change."
   (switch-erc-channel-and-back "#pyar"))
 
 (global-set-key (kbd "<f12>") 'switch-erc-pyar-and-back)
+
+
+;; do not move the cursor to the top
+;; http://stackoverflow.com/questions/22310357/stop-emacs-erc-from-recentering
+(add-to-list 'erc-mode-hook
+             (lambda ()
+               (set (make-local-variable 'scroll-conservatively) 100)))
