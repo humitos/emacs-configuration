@@ -70,6 +70,9 @@
 ;; use spaces by default to indent
 (setq-default indent-tabs-mode nil)
 
+;; load my mate.el script to remind me to drink a mate :)
+(load-file (concat emacs-user-directory "mate.el"))
+
 ;; set maximun number of kills
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Kill-Ring.html
 (setq kill-ring-max 100)
