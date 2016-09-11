@@ -24,9 +24,9 @@
 
 (defun mate-say (notify)
   "Use espeak to say 'mate' and show a notification using 'notify' if NOTIFY"
-  (shell-command "espeak -v es Mate")
+  (call-process "espeak" nil 0 nil "-v" "es" "Mate")
   (if (eq notify t)
-      (shell-command "notify-send -i terminal -t 3000 Mate \"Cebar un mate\"")))
+      (call-process "notify-send" nil 0 nil "-i" "terminal" "-t" "3000" "Mate" "\"Cebar un mate\"")))
 
 (defvar mate-say-cancel-id nil
   "ID of the timer to be cancelled")
@@ -37,5 +37,4 @@
 
 (defun mate-say-stop ()
   "Cancel the timer to stop calling `mate-say` function"
-    (cancel-timer mate-say-cancel-id))
-
+  (cancel-timer mate-say-cancel-id))
