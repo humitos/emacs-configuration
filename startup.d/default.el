@@ -76,3 +76,17 @@
 ;; set maximun number of kills
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Kill-Ring.html
 (setq kill-ring-max 100)
+
+
+;; It is the opposite of fill-paragraph
+;; https://www.emacswiki.org/emacs/UnfillParagraph
+(defun unfill-paragraph (&optional region)
+  "Takes a multi-line paragraph and makes it into a single line of text."
+  (interactive (progn (barf-if-buffer-read-only) '(t)))
+  (let ((fill-column (point-max))
+        ;; This would override `fill-column' if it's an integer.
+        (emacs-lisp-docstring-fill-column t))
+    (fill-paragraph nil region)))
+
+;; Handy key definition
+(define-key global-map (kbd "M-Q") 'unfill-paragraph)
