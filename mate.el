@@ -1,3 +1,4 @@
+;; TODO list:
 ;; 1. add ability to call it interactively
 ;; 2. add ability to say another thing
 ;; 3. add ability to view all the list of timer
@@ -5,7 +6,6 @@
 ;; 5. add ability to stop all at once
 ;; 6. add ability to do not repeat the alert
 ;; 7. use different variables for espeak cmd, notify-send, icon, notify-timer and language
-;; 8. make shell-command async because it takes the CPU while saying
 
 
 (global-set-key (kbd "C-c m") 'mate-start-stop)
@@ -26,7 +26,7 @@
   "Use espeak to say 'mate' and show a notification using 'notify' if NOTIFY"
   (call-process "espeak" nil 0 nil "-v" "es" "Mate")
   (if (eq notify t)
-      (call-process "notify-send" nil 0 nil "-i" "terminal" "-t" "3000" "Mate" "\"Cebar un mate\"")))
+      (call-process "notify-send" nil 0 nil "-i" "terminal" "-t" "3000" "Mate" "Cebar un mate")))
 
 (defvar mate-say-cancel-id nil
   "ID of the timer to be cancelled")
