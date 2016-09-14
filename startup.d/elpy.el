@@ -9,6 +9,14 @@
 ;; Run flycheck only when the file is saved
 (setq flycheck-check-syntax-automatically '(save))
 
+;; Use rope as backend for Elpy
+;; (setq elpy-rpc-backend "rope")
+
+;; Use jedi as backend for Elpy
+(setq elpy-rpc-backend "jedi")
+;; Set timeout for backend rpc
+(setq elpy-rpc-timeout 3)
+
 ;; https://github.com/kpurdon/kp-emacs/blob/master/development/_python.el
 ;; enable autopep8 formatting on save
 ;; ignoring:
