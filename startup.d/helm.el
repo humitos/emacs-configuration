@@ -1,4 +1,3 @@
-
 ;; http://tuhdo.github.io/helm-intro.html
 
 (require 'helm)
@@ -199,3 +198,7 @@
 
 ;; search in dash documentation locally
 (require 'helm-dash)
+
+
+;; When using "C-c h e" match in all the text (including filename)
+(setq helm-etags-match-part-only 'all)
