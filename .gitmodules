@@ -229,3 +229,6 @@
 [submodule "vendor/whitespace-cleanup-mode"]
 	path = vendor/whitespace-cleanup-mode
 	url = https://github.com/purcell/whitespace-cleanup-mode.git
+[submodule "vendor/origami.el"]
+	path = vendor/origami.el
+	url = https://github.com/gregsexton/origami.el
