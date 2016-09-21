@@ -74,13 +74,16 @@
 
 
 ;; https://github.com/hatschipuh/helm-better-defaults
-(require 'smex)
 (require 'helm-swoop)
 (require 'helm-flx)
 (helm-flx-mode +1)
 (require 'helm-fuzzier)
 (helm-fuzzier-mode 1)
+
+;; (require 'smex)
 ;; (require 'helm-smex)
+;; (global-set-key [remap execute-extended-command] #'helm-smex)
+;; (global-set-key (kbd "M-X") #'helm-smex-major-mode-commands)
 
 ;; The following snippet will configure helm to always pop up at the
 ;; bottom.

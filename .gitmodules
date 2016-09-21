@@ -160,9 +160,6 @@
 [submodule "vendor/helm-swoop"]
 	path = vendor/helm-swoop
 	url = https://github.com/ShingoFukuyama/helm-swoop.git
-[submodule "vendor/smex"]
-	path = vendor/smex
-	url = https://github.com/nonsequitur/smex.git
 [submodule "vendor/helm-flx"]
 	path = vendor/helm-flx
 	url = https://github.com/PythonNut/helm-flx.git
