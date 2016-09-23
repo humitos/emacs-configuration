@@ -16,3 +16,9 @@
 -/undohist
 -/*.json
 -/manage.py
+-/var
+-/url
+-/auto-save-list
+-/emacsenv
+-/erc
+
