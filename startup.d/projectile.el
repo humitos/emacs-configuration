@@ -20,4 +20,16 @@
 
 ;; https://github.com/bbatsov/projectile/issues/133#issuecomment-97118653
 ;; sudo apt-get install exuberant-ctags
-(setq projectile-tags-command "ctags-exuberant -Re -f \"%s\" %s")
+;; (setq projectile-tags-command "ctags-exuberant -Re --python-kinds=-iv -f \"%s\" %s")
+
+;; https://github.com/universal-ctags/ctags
+;; Build from source: https://github.com/universal-ctags/ctags/blob/master/docs/autotools.rst
+;;   $ ./autogen.sh
+;;   $ ./configure --prefix=`pwd`/build
+;;   $ make
+;;   $ make install
+(setq projectile-tags-command
+      (concat emacs-user-directory
+              "vendor/ctags/build/bin/ctags"
+              (concat " --exclude=" emacs-user-directory ".ctags")
+              " -Re --python-kinds=-iv -f \"%s\" %s"))

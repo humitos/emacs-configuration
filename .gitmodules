@@ -232,3 +232,6 @@
 [submodule "vendor/origami.el"]
 	path = vendor/origami.el
 	url = https://github.com/gregsexton/origami.el
+[submodule "vendor/ctags"]
+	path = vendor/ctags
+	url = https://github.com/universal-ctags/ctags
