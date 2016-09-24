@@ -6,5 +6,8 @@ set -e
 # Update all git repositories
 git submodule foreach git pull
 
+./bin/compile_helm
+./bin/compile_ctags
+
 # Compile all new packages
 ./bin/compile_el_files

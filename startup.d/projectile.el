@@ -31,5 +31,5 @@
 (setq projectile-tags-command
       (concat emacs-user-directory
               "vendor/ctags/build/bin/ctags"
-              (concat " --exclude=" emacs-user-directory ".ctags")
-              " -Re --python-kinds=-iv -f \"%s\" %s"))
+              (concat " --options=" emacs-user-directory ".ctags")
+              " -f \"%s\" %s"))

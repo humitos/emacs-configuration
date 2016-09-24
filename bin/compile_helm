@@ -1,0 +1,8 @@
+# -*- mode: sh; -*-
+#!/bin/bash
+
+set -e
+
+cd vendor/helm
+make
+

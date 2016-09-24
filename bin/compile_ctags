@@ -1,0 +1,10 @@
+# -*- mode: sh; -*-
+#!/bin/bash
+
+set -e
+
+cd vendor/ctags
+./autogen.sh
+./configure --prefix=`pwd`/build
+make
+make install

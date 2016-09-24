@@ -1,3 +1,70 @@
+#
+# Common Options
+#
+
+-e
+--recurse
+--maxdepth=50
+--python-kinds=-iv
+
+
+#
+# Exclude files
+#
+
+--exclude=*.txt
+# --exclude=*.md
+# --exclude=*.rst
+
+--exclude=*.xml
 --exclude=*.json
 --exclude=*.geojson
+
+--exclude=*.dat
+--exclude=*.crt
+--exclude=*.pem
+
+--exclude=*.zip
+--exclude=*.tar*
+
+--exclude=*.sql
+
+--exclude=*.ini
+--exclude=*.conf
+--exclude=*.yml
+--exclude=*.csv
+
+--exclude=*.po
+--exclude=*.pot
+--exclude=*.mo
+
+--exclude=*.rb
+--exclude=*.erb
+
+--exclude=*.php
+
+--exclude=*.bat
+--exclude=*.jar
+
+--exclude=*.png
+--exclude=*.ico
+--exclude=*.gif
+--exclude=*.jpg
+--exclude=*.jpeg
+--exclude=*.svg
+--exclude=*.pdf
+
+
+# Web Development
+--exclude=*.coffee
+--exclude=*.css
+--exclude=*.scss*
+--exclude=*.html
+--exclude=*.js*
+--exclude=*.jade
+--exclude=*.eot
+--exclude=*.ttf
+--exclude=.jshintrc
+--exclude=.editorconfig
+--exclude=.bowerrc
 
