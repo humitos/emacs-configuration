@@ -2,6 +2,7 @@
 (projectile-global-mode)
 
 ;; http://projectile.readthedocs.io/en/latest/configuration/#caching
+;; http://emacs.stackexchange.com/a/2169
 (setq projectile-enable-caching t)
 
 ;; http://projectile.readthedocs.io/en/latest/configuration/#mode-line-indicator
