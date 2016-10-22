@@ -235,3 +235,6 @@
 [submodule "vendor/ctags"]
 	path = vendor/ctags
 	url = https://github.com/universal-ctags/ctags
+[submodule "vendor/hydra"]
+	path = vendor/hydra
+	url = https://github.com/abo-abo/hydra.git
