@@ -238,3 +238,6 @@
 [submodule "vendor/hydra"]
 	path = vendor/hydra
 	url = https://github.com/abo-abo/hydra.git
+[submodule "vendor/py-autoflake.el"]
+	path = vendor/py-autoflake.el
+	url = https://github.com/humitos/py-autoflake.el.git

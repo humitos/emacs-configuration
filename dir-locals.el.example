@@ -14,6 +14,9 @@
      ;; docformatter global options
      (py-docformatter-options . ("--wrap-summaries=120" "--wrap-descriptions=120" "--pre-summary-newline" "--no-blank" "--make-summary-multi-line"))
 
+     ;; autoflake global options
+     (py-autoflake-options . ("--remove-all-unused-imports" "--remove-unused-variables"))
+
      ;; use our own virtualenv for this project
      (pyvenv-workon . "mozio-ondemand")
 
