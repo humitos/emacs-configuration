@@ -132,6 +132,7 @@ Main modules included in this configuration
 * powerline
 * projectile
 * py-autopep8
+* py-autoflake
 * py-docformatter
 * py-isort
 * rainbow-delimiters
