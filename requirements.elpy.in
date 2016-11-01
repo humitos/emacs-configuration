@@ -13,7 +13,6 @@ flake8-debugger
 flake8-deprecated
 flake8-docstrings
 flake8-exact-pin
-flake8-isort
 flake8-meiqia
 flake8-mutable
 flake8-pep3101
@@ -34,3 +33,4 @@ pyflakes
 pylint
 rope
 yapf
+unify
