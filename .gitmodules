@@ -241,3 +241,9 @@
 [submodule "vendor/py-autoflake.el"]
 	path = vendor/py-autoflake.el
 	url = https://github.com/humitos/py-autoflake.el.git
+[submodule "vendor/py-yapf.el"]
+	path = vendor/py-yapf.el
+	url = https://github.com/humitos/py-yapf.el.git
+[submodule "vendor/py-unify.el"]
+	path = vendor/py-unify.el
+	url = https://github.com/humitos/py-unify.el.git
