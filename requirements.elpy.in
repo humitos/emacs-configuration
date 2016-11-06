@@ -28,6 +28,7 @@ isort
 jedi
 path.py
 pep8
+pip
 pycodestyle
 pyflakes
 pylint
