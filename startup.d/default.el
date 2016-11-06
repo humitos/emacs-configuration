@@ -7,6 +7,28 @@
 ;; Save the session
 (desktop-save-mode 1)
 
+(setq desktop-base-file-name ".emacs-desktop")
+
+(setq desktop-globals-to-save
+      '(
+        desktop-missing-file-warning
+        ;; tags-file-name
+        ;; tags-table-list
+        search-ring
+        regexp-(setq )earch-ring
+        register-alist file-name-history))
+
+;; https://www.emacswiki.org/emacs/Desktop#toc2
+(setq desktop-buffers-not-to-save
+      (concat "\\("
+              "^nn\\.a[0-9]+\\|\\.log\\|(ftp)\\|^tags\\|^TAGS"
+              "\\|\\.emacs.*\\|\\.diary\\|\\.newsrc-dribble\\|\\.bbdb"
+              "\\)$"))
+(add-to-list 'desktop-modes-not-to-save 'dired-mode)
+(add-to-list 'desktop-modes-not-to-save 'Info-mode)
+(add-to-list 'desktop-modes-not-to-save 'info-lookup-mode)
+(add-to-list 'desktop-modes-not-to-save 'fundamental-mode)
+
 ;; http://gastonramos.wordpress.com/2014/10/09/emacs-show-trailing-whitespace
 ;; show trailing whitespaces
 ;; (show-ws-toggle-show-trailing-whitespace)
