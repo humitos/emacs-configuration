@@ -55,3 +55,6 @@
     (condition-case nil (elpy-goto-definition)
         (error (elpy-rgrep-symbol
 		(concat "\\(def\\|class\\)\s" (thing-at-point 'symbol) "(")))))
+
+;; https://github.com/jorgenschaefer/elpy/issues/1015#issuecomment-257070312
+(setq company-minimum-prefix-length 2)
