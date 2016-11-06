@@ -90,3 +90,11 @@
 
 ;; Handy key definition
 (define-key global-map (kbd "M-Q") 'unfill-paragraph)
+
+;; ispell/aspell presonal dictionary file
+(setq ispell-personal-dictionary (concat emacs-user-directory ".ispell.es.pws"))
+
+;; Enable flyspell on rst-mode
+(add-hook 'rst-mode-hook (lambda () flyspell-mode))
+
+
