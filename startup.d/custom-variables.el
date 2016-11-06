@@ -20,6 +20,7 @@
      (py-autoflake-options "--remove-all-unused-imports" "--remove-unused-variables" "--keep-useless-pass")
      (py-unify-options "--quote='")
      (py-yapf-options "--style=/home/humitos/mozio/.style.yapf")
+     (py-yapf-options "--style=/home/humitos/mozio/.style.yapf" "--exclude=*migrations*" "--exclude=*settings*" "--exclude=*scripts*")
      (py-autopep8-options "--global-config=/home/humitos/.autopep8rc")
      (py-autopep8-options "--global-config=/home/humitos/mozio/autopep8rc")
      (elpy-test-django-runner-command "/home/humitos/mozio/mozio/manage.py" "test" "--noinput" "--keepdb" "--failfast")
