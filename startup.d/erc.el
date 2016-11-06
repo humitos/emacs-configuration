@@ -113,7 +113,7 @@
 
 ;; do not bother me with useless notifications
 ;; https://www.emacswiki.org/emacs/ErcChannelTracking
-(setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT"))
+(setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "333" "AWAY"))
 (setq erc-track-exclude-server-buffer t)
 
 ;; connect to the server
