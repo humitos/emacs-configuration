@@ -17,7 +17,7 @@
 (global-set-key (kbd "C-x r b") 'helm-filtered-bookmarks)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 ;; (global-unset-key (kbd "C-c C-f"))
-(define-key elpy-mode-map (kbd "C-c C-f") 'helm-projectile-find-file)
+(define-key elpy-mode-map (kbd "C-c C-f") 'helm-projectile)
 (global-set-key (kbd "C-c C-f") 'helm-projectile-find-file)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x b") 'helm-mini)
