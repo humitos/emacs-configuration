@@ -21,4 +21,7 @@
 -/auto-save-list
 -/emacsenv
 -/erc
-
+-/*.tar.gz
+-/*.svg
+-/*.png
+-/*.jpg
