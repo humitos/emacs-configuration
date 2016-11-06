@@ -34,3 +34,11 @@
               "vendor/ctags/build/bin/ctags"
               (concat " --options=" emacs-user-directory ".ctags")
               " -f \"%s\" %s"))
+
+;; do not ask if we want to reload the TAGS file once it has changed "M-x projectile-regenerate-tags"
+;; http://stackoverflow.com/questions/4096580/how-to-make-emacs-reload-the-tags-file-automatically
+(setq tags-revert-without-query 1)
+
+;; Number of seconds before file existence cache expires for a file on
+;; a local file system.
+(setq projectile-file-exists-local-cache-expire 3)
