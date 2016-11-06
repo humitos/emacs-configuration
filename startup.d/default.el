@@ -98,3 +98,7 @@
 (add-hook 'rst-mode-hook (lambda () flyspell-mode))
 
 
+;; https://github.com/philippe-grenet/exordium
+(define-key global-map (kbd "C-+") 'text-scale-increase)
+(define-key global-map (kbd "C--") 'text-scale-decrease)
+
