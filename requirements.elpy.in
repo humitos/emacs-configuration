@@ -3,7 +3,11 @@ autopep8
 docformatter
 elpy
 epc
-flake8
+
+# Use the master branch as a temporal fix of this issue
+# https://gitlab.com/pycqa/flake8/issues/246
+-e git+https://gitlab.com/pycqa/flake8.git#egg=flake8
+
 flake8-blind-except
 flake8-builtins
 flake8-coding
