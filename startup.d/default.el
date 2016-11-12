@@ -124,3 +124,7 @@
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
 
+;; Do not ask "Keep current list of tags tables also?" when moving to
+;; another directory that also have a TAGS file
+;; http://emacs.stackexchange.com/questions/14802/never-keep-current-list-of-tags-tables-also
+(setq tags-add-tables nil)
