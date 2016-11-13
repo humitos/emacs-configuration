@@ -58,3 +58,8 @@
 
 ;; https://github.com/jorgenschaefer/elpy/issues/1015#issuecomment-257070312
 (setq company-minimum-prefix-length 2)
+
+;; do not try to guess the indent offset
+;; Avoid this message: "Can’t guess python-indent-offset, using defaults: 4"
+;; http://stackoverflow.com/questions/18778894/emacs-24-3-python-cant-guess-python-indent-offset-using-defaults-4
+(setq python-indent-guess-indent-offset nil)
