@@ -6,3 +6,6 @@
 
 ;; redefine C-M-% to use visual regexp replace
 (define-key global-map (kbd "C-M-%") 'vr/replace)
+
+;; limit number of matches shown in visual feedback
+(setq vr/default-feedback-limit 100)
