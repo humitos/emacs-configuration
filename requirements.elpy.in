@@ -1,4 +1,6 @@
-autoflake
+# Use this version which implement --keep-useless-pass
+-e git+https://github.com/jobevers/autoflake#egg=autoflake
+
 autopep8
 docformatter
 elpy
