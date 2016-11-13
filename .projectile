@@ -19,6 +19,8 @@
 -/var
 -/url
 -/auto-save-list
+-/savehist
+-/projectile.cache
 -/emacsenv
 -/erc
 -/*.tar.gz
