@@ -8,3 +8,7 @@
 (setq
   uniquify-buffer-name-style 'post-forward
   uniquify-separator ":")
+
+;; https://github.com/bbatsov/emacs.d/blob/master/init.el
+(setq uniquify-after-kill-buffer-p t)
+(setq uniquify-ignore-buffers-re "^\\*")
