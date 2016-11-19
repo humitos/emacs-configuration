@@ -27,3 +27,5 @@
 -/*.svg
 -/*.png
 -/*.jpg
+-/.coverage
+
