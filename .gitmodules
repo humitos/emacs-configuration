@@ -247,3 +247,6 @@
 [submodule "vendor/py-unify.el"]
 	path = vendor/py-unify.el
 	url = https://github.com/humitos/py-unify.el.git
+[submodule "vendor/python-docstring-mode"]
+	path = vendor/python-docstring-mode
+	url = https://github.com/glyph/python-docstring-mode.git
