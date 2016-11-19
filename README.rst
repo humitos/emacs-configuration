@@ -325,7 +325,8 @@ projectile
 
 * https://github.com/bbatsov/projectile
 
-:C-p p: switch between projects
+:C-c p p: switch between projects
+:C-c p b: switch between opened buffers for current project
 :C-c p k: kill all the buffer related to the current project
 :C-c p f: find file in current project
 :C-c C-s: perform a grep on the current project
