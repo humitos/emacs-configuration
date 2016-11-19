@@ -250,3 +250,9 @@
 [submodule "vendor/python-docstring-mode"]
 	path = vendor/python-docstring-mode
 	url = https://github.com/glyph/python-docstring-mode.git
+[submodule "vendor/emacs-helm-pydoc"]
+	path = vendor/emacs-helm-pydoc
+	url = https://github.com/syohex/emacs-helm-pydoc.git
+[submodule "vendor/super-save"]
+	path = vendor/super-save
+	url = https://github.com/bbatsov/super-save.git
