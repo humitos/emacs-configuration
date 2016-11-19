@@ -129,3 +129,33 @@
 ;; another directory that also have a TAGS file
 ;; http://emacs.stackexchange.com/questions/14802/never-keep-current-list-of-tags-tables-also
 (setq tags-add-tables nil)
+
+;; save the time where emacs started
+(setq emacs-start-time (current-time))
+
+
+;; https://github.com/bbatsov/emacs.d/blob/master/init.el
+;; warn when opening files bigger than 10MB
+(setq large-file-warning-threshold 10000)
+
+
+;; https://github.com/bbatsov/emacs.d/blob/master/init.el
+;; reduce the frequency of garbage collection by making it happen on
+;; each 50MB of allocated data (the default is on every 0.76MB)
+(setq gc-cons-threshold 50000000)
+
+;; no blinking cursor
+(blink-cursor-mode -1)
+
+;; https://github.com/bbatsov/emacs.d/blob/master/init.el
+;; nice scrolling
+(setq scroll-margin 0
+      scroll-conservatively 100000
+      scroll-preserve-screen-position 1)
+
+;; https://github.com/bbatsov/emacs.d/blob/master/init.el
+;; store all backup and autosave files in the tmp dir
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
