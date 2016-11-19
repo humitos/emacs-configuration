@@ -63,3 +63,8 @@
 ;; Avoid this message: "Can’t guess python-indent-offset, using defaults: 4"
 ;; http://stackoverflow.com/questions/18778894/emacs-24-3-python-cant-guess-python-indent-offset-using-defaults-4
 (setq python-indent-guess-indent-offset nil)
+
+
+;; helm-pydoc: https://github.com/syohex/emacs-helm-pydoc
+(with-eval-after-load "python"
+  (define-key python-mode-map (kbd "C-c C-d") 'helm-pydoc))
