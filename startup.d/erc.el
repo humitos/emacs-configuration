@@ -202,3 +202,16 @@ erc-modified-channels-alist. Should be executed on window change."
 (add-to-list 'erc-mode-hook
              (lambda ()
                (set (make-local-variable 'scroll-conservatively) 100)))
+
+
+;; check if we are connected to "#pyar" and reconnect if not
+(defun erc-check-connected-and-reconnect ()
+  (if (equal (erc-server-process-alive "#pyar") nil)
+      (progn
+        (switch-to-buffer "#pyar")
+        ;; we need to be in ERC buffer to call this function
+        (erc-server-reconnect)
+        (switch-to-buffer (other-buffer)))))
+
+(setq erc-check-connected-and-reconnect-timer
+      (run-with-timer nil 25 'erc-check-connected-and-reconnect))
