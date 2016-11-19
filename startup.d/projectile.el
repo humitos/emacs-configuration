@@ -42,3 +42,7 @@
 ;; Number of seconds before file existence cache expires for a file on
 ;; a local file system.
 (setq projectile-file-exists-local-cache-expire 3)
+
+
+;; use a simpler shortcut to switch between current project opened buffers
+(define-key global-map (kbd "C-c b") 'helm-projectile-switch-to-buffer)
