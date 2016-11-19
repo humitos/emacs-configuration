@@ -65,7 +65,8 @@
 ;; disable C-z (minimize window)
 (global-unset-key "\^z")
 
-;; '(show-paren-mode t)
+;; highlight visualization on parenthesis matching
+(show-paren-mode +1)
 
 ;; remove menu bar
 (menu-bar-mode -1)
