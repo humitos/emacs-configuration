@@ -30,3 +30,6 @@
         (if magit-display-buffer-noselect
             (magit-display-buffer-traditional buffer)
           (display-buffer buffer '(display-buffer-full-screen)))))
+
+;; try to show differences as diff-highlight (yeah, it's kind of poor)
+(setq magit-diff-refine-hunk t)
