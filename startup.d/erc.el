@@ -15,7 +15,7 @@
 		    netsplit spelling hl-nicks keep-place fill
 		    button match track readonly networks
 		    notifications ring noncommands irccontrols
-		    stamp menu list scrolltobottom))
+		    stamp menu list))
 
 (setq erc-input-line-position -2)
 
