@@ -136,7 +136,7 @@
 
 ;; https://github.com/bbatsov/emacs.d/blob/master/init.el
 ;; warn when opening files bigger than 10MB
-(setq large-file-warning-threshold 10000)
+(setq large-file-warning-threshold 1000000)
 
 
 ;; https://github.com/bbatsov/emacs.d/blob/master/init.el
