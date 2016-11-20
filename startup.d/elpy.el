@@ -57,7 +57,18 @@
 		(concat "\\(def\\|class\\)\s" (thing-at-point 'symbol) "(")))))
 
 ;; https://github.com/jorgenschaefer/elpy/issues/1015#issuecomment-257070312
-(setq company-minimum-prefix-length 2)
+(setq company-minimum-prefix-length 3)
+
+; show quick-access numbers for the first ten candidates (M-<number>
+; selects the specific option)
+(setq company-show-numbers t)
+
+;; all characters from `company-auto-complete-chars' trigger insertion
+;; of the selected completion candidate
+(setq company-auto-complete t)
+
+;; align annotations to the right tooltip border
+(setq company-tooltip-align-annotations t)
 
 ;; do not try to guess the indent offset
 ;; Avoid this message: "Can’t guess python-indent-offset, using defaults: 4"
