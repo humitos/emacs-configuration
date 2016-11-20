@@ -159,3 +159,10 @@
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
+
+;; Need to have this font installed
+;; https://github.com/adobe-fonts/source-code-pro
+;; (set-frame-font "Source Code Pro-13")
+
+;; My default font
+(set-frame-font "Menlo:pixelsize=15")
