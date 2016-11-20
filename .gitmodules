@@ -256,3 +256,6 @@
 [submodule "vendor/super-save"]
 	path = vendor/super-save
 	url = https://github.com/bbatsov/super-save.git
+[submodule "vendor/pip-requirements.el"]
+	path = vendor/pip-requirements.el
+	url = https://github.com/Wilfred/pip-requirements.el
