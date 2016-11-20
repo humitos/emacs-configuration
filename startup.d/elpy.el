@@ -47,15 +47,6 @@
   (highlight-lines-matching-regexp "# DEBUG #\\s-*$" 'hi-red-b))
 (add-hook 'python-mode-hook 'python--add-debug-highlight)
 
-;; https://github.com/jorgenschaefer/elpy/wiki/Customizations#an-alternative-to-elpy-goto-definition
-(defun elpy-goto-definition-or-rgrep ()
-  "Go to the definition of the symbol at point, if found. Otherwise, run `elpy-rgrep-symbol'."
-    (interactive)
-    (ring-insert find-tag-marker-ring (point-marker))
-    (condition-case nil (elpy-goto-definition)
-        (error (elpy-rgrep-symbol
-		(concat "\\(def\\|class\\)\s" (thing-at-point 'symbol) "(")))))
-
 ;; https://github.com/jorgenschaefer/elpy/issues/1015#issuecomment-257070312
 (setq company-minimum-prefix-length 3)
 
