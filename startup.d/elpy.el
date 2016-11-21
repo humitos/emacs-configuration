@@ -58,6 +58,8 @@
 ;; of the selected completion candidate
 (setq company-auto-complete t)
 
+(setq company-auto-complete-chars '(?\( ?\) ?.))
+
 ;; align annotations to the right tooltip border
 (setq company-tooltip-align-annotations t)
 
