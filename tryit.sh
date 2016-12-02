@@ -57,7 +57,7 @@ EMACS_ENOUGH_VERSION=$?
 
 if [ $EMACS_ENOUGH_VERSION -eq 0 ]; then
   echo "*** ERROR ***"
-  echo "*** ERROR *** Emacs 24.4 or greater is needed and you have: ${EMACS_USER_VERSION}"
+  echo "*** ERROR *** Emacs ${EMACS_MIN_REQUIRED_VERSION} or greater is needed and you have: ${EMACS_USER_VERSION}"
   echo "*** ERROR ***"
   echo "  In Ubuntu you can add a PPA repository and install \`emacs-snapshot\` package:"
   echo "    $ sudo add-apt-repository ppa:ubuntu-elisp/ppa"

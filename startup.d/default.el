@@ -73,7 +73,9 @@
 
 ;; remove scroll bar
 (scroll-bar-mode -1)
-(horizontal-scroll-bar-mode -1)
+;; use `setq' for compatibility with Emacs 24.5.1
+;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Scroll-Bars.html
+(setq horizontal-scroll-bar-mode nil)
 
 ;; do not show tooltips for mouse
 (tooltip-mode -1)
