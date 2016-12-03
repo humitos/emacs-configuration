@@ -107,6 +107,16 @@ now::
   user_pref("browser.bookmarks.autoExportHTML", true);
 
 
+Keep this configuration updated
+===============================
+
+::
+
+     cd emacs-configuration
+     git pull
+     git submodule update --init --recursive --remote
+
+
 Main modules included in this configuration
 ===========================================
 
