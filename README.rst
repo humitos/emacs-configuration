@@ -114,7 +114,7 @@ Keep this configuration updated
 
      cd emacs-configuration
      git pull
-     git submodule update --init --recursive --remote
+     git submodule update --init --remote
 
 
 Main modules included in this configuration
