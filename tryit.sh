@@ -66,9 +66,6 @@ if [ $EMACS_ENOUGH_VERSION -eq 0 ]; then
   exit 1
 fi
 
-# stop the script if something goes wrong
-set -e
-
 case $1 in
     -P)
         shift 1
@@ -112,7 +109,17 @@ EOF
 
 
 # download default yasnippets
-cd vendor/yasnippet; git submodule init; git submodule update ; cd - > /dev/null
+cd vendor/yasnippet > /dev/null
+git checkout master
+cd snippets > /dev/null
+git pull
+cd ../yasmate > /dev/null
+git pull
+cd ../../.. > /dev/null
+
+# stop the script if something goes wrong
+set -e
+
 # disable erc for tryit.sh
 if [ -e startup.d/erc.el ]; then
   mv --force startup.d/erc.el startup.d/erc.el.disabled > /dev/null
