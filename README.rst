@@ -39,7 +39,7 @@ Installation
 #. Clone this repository on the standard `.emacs.d` settings directory::
 
      cd ~
-     git clone --recursive --depth 1 https://github.com/humitos/emacs-configuration.git .emacs.d
+     git clone --recursive --jobs 4 --shallow-submodules --depth 1 https://github.com/humitos/emacs-configuration.git .emacs.d
 
 #. Compile helm::
 
