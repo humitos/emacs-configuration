@@ -26,7 +26,7 @@ use it as it is :)
 
 #. Clone this repository::
 
-     git clone --recursive --depth 1 https://github.com/humitos/emacs-configuration.git
+     git clone --recursive --jobs 4 --shallow-submodules --depth 1 https://github.com/humitos/emacs-configuration.git
      cd emacs-configuration
      ./tryit.sh
 
