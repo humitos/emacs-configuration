@@ -110,7 +110,7 @@ EOF
 
 # download default yasnippets
 cd vendor/yasnippet > /dev/null
-git checkout master
+git reset --hard origin/master
 cd snippets > /dev/null
 git pull
 cd ../yasmate > /dev/null
