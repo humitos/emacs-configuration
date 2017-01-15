@@ -1,5 +1,6 @@
 # Use this version which implement --keep-useless-pass
 -e git+https://github.com/jobevers/autoflake#egg=autoflake
+# autoflake
 
 autopep8
 docformatter
@@ -8,7 +9,8 @@ epc
 
 # Use the master branch as a temporal fix of this issue
 # https://gitlab.com/pycqa/flake8/issues/246
--e git+https://gitlab.com/pycqa/flake8.git#egg=flake8
+# -e git+https://gitlab.com/pycqa/flake8.git#egg=flake8
+flake8
 
 flake8-blind-except
 flake8-builtins
@@ -34,10 +36,15 @@ isort
 jedi
 path.py
 pep8
+pep8-naming
 pip
 pycodestyle
-pyflakes
+# pyflakes
 pylint
 rope
 yapf
 unify
+
+# pkg_resources.DistributionNotFound: The 'pyflakes!=1.2.0,!=1.2.1,!=1.2.2,<1.4.0,>=0.8.1'
+# distribution was not found and is required by flake8
+pyflakes==1.3.0
