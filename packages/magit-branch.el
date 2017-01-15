@@ -1,0 +1,1 @@
+../vendor/magit/lisp/magit-branch.el
