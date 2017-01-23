@@ -1,6 +1,6 @@
-;; use firefox to open the documentation
+;; use google-chrome to open the documentation
 (setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "firefox")
+      browse-url-generic-program "google-chrome")
 (setq helm-dash-browser-func 'browse-url-generic)
 
 
