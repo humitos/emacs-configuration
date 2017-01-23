@@ -3,7 +3,7 @@
 -/#*
 -/*#
 -/.dir-locals.el
--/TAGS
+-/*TAGS*
 -/locate.db
 -/*.orig
 -/.venv
@@ -15,6 +15,7 @@
 -/.emacs.desktop
 -/undohist
 -/*.json
+-/*.geojson
 -/manage.py
 -/var
 -/url
