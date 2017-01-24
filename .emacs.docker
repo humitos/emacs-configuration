@@ -1,0 +1,12 @@
+; -*- mode: Lisp;-*-
+
+(setq initial-scratch-message (concat initial-scratch-message
+";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\
+;; This Emacs is Powered by the humitos configurations\n\
+;; This is the full configuration using \`https://github.com/humitos/emacs-configuration\`.\n\
+;; Please check out the README.rst file to learn about all the packages installed here and the most commons hotkeys.\n\
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n"))
+
+
+(setq emacs-user-directory (getenv "EMACS_USER_DIRECTORY"))
+(load (concat emacs-user-directory "init.el"))
