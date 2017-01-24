@@ -15,7 +15,8 @@ flake8
 flake8-blind-except
 flake8-builtins
 flake8-coding
-flake8-commas
+# it's producing an error because python-flakes8 version
+# flake8-commas
 flake8-comprehensions
 flake8-debugger
 flake8-deprecated
