@@ -224,6 +224,10 @@ find-file-in-project
 
   This hotkey is replaced by the helm one if you have it active.
 
+:C-u C-c C-f: find a file in the current project but it regenerate the
+              cache first.
+
+
 flycheck
 --------
 
