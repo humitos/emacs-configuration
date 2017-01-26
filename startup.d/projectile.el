@@ -46,3 +46,16 @@
 
 ;; use a simpler shortcut to switch between current project opened buffers
 (define-key global-map (kbd "C-c b") 'helm-projectile-switch-to-buffer)
+
+;; disable remote file exists cache that use this snippet of code
+(setq projectile-file-exists-remote-cache-expire nil)
+
+
+;; file generated `projectile-bookmarks.eld`
+(defun my-ignore-project (project-root)
+  "Ignore some projects as known for projectile"
+  (or
+   (cl-search ".virtualenvs" project-root)
+   (cl-search "3rdparty" project-root)))
+
+(setq projectile-ignored-project-function #'my-ignore-project)
