@@ -5,6 +5,9 @@
 ;; http://emacs.stackexchange.com/a/2169
 (setq projectile-enable-caching t)
 
+;; prefered method for indexing
+(setq projectile-indexing-method 'alien)
+
 ;; http://projectile.readthedocs.io/en/latest/configuration/#mode-line-indicator
 (setq projectile-mode-line '(:eval (format " [%s]" (projectile-project-name))))
 
