@@ -79,9 +79,6 @@
 [submodule "vendor/flycheck"]
 	path = vendor/flycheck
 	url = https://github.com/flycheck/flycheck
-[submodule "vendor/pkg-info"]
-	path = vendor/pkg-info
-	url = https://github.com/lunaryorn/pkg-info.el
 [submodule "vendor/seq"]
 	path = vendor/seq
 	url = https://github.com/NicolasPetton/seq.el
