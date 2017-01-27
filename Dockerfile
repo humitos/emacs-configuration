@@ -10,10 +10,11 @@ RUN add-apt-repository -y ppa:ubuntu-elisp/ppa && \
     apt-get install -y \
             git \
             build-essential \
-            python-pip \
-            python3-venv \
+            python3-pip \
             dbus-x11 \
-            emacs-snapshot
+            emacs-snapshot \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/lib/apt/archives/*
 
 RUN git clone \
     --depth 1 \
@@ -31,8 +32,8 @@ RUN mv --force startup.d/erc.el startup.d/erc.el.disabled
 RUN cd vendor/helm && make && cd -
 
 # Install python dependecies for emacs' plugins
-RUN pip install -U pip \
-    && pip install -r requirements.elpy.in
+RUN pip3 install -U pip \
+    && pip3 install -r requirements.elpy.in
 
 # Set the `emacs-user-directory` used from the `init.el` file
 ENV EMACS_USER_DIRECTORY /code/
