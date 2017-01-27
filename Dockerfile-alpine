@@ -1,32 +1,45 @@
+# BUILD THE IMAGE
+# docker build --file Dockerfile-alpine --tag emacs-x11-alpine .
+# python bin/git_archive_all.py --force-submodules repo.tar
+# tar xvf repo.tar
+
+# RUN THE IMAGE
+# docker run -it -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $XAUTHORITY:/root/.Xauthority --net=host emacs-x11-alpine
+
 FROM alpine:latest
 
 MAINTAINER Manuel Kaufmann <humitos@gmail.com>
 
+RUN apk add --no-cache \
+        emacs-x11 \
+        python3 \
+        git \
+        make
 
-RUN apk add --no-cache emacs
-RUN apk add --no-cache python3
-RUN apk add --no-cache git   # download python packages
 # RUN apk add --no-cache py-pip
 # RUN apk add --no-cache gcc   # scandir
 # RUN apk add --no-cache python-dev  # scandir
 
-RUN mkdir -p /root/.fonts
-COPY Menlo-Regular.ttf /root/.fonts
+# Make `python` the default for `python3`
+RUN ln -s /usr/bin/python3 /usr/bin/python
 
-COPY unzipped /code
+COPY ./repo /code
 WORKDIR /code
+
+RUN mkdir -p /root/.fonts
+RUN mv -f Menlo-Regular.ttf /root/.fonts
 
 # Disable ERC
 RUN mv -f startup.d/erc.el startup.d/erc.el.disabled
 
-# Compile helm
-# RUN cd vendor/helm && make && cd -
-
 # Install python dependecies for emacs' plugins
-RUN pip3 install -U pip
-RUN pip3 install -r requirements.elpy.in
+RUN pip3 install --no-cache-dir -U pip
+RUN pip3 install --no-cache-dir -r requirements.elpy.in
+
+# Compile helm
+RUN cd vendor/helm && make
 
 # Set the `emacs-user-directory` used from the `init.el` file
 ENV EMACS_USER_DIRECTORY /code/
 
-CMD sh -c "emacs -nw --no-site-file --no-splash --load .emacs.docker"
+CMD sh -c "emacs --no-site-file --no-splash --load .emacs.docker"
