@@ -24,14 +24,18 @@
 -/src
 -/.style.yapf
 
+-/celerybeat-schedule
+
 -/external_apis/zones/*.geojson
 
--*.json
+-/*.json
 -/*.geojson
--*.orig
--*.tar.gz
--*.zip
--*.svg
--*.png
--*.jpg
--*.log
+-/*.orig
+-/*.tar.gz
+-/*.zip
+-/*.svg
+-/*.png
+-/*.jpg
+-/*.log
+-/*#
+-/#*
