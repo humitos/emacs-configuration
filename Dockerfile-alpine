@@ -1,0 +1,32 @@
+FROM alpine:latest
+
+MAINTAINER Manuel Kaufmann <humitos@gmail.com>
+
+
+RUN apk add --no-cache emacs
+RUN apk add --no-cache python3
+RUN apk add --no-cache git   # download python packages
+# RUN apk add --no-cache py-pip
+# RUN apk add --no-cache gcc   # scandir
+# RUN apk add --no-cache python-dev  # scandir
+
+RUN mkdir -p /root/.fonts
+COPY Menlo-Regular.ttf /root/.fonts
+
+COPY unzipped /code
+WORKDIR /code
+
+# Disable ERC
+RUN mv -f startup.d/erc.el startup.d/erc.el.disabled
+
+# Compile helm
+# RUN cd vendor/helm && make && cd -
+
+# Install python dependecies for emacs' plugins
+RUN pip3 install -U pip
+RUN pip3 install -r requirements.elpy.in
+
+# Set the `emacs-user-directory` used from the `init.el` file
+ENV EMACS_USER_DIRECTORY /code/
+
+CMD sh -c "emacs -nw --no-site-file --no-splash --load .emacs.docker"
