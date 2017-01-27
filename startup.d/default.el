@@ -1,6 +1,17 @@
 ;; Remove startup message
 (setq inhibit-startup-message t)
 
+;; insert-file-contents: Recursive load:
+;; "/usr/share/emacs/25.1/lisp/jka-compr.el.gz",
+;; "/usr/share/emacs/25.1/lisp/emacs-lisp/debug.el.gz",
+;; "/usr/share/emacs/25.1/lisp/jka-compr.el.gz",
+;; "/usr/share/emacs/25.1/lisp/jka-compr.el.gz",
+;; "/usr/share/emacs/25.1/lisp/jka-compr.el.gz",
+;; "/usr/share/emacs/25.1/lisp/jka-compr.el.gz",
+;; "/usr/share/emacs/25.1/lisp/hl-line.el.gz"
+;; https://github.com/purcell/emacs.d/issues/340
+(setq load-file-rep-suffixes '(""))
+
 ;; Open TODO.org at startup
 ;; (find-file "/home/humitos/Dropbox/TODO.org")
 
