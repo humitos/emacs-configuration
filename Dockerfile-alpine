@@ -13,7 +13,7 @@ RUN apk add --no-cache \
         git \
         make
 
-RUN apk add --no-cache
+RUN apk add --no-cache \
     grep \
     diffutils
 
