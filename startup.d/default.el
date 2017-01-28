@@ -127,13 +127,6 @@
 ;; Handy key definition
 (define-key global-map (kbd "M-Q") 'unfill-paragraph)
 
-;; ispell/aspell presonal dictionary file
-(setq ispell-personal-dictionary (concat emacs-user-directory ".ispell.es.pws"))
-
-;; Enable flyspell on rst-mode
-(add-hook 'rst-mode-hook (lambda () flyspell-mode))
-
-
 ;; https://github.com/philippe-grenet/exordium
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
