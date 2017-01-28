@@ -3,9 +3,6 @@
 # python bin/git_archive_all.py --force-submodules repo.tar
 # tar xvf repo.tar
 
-# RUN THE IMAGE
-# docker run -it -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $XAUTHORITY:/root/.Xauthority --net=host emacs-x11-alpine
-
 FROM alpine:latest
 
 MAINTAINER Manuel Kaufmann <humitos@gmail.com>
@@ -46,5 +43,7 @@ RUN cd vendor/helm && make
 
 # Set the `emacs-user-directory` used from the `init.el` file
 ENV EMACS_USER_DIRECTORY /code/
+
+WORKDIR /src
 
 CMD sh -c "emacs --no-site-file --no-splash --load .emacs.docker"
