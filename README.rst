@@ -72,7 +72,7 @@ use it as it is :)
 
 #. Install all the dependencies (e.g. in Ubuntu)::
 
-     sudo apt-get install emacs python3-venv git
+     sudo apt-get install emacs python3-venv git ack-grep
 
 *NOTE: if `python3-venv` is not available in your Ubuntu you should install `python-virtualenv`*
 
@@ -138,7 +138,7 @@ Install required system packages
 
 ::
 
-     sudo apt-get install emacs python3-venv git
+     sudo apt-get install emacs python3-venv git ack-grep
 
 
 Configure Firefox to export bookmarks automatically

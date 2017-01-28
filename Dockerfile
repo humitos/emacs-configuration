@@ -10,7 +10,8 @@ RUN apk add --no-cache \
         make \
         grep \
         diffutils \
-        ctags
+        ctags \
+        ack
 
 # Make `python` the default for `python3`
 RUN ln -s /usr/bin/python3 /usr/bin/python
