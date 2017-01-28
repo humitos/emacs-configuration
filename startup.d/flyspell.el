@@ -29,6 +29,7 @@
 
 
 ;; https://www.emacswiki.org/emacs/GuessBufferLanguage
+;; modified version to work on emacs 26
 (defvar guess-language-rules
   '(("en" . "\\<\\(of\\|the\\|and\\|or\\|how\\)\\>")
     ("de" . "\\<\\(und\\|oder\\|der\\|die\\|das\\|wie\\)\\>")
@@ -47,8 +48,8 @@
   (save-excursion
     (goto-char (point-min))
     (let ((count (map 'list (lambda (x)
-                              (cons (string-to-number
-                                     (count-matches (cdr x))) (car x)))
+                              (cons
+                               (count-matches (cdr x)) (car x)))
                       guess-language-rules)))
       (cdr (assoc (car (sort (map 'list 'car count) '>))
                   count)))))
