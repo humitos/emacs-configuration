@@ -10,6 +10,7 @@
 -/.tx
 -/places
 -/.emacs.desktop
+-/.emacs-desktop
 -/undohist
 -/manage.py
 -/var
@@ -32,6 +33,7 @@
 -/*.geojson
 -/*.orig
 -/*.tar.gz
+-/*.tar
 -/*.zip
 -/*.svg
 -/*.png
