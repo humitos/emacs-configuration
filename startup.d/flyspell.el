@@ -31,7 +31,8 @@
 ;; https://www.emacswiki.org/emacs/GuessBufferLanguage
 ;; modified version to work on emacs 26
 (defvar guess-language-rules
-  '(("en" . "\\<\\(of\\|the\\|and\\|or\\|how\\)\\>")
+  '(("es" . "\\<\\(vos\\|de\\|y\\|o\\|que\\|para\\)\\>")
+    ("en" . "\\<\\(of\\|the\\|and\\|or\\|how\\)\\>")
     ("de" . "\\<\\(und\\|oder\\|der\\|die\\|das\\|wie\\)\\>")
     ("fr" . "\\<\\(et\\|ou\\|[ld]es\\|que\\)\\>")
     ("pt" . "\\<\\(de\\|para\\|e\\|ou\\|como\\)\\>"))
