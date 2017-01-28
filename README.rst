@@ -20,7 +20,7 @@ use it as it is :)
 
 #. Install all the dependencies (e.g. in Ubuntu)::
 
-     sudo apt-get install emacs python3-venv git exuberant-ctags
+     sudo apt-get install emacs python3-venv git
 
 *NOTE: if `python3-venv` is not available in your Ubuntu you should install `python-virtualenv`*
 
@@ -63,9 +63,8 @@ Installation
 
   NOTE: all of this configuration was tested in
    * Xubuntu 16.04 LTS
-   * Emacs 25.1.50.2
-   * exuberant-ctags 5.9~svn20110310-
-   * git 2.9.3
+   * Emacs 26.0.50.2
+   * git 2.11.0
    * Python 2.7.12
    * Firefox 48
 
@@ -87,7 +86,7 @@ Install required system packages
 
 ::
 
-     sudo apt-get install emacs python3-venv git exuberant-ctags
+     sudo apt-get install emacs python3-venv git
 
 
 Configure Firefox to export bookmarks automatically
