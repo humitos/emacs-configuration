@@ -1,7 +1,7 @@
 # BUILD THE IMAGE
-# docker build --file Dockerfile-alpine --tag emacs-x11-alpine .
 # python bin/git_archive_all.py --force-submodules repo.tar
 # tar xvf repo.tar
+# docker build --file Dockerfile-alpine --tag emacs-x11-alpine .
 
 FROM alpine:latest
 
@@ -12,6 +12,10 @@ RUN apk add --no-cache \
         python3 \
         git \
         make
+
+RUN apk add --no-cache
+    grep \
+    diffutils
 
 # RUN apk add --no-cache py-pip
 # RUN apk add --no-cache gcc   # scandir
