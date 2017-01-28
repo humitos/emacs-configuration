@@ -18,7 +18,7 @@ What that command does?
 In a few words, it downloads a minimal pre-built linux image with
 emacs and this configuration already setup with all its
 dependencies. So, once you run that command and after downloading the
-image (~350 Mb) you will see emacs running in your computer.
+image (~150 Mb) you will see emacs running in your computer.
 
 
 Why are you passing those strange arguments?
