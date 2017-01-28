@@ -26,3 +26,34 @@
                   (ispell-change-dictionary "spanish")
                   (message "Dictionary switched to Spanish")))
             (flyspell-prog-mode)))
+
+
+;; https://www.emacswiki.org/emacs/GuessBufferLanguage
+(defvar guess-language-rules
+  '(("en" . "\\<\\(of\\|the\\|and\\|or\\|how\\)\\>")
+    ("de" . "\\<\\(und\\|oder\\|der\\|die\\|das\\|wie\\)\\>")
+    ("fr" . "\\<\\(et\\|ou\\|[ld]es\\|que\\)\\>")
+    ("pt" . "\\<\\(de\\|para\\|e\\|ou\\|como\\)\\>"))
+  "Alist of rules to determine the language of some text.
+    Each rule has the form (CODE . REGEXP) where CODE is a string to
+    identify the language (probably according to ISO 639), and REGEXP is a
+    regexp that matches some very common words particular to that language.
+    The default language should be listed first.  That will be the language
+    returned when no REGEXP matches, as would happen for an empty
+    document.")
+
+(defun guess-buffer-language ()
+  "Guess language in the current buffer."
+  (save-excursion
+    (goto-char (point-min))
+    (let ((count (map 'list (lambda (x)
+                              (cons (string-to-number
+                                     (count-matches (cdr x))) (car x)))
+                      guess-language-rules)))
+      (cdr (assoc (car (sort (map 'list 'car count) '>))
+                  count)))))
+
+(defun guess-language ()
+  "Guess language in the current buffer."
+  (interactive)
+  (message (guess-buffer-language)))
