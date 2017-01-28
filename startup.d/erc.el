@@ -17,6 +17,9 @@
 		    notifications ring noncommands irccontrols
 		    stamp menu list))
 
+(setq erc-spelling-dictionaries '(("#pyar" "es")
+                                  ("#python" "american")))
+
 (setq erc-input-line-position -2)
 
 ;; Kill the ERC buffers after /quit

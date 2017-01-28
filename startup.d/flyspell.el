@@ -40,22 +40,25 @@
 
 
 ;; activate flyspell-prog-mode when opening a elpy-mode buffer
-(add-hook 'elpy-mode-hook
-          (lambda ()
-            (set (make-local-variable 'ispell-personal-dictionary) (expand-file-name ".aspell.en.pws" emacs-user-directory))
-            (if (not (string= "american" ispell-current-dictionary))
-                (progn
-                  (ispell-change-dictionary "american")
-                  (message "Dictionary switched to English")))
-            (flyspell-prog-mode)))
-
-
-;; enable flyspell (spanish) on rst-mode
 (add-hook 'rst-mode-hook
           (lambda ()
-            (set (make-local-variable 'ispell-personal-dictionary) (expand-file-name ".aspell.es.pws" emacs-user-directory))
-            (if (not (string= "spanish" ispell-current-dictionary))
-                (progn
-                  (ispell-change-dictionary "spanish")
-                  (message "Dictionary switched to Spanish")))
-            (flyspell-prog-mode)))
+            (let ((language (guess-buffer-language)))
+              (progn
+                (set (make-local-variable 'ispell-personal-dictionary) (expand-file-name (format ".aspell.%s.pws" language) emacs-user-directory))
+                (if (not (string= language ispell-current-dictionary))
+                     (progn
+                       (ispell-change-dictionary language)
+                       (message "Dictionary switched to %s" language)))
+                (flyspell-mode)))))
+
+
+(add-hook 'rst-mode-hook
+          (lambda ()
+            (let ((language (guess-buffer-language)))
+              (progn
+                (set (make-local-variable 'ispell-personal-dictionary) (expand-file-name (format ".aspell.%s.pws" language) emacs-user-directory))
+                (if (not (string= language ispell-current-dictionary))
+                     (progn
+                       (ispell-change-dictionary language)
+                       (message "Dictionary switched to %s" language)))
+                (flyspell-mode)))))
