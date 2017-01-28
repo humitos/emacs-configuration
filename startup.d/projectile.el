@@ -32,9 +32,14 @@
 ;;   $ ./configure --prefix=`pwd`/build
 ;;   $ make
 ;;   $ make install
+
+(if (getenv "DOCKER")
+    (setq ctags-executable "ctags")
+  (setq ctags-executable "vendor/ctags/build/bin/ctags"))
+
 (setq projectile-tags-command
       (concat emacs-user-directory
-              "vendor/ctags/build/bin/ctags"
+              ctags-executable
               (concat " --options=" emacs-user-directory ".ctags")
               " -f \"%s\" %s"))
 

@@ -1,47 +1,44 @@
-FROM ubuntu:16.04
+# Automatic building from hub.docker.com
+FROM alpine:latest
 
 MAINTAINER Manuel Kaufmann <humitos@gmail.com>
 
-RUN apt-get update -y && \
-    apt-get install -y software-properties-common
+RUN apk add --no-cache \
+        emacs-x11 \
+        python3 \
+        git \
+        make \
+        grep \
+        diffutils \
+        ctags
 
-RUN add-apt-repository -y ppa:ubuntu-elisp/ppa && \
-    apt-get -y update && \
-    apt-get install -y \
-            git \
-            build-essential \
-            python3-pip \
-            dbus-x11 \
-            emacs-snapshot \
-    && rm -rf /var/lib/apt/lists/* \
-    && rm -rf /var/lib/apt/archives/*
+# Make `python` the default for `python3`
+RUN ln -s /usr/bin/python3 /usr/bin/python
 
-RUN git clone \
-    --depth 1 \
-    https://github.com/humitos/emacs-configuration.git /code && \
-    cd /code && \
-    git submodule init && \
-    git submodule update
+COPY . /code
 
 WORKDIR /code
 
-# Disable ERC
-RUN mv --force startup.d/erc.el startup.d/erc.el.disabled
+RUN mkdir -p /root/.fonts
+RUN mv -f Menlo-Regular.ttf /root/.fonts
 
-# Compile helm
-RUN cd vendor/helm && make && cd -
+# Disable ERC
+RUN mv -f startup.d/erc.el startup.d/erc.el.disabled
 
 # Install python dependecies for emacs' plugins
-RUN pip3 install -U pip \
-    && pip3 install -r requirements.elpy.in
+RUN pip3 install --no-cache-dir -U pip
+RUN pip3 install --no-cache-dir -r requirements.elpy.in
+
+# Compile helm
+RUN cd vendor/helm && make
 
 # Set the `emacs-user-directory` used from the `init.el` file
 ENV EMACS_USER_DIRECTORY /code/
 
-RUN mkdir -p /root/.fonts
-COPY Menlo-Regular.ttf /root/.fonts
+# Used to set the proper ctags executable
+ENV DOCKER true
 
-# I don't know why but the first time fails because of something related to X11
-# X protocol error: BadAccess (attempt to access private resource denied) on protocol request 130
-CMD emacs-snapshot --no-site-file --no-splash --load .emacs.docker > /dev/null \
-    ; emacs-snapshot --no-site-file --no-splash --load .emacs.docker
+
+WORKDIR /src
+
+CMD sh -c "emacs --no-site-file --no-splash --load /code/.emacs.docker"
