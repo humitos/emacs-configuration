@@ -46,4 +46,4 @@ ENV EMACS_USER_DIRECTORY /code/
 
 WORKDIR /src
 
-CMD sh -c "emacs --no-site-file --no-splash --load .emacs.docker"
+CMD sh -c "emacs --no-site-file --no-splash --load /code/.emacs.docker"
