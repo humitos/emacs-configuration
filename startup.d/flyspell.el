@@ -40,7 +40,7 @@
 
 
 ;; activate flyspell-prog-mode when opening a elpy-mode buffer
-(add-hook 'rst-mode-hook
+(add-hook 'elpy-mode-hook
           (lambda ()
             (let ((language (guess-buffer-language)))
               (progn
@@ -49,7 +49,7 @@
                      (progn
                        (ispell-change-dictionary language)
                        (message "Dictionary switched to %s" language)))
-                (flyspell-mode)))))
+                (flyspell-prog-mode)))))
 
 
 (add-hook 'rst-mode-hook
