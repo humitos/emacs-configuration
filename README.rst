@@ -9,13 +9,13 @@ Try it with Docker!
 This is the **easiest way to try** all this set of configurations without
 touching your computer configuration and break anything::
 
-     docker run --rm -it -e DISPLAY -v $(pwd):/src -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $XAUTHORITY:/root/.Xauthority --net=host humitos/emacs-x11-alpine
+     docker run --rm -it -e DISPLAY -v $(pwd):/src -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+       -v $XAUTHORITY:/root/.Xauthority --net=host humitos/emacs-x11-alpine
 
 
 Full documentation for Docker image: https://github.com/humitos/emacs-x11-alpine
      
 ----
-
 
   NOTE: do not installing it if you are not sure what you are doing... :)
 
