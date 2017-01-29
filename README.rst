@@ -41,8 +41,10 @@ use it as it is :)
 
 #. Clone this repository::
 
-     git clone --recursive --jobs 4 --shallow-submodules --depth 1 https://github.com/humitos/emacs-configuration.git
+     git clone --depth 1 https://github.com/humitos/emacs-configuration.git
      cd emacs-configuration
+     git submodule init
+     git submodule update
      ./tryit.sh
 
 #. Enjoy!
@@ -54,7 +56,10 @@ Installation
 #. Clone this repository on the standard `.emacs.d` settings directory::
 
      cd ~
-     git clone --recursive --jobs 4 --shallow-submodules --depth 1 https://github.com/humitos/emacs-configuration.git .emacs.d
+     git clone --depth 1 https://github.com/humitos/emacs-configuration.git
+     cd emacs-configuration
+     git submodule init
+     git submodule update
 
 #. Compile helm::
 
