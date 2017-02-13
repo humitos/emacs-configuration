@@ -253,3 +253,6 @@
 [submodule "vendor/pip-requirements.el"]
 	path = vendor/pip-requirements.el
 	url = https://github.com/Wilfred/pip-requirements.el
+[submodule "vendor/ispell-multi"]
+	path = vendor/ispell-multi
+	url = https://github.com/emacsmirror/ispell-multi.git

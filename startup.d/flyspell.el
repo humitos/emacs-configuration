@@ -9,8 +9,8 @@
 ;; https://www.emacswiki.org/emacs/GuessBufferLanguage
 ;; modified version to work on emacs 26
 (defvar guess-language-rules
-  '(("es" . "\\<\\(vos\\|de\\|y\\|o\\|que\\|para\\)\\>")
-    ("en" . "\\<\\(of\\|the\\|and\\|or\\|how\\)\\>")
+  '(("en" . "\\<\\(of\\|the\\|and\\|or\\|how\\)\\>")
+    ("es" . "\\<\\(vos\\|de\\|y\\|o\\|que\\|para\\)\\>")
     ("de" . "\\<\\(und\\|oder\\|der\\|die\\|das\\|wie\\)\\>")
     ("fr" . "\\<\\(et\\|ou\\|[ld]es\\|que\\)\\>")
     ("pt" . "\\<\\(de\\|para\\|e\\|ou\\|como\\)\\>"))
@@ -62,3 +62,6 @@
                        (ispell-change-dictionary language)
                        (message "Dictionary switched to %s" language)))
                 (flyspell-mode)))))
+
+;; set a default dictionary
+(setq ispell-dictionary "english")
