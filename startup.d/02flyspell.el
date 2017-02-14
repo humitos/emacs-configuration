@@ -1,5 +1,8 @@
 ;; https://www.emacswiki.org/emacs/FlySpell
 
+;; set a default dictionary
+(setq ispell-dictionary "en")
+
 ;; do not emit a message when checking words
 (setq flyspell-issue-message-flag nil)
 
@@ -38,30 +41,19 @@
   (interactive)
   (message (guess-buffer-language)))
 
+(defun flyspell-active-mode (flymode)
+  "Active FLYMODE flyspell-(prog)-mode"
+  (let ((language (guess-buffer-language)))
+    (progn
+      (set (make-local-variable 'ispell-personal-dictionary) (expand-file-name (format ".aspell.%s.pws" language) emacs-user-directory))
+      (if (not (string= language ispell-current-dictionary))
+          (progn
+            (ispell-change-dictionary language)
+            (message "Dictionary switched to %s" language)))
+      (funcall flymode))))
 
-;; activate flyspell-prog-mode when opening a elpy-mode buffer
-(add-hook 'elpy-mode-hook
-          (lambda ()
-            (let ((language (guess-buffer-language)))
-              (progn
-                (set (make-local-variable 'ispell-personal-dictionary) (expand-file-name (format ".aspell.%s.pws" language) emacs-user-directory))
-                (if (not (string= language ispell-current-dictionary))
-                     (progn
-                       (ispell-change-dictionary language)
-                       (message "Dictionary switched to %s" language)))
-                (flyspell-prog-mode)))))
-
-
-(add-hook 'rst-mode-hook
-          (lambda ()
-            (let ((language (guess-buffer-language)))
-              (progn
-                (set (make-local-variable 'ispell-personal-dictionary) (expand-file-name (format ".aspell.%s.pws" language) emacs-user-directory))
-                (if (not (string= language ispell-current-dictionary))
-                     (progn
-                       (ispell-change-dictionary language)
-                       (message "Dictionary switched to %s" language)))
-                (flyspell-mode)))))
-
-;; set a default dictionary
-(setq ispell-dictionary "english")
+;; apply-partially - http://stackoverflow.com/a/16730821/2187091
+;; funcall - http://emacs.stackexchange.com/a/17467
+(add-hook 'rst-mode-hook (apply-partially #'flyspell-active-mode 'flyspell-mode))
+(add-hook 'text-mode-hook (apply-partially #'flyspell-active-mode 'flyspell-mode))
+(add-hook 'elpy-mode-hook (apply-partially #'flyspell-active-mode 'flyspell-prog-mode))
