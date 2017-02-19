@@ -172,3 +172,9 @@
 
 ;; My default font
 (set-frame-font "Menlo:pixelsize=15")
+
+
+;; cutting and pasting uses the primary selection
+(setq select-enable-primary t)
+;; uses the clipboard
+(setq select-enable-clipboard t)
