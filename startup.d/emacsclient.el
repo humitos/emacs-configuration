@@ -1,5 +1,4 @@
 ; save the position inside the file
-(require 'saveplace)
 (setq server-visit-hook (quote (save-place-find-file-hook)))
 
 ; end an emacsclient session
