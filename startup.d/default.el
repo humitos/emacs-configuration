@@ -178,3 +178,6 @@
 (setq select-enable-primary t)
 ;; uses the clipboard
 (setq select-enable-clipboard t)
+
+;; kill the current buffer instead of asking which one to close
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
