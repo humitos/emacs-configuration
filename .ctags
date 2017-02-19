@@ -68,3 +68,19 @@
 --exclude=.editorconfig
 --exclude=.bowerrc
 
+# Emacs
+--exclude=vendor
+
+# Read The Docs
+--exclude=user_builds
+--exclude=docs
+--exclude=logs
+--exclude=bower_components
+--exclude=node_modules
+--exclude=readthedocs/rtd_tests
+--exclude=media
+--exclude=dist
+--exclude=.tox
+--exclude=public_*
+--exclude=private_*
+
