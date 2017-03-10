@@ -25,4 +25,9 @@
      ;; path must be absolute
      (elpy-test-django-runner-command . ("/home/humitos/mozio/ondemand/manage.py" "test" "--noinput" "--keepdb" "--failfast"))
      )
+
+     ;; remove some hooks that are not needed in this project
+     (eval remove-hook 'python-mode-hook #'py-yapf-enable-on-save t)
+     (eval remove-hook 'elpy-mode-hook #'py-autopep8-enable-on-save t)
+     (eval remove-hook 'before-save-hook #'py-isort-before-save t)
   ))
