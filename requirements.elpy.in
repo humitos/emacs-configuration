@@ -43,7 +43,9 @@ pycodestyle
 # pyflakes
 pylint
 rope
-yapf
+sphinx
+# yapf
+-e git+https://github.com/google/yapf.git#egg=yapf
 unify
 
 # pkg_resources.DistributionNotFound: The 'pyflakes!=1.2.0,!=1.2.1,!=1.2.2,<1.4.0,>=0.8.1'

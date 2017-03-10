@@ -256,3 +256,6 @@
 [submodule "vendor/ispell-multi"]
 	path = vendor/ispell-multi
 	url = https://github.com/emacsmirror/ispell-multi.git
+[submodule "vendor/sphinx-doc.el"]
+	path = vendor/sphinx-doc.el
+	url = https://github.com/naiquevin/sphinx-doc.el.git
