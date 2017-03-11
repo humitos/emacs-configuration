@@ -166,6 +166,7 @@ Main modules included in this configuration
 * py-isort
 * rainbow-delimiters
 * restclient-mode
+* sphinx-doc.el
 * twittering-mode
 * undohist
 * visual-regexp-steroids
@@ -378,6 +379,14 @@ restclient-mode
 :C-c C-u: copy the CURL command to the clipboard
 :C-c C-g: browse the queries / variables / etc with helm
 
+
+sphinx-doc.el
+-------------
+
+* https://github.com/naiquevin/sphinx-doc.el
+
+:C-c M-d: create the docstring for the current Python method/function
+          in reStructuredText form
 
 twittering-mode
 ---------------
