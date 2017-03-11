@@ -18,6 +18,7 @@
 		    stamp menu list))
 
 (setq erc-spelling-dictionaries '(("#pyar" "es")
+                                  ("#readthedocs" "american")
                                   ("#python" "american")))
 
 (setq erc-input-line-position -2)
@@ -81,7 +82,8 @@
 ;; (setq freenode-full-name "your-password-goes-here")
 
 (setq erc-autojoin-channels-alist
-      '(("freenode.net" "#pyar")))
+      '(("freenode.net" "#pyar")
+        ("freenode.net" "#readthedocs")))
 
 ;; https://www.emacswiki.org/emacs/ErcConfiguration
 ;; use a different prompt
@@ -197,7 +199,12 @@ erc-modified-channels-alist. Should be executed on window change."
   (interactive)
   (switch-erc-channel-and-back "#pyar"))
 
+(defun switch-erc-rtfd-and-back ()
+  (interactive)
+  (switch-erc-channel-and-back "#readthedocs"))
+
 (global-set-key (kbd "<f12>") 'switch-erc-pyar-and-back)
+(global-set-key (kbd "S-<f12>") 'switch-erc-rtfd-and-back)
 
 
 ;; do not move the cursor to the top
