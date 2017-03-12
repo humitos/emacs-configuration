@@ -7,3 +7,5 @@
 
 ;; remove linum-mode in twittering-mode
 (add-hook 'twittering-mode-hook (lambda () (linum-mode 0)))
+
+(global-set-key (kbd "<f10>") 'twit)
