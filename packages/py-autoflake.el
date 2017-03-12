@@ -1,1 +1,1 @@
-../vendor/py-autoflake.el/py-autoflake.el
+../vendor/py-cmd-buffer.el/py-autoflake.el

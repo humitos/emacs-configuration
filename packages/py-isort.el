@@ -1,1 +1,1 @@
-../vendor/py-isort/py-isort.el
+../vendor/py-cmd-buffer.el/py-isort.el

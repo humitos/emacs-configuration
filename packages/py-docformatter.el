@@ -1,1 +1,1 @@
-../vendor/py-docformatter.el/py-docformatter.el
+../vendor/py-cmd-buffer.el/py-docformatter.el

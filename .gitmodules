@@ -82,9 +82,6 @@
 [submodule "vendor/seq"]
 	path = vendor/seq
 	url = https://github.com/NicolasPetton/seq.el
-[submodule "vendor/py-autopep8.el"]
-	path = vendor/py-autopep8.el
-	url = https://github.com/paetzke/py-autopep8.el
 [submodule "vendor/swiper"]
 	path = vendor/swiper
 	url = https://github.com/abo-abo/swiper
@@ -109,12 +106,6 @@
 [submodule "vendor/powerline"]
 	path = vendor/powerline
 	url = https://github.com/milkypostman/powerline.git
-[submodule "vendor/py-isort"]
-	path = vendor/py-isort
-	url = https://github.com/paetzke/py-isort.el
-[submodule "vendor/py-docformatter.el"]
-	path = vendor/py-docformatter.el
-	url = https://github.com/humitos/py-docformatter.el
 [submodule "vendor/projectile"]
 	path = vendor/projectile
 	url = https://github.com/bbatsov/projectile.git
@@ -232,15 +223,6 @@
 [submodule "vendor/hydra"]
 	path = vendor/hydra
 	url = https://github.com/abo-abo/hydra.git
-[submodule "vendor/py-autoflake.el"]
-	path = vendor/py-autoflake.el
-	url = https://github.com/humitos/py-autoflake.el.git
-[submodule "vendor/py-yapf.el"]
-	path = vendor/py-yapf.el
-	url = https://github.com/humitos/py-yapf.el.git
-[submodule "vendor/py-unify.el"]
-	path = vendor/py-unify.el
-	url = https://github.com/humitos/py-unify.el.git
 [submodule "vendor/python-docstring-mode"]
 	path = vendor/python-docstring-mode
 	url = https://github.com/glyph/python-docstring-mode.git
@@ -259,3 +241,9 @@
 [submodule "vendor/sphinx-doc.el"]
 	path = vendor/sphinx-doc.el
 	url = https://github.com/naiquevin/sphinx-doc.el.git
+[submodule "vendor/buftra.el"]
+	path = vendor/buftra.el
+	url = https://github.com/paetzke/buftra.el
+[submodule "vendor/py-cmd-buffer.el"]
+	path = vendor/py-cmd-buffer.el
+	url = https://github.com/humitos/py-cmd-buffer.el.git
