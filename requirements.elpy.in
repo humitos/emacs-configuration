@@ -43,11 +43,15 @@ pycodestyle
 # pyflakes
 pylint
 rope
-sphinx
 # yapf
 -e git+https://github.com/google/yapf.git#egg=yapf
 unify
 
 # pkg_resources.DistributionNotFound: The 'pyflakes!=1.2.0,!=1.2.1,!=1.2.2,<1.4.0,>=0.8.1'
 # distribution was not found and is required by flake8
-pyflakes==1.3.0
+# pyflakes==1.3.0
+pyflakes
+
+
+# sphinx-doc.el
+sphinx
