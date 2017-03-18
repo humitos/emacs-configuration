@@ -29,8 +29,11 @@
      (elpy-test-django-runner-command . ("/home/humitos/mozio/ondemand/manage.py" "test" "--noinput" "--keepdb" "--failfast"))
      )
 
-     ;; remove some hooks that are not needed in this project
-     (eval remove-hook 'python-mode-hook #'py-yapf-enable-on-save t)
-     (eval remove-hook 'elpy-mode-hook #'py-autopep8-enable-on-save t)
+     ;; remove some hooks that are not needed in this project (e.g. Read The Docs)
+     (eval remove-hook 'before-save-hook #'py-autoflake-buffer t)
+     (eval remove-hook 'before-save-hook #'py-autopep8-buffer t)
+     (eval remove-hook 'before-save-hook #'py-docformatter-buffer t)
      (eval remove-hook 'before-save-hook #'py-isort-before-save t)
+     (eval remove-hook 'before-save-hook #'py-unify-buffer t)
+     (eval remove-hook 'before-save-hook #'py-yapf-buffer t)
   ))
