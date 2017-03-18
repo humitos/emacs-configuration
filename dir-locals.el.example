@@ -17,6 +17,9 @@
      ;; autoflake global options
      (py-autoflake-options . ("--remove-all-unused-imports" "--remove-unused-variables"))
 
+     ;; yapf --in-place --style .style.yapf --exclude "*migrations*" --exclude "*settings*" --exclude "*scripts*" --parallel --recursive .
+     (py-yapf-options . ("--style=/home/humitos/mozio/.style.yapf" "--exclude=*migrations*" "--exclude=*settings*" "--exclude=*scripts*" "--parallel"))
+
      ;; use our own virtualenv for this project
      (pyvenv-workon . "mozio-ondemand")
 

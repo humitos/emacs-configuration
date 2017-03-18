@@ -43,9 +43,11 @@ pycodestyle
 # pyflakes
 pylint
 rope
+unify
+
 # yapf
 -e git+https://github.com/google/yapf.git#egg=yapf
-unify
+futures  # enable multiprocessing in py2
 
 # pkg_resources.DistributionNotFound: The 'pyflakes!=1.2.0,!=1.2.1,!=1.2.2,<1.4.0,>=0.8.1'
 # distribution was not found and is required by flake8
