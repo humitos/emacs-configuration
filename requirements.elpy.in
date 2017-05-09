@@ -46,7 +46,13 @@ rope
 unify
 
 # yapf
--e git+https://github.com/google/yapf.git#egg=yapf
+# -e git+https://github.com/google/yapf.git#egg=yapf
+# master version of yapf is buggy, it doesn't respect my SPLIT_AT_FIRST_ARGUMENTS or something like that setting:
+#-    def _update_reservation_payment(self, reservation, card_token_id, stored_card_id, save_card, coupon_code,
+#-                                    stripe_origin):
+#+    def _update_reservation_payment(
+#+            self, reservation, card_token_id, stored_card_id, save_card, coupon_code, stripe_origin):
+yapf==0.16.1
 futures  # enable multiprocessing in py2
 
 # pkg_resources.DistributionNotFound: The 'pyflakes!=1.2.0,!=1.2.1,!=1.2.2,<1.4.0,>=0.8.1'
