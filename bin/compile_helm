@@ -4,5 +4,5 @@
 set -e
 
 cd vendor/helm
-make
+EMACSLOADPATH="/home/humitos/.emacs.d/vendor/emacs-async:" make
 
