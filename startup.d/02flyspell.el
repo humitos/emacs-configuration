@@ -54,6 +54,6 @@
 
 ;; apply-partially - http://stackoverflow.com/a/16730821/2187091
 ;; funcall - http://emacs.stackexchange.com/a/17467
-(add-hook 'rst-mode-hook (apply-partially #'flyspell-active-mode 'flyspell-mode))
-(add-hook 'text-mode-hook (apply-partially #'flyspell-active-mode 'flyspell-mode))
-(add-hook 'elpy-mode-hook (apply-partially #'flyspell-active-mode 'flyspell-prog-mode))
+;; (add-hook 'rst-mode-hook (apply-partially #'flyspell-active-mode 'flyspell-mode))
+;; (add-hook 'text-mode-hook (apply-partially #'flyspell-active-mode 'flyspell-mode))
+;; (add-hook 'elpy-mode-hook (apply-partially #'flyspell-active-mode 'flyspell-prog-mode))
