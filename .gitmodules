@@ -247,3 +247,6 @@
 [submodule "vendor/py-cmd-buffer.el"]
 	path = vendor/py-cmd-buffer.el
 	url = https://github.com/humitos/py-cmd-buffer.el.git
+[submodule "vendor/helm-elscreen"]
+	path = vendor/helm-elscreen
+	url = https://github.com/emacs-helm/helm-elscreen.git
