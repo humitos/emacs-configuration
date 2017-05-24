@@ -1,6 +1,6 @@
 # Use this version which implement --keep-useless-pass
--e git+https://github.com/jobevers/autoflake#egg=autoflake
-# autoflake
+# -e git+https://github.com/jobevers/autoflake#egg=autoflake
+autoflake
 
 autopep8
 docformatter
@@ -40,7 +40,6 @@ pep8
 pep8-naming
 pip
 pycodestyle
-# pyflakes
 pylint
 rope
 unify
