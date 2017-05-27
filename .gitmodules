@@ -243,7 +243,7 @@
 	url = https://github.com/naiquevin/sphinx-doc.el.git
 [submodule "vendor/buftra.el"]
 	path = vendor/buftra.el
-	url = https://github.com/paetzke/buftra.el
+	url = https://github.com/humitos/buftra.el
 [submodule "vendor/py-cmd-buffer.el"]
 	path = vendor/py-cmd-buffer.el
 	url = https://github.com/humitos/py-cmd-buffer.el.git
