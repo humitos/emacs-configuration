@@ -181,3 +181,6 @@
 
 ;; kill the current buffer instead of asking which one to close
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
+
+;; increase the line-spacing
+(setq-default line-spacing 3)
