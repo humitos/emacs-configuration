@@ -4,7 +4,8 @@ autoflake
 
 autopep8
 docformatter
-elpy
+# it comes included in the elpy.el source code
+# elpy
 epc
 
 # Use the master branch as a temporal fix of this issue
