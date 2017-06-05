@@ -75,3 +75,6 @@
 
 ;; set the proper PYTHONPATH for elpy (Python module comes included in the source code)
 (setq elpy-rpc-pythonpath (concat emacs-user-directory "vendor/elpy"))
+
+;; try to use pyenv for `pyvenv.el'
+(setenv "WORKON_HOME" "/home/humitos/.pyenv/versions")
