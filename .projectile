@@ -1,31 +1,31 @@
 -/.git
 -/vendor
--/.dir-locals.el
--/TAGS
--/locate.db
--/.venv
--/.gitignore
--/.gitmodules
--/.github
+-.dir-locals.el
+-TAGS
+-locate.db
+-.venv
+-.gitignore
+-.gitmodules
+-.github
 -/.tx
 -/places
--/.emacs.desktop
--/.emacs-desktop
+-.emacs.desktop
+-.emacs-desktop
 -/undohist
 -/manage.py
 -/var
 -/url
--/auto-save-list
--/savehist
--/projectile.cache
+-auto-save-list
+-savehist
+-projectile.cache
 -/emacsenv
 -/erc
 -/.coverage
 -/coverage
 -/src
--/.style.yapf
+-.style.yapf
 
--/celerybeat-schedule
+-celerybeat-schedule
 
 -/external_apis/zones/*.geojson
 
