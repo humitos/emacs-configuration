@@ -253,3 +253,6 @@
 [submodule "vendor/easy-kill"]
 	path = vendor/easy-kill
 	url = https://github.com/leoliu/easy-kill.git
+[submodule "vendor/company-statistics"]
+	path = vendor/company-statistics
+	url = https://github.com/company-mode/company-statistics.git
