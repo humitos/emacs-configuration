@@ -52,6 +52,21 @@
 ;; align annotations to the right tooltip border
 (setq company-tooltip-align-annotations t)
 
+
+;; https://emacs.stackexchange.com/a/12403
+;; show private methods/attributes at the end when suggesting
+(defun company-transform-python (candidates)
+  (let ((deleted))
+    (mapcar #'(lambda (c)
+        (if (or (string-prefix-p "_" c) (string-prefix-p "._" c))
+            (progn
+              (add-to-list 'deleted c)
+              (setq candidates (delete c candidates)))))
+            candidates)
+    (append candidates (nreverse deleted))
+    ))
+(append company-transformers '(company-transform-python))
+
 ;; do not try to guess the indent offset
 ;; Avoid this message: "Can’t guess python-indent-offset, using defaults: 4"
 ;; http://stackoverflow.com/questions/18778894/emacs-24-3-python-cant-guess-python-indent-offset-using-defaults-4
