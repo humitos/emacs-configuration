@@ -67,6 +67,14 @@
     ))
 (append company-transformers '(company-transform-python))
 
+
+;; https://stackoverflow.com/questions/2081577/setting-emacs-split-to-horizontal
+;; split company window horizontally when hitting C-w
+;; README: the problem this has it's that the company popup disappears :(
+;; (setq split-height-threshold 0)
+;; (setq split-width-threshold nil)
+
+
 ;; do not try to guess the indent offset
 ;; Avoid this message: "Can’t guess python-indent-offset, using defaults: 4"
 ;; http://stackoverflow.com/questions/18778894/emacs-24-3-python-cant-guess-python-indent-offset-using-defaults-4
