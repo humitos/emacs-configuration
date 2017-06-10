@@ -143,6 +143,7 @@ Main modules included in this configuration
 * autopair
 * browse-at-remote
 * discover-my-major
+* easy-kill
 * elpy
 * expand-region
 * flycheck
@@ -204,6 +205,16 @@ discover-my-major
 
 :discover-my-major: show help with all the all the hotkeys for this
                     major mode
+
+
+easy-kill
+---------
+
+* https://github.com/leoliu/easy-kill
+
+:M-w d: save the current defun definition into the kill-ring (clipboard)
+:M-w w: save word at point into the kill-ring
+:M-w f: save the name of the current file being edited
 
 
 elpy

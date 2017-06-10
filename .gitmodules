@@ -250,3 +250,6 @@
 [submodule "vendor/helm-elscreen"]
 	path = vendor/helm-elscreen
 	url = https://github.com/emacs-helm/helm-elscreen.git
+[submodule "vendor/easy-kill"]
+	path = vendor/easy-kill
+	url = https://github.com/leoliu/easy-kill.git
