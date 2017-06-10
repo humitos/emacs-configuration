@@ -1,3 +1,7 @@
 [pep8]
-ignore = E125,E501,E701,E702,E70
+# E125 - Indent to distinguish line from next logical line.
+# E501 - Try to make lines fit within --max-line-length characters.
+# E701 - Put colon-separated compound statement on separate lines.
+# E70  - Put semicolon-separated compound statement on separate lines.
+ignore = E125,E501,E701,E70
 max-line-length = 79
