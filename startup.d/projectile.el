@@ -35,7 +35,7 @@
 
 (if (getenv "DOCKER")
     (setq ctags-executable "ctags")
-  (setq ctags-executable "vendor/ctags/build/bin/ctags"))
+  (setq ctags-executable "vendor/ctags/ctags"))
 
 (setq projectile-tags-command
       (concat emacs-user-directory

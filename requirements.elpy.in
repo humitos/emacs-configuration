@@ -1,10 +1,11 @@
 # Use this version which implement --keep-useless-pass
--e git+https://github.com/jobevers/autoflake#egg=autoflake
-# autoflake
+# -e git+https://github.com/jobevers/autoflake#egg=autoflake
+autoflake
 
 autopep8
 docformatter
-elpy
+# it comes included in the elpy.el source code
+# elpy
 epc
 
 # Use the master branch as a temporal fix of this issue
@@ -40,7 +41,6 @@ pep8
 pep8-naming
 pip
 pycodestyle
-# pyflakes
 pylint
 rope
 unify
@@ -60,6 +60,8 @@ futures  # enable multiprocessing in py2
 # pyflakes==1.3.0
 pyflakes
 
+# pyment
+-e git+https://github.com/dadadel/pyment.git#egg=pyment
 
 # sphinx-doc.el
 sphinx

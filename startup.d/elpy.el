@@ -73,6 +73,8 @@
 (with-eval-after-load "python"
   (define-key python-mode-map (kbd "C-c C-d") 'helm-pydoc))
 
+;; set the proper PYTHONPATH for elpy (Python module comes included in the source code)
+(setq elpy-rpc-pythonpath (concat emacs-user-directory "vendor/elpy"))
 
 ;; uses the default emacs virtualenv
 (pyvenv-workon "emacs-default")

@@ -4,5 +4,4 @@
 set -e
 
 cd vendor/helm
-make
-
+EMACSLOADPATH="../emacs-async:" make

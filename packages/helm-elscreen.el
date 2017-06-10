@@ -1,1 +1,1 @@
-../vendor/helm/helm-elscreen.el
+../vendor/helm-elscreen/helm-elscreen.el
