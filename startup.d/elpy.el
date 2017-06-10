@@ -78,3 +78,6 @@
 
 ;; try to use pyenv for `pyvenv.el'
 (setenv "WORKON_HOME" "/home/humitos/.pyenv/versions")
+
+;; uses the default emacs virtualenv
+(pyvenv-workon "emacs-default")
