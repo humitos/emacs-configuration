@@ -1,3 +1,5 @@
+; -*- mode: Lisp -*-
+
 ((python-mode
   . (
      ;; This is used to fill the paragraph in 120 columns when pressing M-q
