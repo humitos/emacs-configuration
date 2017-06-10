@@ -72,3 +72,7 @@
 ;; helm-pydoc: https://github.com/syohex/emacs-helm-pydoc
 (with-eval-after-load "python"
   (define-key python-mode-map (kbd "C-c C-d") 'helm-pydoc))
+
+
+;; uses the default emacs virtualenv
+(pyvenv-workon "emacs-default")
