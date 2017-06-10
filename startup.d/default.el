@@ -188,3 +188,9 @@
 
 ;; increase the line-spacing
 (setq-default line-spacing 3)
+
+;; cycle between the mark ring (C-u C-<SPC>) just by C-<SPC>
+(setq set-mark-command-repeat-pop t)
+
+;; increase the mark ring
+(setq mark-ring-max 200)
