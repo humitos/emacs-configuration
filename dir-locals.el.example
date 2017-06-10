@@ -27,6 +27,9 @@
      (elpy-test-runner . elpy-test-django-runner)
      ;; path must be absolute
      (elpy-test-django-runner-command . ("/home/humitos/mozio/ondemand/manage.py" "test" "--noinput" "--keepdb" "--failfast"))
+
+     ;; when the project is inside a Docker container, I'm running it like this
+     ;; (elpy-test-django-runner-command . ("docker" "exec" "-it" "ondemand_shell_run_1" "python" "manage.py" "test"))
      )
 
      ;; remove some hooks that are not needed in this project (e.g. Read The Docs)
