@@ -58,7 +58,7 @@
 (defun company-transform-python (candidates)
   (let ((deleted))
     (mapcar #'(lambda (c)
-        (if (or (string-prefix-p "_" c) (string-prefix-p "._" c))
+         (if (or (string-prefix-p "__" c) (string-prefix-p ".__" c))
             (progn
               (add-to-list 'deleted c)
               (setq candidates (delete c candidates)))))
