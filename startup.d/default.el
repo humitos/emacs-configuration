@@ -113,6 +113,10 @@
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Kill-Ring.html
 (setq kill-ring-max 100)
 
+;; kill the whole line (including new line char) when `kill-line' is
+;; ran from the beggining of the line
+(setq kill-whole-line t)
+
 
 ;; It is the opposite of fill-paragraph
 ;; https://www.emacswiki.org/emacs/UnfillParagraph
