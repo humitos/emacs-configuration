@@ -52,8 +52,15 @@
 (global-unset-key (kbd "C-c C-s"))
 (define-key elpy-mode-map (kbd "C-c C-s") nil)
 ;; enable regex search using projectile and helm
-(define-key elpy-mode-map (kbd "C-c C-s") 'helm-projectile-ack)
-(define-key global-map (kbd "C-c C-s") 'helm-projectile-ack)
+(define-key elpy-mode-map (kbd "C-c C-s") 'helm-projectile-ag)
+(define-key global-map (kbd "C-c C-s") 'helm-projectile-ag)
+
+;; TODO: this is valid for helm-ag not for helm-projectile-ag
+;; https://github.com/syohex/emacs-helm-ag
+(setq helm-ag-insert-at-point 'symbol)
+(setq helm-ag-fuzzy-match t)
+(setq helm-ag-use-grep-ignore-list t)
+(setq helm-ag-use-agignore t)
 
 ;; the command helm-projects-find-file does a locate in these directories
 (setq helm-locate-project-list
