@@ -24,3 +24,5 @@ erc
 emacsenv
 .emacs-desktop
 recentf
+
+company-statistics-cache.el
