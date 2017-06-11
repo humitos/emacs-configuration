@@ -12,7 +12,7 @@ git submodule foreach 'if [ "$path" != "vendor/helm" ] && [ "$path" != "vendor/h
 
 ./bin/compile_helm
 ./bin/compile_ctags
-./bin/compile_silversercher
+./bin/compile_silversearcher
 
 # Compile all new packages
 ./bin/compile_el_files
