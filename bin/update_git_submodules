@@ -4,11 +4,15 @@
 set -e
 
 # Update all git repositories
-# git submodule foreach git pull
+git submodule foreach git pull
+
+# README: this is here just as a reference about how to exclude some
+# repos, but now I'm using ag (the silver searcher) and this is not
+# valid anymore
 
 # https://gist.github.com/stephenparish/603e637308567f453a16
 # exclude helm and helm-projectile because I'm using rg
-git submodule foreach 'if [ "$path" != "vendor/helm" ] && [ "$path" != "vendor/helm-projectile" ]; then git pull; fi'
+# git submodule foreach 'if [ "$path" != "vendor/helm" ] && [ "$path" != "vendor/helm-projectile" ]; then git pull; fi'
 
 ./bin/compile_helm
 ./bin/compile_ctags
