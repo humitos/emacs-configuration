@@ -14,57 +14,39 @@ touching your computer configuration and break anything::
 
 
 Full documentation for Docker image: https://github.com/humitos/emacs-x11-alpine
-     
+
+By running this configuration using Docker, you can start an emacs
+instance without breaking anything in your existing emacs
+configuration or even without having emacs installed in your computer.
+
+The idea of this Docker image, is that you can easily check some of
+the shortcuts and modules that I'm using and start using them in your
+own configuration by _maybe_ copying that chunk of configuration from
+`startup.d/` folder.
+
+Or, you can just use this Docker image as your daily editor :)
+
+If you really like this configuration, you could install it in your
+computer with the following instructions.
+
 ----
-
-  NOTE: do not installing it if you are not sure what you are doing... :)
-
-
-Try it! (deprecated)
-====================
-
-If you want to try all this configuration without changing anything in
-your computer, you can do it. Even if you already have your own emacs
-configuration and without modifying it!
-
-The idea is that you can try all the features and then copy those ones
-that you like most by reading all the configuration scripts or just
-use it as it is :)
-
-**Important: emacs 24.4 or greater is needed**
-
-#. Install all the dependencies (e.g. in Ubuntu)::
-
-     sudo apt-get install emacs python3-venv git ack-grep
-
-*NOTE: if `python3-venv` is not available in your Ubuntu you should install `python-virtualenv`*
-
-#. Clone this repository::
-
-     git clone --depth 1 https://github.com/humitos/emacs-configuration.git
-     cd emacs-configuration
-     git submodule init
-     git submodule update
-     ./tryit.sh
-
-#. Enjoy!
-
+  
 Installation
 ============
+
+  NOTE: do not installing it if you are not sure what you are doing... :)
 
 
 #. Clone this repository on the standard `.emacs.d` settings directory::
 
      cd ~
-     git clone --depth 1 https://github.com/humitos/emacs-configuration.git
-     cd emacs-configuration
+     git clone --depth 1 https://github.com/humitos/emacs-configuration.git .emacs.d
+     cd .emacs.d
      git submodule init
-     git submodule update
 
-#. Compile helm::
+#. Update git submodules and compile necessary modules (helm, ctags and silver searcher, among others)::
 
-     cd vendor/helm
-     make
+   ./bin/update_git_submodules
 
 #. Put in your `~/.emacs`::
 
@@ -83,21 +65,23 @@ Installation
 
   NOTE: all of this configuration was tested in
    * Xubuntu 16.04 LTS
-   * Emacs 26.0.50.2
-   * git 2.11.0
-   * Python 2.7.12
-   * Firefox 48
+   * Emacs 26.0.50
+   * git 2.13.0
+   * Python 2.7.13
+   * Firefox 53.0.3
 
 
 Install Python necessary modules
 ================================
 
-I'm installing all the necesary package for `elpy` in each venv that
-I'm working on, so you should run this command in your venvs
+I'm installing all the necesary package for `elpy` in each virtualenv
+that I'm working on, so you should run this command in your venvs
 
 Install necessary packages::
 
       pip install -U -r requirements.elpy.in
+
+For virtualenv creation, I'm using `pyenv <https://github.com/pyenv/pyenv>`_.
 
 
 Install required system packages
@@ -106,7 +90,7 @@ Install required system packages
 
 ::
 
-     sudo apt-get install emacs python3-venv git ack-grep
+     sudo apt-get install emacs git aspell-es
 
 
 Configure Firefox to export bookmarks automatically
@@ -131,10 +115,11 @@ Keep this configuration updated
 
 ::
 
-     cd emacs-configuration
+     cd ~/.emacs.d
      git pull
-     git submodule update --init --remote
+     ./bin/update_git_submodules
 
+----
 
 Main modules included in this configuration
 ===========================================
@@ -348,6 +333,7 @@ Once on this buffer
 :z p: pop stashed changes
 :f u: fetch from origin
 :F e: pulll from elsewhere
+:C-w: copy the commit hash to the clipboard
 
 
 Commands:

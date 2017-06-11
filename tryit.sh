@@ -20,9 +20,10 @@
 
 ## Commentary:
 
-# Preconfigured Emacs with Manuel Kaufmann (@humitos) configurations
-# Useful to start quickly an emacs -Q with this configuration.
-# Run it from this directory or symlink it somewhere in your PATH.
+# (THIS IS DEPRECATED) Preconfigured Emacs with Manuel Kaufmann
+# (@humitos) configurations Useful to start quickly an emacs -Q with
+# this configuration.  Run it from this directory or symlink it
+# somewhere in your PATH.
 
 # version comparison
 # http://stackoverflow.com/a/4024263

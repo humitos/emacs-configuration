@@ -1,4 +1,8 @@
 #/bin/bash
+
+# This is DEPRECATED, I'm using
+# https://github.com/humitos/emacs-x11-alpine now
+
 set -e
 
 rm -rf repo.tar
