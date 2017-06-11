@@ -256,3 +256,6 @@
 [submodule "vendor/company-statistics"]
 	path = vendor/company-statistics
 	url = https://github.com/company-mode/company-statistics.git
+[submodule "vendor/the_silver_searcher"]
+	path = vendor/the_silver_searcher
+	url = https://github.com/ggreer/the_silver_searcher.git

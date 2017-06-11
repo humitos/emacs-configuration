@@ -1,0 +1,7 @@
+# -*- mode: sh; -*-
+#!/bin/bash
+
+set -e
+
+cd vendor/the_silver_searcher
+./build.sh
