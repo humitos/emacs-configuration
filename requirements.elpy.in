@@ -1,6 +1,7 @@
+# autoflake
 # Use this version which implement --keep-useless-pass
 # -e git+https://github.com/jobevers/autoflake#egg=autoflake
-autoflake
+-e git+https://github.com/myint/autoflake#egg=autoflake
 
 autopep8
 docformatter
@@ -35,7 +36,8 @@ importmagic
 ipdb
 ipython
 isort
-jedi
+# jedi
+-e git+https://github.com/davidhalter/jedi.git#egg=jedi
 path.py
 pep8
 pep8-naming
