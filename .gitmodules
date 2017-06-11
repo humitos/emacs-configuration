@@ -127,9 +127,6 @@
 [submodule "vendor/helm-projectile"]
 	path = vendor/helm-projectile
 	url = https://github.com/bbatsov/helm-projectile.git
-[submodule "vendor/etags-update"]
-	path = vendor/etags-update
-	url = https://github.com/mattkeller/etags-update.git
 [submodule "vendor/gist.el"]
 	path = vendor/gist.el
 	url = https://github.com/defunkt/gist.el.git
@@ -259,3 +256,6 @@
 [submodule "vendor/the_silver_searcher"]
 	path = vendor/the_silver_searcher
 	url = https://github.com/ggreer/the_silver_searcher.git
+[submodule "vendor/ctags-update"]
+	path = vendor/ctags-update
+	url = https://github.com/jixiuf/ctags-update.git
