@@ -259,3 +259,6 @@
 [submodule "vendor/ctags-update"]
 	path = vendor/ctags-update
 	url = https://github.com/jixiuf/ctags-update.git
+[submodule "vendor/highlight-symbol.el"]
+	path = vendor/highlight-symbol.el
+	url = https://github.com/nschum/highlight-symbol.el.git
