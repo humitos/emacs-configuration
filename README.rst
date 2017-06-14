@@ -123,6 +123,7 @@ Main modules included in this configuration
 * ace-jump-mode
 * autopair
 * browse-at-remote
+* ctags-update
 * discover-my-major
 * easy-kill
 * elpy
@@ -136,6 +137,7 @@ Main modules included in this configuration
 * help-fuzzier
 * helm-swoop
 * highlight-indentation
+* highlight-symbol
 * jedi
 * magit
 * material-theme
