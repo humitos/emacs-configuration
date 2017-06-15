@@ -194,3 +194,6 @@
 
 ;; increase the mark ring
 (setq mark-ring-max 200)
+
+;; max column number by default
+(setq fill-column 80)
