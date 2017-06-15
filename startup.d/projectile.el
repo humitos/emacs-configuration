@@ -67,6 +67,7 @@
    (cl-search ".pyenv" project-root)
    (cl-search "readthedocs/repositories" project-root)
    (cl-search "readthedocs.org/user_builds" project-root)
+   (cl-search "vendor" project-root)
    (cl-search "3rdparty" project-root)))
 
 (setq projectile-ignored-project-function #'my-ignore-project)
