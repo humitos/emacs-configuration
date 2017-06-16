@@ -262,3 +262,9 @@
 [submodule "vendor/highlight-symbol.el"]
 	path = vendor/highlight-symbol.el
 	url = https://github.com/nschum/highlight-symbol.el.git
+[submodule "vendor/highlight-numbers"]
+	path = vendor/highlight-numbers
+	url = https://github.com/Fanael/highlight-numbers.git
+[submodule "vendor/parent-mode"]
+	path = vendor/parent-mode
+	url = https://github.com/Fanael/parent-mode.git
