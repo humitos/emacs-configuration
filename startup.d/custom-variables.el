@@ -27,5 +27,5 @@
      (elpy-test-django-runner-command "/home/humitos/mozio/ondemand/manage.py" "test" "--noinput" "--keepdb" "--failfast")
      (elpy-test-django-runner-command "/home/humitos/mozio/data-entry/manage.py" "test" "--noinput" "--keepdb" "--failfast")
      (elpy-test-django-runner-command "/home/humitos/mozio/mozio-search/manage.py" "test" "--noinput" "--keepdb" "--failfast")
-     (elpy-test-django-runner-command "docker" "exec" "-it" "ondemand_shell_run_1" "python" "manage.py" "test")
+     (elpy-test-django-runner-command "docker" "exec" "-it" "ondemand_shell_run_1" "python" "manage.py" "test" "--keepdb")
      ))))
