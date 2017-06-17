@@ -157,6 +157,7 @@ Main modules included in this configuration
 * web-mode
 * whitespace-cleanup-mode
 * yasnippet
+* zencoding-mode
 * zzz-to-char
 
 These are the hotkeys that I use most.
@@ -413,6 +414,14 @@ zzz-to-char
 * https://github.com/mrkkrp/zzz-to-char
 
 :M-z: zap up to one of the characters in the current paragraph
+
+
+zencoding-mode
+--------------
+
+* https://github.com/rooney/zencoding
+
+:C-j: expand the current expression to match the snippet
 
 
 References

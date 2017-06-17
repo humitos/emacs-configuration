@@ -268,3 +268,6 @@
 [submodule "vendor/parent-mode"]
 	path = vendor/parent-mode
 	url = https://github.com/Fanael/parent-mode.git
+[submodule "vendor/zencoding"]
+	path = vendor/zencoding
+	url = https://github.com/rooney/zencoding.git
