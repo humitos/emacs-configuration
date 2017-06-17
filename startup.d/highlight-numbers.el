@@ -1,2 +1,4 @@
 (require 'highlight-numbers)
-(highlight-numbers-mode t)
+
+(add-hook 'elpy-mode-hook
+          (lambda () (highlight-numbers-mode +1)))
