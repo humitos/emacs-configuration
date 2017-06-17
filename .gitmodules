@@ -271,3 +271,6 @@
 [submodule "vendor/zencoding"]
 	path = vendor/zencoding
 	url = https://github.com/rooney/zencoding.git
+[submodule "vendor/guess-language.el"]
+	path = vendor/guess-language.el
+	url = https://github.com/tmalsburg/guess-language.el.git
