@@ -132,6 +132,7 @@ Main modules included in this configuration
 * gist.el
 * git-gutter.el
 * git-timemachine
+* guess-language
 * helm
 * helm-dash
 * help-fuzzier
@@ -150,6 +151,7 @@ Main modules included in this configuration
 * py-isort
 * rainbow-delimiters
 * restclient-mode
+* smart-forward.el
 * sphinx-doc.el
 * twittering-mode
 * undohist
@@ -374,6 +376,17 @@ restclient-mode
 :C-c C-v: execute the current request
 :C-c C-u: copy the CURL command to the clipboard
 :C-c C-g: browse the queries / variables / etc with helm
+
+
+smart-forward.el
+----------------
+
+* https://github.com/magnars/smart-forward.el
+
+:C-S-<left>: move backward 'smartly'
+:C-S-<right>: move forward 'smartly'
+:C-S-<up>: move up 'smartly'
+:C-S-<down>: move down 'smartly'
 
 
 sphinx-doc.el
