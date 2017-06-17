@@ -8,7 +8,7 @@
       (ignore-errors
         (funcall fn)))))
 
-(global-set-key (kbd "C-c <left>") (ignore-error-wrapper 'windmove-left))
-(global-set-key (kbd "C-c <right>") (ignore-error-wrapper 'windmove-right))
-(global-set-key (kbd "C-c <up>") (ignore-error-wrapper 'windmove-up))
-(global-set-key (kbd "C-c <down>") (ignore-error-wrapper 'windmove-down))
+(global-set-key (kbd "C-c <left>") 'windmove-left)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <up>") 'windmove-up)
+(global-set-key (kbd "C-c <down>") 'windmove-down)

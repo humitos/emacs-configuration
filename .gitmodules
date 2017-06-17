@@ -277,3 +277,6 @@
 [submodule "vendor/smart-forward.el"]
 	path = vendor/smart-forward.el
 	url = https://github.com/magnars/smart-forward.el.git
+[submodule "vendor/golden-ratio.el"]
+	path = vendor/golden-ratio.el
+	url = https://github.com/roman/golden-ratio.el.git
