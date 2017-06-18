@@ -18,6 +18,13 @@
 ;; Save the session
 (desktop-save-mode 1)
 
+;; You can specify the maximum number of buffers to restore
+;; immediately with the variable desktop-restore-eager; the remaining
+;; buffers are restored lazily, when Emacs is idle.
+;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Emacs-Sessions.html
+(setq desktop-restore-eager 5)
+
+
 (setq desktop-base-file-name ".emacs-desktop")
 
 (setq desktop-globals-to-save
