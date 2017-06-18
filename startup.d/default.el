@@ -33,8 +33,12 @@
         ;; tags-file-name
         ;; tags-table-list
         search-ring
-        regexp-(setq )earch-ring
-        register-alist file-name-history))
+        regexp-search-ring
+        register-alist
+        file-name-history
+        kill-ring
+        kill-ring-yank-pointer
+        ))
 
 ;; https://www.emacswiki.org/emacs/Desktop#toc2
 (setq desktop-buffers-not-to-save
