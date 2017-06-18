@@ -1,0 +1,1 @@
+../vendor/magithub/magithub-issue-tricks.el

@@ -1,0 +1,1 @@
+../vendor/magithub/magithub-ci.el

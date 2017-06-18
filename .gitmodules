@@ -286,3 +286,15 @@
 [submodule "vendor/fringe-helper.el"]
 	path = vendor/fringe-helper.el
 	url = https://github.com/nschum/fringe-helper.el.git
+[submodule "vendor/magithub"]
+	path = vendor/magithub
+	url = https://github.com/vermiculus/magithub.git
+[submodule "vendor/ghub"]
+	path = vendor/ghub
+	url = https://github.com/tarsius/ghub
+[submodule "vendor/ghub-plus"]
+	path = vendor/ghub-plus
+	url = https://github.com/vermiculus/ghub-plus.git
+[submodule "vendor/apiwrap.el"]
+	path = vendor/apiwrap.el
+	url = https://github.com/vermiculus/apiwrap.el.git

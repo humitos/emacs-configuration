@@ -141,6 +141,7 @@ Main modules included in this configuration
 * highlight-symbol
 * jedi
 * magit
+* magithub
 * material-theme
 * origami.el
 * powerline
