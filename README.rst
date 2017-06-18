@@ -135,7 +135,8 @@ Main modules included in this configuration
 * guess-language
 * helm
 * helm-dash
-* help-fuzzier
+* helm-flycheck  
+* helm-fuzzier
 * helm-swoop
 * highlight-indentation
 * highlight-symbol
@@ -305,6 +306,7 @@ Commands:
 :helm-swoop: search inside the current buffer and jump to them
 :helm-multi-swoop: search in multiples buffer and jump to them
 :helm-dash: search in dash documentation (https://kapeli.com/dash)
+:helm-flycheck: show all the flycheck errors in a helm buffer
 
 Once in the helm session / buffer:
 

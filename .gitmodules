@@ -298,3 +298,6 @@
 [submodule "vendor/apiwrap.el"]
 	path = vendor/apiwrap.el
 	url = https://github.com/vermiculus/apiwrap.el.git
+[submodule "vendor/helm-flycheck"]
+	path = vendor/helm-flycheck
+	url = https://github.com/yasuyk/helm-flycheck.git
