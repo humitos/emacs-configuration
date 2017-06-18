@@ -1,4 +1,4 @@
-;; -*- mode: pip-requirements -*-
+# ;; -*- mode: pip-requirements -*-
 
 # autoflake
 # Use this version which implement --keep-useless-pass
