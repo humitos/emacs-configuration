@@ -130,7 +130,7 @@ Main modules included in this configuration
 * expand-region
 * flycheck
 * gist.el
-* git-gutter.el
+* git-gutter-fringe.el
 * git-timemachine
 * guess-language
 * helm

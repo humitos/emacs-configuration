@@ -1,7 +1,5 @@
-(require 'git-gutter)
-
-;; If you would like to use git-gutter.el and linum-mode
-;; (git-gutter:linum-setup)
+;; https://github.com/syohex/emacs-git-gutter-fringe
+(require 'git-gutter-fringe)
 
 (custom-set-variables
  '(git-gutter:unchanged-sign "  ") ;; two spaces
@@ -14,6 +12,9 @@
  '(git-gutter:verbosity 0)  ;; Don't need log/message
  '(git-gutter:update-interval 5)
 )
+
+(setq-default left-fringe-width 15)
+(setq-default right-fringe-width 15)
 
 ;; show git status (add, remove, etc lines) next to the row numbers
 (global-git-gutter-mode +1)

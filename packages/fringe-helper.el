@@ -1,0 +1,1 @@
+../vendor/fringe-helper.el/fringe-helper.el
