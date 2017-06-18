@@ -1,0 +1,1 @@
+../vendor/helm-flycheck/helm-flycheck.el
