@@ -208,3 +208,8 @@
 
 ;; max column number by default
 (setq fill-column 80)
+
+;; move between buffers with Ctrl-RePag and Ctrl-AvPag as in many other programs
+(define-key global-map (kbd "C-<prior>") 'previous-buffer)
+(define-key global-map (kbd "C-<next>") 'next-buffer)
+
