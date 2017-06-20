@@ -17,7 +17,7 @@
 (global-set-key (kbd "C-x r b") 'helm-filtered-bookmarks)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 ;; (global-unset-key (kbd "C-c C-f"))
-(define-key elpy-mode-map (kbd "C-c C-f") 'helm-projectile)
+(define-key elpy-mode-map (kbd "C-c C-f") 'helm-projectile-find-file)
 (global-set-key (kbd "C-c C-f") 'helm-projectile-find-file)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x b") 'helm-mini)
@@ -50,10 +50,9 @@
 
 ;; disable regex search from elpy
 (global-unset-key (kbd "C-c C-s"))
-(define-key elpy-mode-map (kbd "C-c C-s") nil)
 ;; enable regex search using projectile and helm
+(global-set-key (kbd "C-c C-s") 'helm-projectile-ag)
 (define-key elpy-mode-map (kbd "C-c C-s") 'helm-projectile-ag)
-(define-key global-map (kbd "C-c C-s") 'helm-projectile-ag)
 
 ;; TODO: this is valid for helm-ag not for helm-projectile-ag
 ;; https://github.com/syohex/emacs-helm-ag

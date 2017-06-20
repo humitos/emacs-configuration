@@ -31,6 +31,9 @@
 ;; disable find-file-in-project because of helm
 (define-key elpy-mode-map (kbd "C-c C-f") nil)
 
+;; disable elpy-rgrep-symbol of helm
+(define-key elpy-mode-map (kbd "C-c C-s") nil)
+
 ;; https://masteringemacs.org/article/compiling-running-scripts-emacs
 (defun python--add-debug-highlight ()
   "Adds a highlighter for '# DEBUG #' string"
