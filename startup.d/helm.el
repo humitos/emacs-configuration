@@ -54,6 +54,10 @@
 (global-set-key (kbd "C-c C-s") 'helm-projectile-ag)
 (define-key elpy-mode-map (kbd "C-c C-s") 'helm-projectile-ag)
 
+;; helm-occur in the buffer (default symbol)
+(global-set-key (kbd "C-c s") 'helm-occur)
+
+
 ;; TODO: this is valid for helm-ag not for helm-projectile-ag
 ;; https://github.com/syohex/emacs-helm-ag
 (setq helm-ag-insert-at-point 'symbol)

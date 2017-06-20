@@ -296,6 +296,7 @@ helm
 :C-x r b: files position bookmark listing
 :C-c h e: etags
 :C-c h i: all function and variable names in the current buffer
+:C-c s: occurrences of the symbol at point in buffer
 
 
 Commands:
