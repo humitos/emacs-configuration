@@ -301,3 +301,6 @@
 [submodule "vendor/helm-flycheck"]
 	path = vendor/helm-flycheck
 	url = https://github.com/yasuyk/helm-flycheck.git
+[submodule "vendor/floobits"]
+	path = vendor/floobits
+	url = https://github.com/Floobits/floobits-emacs.git
