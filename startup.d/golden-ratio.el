@@ -12,4 +12,8 @@
         windmove-up
         ignore-error-wrapper))
 
+;; exclude ispell choices when pressing M-$
+(setq golden-ratio-exclude-buffer-names
+      '("*Choices*"))
+
 (golden-ratio-mode 1)
