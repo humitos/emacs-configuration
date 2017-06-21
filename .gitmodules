@@ -304,3 +304,6 @@
 [submodule "vendor/floobits"]
 	path = vendor/floobits
 	url = https://github.com/Floobits/floobits-emacs.git
+[submodule "vendor/region-state.el"]
+	path = vendor/region-state.el
+	url = https://github.com/xuchunyang/region-state.el.git
