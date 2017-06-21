@@ -14,6 +14,7 @@
 
 ;; exclude ispell choices when pressing M-$
 (setq golden-ratio-exclude-buffer-names
-      '("*Choices*"))
+      '("*Choices*"
+        "*twittering-edit*"))
 
 (golden-ratio-mode 1)
