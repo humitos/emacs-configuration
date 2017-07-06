@@ -4,6 +4,7 @@
 
 (setq highlight-symbol-ignore-list
       '("False" "True" "None" "self" "def" "import" "from" "if" "else" "for"
-        "while" "class" "print" "and" "not" "is" "param" "type" "rtype" "async"))
+        "while" "class" "print" "and" "not" "is" "param" "type" "rtype" "async"
+        "with"))
 
 (add-hook 'elpy-mode-hook 'highlight-symbol-mode)
