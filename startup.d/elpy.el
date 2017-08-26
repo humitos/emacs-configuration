@@ -97,3 +97,26 @@
 
 ;; uses the default emacs virtualenv
 (pyvenv-workon "emacs-default")
+
+;; sometimes `elpy-goto-definition' fails so, I'm using my custom
+;; M-. keybord shortcut that calls the elpy functions and if fails
+;; uses `helm-etags-select' with the tags files from the project I use
+;; most and by disabling the fuzzy matching
+(defun meta-dot ()
+  "Use elpy-goto-definition first and if it fails, use helm-etags-select."
+  (interactive)
+  (let ((location (elpy-rpc-get-definition))
+        (tags-table-list-orig tags-table-list))
+    (if location
+        (elpy-goto-location (car location) (cadr location))
+      (progn
+        (setq helm-etags-fuzzy-match nil)
+        (setq-local tags-table-list
+                    '("/home/humitos/mozio/ondemand/TAGS"
+                      "/home/humitos/mozio/mozio/TAGS"
+                      "/home/humitos/mozio/mozio-commons/TAGS"))
+        (helm-etags-select nil)
+        (setq tags-table-list tags-table-list-orig)
+        (setq helm-etags-fuzzy-match t)))))
+
+(define-key elpy-mode-map (kbd "M-.") 'meta-dot)
