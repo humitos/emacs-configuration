@@ -9,6 +9,16 @@
 ;; do not ask if we want to save the personal dictionary
 (setq ispell-silently-savep t)
 
+;; enable the likeness criteria
+(setq flyspell-sort-corrections nil)
+
+;; don't use `M-TAB' to correct word (only use `C-.')
+(setq flyspell-use-meta-tab nil)
+
+;; dash character (`-') is considered as a word delimiter
+(setq flyspell-consider-dash-as-word-delimiter-flag t)
+
+(setq flyspell-mode-line-string "FlySpell")
 
 (require 'guess-language)
 (setq guess-language-languages '(en es))
