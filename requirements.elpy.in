@@ -88,17 +88,11 @@ unify
 #+    def _update_reservation_payment(
 #+            self, reservation, card_token_id, stored_card_id, save_card, coupon_code, stripe_origin):
 
-# better stable version
-# yapf==0.16.1
+# better version
+# yapf==0.16.1  # stable
+# yapf==0.18.0  # unreleased
 
-# https://github.com/google/yapf/issues/378
-# https://github.com/google/yapf/commit/848efddd27a8547ecce0876eeed12c197a3d4234
-# I created a personal branch for this that it's fork from `master`
-# and it has merged `no-split-before-dict-value`
-# pip install git+ssh://git@github.com/humitos/yapf.git@master+no-split-before-dict-value#egg=yapf
-# NO_SPLIT_BEFORE_DICT_VALUE=True
--e git+https://github.com/humitos/yapf.git@master+no-split-before-dict-value#egg=yapf
-
+-e git+ssh://git@github.com/google/yapf.git@master#egg=yapf
 futures  # enable multiprocessing in py2
 
 # pkg_resources.DistributionNotFound: The 'pyflakes!=1.2.0,!=1.2.1,!=1.2.2,<1.4.0,>=0.8.1'
