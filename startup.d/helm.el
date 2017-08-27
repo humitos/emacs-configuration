@@ -219,3 +219,6 @@
 
 ;; When using "C-c h e" match in all the text (including filename)
 (setq helm-etags-match-part-only 'all)
+
+;; Define the length of the helm buffer
+(setq helm-buffer-max-length 50)
