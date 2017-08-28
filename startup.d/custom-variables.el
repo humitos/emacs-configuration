@@ -1,17 +1,11 @@
 (custom-set-variables
  '(safe-local-variable-values
-   (quote
-    (
-     (eval pyvenv-workon
-	   (quote emacs-default))
-     (eval pyvenv-workon
-	   (quote mozio))
-     (eval pyvenv-workon
-	   (quote mozio-commons))
-     (eval pyvenv-workon
-	   (quote mozio-ondemand))
-     (eval pyvenv-workon
-	   (quote mozio-data-entry))
+   '(
+     (eval pyvenv-workon 'emacs-default)
+     (eval pyvenv-workon 'mozio)
+     (eval pyvenv-workon 'mozio-commons)
+     (eval pyvenv-workon 'mozio-ondemand)
+     (eval pyvenv-workon 'mozio-data-entry)
      (py-docformatter-options "--wrap-summaries=80" "--wrap-descriptions=80" "--pre-summary-newline" "--no-blank")
      (py-docformatter-options "--wrap-summaries=120 --wrap-descriptions=120 --pre-summary-newline --no-blank")
      (py-docformatter-options "--wrap-summaries=120" "--wrap-descriptions=120" "--pre-summary-newline" "--no-blank")
