@@ -307,3 +307,6 @@
 [submodule "vendor/region-state.el"]
 	path = vendor/region-state.el
 	url = https://github.com/xuchunyang/region-state.el.git
+[submodule "vendor/company-flx"]
+	path = vendor/company-flx
+	url = https://github.com/PythonNut/company-flx.git
