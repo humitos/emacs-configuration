@@ -222,3 +222,6 @@
 
 ;; Define the length of the helm buffer
 (setq helm-buffer-max-length 50)
+
+; helm-bookmarks
+(global-set-key (kbd "C-x C-b") 'helm-bookmarks)
