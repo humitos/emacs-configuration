@@ -96,7 +96,9 @@
 (setq elpy-rpc-pythonpath (concat emacs-user-directory "vendor/elpy"))
 
 ;; try to use pyenv for `pyvenv.el'
-(setenv "WORKON_HOME" "/home/humitos/.pyenv/versions")
+(if (not (getenv "DOCKER"))
+    (setenv "WORKON_HOME" "/home/humitos/.pyenv/versions"))
+
 
 ;; uses the default emacs virtualenv
 (pyvenv-workon "emacs-default")
