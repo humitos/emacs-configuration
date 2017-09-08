@@ -49,7 +49,7 @@
 
 ;; all characters from `company-auto-complete-chars' trigger insertion
 ;; of the selected completion candidate
-(setq company-auto-complete t)
+(setq company-auto-complete nil)
 
 (setq company-auto-complete-chars '(?\( ?\) ?.))
 
