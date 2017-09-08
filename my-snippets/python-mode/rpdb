@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: rpdb
+# key: rpdb
+# group: debug
+# --
+import rpdb; debugger = rpdb.Rpdb(port=4444, addr='0.0.0.0') ; debugger.set_trace()  # yapf: disable

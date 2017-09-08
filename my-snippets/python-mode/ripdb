@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: ripdb
+# key: ripdb
+# group: debug
+# --
+import ripdb; ripdb.set_trace(port=4444, addr='0.0.0.0')  # yapf: disable
