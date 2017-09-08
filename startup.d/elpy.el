@@ -7,8 +7,11 @@
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
 
-;; Run flycheck only when the file is saved
-(setq flycheck-check-syntax-automatically '(save))
+;; Run flycheck only when the file is saved, idle or new line
+(setq flycheck-check-syntax-automatically '(save idle-change new-line))
+
+;; Wait idle seconds before running flycheck
+(setq flycheck-idle-change-delay 2)
 
 ;; Use rope as backend for Elpy
 ;; (setq elpy-rpc-backend "rope")
