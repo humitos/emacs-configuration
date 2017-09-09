@@ -62,9 +62,9 @@ Installation
   NOTE: all of this configuration was tested in
    * Xubuntu 16.04 LTS
    * Emacs 26.0.50
-   * git 2.13.0
+   * git 2.14.1
    * Python 2.7.13
-   * Firefox 53.0.3
+   * Firefox 55.0.2
 
 
 Install Python necessary modules
@@ -87,6 +87,11 @@ Install required system packages
 ::
 
      sudo apt-get install emacs git aspell-es
+
+
+ctags compilation::
+
+     sudo apt-get install clang-format
 
 
 Configure Firefox to export bookmarks automatically
