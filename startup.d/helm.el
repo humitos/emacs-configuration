@@ -67,7 +67,7 @@
 (setq helm-ag-use-agignore t)
 
 (if (not (getenv "DOCKER"))
-    (setq helm-ag-base-command (concat emacs-user-directory "vendor/the_silver_searcher/" "ag --nocolor --nogroup")))
+    (setq helm-ag-base-command (concat emacs-user-directory "vendor/the_silver_searcher/" "ag --nocolor --nogroup --literal")))
 
 ;; the command helm-projects-find-file does a locate in these directories
 (setq helm-locate-project-list

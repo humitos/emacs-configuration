@@ -310,3 +310,6 @@
 [submodule "vendor/company-flx"]
 	path = vendor/company-flx
 	url = https://github.com/PythonNut/company-flx.git
+[submodule "vendor/helm-backup"]
+	path = vendor/helm-backup
+	url = https://github.com/antham/helm-backup.git
