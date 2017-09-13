@@ -316,3 +316,9 @@
 [submodule "vendor/systemd-mode"]
 	path = vendor/systemd-mode
 	url = https://github.com/holomorph/systemd-mode.git
+[submodule "vendor/emacs-vdiff"]
+	path = vendor/emacs-vdiff
+	url = https://github.com/justbur/emacs-vdiff.git
+[submodule "vendor/emacs-vdiff-magit"]
+	path = vendor/emacs-vdiff-magit
+	url = https://github.com/justbur/emacs-vdiff-magit.git

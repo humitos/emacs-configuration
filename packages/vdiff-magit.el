@@ -1,0 +1,1 @@
+../vendor/emacs-vdiff-magit/vdiff-magit.el
