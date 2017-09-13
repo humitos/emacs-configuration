@@ -313,3 +313,6 @@
 [submodule "vendor/helm-backup"]
 	path = vendor/helm-backup
 	url = https://github.com/antham/helm-backup.git
+[submodule "vendor/systemd-mode"]
+	path = vendor/systemd-mode
+	url = https://github.com/holomorph/systemd-mode.git
