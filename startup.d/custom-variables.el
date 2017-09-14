@@ -24,4 +24,5 @@
      (elpy-test-django-runner-command "docker" "exec" "-it" "ondemand_shell_run_1" "python" "manage.py" "test" "--keepdb")
      (browse-url-generic-program  . "firefox")
      (browse-url-generic-program  . "google-chrome")
+     (browse-url-generic-program  . "google-chrome-stable")
      )))
