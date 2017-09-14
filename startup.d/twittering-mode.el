@@ -1,4 +1,8 @@
+;; https://github.com/hayamiz/twittering-mode
 (require 'twittering-mode)
+
+;; https://emacs.stackexchange.com/questions/35138/using-a-master-password-gnupg-with-twittering-mode
+;; $ gpg --generate-key
 (setq twittering-use-master-password t)
 
 ;; my personal style of the timeline
