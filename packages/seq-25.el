@@ -1,1 +1,0 @@
-../vendor/seq/seq-25.el

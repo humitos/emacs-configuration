@@ -1,1 +1,0 @@
-../vendor/seq/seq-24.el
