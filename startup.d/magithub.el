@@ -14,4 +14,7 @@
         (:user-demographics . 86400)
         (:label . 3600)))
 
+;; https://github.com/vermiculus/magithub/pull/142
+(setq magithub-api-available-check-frequency 600)
+
 (magithub-feature-autoinject t)
