@@ -90,9 +90,9 @@ unify
 
 # better version
 # yapf==0.16.1  # stable
-# yapf==0.18.0  # unreleased
+yapf==0.18.0  # stable
 
--e git+https://github.com/google/yapf.git@master#egg=yapf
+# -e git+https://github.com/google/yapf.git@master#egg=yapf
 futures  # enable multiprocessing in py2
 
 # pkg_resources.DistributionNotFound: The 'pyflakes!=1.2.0,!=1.2.1,!=1.2.2,<1.4.0,>=0.8.1'
