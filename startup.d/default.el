@@ -213,3 +213,8 @@
 (define-key global-map (kbd "C-<prior>") 'previous-buffer)
 (define-key global-map (kbd "C-<next>") 'next-buffer)
 
+
+;; https://www.emacswiki.org/emacs/FillParagraph#toc4
+;; The original value is "\f\\|[      ]*$", so we add the bullets (-), (+), and (*).
+;; There is no need for "^" as the regexp is matched at the beginning of line.
+(setq paragraph-start "\f\\|[ \t]*$\\|[ \t]*[-+*] ")
