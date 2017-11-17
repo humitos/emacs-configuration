@@ -1,1 +1,0 @@
-../vendor/magithub/magithub-issue-status.el
