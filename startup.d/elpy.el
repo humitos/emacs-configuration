@@ -117,9 +117,11 @@
       (progn
         (setq helm-etags-fuzzy-match nil)
         (setq-local tags-table-list
-                    '("/home/humitos/mozio/ondemand/TAGS"
-                      "/home/humitos/mozio/mozio/TAGS"
-                      "/home/humitos/mozio/mozio-commons/TAGS"))
+                    '("/home/humitos/rtfd/code/readthedocs.org/TAGS"
+                      "/home/humitos/rtfd/code/readthedocs-corporate/TAGS"))
+                      ;; "/home/humitos/mozio/ondemand/TAGS"
+                      ;; "/home/humitos/mozio/mozio/TAGS"
+                      ;; "/home/humitos/mozio/mozio-commons/TAGS"))
         (helm-etags-select nil)
         (setq tags-table-list tags-table-list-orig)
         (setq helm-etags-fuzzy-match t)))))

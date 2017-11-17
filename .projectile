@@ -27,10 +27,6 @@
 
 -celerybeat-schedule
 
--/external_apis/zones/*.geojson
-
--/*.json
--/*.geojson
 -/*.orig
 -/*.tar.gz
 -/*.tar
@@ -43,3 +39,15 @@
 -/#*
 
 -/.tox
+-/*.mo
+-/*.po
+-/media
+-/locale
+-/docs/locale
+-/readthedocs/locale
+-/public_cname_project
+-/public_cname_root
+-/public_symlinks
+-/public_web_root
+-/user_builds
+-/deploy
