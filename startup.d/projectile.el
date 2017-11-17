@@ -35,8 +35,9 @@
 
 ;; TODO: work in progress to try to exclude files defined in
 ;; `.projectile' file when using a `git' repostory with projectile
-(setq projectile-git-ignored-command "git ls-files -z --cached --others --ignored --exclude-standard --exclude-from='/home/humitos/.emacs.d/.projectile'")
-(setq projectile-git-command "git ls-files -z --cached --others --exclude-standard --exclude-from='/home/humitos/.emacs.d/.projectile'")
+;; This is key for C-c C-f (helm-projectile-find-file)
+;; (setq projectile-git-ignored-command "git ls-files -z --cached --others --ignored --exclude-standard --exclude-from='/home/humitos/.emacs.d/.projectile'")
+;; (setq projectile-git-command "git ls-files -z --cached --others --exclude-standard --exclude-from='/home/humitos/.emacs.d/.projectile'")
 
 
 (if (getenv "DOCKER")
