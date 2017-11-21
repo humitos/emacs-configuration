@@ -1,1 +1,1 @@
-../vendor/magit/lisp/magit-popup.el
+../vendor/magit-popup/magit-popup.el

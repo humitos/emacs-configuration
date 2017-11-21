@@ -325,3 +325,6 @@
 [submodule "vendor/pkgbuild-mode"]
 	path = vendor/pkgbuild-mode
 	url = https://github.com/juergenhoetzel/pkgbuild-mode.git
+[submodule "vendor/magit-popup"]
+	path = vendor/magit-popup
+	url = https://github.com/magit/magit-popup.git
