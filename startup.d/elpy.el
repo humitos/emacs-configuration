@@ -127,3 +127,7 @@
         (setq helm-etags-fuzzy-match t)))))
 
 (define-key elpy-mode-map (kbd "M-.") 'meta-dot)
+
+(define-key elpy-mode-map (kbd "<f5>") 'recompile)
+
+(define-key elpy-mode-map (kbd "M-q") 'python-fill-paragraph)
