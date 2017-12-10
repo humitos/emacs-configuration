@@ -65,6 +65,7 @@ flake8-quotes
 flake8-string-format
 flake8-tidy-imports
 flake8-todo
+howdoi
 importmagic
 ipdb
 ipython

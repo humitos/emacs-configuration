@@ -337,3 +337,6 @@
 [submodule "vendor/mmm-jinja2"]
 	path = vendor/mmm-jinja2
 	url = https://github.com/glynnforrest/mmm-jinja2.git
+[submodule "vendor/howdoi.el"]
+	path = vendor/howdoi.el
+	url = https://github.com/galaunay/howdoi.el.git
