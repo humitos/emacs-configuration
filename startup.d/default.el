@@ -218,3 +218,6 @@
 ;; The original value is "\f\\|[      ]*$", so we add the bullets (-), (+), and (*).
 ;; There is no need for "^" as the regexp is matched at the beginning of line.
 (setq paragraph-start "\f\\|[ \t]*$\\|[ \t]*[-+*] ")
+
+;; https://www.emacswiki.org/emacs/AlarmBell
+ (setq ring-bell-function 'ignore)
