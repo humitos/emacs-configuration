@@ -76,6 +76,7 @@
    (cl-search "readthedocs.org/user_builds" project-root)
    (cl-search "vendor" project-root)
    (cl-search ".helm-backup" project-root)
+   (cl-search "./cache/pre-commit" project-root)
    (cl-search "3rdparty" project-root)))
 
 (setq projectile-ignored-project-function #'my-ignore-project)

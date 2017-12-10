@@ -51,3 +51,5 @@
 -/public_web_root
 -/user_builds
 -/deploy
+-/*.fjson
+-/static
