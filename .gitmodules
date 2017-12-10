@@ -328,3 +328,12 @@
 [submodule "vendor/magit-popup"]
 	path = vendor/magit-popup
 	url = https://github.com/magit/magit-popup.git
+[submodule "vendor/salt-mode"]
+	path = vendor/salt-mode
+	url = https://github.com/glynnforrest/salt-mode.git
+[submodule "vendor/mmm-mode"]
+	path = vendor/mmm-mode
+	url = https://github.com/purcell/mmm-mode.git
+[submodule "vendor/mmm-jinja2"]
+	path = vendor/mmm-jinja2
+	url = https://github.com/glynnforrest/mmm-jinja2.git

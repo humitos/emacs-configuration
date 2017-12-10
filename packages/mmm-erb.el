@@ -1,0 +1,1 @@
+../vendor/mmm-mode/mmm-erb.el

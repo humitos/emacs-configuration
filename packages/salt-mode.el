@@ -1,0 +1,1 @@
+../vendor/salt-mode/salt-mode.el
