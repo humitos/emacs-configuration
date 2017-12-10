@@ -91,7 +91,7 @@ unify
 
 # better version
 # yapf==0.16.1  # stable
-yapf==0.18.0  # stable
+yapf==0.20.0  # stable
 
 # -e git+https://github.com/google/yapf.git@master#egg=yapf
 futures  # enable multiprocessing in py2
