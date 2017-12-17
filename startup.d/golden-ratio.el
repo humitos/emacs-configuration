@@ -15,6 +15,7 @@
 ;; exclude ispell choices when pressing M-$
 (setq golden-ratio-exclude-buffer-names
       '("*Choices*"
-        "*twittering-edit*"))
+        "*twittering-edit*"
+        "*Ediff Control Panel*"))
 
 (golden-ratio-mode 1)
