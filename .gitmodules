@@ -340,3 +340,6 @@
 [submodule "vendor/howdoi.el"]
 	path = vendor/howdoi.el
 	url = https://github.com/galaunay/howdoi.el.git
+[submodule "vendor/fzf.el"]
+	path = vendor/fzf.el
+	url = https://github.com/bling/fzf.el.git
