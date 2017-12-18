@@ -313,6 +313,8 @@ Commands:
 :helm-multi-swoop: search in multiples buffer and jump to them
 :helm-dash: search in dash documentation (https://kapeli.com/dash)
 :helm-flycheck: show all the flycheck errors in a helm buffer
+:helm-backup: show the history of the current file
+
 
 Once in the helm session / buffer:
 

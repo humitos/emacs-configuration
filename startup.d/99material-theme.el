@@ -1,3 +1,5 @@
+;; https://github.com/cpaulik/emacs-material-theme
+
 (add-to-list 'custom-theme-load-path (concat emacs-user-directory "vendor/emacs-material-theme"))
 (load-theme 'material t) ;; load material theme
 
