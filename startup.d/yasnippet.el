@@ -2,8 +2,9 @@
 
 (setq yas-snippet-dirs
       (list (concat emacs-user-directory "my-snippets")  ;; personal snippets
-            (concat emacs-user-directory "vendor/elpy/snippets")     ;; elpy collection
-	    (concat emacs-user-directory "vendor/yasnippet/snippets")     ;; default snippet collection
+            ;; (concat emacs-user-directory "vendor/elpy/snippets")     ;; elpy collection
+	    (concat emacs-user-directory "vendor/yasnippet/snippets/snippets")     ;; default snippet collection
+	    (concat emacs-user-directory "vendor/yasnippet/yasmate/snippets")     ;; default snippet collection
 	    ))
 (yas-global-mode 1)
 
