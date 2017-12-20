@@ -19,39 +19,16 @@ epc
 flake8
 
 flake8-blind-except
-
-# Suspicious state from syntax checker python-flake8: Flycheck checker python-flake8 returned non-zero exit code 1, but its output contained no errors: Traceback (most recent call last):
-#   File "/home/humitos/.virtualenvs/emacs-default/bin/flake8", line 11, in <module>
-#     sys.exit(main())
-#   File "/home/humitos/.virtualenvs/emacs-default/lib/python3.5/site-packages/flake8/main/cli.py", line 16, in main
-#     app.run(argv)
-#   File "/home/humitos/.virtualenvs/emacs-default/lib/python3.5/site-packages/flake8/main/application.py", line 328, in run
-#     self._run(argv)
-#   File "/home/humitos/.virtualenvs/emacs-default/lib/python3.5/site-packages/flake8/main/application.py", line 316, in _run
-#     self.run_checks()
-#   File "/home/humitos/.virtualenvs/emacs-default/lib/python3.5/site-packages/flake8/main/application.py", line 246, in run_checks
-#     self.file_checker_manager.run()
-#   File "/home/humitos/.virtualenvs/emacs-default/lib/python3.5/site-packages/flake8/checker.py", line 319, in run
-#     self.run_serial()
-#   File "/home/humitos/.virtualenvs/emacs-default/lib/python3.5/site-packages/flake8/checker.py", line 303, in run_serial
-#     checker.run_checks()
-#   File "/home/humitos/.virtualenvs/emacs-default/lib/python3.5/site-packages/flake8/checker.py", line 573, in run_checks
-#     self.run_ast_checks()
-#   File "/home/humitos/.virtualenvs/emacs-default/lib/python3.5/site-packages/flake8/checker.py", line 487, in run_ast_checks
-#     for (line_number, offset, text, check) in runner:
-#   File "/home/humitos/.virtualenvs/emacs-default/lib/python3.5/site-packages/flake8_builtins.py", line 52, in run
-#     tree = ast.parse(lines)
-#   File "/usr/lib/python3.5/ast.py", line 35, in parse
-#     return compile(source, filename, mode, PyCF_ONLY_AST)
-# TypeError: compile() arg 1 must be a string, bytes or AST object
-# flake8-builtins
+flake8-builtins
 
 flake8-coding
-# it's producing an error because python-flakes8 version
-# flake8-commas
+flake8-commas
 flake8-comprehensions
 flake8-debugger
 flake8-deprecated
+
+# it seems that it has problems with pydocstyle
+# flake8-docstrings-1.1.0 pydocstyle-2.1.1
 flake8-docstrings
 
 # it's causing problems
@@ -65,6 +42,7 @@ flake8-quotes
 flake8-string-format
 flake8-tidy-imports
 flake8-todo
+
 howdoi
 importmagic
 ipdb
@@ -90,7 +68,6 @@ unify
 #+            self, reservation, card_token_id, stored_card_id, save_card, coupon_code, stripe_origin):
 
 # better version
-# yapf==0.16.1  # stable
 yapf==0.20.0  # stable
 
 # -e git+https://github.com/google/yapf.git@master#egg=yapf
