@@ -20,4 +20,8 @@
         "*helm mini*"
         "*heml M-x*"))
 
+(setq golden-ratio-exclude-buffer-regexp '("`_[Hh]elm.__'"))
+(setq golden-ratio-exclude-modes '(ediff-mode calendar-mode wget-mode))
+(setq golden-ratio-recenter t)
+
 (golden-ratio-mode 1)
