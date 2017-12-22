@@ -343,3 +343,6 @@
 [submodule "vendor/fzf.el"]
 	path = vendor/fzf.el
 	url = https://github.com/bling/fzf.el.git
+[submodule "vendor/importmagic.el"]
+	path = vendor/importmagic.el
+	url = https://github.com/anachronic/importmagic.el.git
