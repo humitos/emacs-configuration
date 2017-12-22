@@ -10,7 +10,7 @@
 
 (setq importmagic-style-configuration-alist
   '((multiline . parentheses)
-    (max_columns . 80))
+    (max_columns . 80)))
 
 (define-key importmagic-mode-map (kbd "C-c RET") 'importmagic-fix-symbol-at-point)
 
