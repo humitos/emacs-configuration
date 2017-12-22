@@ -10,3 +10,9 @@
 ;; http://www.emacswiki.org/emacs/AutoPairs
 (require 'autopair)
 (autopair-global-mode) ;; to enable in all buffers
+
+;; disable autopair in web-mode
+(add-hook 'web-mode-hook
+          #'(lambda ()
+              (autopair-mode -1))
+          )
