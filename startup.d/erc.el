@@ -97,7 +97,7 @@
 
 ;; disable linum-mode in erc-mode
 (add-hook 'erc-mode-hook
-	  '(lambda () (linum-mode -1)))
+	  '(lambda () (nlinum-mode -1)))
 
 ;; connect to channels in background instead of showing the buffer
 ;; immediately

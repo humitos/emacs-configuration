@@ -57,8 +57,8 @@
 ;; remove trailing whitespaces
 ;; (global-set-key (kbd "C-c x") 'whitespace-cleanup)
 
-(global-linum-mode t) ;; enable line numbers globally
-(setq linum-format "%4d \u2502") ;; line numbers style
+(global-linum-mode 0) ;; disable default line numbers globally
+;; (setq linum-format "%4d \u2502") ;; line numbers style
 
 ;; saves the location of the point when you kill a buffer and returns
 ;; to it next time you visit the associated file.

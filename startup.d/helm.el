@@ -78,10 +78,10 @@
 (require 'helm-firefox)
 
 ;; Disable line numbers in helm buffers
-(when linum-mode
+(when nlinum-mode
   (add-hook 'helm-after-initialize-hook (lambda ()
 					  (with-helm-buffer
-					    (linum-mode 0)))))
+					    (nlinum-mode 0)))))
 
 
 ;; https://github.com/hatschipuh/helm-better-defaults

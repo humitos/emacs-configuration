@@ -349,3 +349,6 @@
 [submodule "vendor/smartparens"]
 	path = vendor/smartparens
 	url = https://github.com/Fuco1/smartparens
+[submodule "vendor/nlinum"]
+	path = vendor/nlinum
+	url = https://github.com/emacsmirror/nlinum.git

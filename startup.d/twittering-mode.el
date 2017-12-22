@@ -17,7 +17,7 @@
       "%i %FACE[bold]{%S} %RT{(RT)}, %@:\n%FOLD[   ]{%T %r%R%QT{\n+--------------------\n%FOLD[|]{%i %S, %@:\n%FOLD[   ]{%T %r%R}}\n+--------------------}}\n ")
 
 ;; remove linum-mode in twittering-mode
-(add-hook 'twittering-mode-hook (lambda () (linum-mode 0)))
+(add-hook 'twittering-mode-hook (lambda () (nlinum-mode 0)))
 
 ;; launch twittering-mode with F10
 (global-set-key (kbd "<f10>") 'twit)
