@@ -125,8 +125,7 @@ Keep this configuration updated
 Main modules included in this configuration
 ===========================================
 
-* ace-jump-mode
-* autopair
+* avy
 * browse-at-remote
 * ctags-update
 * discover-my-major
@@ -156,8 +155,10 @@ Main modules included in this configuration
 * py-autoflake
 * py-docformatter
 * py-isort
+* py-yapf
 * rainbow-delimiters
 * restclient-mode
+* smartparens
 * smart-forward.el
 * sphinx-doc.el
 * twittering-mode
@@ -171,13 +172,13 @@ Main modules included in this configuration
 
 These are the hotkeys that I use most.
 
-ace-jump-mode
--------------
+avy
+---
 
-* https://github.com/winterTTr/ace-jump-mode
+* https://github.com/abo-abo/avy
 
-:C-c SPC: jump to any place in the buffer with just a hotkey plus a
-          position key
+:C-c SPC: jump to any place in the buffer with just a hotkey plus the
+          beginning of the word and a char
 
 browse-at-remote
 ----------------
