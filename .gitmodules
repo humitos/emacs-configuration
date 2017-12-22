@@ -346,3 +346,6 @@
 [submodule "vendor/importmagic.el"]
 	path = vendor/importmagic.el
 	url = https://github.com/anachronic/importmagic.el.git
+[submodule "vendor/smartparens"]
+	path = vendor/smartparens
+	url = https://github.com/Fuco1/smartparens

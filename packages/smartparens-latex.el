@@ -1,0 +1,1 @@
+../vendor/smartparens/smartparens-latex.el
