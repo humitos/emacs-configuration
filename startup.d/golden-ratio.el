@@ -16,6 +16,8 @@
 (setq golden-ratio-exclude-buffer-names
       '("*Choices*"
         "*twittering-edit*"
-        "*Ediff Control Panel*"))
+        "*Ediff Control Panel*"
+        "*helm mini*"
+        "*heml M-x*"))
 
 (golden-ratio-mode 1)
