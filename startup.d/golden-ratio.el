@@ -16,11 +16,9 @@
 (setq golden-ratio-exclude-buffer-names
       '("*Choices*"
         "*twittering-edit*"
-        "*Ediff Control Panel*"
-        "*helm mini*"
-        "*heml M-x*"))
+        "*Ediff Control Panel*"))
 
-(setq golden-ratio-exclude-buffer-regexp '("`_[Hh]elm.__'"))
+(setq golden-ratio-exclude-buffer-regexp '(".*helm.*" ".*magit.*"))
 (setq golden-ratio-exclude-modes '(ediff-mode calendar-mode wget-mode))
 (setq golden-ratio-recenter t)
 
