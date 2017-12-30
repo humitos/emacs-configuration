@@ -9,5 +9,6 @@
 (setq ediff-split-window-function 'split-window-horizontally)
 
 ;; Restoring the windows after Ediff quits
-(winner-mode)
-(add-hook 'ediff-after-quit-hook-internal 'winner-undo)
+;; FIXME: `winner-mode' interferes with `C-c Arrows' for movement
+;; (winner-mode)
+;; (add-hook 'ediff-after-quit-hook-internal 'winner-undo)
