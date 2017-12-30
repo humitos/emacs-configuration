@@ -29,9 +29,13 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 
 ;; enable flyspell-prog-mode on Python code
-(add-hook 'elpy-mode-hook 'flyspell-prog-mode)
+(add-hook 'python-mode-hook 'flyspell-prog-mode)
+
+;; enable flyspell-prog-mode on HTML code
+(add-hook 'web-mode-hook 'flyspell-prog-mode)
 
 ;; enable guess-language for these modes
 (add-hook 'rst-mode-hook (lambda () (guess-language-mode 1)))
 (add-hook 'text-mode-hook (lambda () (guess-language-mode 1)))
-(add-hook 'elpy-mode-hook (lambda () (guess-language-mode 1)))
+(add-hook 'python-mode-hook (lambda () (guess-language-mode 1)))
+(add-hook 'web-mode-hook (lambda () (guess-language-mode 1)))
