@@ -20,6 +20,9 @@
 
 (setq golden-ratio-exclude-buffer-regexp '(".*helm.*" ".*magit.*"))
 (setq golden-ratio-exclude-modes '(ediff-mode calendar-mode wget-mode))
-(setq golden-ratio-recenter t)
+
+;; avoid re-center when clicking with the mouse (mouse-drag-region),
+;; it was very annoying when trying to select/copy text
+(setq golden-ratio-recenter nil)
 
 (golden-ratio-mode 1)
