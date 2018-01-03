@@ -352,3 +352,12 @@
 [submodule "vendor/nlinum"]
 	path = vendor/nlinum
 	url = https://github.com/emacsmirror/nlinum.git
+[submodule "vendor/circe"]
+	path = vendor/circe
+	url = https://github.com/jorgenschaefer/circe.git
+[submodule "vendor/circe-notifications"]
+	path = vendor/circe-notifications
+	url = https://github.com/eqyiel/circe-notifications.git
+[submodule "vendor/dimmer.el"]
+	path = vendor/dimmer.el
+	url = https://github.com/gonewest818/dimmer.el.git

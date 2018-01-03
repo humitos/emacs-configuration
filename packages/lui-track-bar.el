@@ -1,0 +1,1 @@
+../vendor/circe/lui-track-bar.el

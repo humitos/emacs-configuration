@@ -15,13 +15,13 @@
 		    netsplit spelling hl-nicks keep-place fill
 		    button match track readonly networks
 		    notifications ring noncommands irccontrols
-		    stamp menu list))
+		    stamp menu list scrolltobottom))
 
 (setq erc-spelling-dictionaries '(("#pyar" "es")
                                   ("#readthedocs" "american")
                                   ("#python" "american")))
 
-(setq erc-input-line-position -2)
+;; (setq erc-input-line-position -2)
 
 ;; Kill the ERC buffers after /quit
 (setq erc-kill-server-buffer-on-quit t)
@@ -209,9 +209,9 @@ erc-modified-channels-alist. Should be executed on window change."
 
 ;; do not move the cursor to the top
 ;; http://stackoverflow.com/questions/22310357/stop-emacs-erc-from-recentering
-(add-to-list 'erc-mode-hook
-             (lambda ()
-               (set (make-local-variable 'scroll-conservatively) 100)))
+;; (add-to-list 'erc-mode-hook
+;;              (lambda ()
+;;                (set (make-local-variable 'scroll-conservatively) 100)))
 
 
 ;; check if we are connected to "#pyar" and reconnect if not

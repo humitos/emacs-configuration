@@ -1,0 +1,1 @@
+../vendor/circe/circe-color-nicks.el
