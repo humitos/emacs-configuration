@@ -1,3 +1,5 @@
+;; Test to automate build
+
 ;; https://github.com/jorgenschaefer/circe
 (require 'circe)
 
