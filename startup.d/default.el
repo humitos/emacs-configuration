@@ -174,6 +174,10 @@
       scroll-conservatively 100000
       scroll-preserve-screen-position 1)
 
+;; move the buffer text window and keep the cursor in the same place
+(global-set-key (kbd "s-<down>") 'scroll-up-line)
+(global-set-key (kbd "s-<up>") 'scroll-down-line)
+
 ;; https://github.com/bbatsov/emacs.d/blob/master/init.el
 ;; store all backup and autosave files in the tmp dir
 (setq backup-directory-alist
