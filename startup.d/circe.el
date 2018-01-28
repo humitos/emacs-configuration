@@ -117,3 +117,26 @@
 
 (circe "Freenode")
 
+;; switch between current buffer and CIRCE channel
+(defvar circe-previous-buffer nil)
+(defun switch-circe-channel-and-back (channel)
+  "Switch to CIRCE CHANNEL buffer and back"
+  (let ((current-buffer (current-buffer))
+        (channel-buffer (get-buffer channel)))
+    (if (eq current-buffer channel-buffer)
+        (progn
+          (switch-to-buffer circe-previous-buffer))
+      (progn
+        (setq circe-previous-buffer current-buffer)
+        (switch-to-buffer channel-buffer)))))
+
+(defun switch-circe-pyar-and-back ()
+  (interactive)
+  (switch-circe-channel-and-back "#pyar"))
+
+(defun switch-circe-rtfd-and-back ()
+  (interactive)
+  (switch-circe-channel-and-back "#readthedocs"))
+
+(global-set-key (kbd "<f12>") 'switch-circe-pyar-and-back)
+(global-set-key (kbd "S-<f12>") 'switch-circe-rtfd-and-back)
