@@ -65,8 +65,11 @@
 
 ;; circe-notifications
 ;; https://github.com/eqyiel/circe-notifications
-(autoload 'enable-circe-notifications "circe-notifications" nil t)
+;; https://github.com/jwiegley/alert
+(require 'alert)
+(setq alert-default-style "x11")
 
+(autoload 'enable-circe-notifications "circe-notifications" nil t)
 (eval-after-load "circe-notifications"
   '(setq circe-notifications-watch-strings
       '("humitos" "manuel" "kaufmann" "argenpython" "argentina en python" "Argentina en Python")))

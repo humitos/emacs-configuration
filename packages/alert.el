@@ -1,0 +1,1 @@
+../vendor/alert/alert.el

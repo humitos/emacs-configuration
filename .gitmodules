@@ -361,3 +361,6 @@
 [submodule "vendor/dimmer.el"]
 	path = vendor/dimmer.el
 	url = https://github.com/gonewest818/dimmer.el.git
+[submodule "vendor/alert"]
+	path = vendor/alert
+	url = https://github.com/jwiegley/alert.git
