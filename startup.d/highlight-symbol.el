@@ -7,4 +7,4 @@
         "while" "class" "print" "and" "not" "is" "param" "rtype" "async"
         "with"))
 
-(add-hook 'elpy-mode-hook 'highlight-symbol-mode)
+(add-hook 'prog-mode-hook 'highlight-symbol-mode)
