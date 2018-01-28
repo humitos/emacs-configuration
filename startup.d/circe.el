@@ -69,7 +69,7 @@
 
 (eval-after-load "circe-notifications"
   '(setq circe-notifications-watch-strings
-      '("humitos")))
+      '("humitos" "manuel" "kaufmann" "argenpython" "argentina en python" "Argentina en Python")))
 
 (add-hook 'circe-server-connected-hook 'enable-circe-notifications)
 
@@ -80,8 +80,28 @@
 
 ;; (irc-connect)
 
-(setq lui-fill-column 120)
+(setq lui-fill-column 80)
 
+;; Fluid-width windows
+;; https://github.com/jorgenschaefer/circe/wiki/Configuration#fluid-width-windows
+(setq
+ lui-time-stamp-position 'right-margin
+ lui-fill-type nil)
+
+(setf (cdr (assoc 'continuation fringe-indicator-alist)) nil)
+(defun my-lui-setup ()
+  (setq
+   fringes-outside-margins t
+   right-margin-width 15
+   word-wrap t
+   wrap-prefix "    "))
+(add-hook 'lui-mode-hook 'my-lui-setup)
+
+;; https://github.com/jorgenschaefer/circe/wiki/Configuration#tab-completion
+(setq helm-mode-no-completion-in-region-in-modes
+      '(circe-channel-mode
+        circe-query-mode
+        circe-server-mode))
 
 (require 'lui-format)
 (require 'lui-irc-colors)
