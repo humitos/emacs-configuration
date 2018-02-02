@@ -106,6 +106,11 @@
         circe-query-mode
         circe-server-mode))
 
+(setq circe-server-max-reconnect-attempts 20)
+
+;; Autoreconnect if the connection drops
+(require 'circe-lagmon)
+
 (require 'lui-format)
 (require 'lui-irc-colors)
 (require 'lui-logging)
