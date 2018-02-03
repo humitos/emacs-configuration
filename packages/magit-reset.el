@@ -1,0 +1,1 @@
+../vendor/magit/lisp/magit-reset.el
