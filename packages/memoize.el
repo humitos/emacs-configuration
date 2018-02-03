@@ -1,0 +1,1 @@
+../vendor/emacs-memoize/memoize.el

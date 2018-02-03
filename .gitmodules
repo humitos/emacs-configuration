@@ -367,3 +367,12 @@
 [submodule "vendor/less-css-mode"]
 	path = vendor/less-css-mode
 	url = https://github.com/purcell/less-css-mode.git
+[submodule "vendor/emacs-neotree"]
+	path = vendor/emacs-neotree
+	url = https://github.com/jaypei/emacs-neotree.git
+[submodule "vendor/all-the-icons.el"]
+	path = vendor/all-the-icons.el
+	url = https://github.com/domtronn/all-the-icons.el.git
+[submodule "vendor/emacs-memoize"]
+	path = vendor/emacs-memoize
+	url = https://github.com/skeeto/emacs-memoize.git
