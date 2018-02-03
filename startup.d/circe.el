@@ -10,6 +10,10 @@
 
 (setq circe-use-cycle-completion t)
 
+;; Adds the ability to assign a color to each nick in a channel
+(require 'circe-color-nicks)
+(enable-circe-color-nicks)
+
 ;; hide the join/part spam
 ;; https://github.com/jorgenschaefer/circe/wiki/Configuration#hiding-the-joinpart-spam
 (setq circe-reduce-lurker-spam t)
