@@ -2,6 +2,9 @@
 (require 'magit)
 (require 'magithub)
 
+;; https://github.com/vermiculus/magithub/issues/286#issuecomment-366540058
+(require 'magithub-completion)
+
 (load "~/.ghub.el")
 
 ;; API timeout before asking to go offline
