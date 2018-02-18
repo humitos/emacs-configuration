@@ -1,0 +1,1 @@
+../vendor/ecb/silentcomp.el
