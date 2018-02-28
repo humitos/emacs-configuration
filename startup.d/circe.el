@@ -125,9 +125,19 @@
       `(("Freenode"
          :nick ,freenode-nick
          :channels ("#pyar" "#readthedocs" "#python")
-         :nickserv-password ,freenode-password)))
+         :nickserv-password ,freenode-password)
+        ("Gitter"
+         :host "irc.gitter.im"
+         :port 6667
+         :use-tls t
+         :pass ,gitter-token
+         :channels ("#rtfd/readthedocs.org")
+         :user "reydelhumo_twitter"
+         :realname "Manuel Kaufamnn"
+         :nick "humitos")))
 
 (circe "Freenode")
+(circe "Gitter")
 
 ;; switch between current buffer and CIRCE channel
 (defvar circe-previous-buffer nil)
