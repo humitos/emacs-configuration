@@ -124,7 +124,7 @@
 (setq circe-network-options
       `(("Freenode"
          :nick ,freenode-nick
-         :channels ("#pyar" "#readthedocs" "#python")
+         :channels (:after-auth "#pyar" "#readthedocs" "#python")
          :nickserv-password ,freenode-password)
         ("Gitter"
          :host "irc.gitter.im"
