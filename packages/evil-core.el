@@ -1,0 +1,1 @@
+../vendor/evil/evil-core.el

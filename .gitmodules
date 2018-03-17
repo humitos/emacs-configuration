@@ -376,3 +376,6 @@
 [submodule "vendor/emacs-memoize"]
 	path = vendor/emacs-memoize
 	url = https://github.com/skeeto/emacs-memoize.git
+[submodule "vendor/evil"]
+	path = vendor/evil
+	url = https://github.com/emacs-evil/evil.git
