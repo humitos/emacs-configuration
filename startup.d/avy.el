@@ -2,4 +2,4 @@
 (require 'avy)
 
 (setq avy-background t)
-(global-set-key (kbd "C-c SPC") 'avy-goto-char-timer)
+(global-set-key (kbd "C-c C-c") 'avy-goto-char-timer)

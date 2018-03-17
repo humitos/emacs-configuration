@@ -37,6 +37,10 @@
 ;; disable elpy-rgrep-symbol of helm
 (define-key elpy-mode-map (kbd "C-c C-s") nil)
 
+;; disable this to be used by avy
+(define-key elpy-mode-map (kbd "C-c C-c") nil)
+(define-key python-mode-map (kbd "C-c C-c") nil)
+
 ;; https://masteringemacs.org/article/compiling-running-scripts-emacs
 (defun python--add-debug-highlight ()
   "Adds a highlighter for '# DEBUG #' string"
