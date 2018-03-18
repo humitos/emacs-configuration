@@ -1,0 +1,1 @@
+../vendor/rich-minority/rich-minority.el

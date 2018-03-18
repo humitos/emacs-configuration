@@ -379,3 +379,9 @@
 [submodule "vendor/evil"]
 	path = vendor/evil
 	url = https://github.com/emacs-evil/evil.git
+[submodule "vendor/smart-mode-line"]
+	path = vendor/smart-mode-line
+	url = https://github.com/Malabarba/smart-mode-line.git
+[submodule "vendor/rich-minority"]
+	path = vendor/rich-minority
+	url = https://github.com/Malabarba/rich-minority.git
