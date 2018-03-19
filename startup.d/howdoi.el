@@ -1,2 +1,3 @@
 ;; https://github.com/galaunay/howdoi.el.git
-(require 'howdoi)
+;; Temporary disabled because it's incompatible with evil-mode
+;; (require 'howdoi)
