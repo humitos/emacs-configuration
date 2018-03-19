@@ -30,7 +30,7 @@ If you really like this configuration, you could install it in your
 computer with the following instructions.
 
 ----
-  
+
 Installation
 ============
 
@@ -131,6 +131,7 @@ Main modules included in this configuration
 * discover-my-major
 * easy-kill
 * elpy
+* evil-mode
 * expand-region
 * flycheck
 * gist.el
@@ -139,7 +140,7 @@ Main modules included in this configuration
 * guess-language
 * helm
 * helm-dash
-* helm-flycheck  
+* helm-flycheck
 * helm-fuzzier
 * helm-swoop
 * highlight-indentation
@@ -226,6 +227,24 @@ elpy
 :C-c C-z: switch to a Python shell
 :C-c C-d: open Python documentation (class, function, etc)
 :C-c C-t: run test depending on cursor position
+
+
+evil-mode
+---------
+
+* https://github.com/emacs-evil/evil
+
+* <N>: normal state
+
+ :g x: open URL at point
+ :g f: helm-find-files
+ :<number> g g: go to <number> line
+
+ :C-z: disable evil mode temporary
+
+ :zz: shift current line in the MIDDLE of the screen
+ :zt: shift current line to the TOP of the screen
+ :zb: shift current line to the BOTTOM of the screen
 
 
 expand-region

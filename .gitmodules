@@ -385,3 +385,9 @@
 [submodule "vendor/rich-minority"]
 	path = vendor/rich-minority
 	url = https://github.com/Malabarba/rich-minority.git
+[submodule "vendor/evil-collection"]
+	path = vendor/evil-collection
+	url = https://github.com/emacs-evil/evil-collection
+[submodule "vendor/evil-snipe"]
+	path = vendor/evil-snipe
+	url = https://github.com/hlissner/evil-snipe
