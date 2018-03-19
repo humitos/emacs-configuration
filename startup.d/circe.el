@@ -59,7 +59,7 @@
 
 ;; disable linum-mode in circe
 (add-hook 'circe-mode-hook
-	  '(lambda () (nlinum-mode -1)))
+          '(lambda () (nlinum-mode -1)))
 
 ;; track bar for unread messages
 (require 'lui-track-bar)
@@ -79,6 +79,8 @@
       '("humitos" "manuel" "kaufmann" "argenpython" "argentina en python" "Argentina en Python")))
 
 (add-hook 'circe-server-connected-hook 'enable-circe-notifications)
+
+(setq lui-hightlight-keywords '("humitos" "manuel" "kaufmann" "argenpython" "argentina en python" "Argentina en Python"))
 
 ;; (defun irc-connect ()
 ;;   (progn
