@@ -391,3 +391,6 @@
 [submodule "vendor/evil-snipe"]
 	path = vendor/evil-snipe
 	url = https://github.com/hlissner/evil-snipe
+[submodule "vendor/highlight-indent-guides"]
+	path = vendor/highlight-indent-guides
+	url = https://github.com/DarthFennec/highlight-indent-guides

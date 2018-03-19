@@ -1,6 +1,7 @@
 ;; https://github.com/jorgenschaefer/elpy
 (require 'elpy)
 (elpy-enable)
+(setq elpy-modules (delete 'elpy-module-highlight-indentation elpy-modules))
 
 ;; Remove flymake and use flycheck
 (when (require 'flycheck nil t)
