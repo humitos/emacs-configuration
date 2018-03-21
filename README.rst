@@ -145,12 +145,12 @@ Main modules included in this configuration
 * helm-swoop
 * highlight-indentation
 * highlight-symbol
+* imenu-list
 * jedi
 * magit
 * magithub
 * material-theme
 * origami.el
-* powerline
 * projectile
 * py-autopep8
 * py-autoflake
@@ -161,6 +161,7 @@ Main modules included in this configuration
 * restclient-mode
 * smartparens
 * smart-forward.el
+* smart-mode-line
 * sphinx-doc.el
 * twittering-mode
 * undohist
