@@ -170,7 +170,7 @@
 
 ;; https://github.com/bbatsov/emacs.d/blob/master/init.el
 ;; nice scrolling
-(setq scroll-margin 0
+(setq scroll-margin 5
       scroll-conservatively 100000
       scroll-preserve-screen-position 1)
 
@@ -202,7 +202,7 @@
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 
 ;; increase the line-spacing
-(setq-default line-spacing 3)
+(setq-default line-spacing 2)
 
 ;; cycle between the mark ring (C-u C-<SPC>) just by C-<SPC>
 (setq set-mark-command-repeat-pop t)
