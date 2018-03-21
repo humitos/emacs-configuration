@@ -394,3 +394,6 @@
 [submodule "vendor/highlight-indent-guides"]
 	path = vendor/highlight-indent-guides
 	url = https://github.com/DarthFennec/highlight-indent-guides
+[submodule "vendor/imenu-list"]
+	path = vendor/imenu-list
+	url = https://github.com/bmag/imenu-list.git
