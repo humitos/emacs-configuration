@@ -6,12 +6,12 @@
       (ctags-auto-update-mode 1))))
 
 (use-package ctags-update
-             :config
-             (if (getenv "DOCKER")
-                 (setq ctags-update-command "ctags")
-               (setq ctags-update-command (concat emacs-user-directory  "vendor/ctags/ctags")))
+  :config
+  (if (getenv "DOCKER")
+      (setq ctags-update-command "ctags")
+    (setq ctags-update-command (concat emacs-user-directory  "vendor/ctags/ctags")))
 
-             (setq ctags-update-other-options (list (concat "--options=" emacs-user-directory ".ctags")))
-             (setq ctags-update-delay-seconds (* 5 60)) ;; 5 minutes
+  (setq ctags-update-other-options (list (concat "--options=" emacs-user-directory ".ctags")))
+  (setq ctags-update-delay-seconds (* 5 60)) ;; 5 minutes
 
-             (add-hook 'elpy-mode-hook 'turn-on-ctags-if-tags-file))
+  (add-hook 'elpy-mode-hook 'turn-on-ctags-if-tags-file))

@@ -10,21 +10,9 @@
 [submodule "vendor/autopair"]
 	path = vendor/autopair
 	url = https://github.com/emacsmirror/autopair.git
-[submodule "vendor/yaml-mode"]
-	path = vendor/yaml-mode
-	url = https://github.com/yoshiki/yaml-mode.git
-[submodule "vendor/rainbow-mode"]
-	path = vendor/rainbow-mode
-	url = https://github.com/emacsmirror/rainbow-mode.git
-[submodule "vendor/helm"]
-	path = vendor/helm
-	url = https://github.com/emacs-helm/helm.git
 [submodule "vendor/git-modes"]
 	path = vendor/git-modes
 	url = https://github.com/magit/git-modes
-[submodule "vendor/markdown-mode"]
-	path = vendor/markdown-mode
-	url = https://github.com/defunkt/markdown-mode
 [submodule "vendor/fill-column-indicator"]
 	path = vendor/fill-column-indicator
 	url = https://github.com/alpaker/Fill-Column-Indicator.git
@@ -52,9 +40,6 @@
 [submodule "vendor/monky"]
 	path = vendor/monky
 	url = https://github.com/ananthakumaran/monky.git
-[submodule "vendor/rainbow-delimiters"]
-	path = vendor/rainbow-delimiters
-	url = https://github.com/Fanael/rainbow-delimiters
 [submodule "vendor/nginx-mode"]
 	path = vendor/nginx-mode
 	url = https://github.com/zev/nginx-mode
@@ -70,9 +55,6 @@
 [submodule "vendor/company-mode"]
 	path = vendor/company-mode
 	url = https://github.com/company-mode/company-mode
-[submodule "vendor/find-file-in-project"]
-	path = vendor/find-file-in-project
-	url = https://github.com/technomancy/find-file-in-project
 [submodule "vendor/flycheck"]
 	path = vendor/flycheck
 	url = https://github.com/flycheck/flycheck
@@ -88,36 +70,15 @@
 [submodule "vendor/with-editor"]
 	path = vendor/with-editor
 	url = https://github.com/magit/with-editor
-[submodule "vendor/web-mode"]
-	path = vendor/web-mode
-	url = https://github.com/fxbois/web-mode
 [submodule "vendor/startupd.el"]
 	path = vendor/startupd.el
 	url = https://github.com/fgallina/startupd.el
-[submodule "vendor/powerline"]
-	path = vendor/powerline
-	url = https://github.com/milkypostman/powerline.git
-[submodule "vendor/projectile"]
-	path = vendor/projectile
-	url = https://github.com/bbatsov/projectile.git
 [submodule "vendor/ace-jump-mode"]
 	path = vendor/ace-jump-mode
 	url = https://github.com/winterTTr/ace-jump-mode.git
 [submodule "vendor/undohist-el"]
 	path = vendor/undohist-el
 	url = https://github.com/m2ym/undohist-el.git
-[submodule "vendor/helm-ls-git"]
-	path = vendor/helm-ls-git
-	url = https://github.com/emacs-helm/helm-ls-git.git
-[submodule "vendor/helm-firefox"]
-	path = vendor/helm-firefox
-	url = https://github.com/emacs-helm/helm-firefox.git
-[submodule "vendor/helm-projectile"]
-	path = vendor/helm-projectile
-	url = https://github.com/bbatsov/helm-projectile.git
-[submodule "vendor/gist.el"]
-	path = vendor/gist.el
-	url = https://github.com/defunkt/gist.el.git
 [submodule "vendor/gh.el"]
 	path = vendor/gh.el
 	url = https://github.com/sigma/gh.el.git
@@ -127,39 +88,18 @@
 [submodule "vendor/logito"]
 	path = vendor/logito
 	url = https://github.com/sigma/logito.git
-[submodule "vendor/helm-swoop"]
-	path = vendor/helm-swoop
-	url = https://github.com/ShingoFukuyama/helm-swoop.git
-[submodule "vendor/helm-flx"]
-	path = vendor/helm-flx
-	url = https://github.com/PythonNut/helm-flx.git
 [submodule "vendor/flx"]
 	path = vendor/flx
 	url = https://github.com/lewang/flx.git
-[submodule "vendor/helm-fuzzier"]
-	path = vendor/helm-fuzzier
-	url = https://github.com/EphramPerdition/helm-fuzzier.git
 [submodule "vendor/yasnippet"]
 	path = vendor/yasnippet
 	url = https://github.com/joaotavora/yasnippet
 [submodule "vendor/f.el"]
 	path = vendor/f.el
 	url = https://github.com/rejeep/f.el.git
-[submodule "vendor/git-timemachine"]
-	path = vendor/git-timemachine
-	url = https://github.com/pidu/git-timemachine.git
-[submodule "vendor/helm-dash"]
-	path = vendor/helm-dash
-	url = https://github.com/areina/helm-dash.git
-[submodule "vendor/restclient.el"]
-	path = vendor/restclient.el
-	url = https://github.com/pashky/restclient.el.git
 [submodule "vendor/makey"]
 	path = vendor/makey
 	url = https://github.com/mickeynp/makey.git
-[submodule "vendor/company-quickhelp"]
-	path = vendor/company-quickhelp
-	url = https://github.com/expez/company-quickhelp.git
 [submodule "vendor/pos-tip"]
 	path = vendor/pos-tip
 	url = https://github.com/pitkali/pos-tip.git
@@ -175,18 +115,6 @@
 [submodule "vendor/ht.el"]
 	path = vendor/ht.el
 	url = https://github.com/Wilfred/ht.el.git
-[submodule "vendor/visual-regexp.el"]
-	path = vendor/visual-regexp.el
-	url = https://github.com/benma/visual-regexp.el.git
-[submodule "vendor/visual-regexp-steroids.el"]
-	path = vendor/visual-regexp-steroids.el
-	url = https://github.com/benma/visual-regexp-steroids.el.git
-[submodule "vendor/zzz-to-char"]
-	path = vendor/zzz-to-char
-	url = https://github.com/mrkkrp/zzz-to-char.git
-[submodule "vendor/whitespace-cleanup-mode"]
-	path = vendor/whitespace-cleanup-mode
-	url = https://github.com/purcell/whitespace-cleanup-mode.git
 [submodule "vendor/origami.el"]
 	path = vendor/origami.el
 	url = https://github.com/gregsexton/origami.el
@@ -196,60 +124,27 @@
 [submodule "vendor/hydra"]
 	path = vendor/hydra
 	url = https://github.com/abo-abo/hydra.git
-[submodule "vendor/python-docstring-mode"]
-	path = vendor/python-docstring-mode
-	url = https://github.com/glyph/python-docstring-mode.git
-[submodule "vendor/emacs-helm-pydoc"]
-	path = vendor/emacs-helm-pydoc
-	url = https://github.com/syohex/emacs-helm-pydoc.git
 [submodule "vendor/super-save"]
 	path = vendor/super-save
 	url = https://github.com/bbatsov/super-save.git
-[submodule "vendor/pip-requirements.el"]
-	path = vendor/pip-requirements.el
-	url = https://github.com/Wilfred/pip-requirements.el
 [submodule "vendor/ispell-multi"]
 	path = vendor/ispell-multi
 	url = https://github.com/emacsmirror/ispell-multi.git
-[submodule "vendor/sphinx-doc.el"]
-	path = vendor/sphinx-doc.el
-	url = https://github.com/naiquevin/sphinx-doc.el.git
 [submodule "vendor/buftra.el"]
 	path = vendor/buftra.el
 	url = https://github.com/humitos/buftra.el
 [submodule "vendor/py-cmd-buffer.el"]
 	path = vendor/py-cmd-buffer.el
 	url = https://github.com/humitos/py-cmd-buffer.el.git
-[submodule "vendor/helm-elscreen"]
-	path = vendor/helm-elscreen
-	url = https://github.com/emacs-helm/helm-elscreen.git
-[submodule "vendor/easy-kill"]
-	path = vendor/easy-kill
-	url = https://github.com/leoliu/easy-kill.git
-[submodule "vendor/company-statistics"]
-	path = vendor/company-statistics
-	url = https://github.com/company-mode/company-statistics.git
 [submodule "vendor/the_silver_searcher"]
 	path = vendor/the_silver_searcher
 	url = https://github.com/ggreer/the_silver_searcher.git
 [submodule "vendor/highlight-symbol.el"]
 	path = vendor/highlight-symbol.el
 	url = https://github.com/nschum/highlight-symbol.el.git
-[submodule "vendor/highlight-numbers"]
-	path = vendor/highlight-numbers
-	url = https://github.com/Fanael/highlight-numbers.git
 [submodule "vendor/parent-mode"]
 	path = vendor/parent-mode
 	url = https://github.com/Fanael/parent-mode.git
-[submodule "vendor/zencoding"]
-	path = vendor/zencoding
-	url = https://github.com/rooney/zencoding.git
-[submodule "vendor/guess-language.el"]
-	path = vendor/guess-language.el
-	url = https://github.com/tmalsburg/guess-language.el.git
-[submodule "vendor/golden-ratio.el"]
-	path = vendor/golden-ratio.el
-	url = https://github.com/roman/golden-ratio.el.git
 [submodule "vendor/fringe-helper.el"]
 	path = vendor/fringe-helper.el
 	url = https://github.com/nschum/fringe-helper.el.git
@@ -265,39 +160,12 @@
 [submodule "vendor/apiwrap.el"]
 	path = vendor/apiwrap.el
 	url = https://github.com/vermiculus/apiwrap.el.git
-[submodule "vendor/helm-flycheck"]
-	path = vendor/helm-flycheck
-	url = https://github.com/yasuyk/helm-flycheck.git
-[submodule "vendor/floobits"]
-	path = vendor/floobits
-	url = https://github.com/Floobits/floobits-emacs.git
-[submodule "vendor/region-state.el"]
-	path = vendor/region-state.el
-	url = https://github.com/xuchunyang/region-state.el.git
 [submodule "vendor/company-flx"]
 	path = vendor/company-flx
 	url = https://github.com/PythonNut/company-flx.git
-[submodule "vendor/helm-backup"]
-	path = vendor/helm-backup
-	url = https://github.com/antham/helm-backup.git
-[submodule "vendor/systemd-mode"]
-	path = vendor/systemd-mode
-	url = https://github.com/holomorph/systemd-mode.git
-[submodule "vendor/emacs-vdiff"]
-	path = vendor/emacs-vdiff
-	url = https://github.com/justbur/emacs-vdiff.git
-[submodule "vendor/emacs-vdiff-magit"]
-	path = vendor/emacs-vdiff-magit
-	url = https://github.com/justbur/emacs-vdiff-magit.git
-[submodule "vendor/pkgbuild-mode"]
-	path = vendor/pkgbuild-mode
-	url = https://github.com/juergenhoetzel/pkgbuild-mode.git
 [submodule "vendor/magit-popup"]
 	path = vendor/magit-popup
 	url = https://github.com/magit/magit-popup.git
-[submodule "vendor/salt-mode"]
-	path = vendor/salt-mode
-	url = https://github.com/glynnforrest/salt-mode.git
 [submodule "vendor/mmm-mode"]
 	path = vendor/mmm-mode
 	url = https://github.com/purcell/mmm-mode.git
@@ -313,48 +181,18 @@
 [submodule "vendor/importmagic.el"]
 	path = vendor/importmagic.el
 	url = https://github.com/anachronic/importmagic.el.git
-[submodule "vendor/smartparens"]
-	path = vendor/smartparens
-	url = https://github.com/Fuco1/smartparens
-[submodule "vendor/circe"]
-	path = vendor/circe
-	url = https://github.com/jorgenschaefer/circe.git
-[submodule "vendor/circe-notifications"]
-	path = vendor/circe-notifications
-	url = https://github.com/eqyiel/circe-notifications.git
 [submodule "vendor/dimmer.el"]
 	path = vendor/dimmer.el
 	url = https://github.com/gonewest818/dimmer.el.git
 [submodule "vendor/alert"]
 	path = vendor/alert
 	url = https://github.com/jwiegley/alert.git
-[submodule "vendor/less-css-mode"]
-	path = vendor/less-css-mode
-	url = https://github.com/purcell/less-css-mode.git
-[submodule "vendor/emacs-neotree"]
-	path = vendor/emacs-neotree
-	url = https://github.com/jaypei/emacs-neotree.git
 [submodule "vendor/emacs-memoize"]
 	path = vendor/emacs-memoize
 	url = https://github.com/skeeto/emacs-memoize.git
-[submodule "vendor/evil"]
-	path = vendor/evil
-	url = https://github.com/emacs-evil/evil.git
-[submodule "vendor/smart-mode-line"]
-	path = vendor/smart-mode-line
-	url = https://github.com/Malabarba/smart-mode-line.git
 [submodule "vendor/rich-minority"]
 	path = vendor/rich-minority
 	url = https://github.com/Malabarba/rich-minority.git
-[submodule "vendor/evil-collection"]
-	path = vendor/evil-collection
-	url = https://github.com/emacs-evil/evil-collection
-[submodule "vendor/evil-snipe"]
-	path = vendor/evil-snipe
-	url = https://github.com/hlissner/evil-snipe
-[submodule "vendor/highlight-indent-guides"]
-	path = vendor/highlight-indent-guides
-	url = https://github.com/DarthFennec/highlight-indent-guides
 [submodule "vendor/imenu-list"]
 	path = vendor/imenu-list
 	url = https://github.com/bmag/imenu-list.git

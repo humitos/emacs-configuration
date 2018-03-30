@@ -1,1 +1,0 @@
-../vendor/emacs-vdiff/vdiff.el

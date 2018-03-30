@@ -1,1 +1,0 @@
-../vendor/helm-swoop/helm-swoop.el

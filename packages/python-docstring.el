@@ -1,1 +1,0 @@
-../vendor/python-docstring-mode/python-docstring.el

@@ -1,1 +1,0 @@
-../vendor/whitespace-cleanup-mode/whitespace-cleanup-mode.el

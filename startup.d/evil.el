@@ -1,43 +1,62 @@
 ;; https://github.com/emacs-evil/evil
-(setq evil-want-integration nil)
-(require 'evil)
+(use-package evil
+  :init
+  (setq evil-want-integration nil)
+  :bind
+  (()
+   :map evil-insert-state-map
+   ;; use C-g to exit the INSERT mode
+   ("C-g" . evil-force-normal-state)
+   ;; interferes with yasnippet
+   ([tab] . nil)
 
-(require 'evil-collection-neotree)
-(evil-collection-neotree-setup)
-;; quick look with TAB key instead of "g O"
-(evil-define-key 'normal neotree-mode-map
-  (kbd "<tab>") 'neotree-quick-look)
+   :map evil-normal-state-map
+   ;; call `helm-find-files' easily from NORMAL mode
+   ("g f" . helm-find-files)
 
-(require 'evil-collection-helm)
-(evil-collection-helm-setup)
+   ;; call `helm-mini' easily from NORMAL mode
+   ("g b" . helm-mini)
 
-;; use C-g to exit the INSERT mode
-(define-key evil-insert-state-map (kbd "C-g") 'evil-force-normal-state)
+   ;; call `helm-etags-select' easily from NORMAL mode
+   ("g t" . helm-etags-select)
 
-;; call `helm-find-files' easily from NORMAL mode
-(define-key evil-normal-state-map (kbd "g f") 'helm-find-files)
+   ;; scroll with SPC in NORMAL mode
+   ("SPC" . evil-scroll-down)
+   ("S-SPC" . evil-scroll-up)
 
-;; call `helm-mini' easily from NORMAL mode
-(define-key evil-normal-state-map (kbd "g b") 'helm-mini)
+   ;; unset "M-." since it's used in elpy
+   ("M-." .  nil))
+                                        ;
+  :config
+  ;; Disable evil on Circe
+  (evil-set-initial-state 'circe-mode 'emacs)
+  ;; Disable evil on imenu-list
+  (evil-set-initial-state 'imenu-list-mode 'emacs)
 
-;; call `helm-etags-select' easily from NORMAL mode
-(define-key evil-normal-state-map (kbd "g t") 'helm-etags-select)
+  (setq evil-move-cursor-back nil)
+  (setq evil-want-fine-undo t)
+  (evil-mode +1))
 
-;; scroll with SPC in NORMAL mode
-(define-key evil-normal-state-map (kbd "SPC") 'evil-scroll-down)
-(define-key evil-normal-state-map (kbd "S-SPC") 'evil-scroll-up)
 
-;; unset "M-." since it's used in elpy
-(define-key evil-normal-state-map (kbd "M-.") nil)
-;; interferes with yasnippet
-(define-key evil-insert-state-map (kbd "TAB") nil)
 
-;; Disable evil on Circe
-(evil-set-initial-state 'circe-mode 'emacs)
-;; Disable evil on imenu-list
-(evil-set-initial-state 'imenu-list-mode 'emacs)
+;; https://github.com/emacs-evil/evil-collection
+(use-package evil-collection
+  :after evil
+  :config
+  (require 'evil-collection-neotree)
+  (evil-collection-neotree-setup)
+  ;; quick look with TAB key instead of "g O"
+  (evil-define-key 'normal neotree-mode-map
+    (kbd "<tab>") 'neotree-quick-look)
 
-(setq evil-move-cursor-back nil)
-(setq evil-want-fine-undo t)
+  (require 'evil-collection-helm)
+  (evil-collection-helm-setup)
+  )
 
-(evil-mode 1)
+
+;; https://github.com/hlissner/evil-snipe
+(use-package evil-snipe
+  :after evil
+  :config
+  (evil-snipe-mode +1)
+  (evil-snipe-override-mode +1))

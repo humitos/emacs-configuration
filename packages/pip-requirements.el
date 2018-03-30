@@ -1,1 +1,0 @@
-../vendor/pip-requirements.el/pip-requirements.el

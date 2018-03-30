@@ -1,1 +1,0 @@
-../vendor/yaml-mode/yaml-mode.el

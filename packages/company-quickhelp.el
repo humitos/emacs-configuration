@@ -1,1 +1,0 @@
-../vendor/company-quickhelp/company-quickhelp.el

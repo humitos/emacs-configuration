@@ -1,1 +1,0 @@
-../vendor/rainbow-mode/rainbow-mode.el

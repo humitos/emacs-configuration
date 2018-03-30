@@ -1,1 +1,0 @@
-../vendor/circe/circe-chanop.el

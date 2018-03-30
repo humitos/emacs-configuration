@@ -1,1 +1,0 @@
-../vendor/helm/helm-man.el

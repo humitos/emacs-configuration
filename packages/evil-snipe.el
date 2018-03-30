@@ -1,1 +1,0 @@
-../vendor/evil-snipe/evil-snipe.el
