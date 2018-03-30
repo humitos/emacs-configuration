@@ -29,7 +29,7 @@
       helm-imenu-fuzzy-match      t
       helm-apropos-fuzzy-match    t
       helm-lisp-fuzzy-completion  t
-      helm-etags-fuzzy-match      t
+      helm-etags-fuzzy-match      nil
       )
 
 (when (executable-find "curl")
