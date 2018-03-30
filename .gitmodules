@@ -157,9 +157,6 @@
 [submodule "vendor/emacs-git-gutter"]
 	path = vendor/emacs-git-gutter
 	url = https://github.com/syohex/emacs-git-gutter.git
-[submodule "vendor/browse-at-remote"]
-	path = vendor/browse-at-remote
-	url = https://github.com/rmuslimov/browse-at-remote.git
 [submodule "vendor/f.el"]
 	path = vendor/f.el
 	url = https://github.com/rejeep/f.el.git
@@ -397,3 +394,6 @@
 [submodule "vendor/imenu-list"]
 	path = vendor/imenu-list
 	url = https://github.com/bmag/imenu-list.git
+[submodule "vendor/use-package"]
+	path = vendor/use-package
+	url = https://github.com/jwiegley/use-package
