@@ -27,6 +27,11 @@
 (define-key evil-normal-state-map (kbd "SPC") 'evil-scroll-down)
 (define-key evil-normal-state-map (kbd "S-SPC") 'evil-scroll-up)
 
+;; unset "M-." since it's used in elpy
+(define-key evil-normal-state-map (kbd "M-.") nil)
+;; interferes with yasnippet
+(define-key evil-insert-state-map (kbd "TAB") nil)
+
 ;; Disable evil on Circe
 (evil-set-initial-state 'circe-mode 'emacs)
 ;; Disable evil on imenu-list
