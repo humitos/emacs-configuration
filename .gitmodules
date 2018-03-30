@@ -13,9 +13,6 @@
 [submodule "vendor/yaml-mode"]
 	path = vendor/yaml-mode
 	url = https://github.com/yoshiki/yaml-mode.git
-[submodule "vendor/twittering-mode"]
-	path = vendor/twittering-mode
-	url = https://github.com/hayamiz/twittering-mode.git
 [submodule "vendor/rainbow-mode"]
 	path = vendor/rainbow-mode
 	url = https://github.com/emacsmirror/rainbow-mode.git
@@ -100,9 +97,6 @@
 [submodule "vendor/dockerfile-mode"]
 	path = vendor/dockerfile-mode
 	url = https://github.com/spotify/dockerfile-mode
-[submodule "vendor/any-ini-mode"]
-	path = vendor/any-ini-mode
-	url = https://github.com/emacsmirror/any-ini-mode.git
 [submodule "vendor/powerline"]
 	path = vendor/powerline
 	url = https://github.com/milkypostman/powerline.git
@@ -154,9 +148,6 @@
 [submodule "vendor/yasnippet"]
 	path = vendor/yasnippet
 	url = https://github.com/joaotavora/yasnippet
-[submodule "vendor/emacs-git-gutter"]
-	path = vendor/emacs-git-gutter
-	url = https://github.com/syohex/emacs-git-gutter.git
 [submodule "vendor/f.el"]
 	path = vendor/f.el
 	url = https://github.com/rejeep/f.el.git
@@ -202,9 +193,6 @@
 [submodule "vendor/zzz-to-char"]
 	path = vendor/zzz-to-char
 	url = https://github.com/mrkkrp/zzz-to-char.git
-[submodule "vendor/avy"]
-	path = vendor/avy
-	url = https://github.com/abo-abo/avy.git
 [submodule "vendor/whitespace-cleanup-mode"]
 	path = vendor/whitespace-cleanup-mode
 	url = https://github.com/purcell/whitespace-cleanup-mode.git
@@ -253,9 +241,6 @@
 [submodule "vendor/the_silver_searcher"]
 	path = vendor/the_silver_searcher
 	url = https://github.com/ggreer/the_silver_searcher.git
-[submodule "vendor/ctags-update"]
-	path = vendor/ctags-update
-	url = https://github.com/jixiuf/ctags-update.git
 [submodule "vendor/highlight-symbol.el"]
 	path = vendor/highlight-symbol.el
 	url = https://github.com/nschum/highlight-symbol.el.git
@@ -277,9 +262,6 @@
 [submodule "vendor/golden-ratio.el"]
 	path = vendor/golden-ratio.el
 	url = https://github.com/roman/golden-ratio.el.git
-[submodule "vendor/emacs-git-gutter-fringe"]
-	path = vendor/emacs-git-gutter-fringe
-	url = https://github.com/syohex/emacs-git-gutter-fringe.git
 [submodule "vendor/fringe-helper.el"]
 	path = vendor/fringe-helper.el
 	url = https://github.com/nschum/fringe-helper.el.git
@@ -346,9 +328,6 @@
 [submodule "vendor/smartparens"]
 	path = vendor/smartparens
 	url = https://github.com/Fuco1/smartparens
-[submodule "vendor/nlinum"]
-	path = vendor/nlinum
-	url = https://github.com/emacsmirror/nlinum.git
 [submodule "vendor/circe"]
 	path = vendor/circe
 	url = https://github.com/jorgenschaefer/circe.git
@@ -367,9 +346,6 @@
 [submodule "vendor/emacs-neotree"]
 	path = vendor/emacs-neotree
 	url = https://github.com/jaypei/emacs-neotree.git
-[submodule "vendor/all-the-icons.el"]
-	path = vendor/all-the-icons.el
-	url = https://github.com/domtronn/all-the-icons.el.git
 [submodule "vendor/emacs-memoize"]
 	path = vendor/emacs-memoize
 	url = https://github.com/skeeto/emacs-memoize.git

@@ -1,7 +1,7 @@
 ;; Packages installed using `use-package'
 ;; (if the configuration is long enough it has it's own `startup.d/<package>.el' filename)
 
-; https://github.com/rranelli/auto-package-update.el
+;; https://github.com/rranelli/auto-package-update.el
 (use-package auto-package-update
              :config
              (setq auto-package-update-delete-old-versions t)
@@ -14,4 +14,34 @@
              :config
              (setq browse-at-remote-prefer-symbolic nil)
              :bind
-             (("C-c g g" . browse-at-remote)))
+             ("C-c g g" . browse-at-remote))
+
+;; https://github.com/emacsmirror/nlinum
+(use-package nlinum
+             ;; FIXME: this is currently failing for some `use-package' reason
+             :disabled
+             :hook (prog-mode text-mode)
+             :init
+             (setq nlinum-format "%4d \u2502") ;; line numbers style
+             )
+
+;; https://github.com/domtronn/all-the-icons.el
+;; To install the fonts, I ran:
+;; $ cd $HOME/.fonts
+;; $ ln -s ../all-the-icons/fonts all-the-icons
+(use-package all-the-icons)
+
+;; FIXME: not available in MELPA
+;; (use-package any-ini-mode
+;;              :mode ("\\.ini\\'" "\\.rc\\'"))
+
+
+;; https://github.com/abo-abo/avy
+(use-package avy
+             :bind
+             ("C-c C-c" . avy-goto-char-timer)
+             :config
+             (setq avy-background t)
+             ;; respect case
+             (setq avy-case-fold-search nil)
+             )
