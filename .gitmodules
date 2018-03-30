@@ -94,18 +94,12 @@
 [submodule "vendor/startupd.el"]
 	path = vendor/startupd.el
 	url = https://github.com/fgallina/startupd.el
-[submodule "vendor/dockerfile-mode"]
-	path = vendor/dockerfile-mode
-	url = https://github.com/spotify/dockerfile-mode
 [submodule "vendor/powerline"]
 	path = vendor/powerline
 	url = https://github.com/milkypostman/powerline.git
 [submodule "vendor/projectile"]
 	path = vendor/projectile
 	url = https://github.com/bbatsov/projectile.git
-[submodule "vendor/expand-region.el"]
-	path = vendor/expand-region.el
-	url = https://github.com/magnars/expand-region.el.git
 [submodule "vendor/ace-jump-mode"]
 	path = vendor/ace-jump-mode
 	url = https://github.com/winterTTr/ace-jump-mode.git
@@ -160,9 +154,6 @@
 [submodule "vendor/restclient.el"]
 	path = vendor/restclient.el
 	url = https://github.com/pashky/restclient.el.git
-[submodule "vendor/discover-my-major"]
-	path = vendor/discover-my-major
-	url = https://github.com/steckerhalter/discover-my-major.git
 [submodule "vendor/makey"]
 	path = vendor/makey
 	url = https://github.com/mickeynp/makey.git
@@ -256,9 +247,6 @@
 [submodule "vendor/guess-language.el"]
 	path = vendor/guess-language.el
 	url = https://github.com/tmalsburg/guess-language.el.git
-[submodule "vendor/smart-forward.el"]
-	path = vendor/smart-forward.el
-	url = https://github.com/magnars/smart-forward.el.git
 [submodule "vendor/golden-ratio.el"]
 	path = vendor/golden-ratio.el
 	url = https://github.com/roman/golden-ratio.el.git

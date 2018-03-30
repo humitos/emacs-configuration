@@ -1,1 +1,0 @@
-../vendor/dockerfile-mode/dockerfile-mode.el

@@ -45,3 +45,26 @@
              ;; respect case
              (setq avy-case-fold-search nil)
              )
+
+
+;; https://github.com/steckerhalter/discover-my-major
+(use-package discover-my-major)
+
+
+;; https://github.com/spotify/dockerfile-mode
+(use-package dockerfile-mode
+             :mode "Dockerfile\\'")
+
+
+;; https://github.com/magnars/expand-region.el
+(use-package expand-region
+             :bind
+             ("C-=" . er/expand-region))
+
+;; https://github.com/magnars/smart-forward.el
+(use-package smart-forward
+             :bind
+             ("C-s-<up>" . smart-up)
+             ("C-s-<down>" . smart-down)
+             ("C-s-<left>" . smart-backward)
+             ("C-s-<right>" . smart-forward))

@@ -1,5 +1,0 @@
-(require 'smart-forward)
-(global-set-key (kbd "C-S-<up>") 'smart-up)
-(global-set-key (kbd "C-S-<down>") 'smart-down)
-(global-set-key (kbd "C-S-<left>") 'smart-backward)
-(global-set-key (kbd "C-S-<right>") 'smart-forward)
