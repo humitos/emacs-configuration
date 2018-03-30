@@ -1,1 +1,0 @@
-../vendor/with-editor/with-editor.el

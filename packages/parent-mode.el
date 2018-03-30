@@ -1,1 +1,0 @@
-../vendor/parent-mode/parent-mode.el

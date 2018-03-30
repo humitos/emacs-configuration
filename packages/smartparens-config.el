@@ -1,1 +1,0 @@
-../vendor/smartparens/smartparens-config.el

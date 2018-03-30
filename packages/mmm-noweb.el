@@ -1,1 +1,0 @@
-../vendor/mmm-mode/mmm-noweb.el

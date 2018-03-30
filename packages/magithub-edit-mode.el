@@ -1,1 +1,0 @@
-../vendor/magithub/magithub-edit-mode.el

@@ -1,1 +1,0 @@
-../vendor/circe/irc.el

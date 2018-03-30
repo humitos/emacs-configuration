@@ -1,1 +1,0 @@
-../vendor/yasnippet/yasnippet.el

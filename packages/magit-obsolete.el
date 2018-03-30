@@ -1,1 +1,0 @@
-../vendor/magit/lisp/magit-obsolete.el

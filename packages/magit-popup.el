@@ -1,1 +1,0 @@
-../vendor/magit-popup/magit-popup.el

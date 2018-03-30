@@ -1,1 +1,0 @@
-../vendor/howdoi.el/howdoi.el

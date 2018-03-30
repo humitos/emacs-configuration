@@ -1,1 +1,0 @@
-../vendor/pyvenv/pyvenv.el

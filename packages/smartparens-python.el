@@ -1,1 +1,0 @@
-../vendor/smartparens/smartparens-python.el

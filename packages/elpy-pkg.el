@@ -1,1 +1,0 @@
-../vendor/elpy/elpy-pkg.el

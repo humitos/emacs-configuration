@@ -1,1 +1,0 @@
-../vendor/swiper/swiper.el

@@ -1,1 +1,0 @@
-../vendor/ghub/ghub.el

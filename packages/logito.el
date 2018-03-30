@@ -1,1 +1,0 @@
-../vendor/logito/logito.el

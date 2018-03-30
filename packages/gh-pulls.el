@@ -1,1 +1,0 @@
-../vendor/gh.el/gh-pulls.el

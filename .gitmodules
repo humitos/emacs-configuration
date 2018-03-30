@@ -1,135 +1,33 @@
-[submodule "vendor/multi-web-mode"]
-	path = vendor/multi-web-mode
-	url = https://github.com/fgallina/multi-web-mode
-[submodule "vendor/magit"]
-	path = vendor/magit
-	url = https://github.com/magit/magit.git
-[submodule "vendor/highlight-indentation"]
-	path = vendor/highlight-indentation
-	url = https://github.com/antonj/Highlight-Indentation-for-Emacs.git
-[submodule "vendor/autopair"]
-	path = vendor/autopair
-	url = https://github.com/emacsmirror/autopair.git
 [submodule "vendor/git-modes"]
 	path = vendor/git-modes
 	url = https://github.com/magit/git-modes
-[submodule "vendor/fill-column-indicator"]
-	path = vendor/fill-column-indicator
-	url = https://github.com/alpaker/Fill-Column-Indicator.git
-[submodule "vendor/emacs-epc"]
-	path = vendor/emacs-epc
-	url = https://github.com/kiwanami/emacs-epc.git
-[submodule "vendor/emacs-deferred"]
-	path = vendor/emacs-deferred
-	url = https://github.com/kiwanami/emacs-deferred.git
-[submodule "vendor/emacs-ctable"]
-	path = vendor/emacs-ctable
-	url = https://github.com/kiwanami/emacs-ctable.git
-[submodule "vendor/emacs-python-environment"]
-	path = vendor/emacs-python-environment
-	url = https://github.com/tkf/emacs-python-environment.git
-[submodule "vendor/virtualenvwrapper.el"]
-	path = vendor/virtualenvwrapper.el
-	url = https://github.com/porterjamesj/virtualenvwrapper.el.git
-[submodule "vendor/dash.el"]
-	path = vendor/dash.el
-	url = https://github.com/magnars/dash.el.git
-[submodule "vendor/s.el"]
-	path = vendor/s.el
-	url = https://github.com/magnars/s.el.git
-[submodule "vendor/monky"]
-	path = vendor/monky
-	url = https://github.com/ananthakumaran/monky.git
 [submodule "vendor/nginx-mode"]
 	path = vendor/nginx-mode
 	url = https://github.com/zev/nginx-mode
 [submodule "vendor/emacs-material-theme"]
 	path = vendor/emacs-material-theme
 	url = https://github.com/cpaulik/emacs-material-theme
-[submodule "vendor/elpy"]
-	path = vendor/elpy
-	url = https://github.com/jorgenschaefer/elpy
-[submodule "vendor/pyvenv"]
-	path = vendor/pyvenv
-	url = https://github.com/jorgenschaefer/pyvenv
 [submodule "vendor/company-mode"]
 	path = vendor/company-mode
 	url = https://github.com/company-mode/company-mode
 [submodule "vendor/flycheck"]
 	path = vendor/flycheck
 	url = https://github.com/flycheck/flycheck
-[submodule "vendor/seq"]
-	path = vendor/seq
-	url = https://github.com/NicolasPetton/seq.el
-[submodule "vendor/swiper"]
-	path = vendor/swiper
-	url = https://github.com/abo-abo/swiper
-[submodule "vendor/emacs-async"]
-	path = vendor/emacs-async
-	url = https://github.com/jwiegley/emacs-async
-[submodule "vendor/with-editor"]
-	path = vendor/with-editor
-	url = https://github.com/magit/with-editor
 [submodule "vendor/startupd.el"]
 	path = vendor/startupd.el
 	url = https://github.com/fgallina/startupd.el
-[submodule "vendor/ace-jump-mode"]
-	path = vendor/ace-jump-mode
-	url = https://github.com/winterTTr/ace-jump-mode.git
 [submodule "vendor/undohist-el"]
 	path = vendor/undohist-el
 	url = https://github.com/m2ym/undohist-el.git
-[submodule "vendor/gh.el"]
-	path = vendor/gh.el
-	url = https://github.com/sigma/gh.el.git
-[submodule "vendor/pcache"]
-	path = vendor/pcache
-	url = https://github.com/sigma/pcache.git
-[submodule "vendor/logito"]
-	path = vendor/logito
-	url = https://github.com/sigma/logito.git
 [submodule "vendor/flx"]
 	path = vendor/flx
 	url = https://github.com/lewang/flx.git
-[submodule "vendor/yasnippet"]
-	path = vendor/yasnippet
-	url = https://github.com/joaotavora/yasnippet
-[submodule "vendor/f.el"]
-	path = vendor/f.el
-	url = https://github.com/rejeep/f.el.git
-[submodule "vendor/makey"]
-	path = vendor/makey
-	url = https://github.com/mickeynp/makey.git
-[submodule "vendor/pos-tip"]
-	path = vendor/pos-tip
-	url = https://github.com/pitkali/pos-tip.git
-[submodule "vendor/erc-hl-nicks"]
-	path = vendor/erc-hl-nicks
-	url = https://github.com/leathekd/erc-hl-nicks.git
 [submodule "vendor/emacs-helm-ag"]
 	path = vendor/emacs-helm-ag
 	url = https://github.com/syohex/emacs-helm-ag.git
-[submodule "vendor/marshal.el"]
-	path = vendor/marshal.el
-	url = https://github.com/sigma/marshal.el
-[submodule "vendor/ht.el"]
-	path = vendor/ht.el
-	url = https://github.com/Wilfred/ht.el.git
-[submodule "vendor/origami.el"]
-	path = vendor/origami.el
-	url = https://github.com/gregsexton/origami.el
 [submodule "vendor/ctags"]
 	path = vendor/ctags
 	url = https://github.com/universal-ctags/ctags
-[submodule "vendor/hydra"]
-	path = vendor/hydra
-	url = https://github.com/abo-abo/hydra.git
-[submodule "vendor/super-save"]
-	path = vendor/super-save
-	url = https://github.com/bbatsov/super-save.git
-[submodule "vendor/ispell-multi"]
-	path = vendor/ispell-multi
-	url = https://github.com/emacsmirror/ispell-multi.git
 [submodule "vendor/buftra.el"]
 	path = vendor/buftra.el
 	url = https://github.com/humitos/buftra.el
@@ -142,57 +40,6 @@
 [submodule "vendor/highlight-symbol.el"]
 	path = vendor/highlight-symbol.el
 	url = https://github.com/nschum/highlight-symbol.el.git
-[submodule "vendor/parent-mode"]
-	path = vendor/parent-mode
-	url = https://github.com/Fanael/parent-mode.git
-[submodule "vendor/fringe-helper.el"]
-	path = vendor/fringe-helper.el
-	url = https://github.com/nschum/fringe-helper.el.git
-[submodule "vendor/magithub"]
-	path = vendor/magithub
-	url = https://github.com/vermiculus/magithub.git
-[submodule "vendor/ghub"]
-	path = vendor/ghub
-	url = https://github.com/tarsius/ghub
-[submodule "vendor/ghub-plus"]
-	path = vendor/ghub-plus
-	url = https://github.com/vermiculus/ghub-plus.git
-[submodule "vendor/apiwrap.el"]
-	path = vendor/apiwrap.el
-	url = https://github.com/vermiculus/apiwrap.el.git
-[submodule "vendor/company-flx"]
-	path = vendor/company-flx
-	url = https://github.com/PythonNut/company-flx.git
-[submodule "vendor/magit-popup"]
-	path = vendor/magit-popup
-	url = https://github.com/magit/magit-popup.git
-[submodule "vendor/mmm-mode"]
-	path = vendor/mmm-mode
-	url = https://github.com/purcell/mmm-mode.git
-[submodule "vendor/mmm-jinja2"]
-	path = vendor/mmm-jinja2
-	url = https://github.com/glynnforrest/mmm-jinja2.git
-[submodule "vendor/howdoi.el"]
-	path = vendor/howdoi.el
-	url = https://github.com/galaunay/howdoi.el.git
-[submodule "vendor/fzf.el"]
-	path = vendor/fzf.el
-	url = https://github.com/bling/fzf.el.git
-[submodule "vendor/importmagic.el"]
-	path = vendor/importmagic.el
-	url = https://github.com/anachronic/importmagic.el.git
-[submodule "vendor/dimmer.el"]
-	path = vendor/dimmer.el
-	url = https://github.com/gonewest818/dimmer.el.git
-[submodule "vendor/alert"]
-	path = vendor/alert
-	url = https://github.com/jwiegley/alert.git
-[submodule "vendor/emacs-memoize"]
-	path = vendor/emacs-memoize
-	url = https://github.com/skeeto/emacs-memoize.git
-[submodule "vendor/rich-minority"]
-	path = vendor/rich-minority
-	url = https://github.com/Malabarba/rich-minority.git
 [submodule "vendor/imenu-list"]
 	path = vendor/imenu-list
 	url = https://github.com/bmag/imenu-list.git
