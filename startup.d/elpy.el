@@ -131,7 +131,7 @@
         (setq tags-table-list tags-table-list-orig)
         (setq helm-etags-fuzzy-match t)))))
 
-(define-key elpy-mode-map (kbd "M-.") 'meta-dot)
+;; (define-key elpy-mode-map (kbd "M-.") 'meta-dot)
 
 (define-key elpy-mode-map (kbd "<f5>") 'recompile)
 
