@@ -95,6 +95,9 @@
   (define-key elpy-mode-map (kbd "C-c p") nil)
    ;; disable this to be used by avy
   (define-key elpy-mode-map (kbd "C-c C-c") nil)
+  ;; don't call `elpy-find-file' (use `helm-projectile-find-file')
+  (define-key python-mode-map (kbd "C-c C-f") nil)
+  (define-key elpy-mode-map (kbd "C-c C-f") nil)
 
   ;; navigate between Flycheck errors (I'm not using Flymake)
   (define-key elpy-mode-map (kbd "C-c C-n") 'flycheck-next-error)
