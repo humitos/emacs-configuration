@@ -1,9 +1,6 @@
 [submodule "vendor/git-modes"]
 	path = vendor/git-modes
 	url = https://github.com/magit/git-modes
-[submodule "vendor/emacs-material-theme"]
-	path = vendor/emacs-material-theme
-	url = https://github.com/cpaulik/emacs-material-theme
 [submodule "vendor/startupd.el"]
 	path = vendor/startupd.el
 	url = https://github.com/fgallina/startupd.el
