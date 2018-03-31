@@ -25,9 +25,11 @@
 
 
 ;; https://github.com/nonsequitur/smex
-(use-package smex)
+(use-package smex
+  :disabled)
 ;; https://github.com/ptrv/helm-smex
 (use-package helm-smex
+  :disabled
   :after (helm smex))
 
 
