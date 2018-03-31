@@ -365,3 +365,16 @@
 (use-package howdoi
   ;; FIXME: doesn't work properly. Answer are not shown at all.
   :disabled)
+
+
+;; https://github.com/anachronic/importmagic.el
+(use-package importmagic
+  :hook (python-mode . importmagic-mode)
+  :bind
+  (()
+   :map importmagic-mode-map
+   ("C-c RET" . importmagic-fix-symbol-at-point))
+  :config
+  (setq importmagic-style-configuration-alist
+        '((multiline . parentheses)
+          (max_columns . 80))))
