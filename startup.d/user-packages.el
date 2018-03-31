@@ -96,13 +96,23 @@
 
 
 ;; https://github.com/expez/company-quickhelp
-(use-package company-quickhelp)
+(use-package company-quickhelp
+  :after company)
 
 
 ;; https://github.com/company-mode/company-statistics
 (use-package company-statistics
+  :after company
   :config
   (setq company-statistics-size 10000))
+
+;; https://github.com/PythonNut/company-flx
+(use-package company-flx
+  :after flx)
+
+
+;; https://github.com/lewang/flx
+(use-package flx)
 
 
 ;; https://github.com/areina/helm-dash
@@ -116,9 +126,12 @@
   (setq helm-dash-docsets-path (concat emacs-user-directory "docsets")))
 
 
+;; https://github.com/flycheck/flycheck
+(use-package flycheck)
+
 ;; https://github.com/yasuyk/helm-flycheck
 (use-package helm-flycheck
-  :after helm)
+  :after (helm flycheck))
 
 
 ;; https://github.com/emacs-helm/helm-ls-git
@@ -137,6 +150,17 @@
 ;; https://github.com/Fanael/highlight-numbers
 (use-package highlight-numbers
   :hook (elpy-mode . hightlight-numbers-mode))
+
+
+;; https://github.com/nschum/highlight-symbol.el
+(use-package highlight-symbol
+  :hook (prog-mode . highlight-symbol-mode)
+  :config
+  (setq highlight-symbol-idle-delay 0.2)
+  (setq highlight-symbol-ignore-list
+        '("False" "True" "None" "self" "def" "import" "from" "if" "else" "for"
+          "while" "class" "print" "and" "not" "is" "param" "rtype" "async"
+          "with")))
 
 
 ;; https://github.com/purcell/less-css-mode.git
@@ -278,3 +302,16 @@
   ;; preview and selecting by hitting RET
   :bind (:map zencoding-mode-keymap
               ("C-j" . zencoding-expand-yas)))
+
+
+;; https://github.com/ajc/nginx-mode
+(use-package nginx-mode
+  :mode "/nginx/sites-\\(?:available\\|enabled\\)/")
+
+
+;; https://github.com/bmag/imenu-list
+(use-package imenu-list
+  :bind
+  ("C-'" . imenu-list-smart-toggle)
+  :config
+  (setq imenu-list-focus-after-activation t))

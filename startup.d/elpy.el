@@ -1,6 +1,6 @@
 ;; https://github.com/jorgenschaefer/elpy
 (use-package elpy
-  :requires (company helm-pydoc flycheck)
+  :after (company helm-pydoc flycheck)
   :bind
   (()
    :map elpy-mode-map
@@ -121,4 +121,5 @@
 
 
 ;; https://github.com/syohex/emacs-helm-pydoc
-(use-package helm-pydoc)
+(use-package helm-pydoc
+  :after helm)

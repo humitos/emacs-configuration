@@ -1,27 +1,12 @@
 [submodule "vendor/git-modes"]
 	path = vendor/git-modes
 	url = https://github.com/magit/git-modes
-[submodule "vendor/nginx-mode"]
-	path = vendor/nginx-mode
-	url = https://github.com/zev/nginx-mode
 [submodule "vendor/emacs-material-theme"]
 	path = vendor/emacs-material-theme
 	url = https://github.com/cpaulik/emacs-material-theme
-[submodule "vendor/company-mode"]
-	path = vendor/company-mode
-	url = https://github.com/company-mode/company-mode
-[submodule "vendor/flycheck"]
-	path = vendor/flycheck
-	url = https://github.com/flycheck/flycheck
 [submodule "vendor/startupd.el"]
 	path = vendor/startupd.el
 	url = https://github.com/fgallina/startupd.el
-[submodule "vendor/undohist-el"]
-	path = vendor/undohist-el
-	url = https://github.com/m2ym/undohist-el.git
-[submodule "vendor/flx"]
-	path = vendor/flx
-	url = https://github.com/lewang/flx.git
 [submodule "vendor/emacs-helm-ag"]
 	path = vendor/emacs-helm-ag
 	url = https://github.com/syohex/emacs-helm-ag.git
@@ -37,12 +22,6 @@
 [submodule "vendor/the_silver_searcher"]
 	path = vendor/the_silver_searcher
 	url = https://github.com/ggreer/the_silver_searcher.git
-[submodule "vendor/highlight-symbol.el"]
-	path = vendor/highlight-symbol.el
-	url = https://github.com/nschum/highlight-symbol.el.git
-[submodule "vendor/imenu-list"]
-	path = vendor/imenu-list
-	url = https://github.com/bmag/imenu-list.git
 [submodule "vendor/use-package"]
 	path = vendor/use-package
 	url = https://github.com/jwiegley/use-package

@@ -17,7 +17,7 @@
 
 
 (use-package helm-flx
-  :after helm)
+  :after (helm flx))
 
 
 (use-package helm-fuzzier

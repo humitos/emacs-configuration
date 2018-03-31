@@ -1,1 +1,0 @@
-../vendor/nginx-mode/nginx-mode.el

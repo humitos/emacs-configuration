@@ -1,1 +1,0 @@
-../vendor/company-mode/company-semantic.el
