@@ -108,7 +108,7 @@
 
 ;; https://github.com/PythonNut/company-flx
 (use-package company-flx
-  :after flx)
+  :after (flx company))
 
 
 ;; https://github.com/lewang/flx
