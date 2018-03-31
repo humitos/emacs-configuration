@@ -7,32 +7,6 @@
   (use-package elpy
     :after (company helm-pydoc flycheck helm-projectile avy yasnippet)
     :commands elpy-enable
-    :bind
-    (()
-     :map elpy-mode-map
-     ;; navigate between Flycheck errors (I'm not using Flymake)
-     ("C-c C-n" . flycheck-next-error)
-     ("C-c C-p" . flycheck-previous-error)
-     ;; disable the old ones
-     ("C-c n" . nil)
-     ("C-c p" . nil)
-
-     ;; disable this to be used by avy
-     ("C-c C-c" . nil)
-     ;; helm-ag
-     ("C-c C-s" . nil)
-
-     ("<f5>" . recompile)
-     ("M-q" . python-fill-paragraph)
-
-     :map python-mode-map
-     ;; helm-pydoc: https://github.com/syohex/emacs-helm-pydoc
-     ("C-c C-d" . helm-pydoc)
-
-     ("C-c C-c" . nil)
-     ;; helm-projectile integration
-     ("C-c C-f" . helm-projectile-find-file))
-
     :config
     ;; Run flycheck only when the file is saved, idle or new line
     (setq flycheck-check-syntax-automatically '(save idle-change new-line))
@@ -47,10 +21,6 @@
     (setq elpy-rpc-backend "jedi")
     ;; Set timeout for backend rpc
     (setq elpy-rpc-timeout 3)
-
-    ;; enable newline-and-indent on return
-    ;; (define-key global-map (kbd "RET") 'newline-and-indent)
-
 
     ;; https://masteringemacs.org/article/compiling-running-scripts-emacs
     (defun python--add-debug-highlight ()
@@ -103,9 +73,6 @@
     (setq python-indent-guess-indent-offset nil)
 
 
-    ;; set the proper PYTHONPATH for elpy (Python module comes included in the source code)
-    ;; (setq elpy-rpc-pythonpath (concat emacs-user-directory "vendor/elpy"))
-
     ;; try to use pyenv for `pyvenv.el'
     (if (not (getenv "DOCKER"))
         (setenv "WORKON_HOME" "/home/humitos/.pyenv/versions"))
@@ -116,14 +83,27 @@
 
 
   (elpy-enable)
+
+  ;; Need to define these here otherwise they are not "undefined"
+  ;; helm-ag
+  (define-key python-mode-map (kbd "C-c C-s") nil)
+  (define-key elpy-mode-map (kbd "C-c C-s") nil)
+  ;; disable Flymake unused binds
+  (define-key elpy-mode-map (kbd "C-c n") nil)
+  (define-key elpy-mode-map (kbd "C-c p") nil)
+   ;; disable this to be used by avy
+  (define-key elpy-mode-map (kbd "C-c C-c") nil)
+
+  ;; navigate between Flycheck errors (I'm not using Flymake)
+  (define-key elpy-mode-map (kbd "C-c C-n") 'flycheck-next-error)
+  (define-key elpy-mode-map (kbd "C-c C-p") 'flycheck-previous-error)
+
+  (define-key elpy-mode-map (kbd "<f5>") 'recompile)
+  ;; (define-key elpy-mode-map (kbd "M-q") 'python-fill-paragraph)
+  (define-key elpy-mode-map (kbd "C-c C-d") 'helm-pydoc)
+
   (setq elpy-modules (delete 'elpy-module-highlight-indentation elpy-modules))
 
   ;; Remove flymake and use flycheck
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
-
-
-
-;; https://github.com/syohex/emacs-helm-pydoc
-(use-package helm-pydoc
-  :after helm)

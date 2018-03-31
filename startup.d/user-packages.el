@@ -126,6 +126,11 @@
   (setq helm-dash-docsets-path (concat emacs-user-directory "docsets")))
 
 
+;; https://github.com/syohex/emacs-helm-pydoc
+(use-package helm-pydoc
+  :after helm)
+
+
 ;; https://github.com/flycheck/flycheck
 (use-package flycheck)
 
