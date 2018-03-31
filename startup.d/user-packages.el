@@ -321,3 +321,24 @@
   ("C-'" . imenu-list-smart-toggle)
   :config
   (setq imenu-list-focus-after-activation t))
+
+
+;; https://github.com/mooz/js2-mode
+(use-package js2-mode
+  :mode "\\.js\\.")
+
+
+;; https://github.com/joshwnj/json-mode
+(use-package json-mode
+  :mode "\\.json\\'")
+
+
+;; https://github.com/dryman/toml-mode.el
+(use-package toml-mode
+  :mode "\\.toml")
+
+
+;; https://github.com/galaunay/howdoi.el
+(use-package howdoi
+  ;; FIXME: doesn't work properly. Answer are not shown at all.
+  :disabled)
