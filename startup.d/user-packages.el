@@ -139,6 +139,12 @@
   :bind
   ("C-x f" . helm-browse-project))
 
+;; https://github.com/syohex/emacs-helm-ag
+(use-package helm-ag
+  :after helm-projectile
+  :bind
+  ;; enable regex search using projectile and helm
+  ("C-c C-s" . helm-projectile-ag))
 
 ;; https://github.com/DarthFennec/highlight-indent-guides
 (use-package highlight-indent-guides

@@ -38,14 +38,15 @@
 
 ;; https://github.com/bbatsov/helm-projectile
 (use-package helm-projectile
-  :after helm
+  :after (helm projectile)
   :bind
-  ;; enable regex search using projectile and helm
-  ("C-c C-s" . helm-projectile-ag)
   ("C-c C-f" . helm-projectile-find-file)
+  ;; use a simpler shortcut to switch between current project opened buffers
+  ("C-c b" . helm-projectile-switch-to-buffer)
   :config
   ;; helm-projectile integration
   (helm-projectile-on))
+
 
 (use-package helm
   :config

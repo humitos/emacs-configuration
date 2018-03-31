@@ -1,9 +1,5 @@
 ;; https://github.com/bbatsov/projectile
 (use-package projectile
-  :bind
-  ;; use a simpler shortcut to switch between current project opened buffers
-  ("C-c b" . helm-projectile-switch-to-buffer)
-
   :config
   ;; http://projectile.readthedocs.io/en/latest/configuration/#caching
   ;; http://emacs.stackexchange.com/a/2169
