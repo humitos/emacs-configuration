@@ -141,10 +141,21 @@
 
 ;; https://github.com/syohex/emacs-helm-ag
 (use-package helm-ag
-  :after helm-projectile
+  :after helm
   :bind
   ;; enable regex search using projectile and helm
-  ("C-c C-s" . helm-projectile-ag))
+  ("C-c C-s" . helm-ag-project-root)
+  :config
+  (setq helm-ag-insert-at-point 'symbol)
+  (setq helm-ag-fuzzy-match t)
+  (setq helm-ag-use-grep-ignore-list t)
+  (setq helm-ag-use-agignore t)
+
+  (if (getenv "DOCKER")
+      (setq helm-ag-base-command (concat emacs-user-directory "ack --nocolor --nogroup"))
+    (setq helm-ag-base-command (concat emacs-user-directory "vendor/the_silver_searcher/" "ag --nocolor --nogroup --literal")))
+    ;; (setq helm-ag-base-command "rg --no-heading"))
+ )
 
 ;; https://github.com/DarthFennec/highlight-indent-guides
 (use-package highlight-indent-guides

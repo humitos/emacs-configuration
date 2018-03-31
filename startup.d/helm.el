@@ -85,23 +85,11 @@
         helm-ff-file-name-history-use-recentf t)
 
   ;; disable regex search from elpy
-  (global-unset-key (kbd "C-c C-s"))
-    ;; helm-occur in the buffer (default symbol)
+  ;; (global-unset-key (kbd "C-c C-s"))
+  ;; helm-occur in the buffer (default symbol)
   (global-set-key (kbd "C-c s") 'helm-occur)
 
-
-  ;; TODO: this is valid for helm-ag not for helm-projectile-ag
-  ;; https://github.com/syohex/emacs-helm-ag
-  (setq helm-ag-insert-at-point 'symbol)
-  (setq helm-ag-fuzzy-match t)
-  (setq helm-ag-use-grep-ignore-list t)
-  (setq helm-ag-use-agignore t)
-
-  (if (getenv "DOCKER")
-      (setq helm-ag-base-command (concat emacs-user-directory "ack --nocolor --nogroup"))
-    (setq helm-ag-base-command (concat emacs-user-directory "vendor/the_silver_searcher/" "ag --nocolor --nogroup --literal")))
-
-  ;; the command helm-projects-find-file does a locate in these directories
+ ;; the command helm-projects-find-file does a locate in these directories
   (setq helm-locate-project-list
         '("~/mozio/mozio"
           "~/mozio/ondemand"
