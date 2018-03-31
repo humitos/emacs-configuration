@@ -132,7 +132,14 @@
 
 
 ;; https://github.com/flycheck/flycheck
-(use-package flycheck)
+(use-package flycheck
+  :config
+  ;; Run flycheck only when the file is saved, idle or new line
+  (setq flycheck-check-syntax-automatically '(save idle-change new-line))
+
+  ;; Wait idle seconds before running flycheck
+  (setq flycheck-idle-change-delay 2)
+  )
 
 ;; https://github.com/yasuyk/helm-flycheck
 (use-package helm-flycheck

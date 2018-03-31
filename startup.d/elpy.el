@@ -5,15 +5,9 @@
   :config
   ;; https://github.com/ljos/.emacs.d/blob/master/init.el
   (use-package elpy
-    :after (company helm-pydoc flycheck helm-projectile avy yasnippet)
+    :after (company helm-pydoc helm-projectile avy yasnippet flycheck)
     :commands elpy-enable
     :config
-    ;; Run flycheck only when the file is saved, idle or new line
-    (setq flycheck-check-syntax-automatically '(save idle-change new-line))
-
-    ;; Wait idle seconds before running flycheck
-    (setq flycheck-idle-change-delay 2)
-
     ;; Use rope as backend for Elpy
     ;; (setq elpy-rpc-backend "rope")
 
