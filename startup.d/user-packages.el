@@ -156,7 +156,7 @@
   :after helm
   :bind
   ;; enable regex search using projectile and helm
-  ("C-c C-s" . helm-ag-project-root)
+  ("C-c C-s" . helm-do-ag-project-root)
   :config
   (setq helm-ag-insert-at-point 'symbol)
   (setq helm-ag-fuzzy-match t)
