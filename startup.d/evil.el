@@ -2,6 +2,7 @@
 (use-package evil
   :init
   (setq evil-want-integration nil)
+  (evil-mode 1)
   :bind
   (()
    :map evil-insert-state-map
@@ -34,8 +35,7 @@
   (evil-set-initial-state 'imenu-list-mode 'emacs)
 
   (setq evil-move-cursor-back nil)
-  (setq evil-want-fine-undo t)
-  (evil-mode +1))
+  (setq evil-want-fine-undo t))
 
 
 
