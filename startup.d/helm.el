@@ -45,7 +45,8 @@
   ("C-c C-f" . helm-projectile-find-file)
   ;; use a simpler shortcut to switch between current project opened buffers
   ("C-c b" . helm-projectile-switch-to-buffer)
-  :config
+  ("C-c p p " . helm-projectile-switch-project)
+  :init
   ;; helm-projectile integration
   (helm-projectile-on))
 
