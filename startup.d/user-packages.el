@@ -149,7 +149,7 @@
 
 ;; https://github.com/Fanael/highlight-numbers
 (use-package highlight-numbers
-  :hook (elpy-mode . hightlight-numbers-mode))
+  :hook (elpy-mode . highlight-numbers-mode))
 
 
 ;; https://github.com/nschum/highlight-symbol.el

@@ -1,5 +1,7 @@
 ;; http://web-mode.org/
 (use-package web-mode
+  :after projectile
+
   :mode "\\.html?\\'"
   :mode "\\.tmpl?\\'"
   :mode "\\.json?\\'"

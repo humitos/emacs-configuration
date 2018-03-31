@@ -38,11 +38,11 @@
 
 ;; https://github.com/bbatsov/helm-projectile
 (use-package helm-projectile
-  :after (helm elpy)
+  :after helm
   :bind
-  (("C-c C-f" . helm-projectile-find-file)
-   :map elpy-mode-map
-   ("C-c C-f" . helm-projectile-find-file))
+  ;; enable regex search using projectile and helm
+  ("C-c C-s" . helm-projectile-ag)
+  ("C-c C-f" . helm-projectile-find-file)
   :config
   ;; helm-projectile integration
   (helm-projectile-on))
@@ -85,11 +85,7 @@
 
   ;; disable regex search from elpy
   (global-unset-key (kbd "C-c C-s"))
-  ;; enable regex search using projectile and helm
-  (global-set-key (kbd "C-c C-s") 'helm-projectile-ag)
-  ;; (define-key elpy-mode-map (kbd "C-c C-s") 'helm-projectile-ag)
-
-  ;; helm-occur in the buffer (default symbol)
+    ;; helm-occur in the buffer (default symbol)
   (global-set-key (kbd "C-c s") 'helm-occur)
 
 
