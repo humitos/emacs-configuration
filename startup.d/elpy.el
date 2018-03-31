@@ -75,8 +75,16 @@
     ;; uses the default emacs virtualenv
     (pyvenv-workon "emacs-default"))
 
-
   (elpy-enable)
+
+  ;; Remove highligh-indentation (I use highlight-indent-guides)
+  (setq elpy-modules (delete 'elpy-module-highlight-indentation elpy-modules))
+
+
+  ;; Remove flymake (I use flycheck)
+  (setq elpy-modules (delete 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode)
+
 
   ;; Need to define these here otherwise they are not "undefined"
   ;; helm-ag
@@ -93,11 +101,5 @@
   (define-key elpy-mode-map (kbd "C-c C-p") 'flycheck-previous-error)
 
   (define-key elpy-mode-map (kbd "<f5>") 'recompile)
-  ;; (define-key elpy-mode-map (kbd "M-q") 'python-fill-paragraph)
   (define-key elpy-mode-map (kbd "C-c C-d") 'helm-pydoc)
-
-  (setq elpy-modules (delete 'elpy-module-highlight-indentation elpy-modules))
-
-  ;; Remove flymake and use flycheck
-  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (add-hook 'elpy-mode-hook 'flycheck-mode))
+  )
