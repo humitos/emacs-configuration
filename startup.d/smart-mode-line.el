@@ -4,6 +4,7 @@
   :disabled)
 
 (use-package smart-mode-line
+  :disabled
   ;; :after (powerline projectile)
   :config
   (setq sml/theme 'respectful)
