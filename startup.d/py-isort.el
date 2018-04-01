@@ -1,2 +1,2 @@
 (require 'py-isort)
-(add-hook 'elpy-mode-hook 'py-isort-enable-on-save)
+(add-hook 'python-mode-hook 'py-isort-enable-on-save)
