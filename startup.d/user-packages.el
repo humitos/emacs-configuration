@@ -400,3 +400,11 @@
 (use-package aggressive-indent
   :config
   (add-to-list 'aggressive-indent-excluded-modes 'elpy-mode))
+
+
+;; https://github.com/tarsius/hl-todo
+(use-package hl-todo
+  :hook (prog-mode . hl-todo-mode))
+
+
+(use-package pretty-mode)
