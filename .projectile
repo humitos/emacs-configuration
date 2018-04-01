@@ -24,6 +24,7 @@
 -/coverage
 -/src
 -.style.yapf
+-/elpa
 
 -celerybeat-schedule
 
