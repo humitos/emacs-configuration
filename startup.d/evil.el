@@ -30,6 +30,8 @@
   :config
   ;; Disable evil on Circe
   (evil-set-initial-state 'circe-mode 'emacs)
+  ;; Disable evil on Timemachig
+  (evil-set-initial-state 'git-timemachine-mode 'emacs)
   ;; Disable evil on imenu-list
   (evil-set-initial-state 'imenu-list-mode 'emacs)
 
