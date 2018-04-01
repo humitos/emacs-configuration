@@ -52,23 +52,25 @@
 
 
 (use-package helm
-  :config
+  :after helm-core
+  :bind
+  ("M-x" . helm-M-x)
+  ("C-x r b" . helm-filtered-bookmarks)
+  ("C-x C-f" . helm-find-files)
+  ;; (global-unset-key (kbd "C-c C-f"))
+  ("M-y" . helm-show-kill-ring)
+  ("C-x b" . helm-mini)
   ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
   ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
   ;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
-  (global-set-key (kbd "C-c h") 'helm-command-prefix)
-  (global-unset-key (kbd "C-x c"))
-
+  ("C-c h" . helm-command-prefix)
+  ("C-x c" . nil)
+  ("C-x C-b" . helm-bookmarks)
+  :config
   (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
   (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
   (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 
-  (global-set-key (kbd "M-x") 'helm-M-x)
-  (global-set-key (kbd "C-x r b") 'helm-filtered-bookmarks)
-  (global-set-key (kbd "C-x C-f") 'helm-find-files)
-  ;; (global-unset-key (kbd "C-c C-f"))
-  (global-set-key (kbd "M-y") 'helm-show-kill-ring)
-  (global-set-key (kbd "C-x b") 'helm-mini)
   (setq helm-buffers-fuzzy-matching t
         helm-recentf-fuzzy-match    t
         helm-locate-fuzzy-match     t
@@ -92,7 +94,7 @@
   ;; helm-occur in the buffer (default symbol)
   (global-set-key (kbd "C-c s") 'helm-occur)
 
- ;; the command helm-projects-find-file does a locate in these directories
+  ;; the command helm-projects-find-file does a locate in these directories
   (setq helm-locate-project-list
         '("~/mozio/mozio"
           "~/mozio/ondemand"
@@ -168,7 +170,6 @@
   ;; Define the length of the helm buffer
   (setq helm-buffer-max-length 50)
 
-  (global-set-key (kbd "C-x C-b") 'helm-bookmarks)
 
   ;; filter this buffers from helm options
   (setq helm-boring-buffer-regexp-list
