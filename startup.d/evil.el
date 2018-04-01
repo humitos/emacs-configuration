@@ -28,12 +28,19 @@
    ;; unset "M-." since it's used in elpy
    ("M-." .  nil))
   :config
+  ;; https://github.com/emacs-evil/evil#underscore-_-is-not-a-word-character
+  ;; Add the "_" as a word character
+  (modify-syntax-entry ?_ "w")
   ;; Disable evil on Circe
   (evil-set-initial-state 'circe-mode 'emacs)
   ;; Disable evil on Timemachig
   (evil-set-initial-state 'git-timemachine-mode 'emacs)
   ;; Disable evil on imenu-list
   (evil-set-initial-state 'imenu-list-mode 'emacs)
+  ;; Disable evil on Fundamental buffers
+  (evil-set-initial-state 'fundamental-mode 'emacs)
+  ;; Disable evil on Fundamental buffers
+  (evil-set-initial-state 'help-mode 'emacs)
 
   (setq evil-move-cursor-back nil)
   (setq evil-want-fine-undo t))
@@ -42,14 +49,13 @@
 
 ;; https://github.com/emacs-evil/evil-collection
 (use-package evil-collection
-  :after evil
+  :after (evil neotree)
   :pin melpa
   :config
   (require 'evil-collection-neotree)
   (evil-collection-neotree-setup)
   ;; quick look with TAB key instead of "g O"
-  (evil-define-key 'normal neotree-mode-map
-    (kbd "<tab>") 'neotree-quick-look)
+  (evil-define-key 'normal neotree-mode-map (kbd "<tab>") 'neotree-quick-look)
 
   ;; (require 'evil-collection-helm)
   ;; (evil-collection-helm-setup)
