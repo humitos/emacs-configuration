@@ -99,6 +99,27 @@
   (after-save . helm-backup-versioning))
 
 
+;; https://github.com/company-mode/company-mode
+(use-package company
+  :hook (prog-mode . company-mode)
+  :config
+  ;; https://github.com/jorgenschaefer/elpy/issues/1015#issuecomment-257070312
+  (setq company-minimum-prefix-length 3)
+
+  ;; show quick-access numbers for the first ten candidates (M-<number>
+  ;; selects the specific option)
+  (setq company-show-numbers t)
+
+  ;; all characters from `company-auto-complete-chars' trigger insertion
+  ;; of the selected completion candidate
+  (setq company-auto-complete nil)
+
+  (setq company-auto-complete-chars '(?\( ?\) ?.))
+
+  ;; align annotations to the right tooltip border
+  (setq company-tooltip-align-annotations t))
+
+
 ;; https://github.com/expez/company-quickhelp
 (use-package company-quickhelp
   :after company)
