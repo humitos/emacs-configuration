@@ -17,10 +17,12 @@
 
 
 (use-package helm-flx
+  :pin melpa
   :after (helm flx))
 
 
 (use-package helm-fuzzier
+  :pin melpa
   :after helm)
 
 
@@ -46,13 +48,60 @@
   ;; use a simpler shortcut to switch between current project opened buffers
   ("C-c b" . helm-projectile-switch-to-buffer)
   ("C-c p p " . helm-projectile-switch-project)
-  :init
+  :config
   ;; helm-projectile integration
   (helm-projectile-on))
 
 
+;; https://github.com/yasuyk/helm-flycheck
+(use-package helm-flycheck
+  :after (helm flycheck))
+
+
+;; https://github.com/emacs-helm/helm-ls-git
+(use-package helm-ls-git
+  :after helm
+  :bind
+  ("C-x f" . helm-browse-project))
+
+
+;; https://github.com/areina/helm-dash
+(use-package helm-dash
+  :after helm
+  :config
+  ;; use firefox to open the documentation
+  (setq browse-url-browser-function 'browse-url-generic
+        browse-url-generic-program "firefox")
+  (setq helm-dash-browser-func 'browse-url-generic)
+  (setq helm-dash-docsets-path (concat emacs-user-directory "docsets")))
+
+
+;; https://github.com/syohex/emacs-helm-pydoc
+;; (use-package helm-pydoc
+;;  :pin melpa
+;;  :after helm)
+
+
+;;; https://github.com/syohex/emacs-helm-ag
+(use-package helm-ag
+  :after helm
+  :bind
+  ;; enable regex search using projectile and helm
+  ("C-c C-s" . helm-do-ag-project-root)
+  :config
+  (setq helm-ag-insert-at-point 'symbol)
+  (setq helm-ag-fuzzy-match t)
+  (setq helm-ag-use-grep-ignore-list t)
+  (setq helm-ag-use-agignore t)
+
+  (if (getenv "DOCKER")
+      (setq helm-ag-base-command (concat emacs-user-directory "ack --nocolor --nogroup"))
+    (setq helm-ag-base-command (concat emacs-user-directory "vendor/the_silver_searcher/" "ag --nocolor --nogroup --literal")))
+    ;; (setq helm-ag-base-command "rg --no-heading"))
+ )
+
+
 (use-package helm
-  :after helm-core
   :bind
   ("M-x" . helm-M-x)
   ("C-x r b" . helm-filtered-bookmarks)
@@ -66,7 +115,10 @@
   ("C-c h" . helm-command-prefix)
   ("C-x c" . nil)
   ("C-x C-b" . helm-bookmarks)
+  ;; helm-occur in the buffer (default symbol)
+  ("C-c s" . helm-occur)
   :config
+  (require 'helm-config)
   (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
   (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
   (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
@@ -91,8 +143,6 @@
 
   ;; disable regex search from elpy
   ;; (global-unset-key (kbd "C-c C-s"))
-  ;; helm-occur in the buffer (default symbol)
-  (global-set-key (kbd "C-c s") 'helm-occur)
 
   ;; the command helm-projects-find-file does a locate in these directories
   (setq helm-locate-project-list
@@ -188,4 +238,4 @@
           rst-mode
           emacs-lisp-mode
           text-mode))
-  (require 'helm-config))
+  )

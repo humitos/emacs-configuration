@@ -1,6 +1,7 @@
 ;; https://github.com/tmalsburg/guess-language.el
 
 (use-package guess-language
+  :pin melpa
   :init
   ;; set a default dictionary
   (setq ispell-dictionary "en")

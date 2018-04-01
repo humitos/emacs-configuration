@@ -1,6 +1,6 @@
 ;; https://github.com/vermiculus/magithub
 (use-package magithub
-  :after magit
+  :after (magit magit-popup)
   ;; https://github.com/vermiculus/magithub/issues/286#issuecomment-366540058
   :requires magithub-completion
   :config

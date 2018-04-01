@@ -41,6 +41,7 @@
 ;; https://github.com/emacs-evil/evil-collection
 (use-package evil-collection
   :after evil
+  :pin melpa
   :config
   (require 'evil-collection-neotree)
   (evil-collection-neotree-setup)
@@ -48,8 +49,8 @@
   (evil-define-key 'normal neotree-mode-map
     (kbd "<tab>") 'neotree-quick-look)
 
-  (require 'evil-collection-helm)
-  (evil-collection-helm-setup)
+  ;; (require 'evil-collection-helm)
+  ;; (evil-collection-helm-setup)
   )
 
 
@@ -87,7 +88,8 @@
        (define-key evil-normal-state-map ",ll" 'evilnc-quick-comment-or-uncomment-to-the-line)
        (define-key evil-normal-state-map ",cc" 'evilnc-copy-and-comment-lines)
        (define-key evil-visual-state-map ",cc" 'evilnc-copy-and-comment-lines)
-       (define-key evil-normal-state-map ",cp" 'evilnc-comment-or-uncomment-paragraphs)
+       (define-key evil-normal-state-map ",cp" 'evilnc-comment-or-uncomment-paragraphs)))
+
        ;; (define-key evil-normal-state-map ",cr" 'comment-or-uncomment-region)
        ;; (define-key evil-normal-state-map ",cv" 'evilnc-toggle-invert-comment-line-by-line)))
 
@@ -102,4 +104,10 @@
 
        ;; comment itself is text object
        (define-key evil-inner-text-objects-map evilnc-comment-text-object 'evilnc-inner-comment)
-       (define-key evil-outer-text-objects-map evilnc-comment-text-object 'evilnc-outer-commenter))))
+       (define-key evil-outer-text-objects-map evilnc-comment-text-object 'evilnc-outer-commenter)))
+    )
+
+
+;; https://github.com/syohex/emacs-evil-anzu
+(use-package evil-anzu
+  :after (evil anzu))

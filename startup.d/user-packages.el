@@ -11,17 +11,19 @@
 
 ;; https://github.com/rmuslimov/browse-at-remote
 (use-package browse-at-remote
+  :pin melpa
   :config
   (setq browse-at-remote-prefer-symbolic nil)
   :bind
   ("C-c g g" . browse-at-remote))
 
 ;; https://github.com/emacsmirror/nlinum
-(use-package nlinum
+(use-package nlinum-hl
+  :pin melpa
   :hook
   ((prog-mode . nlinum-mode)
    (text-mode . nlinum-mode))
-  :init
+  :config
   (setq nlinum-format "%4d \u2502") ;; line numbers style
   )
 
@@ -29,7 +31,7 @@
 ;; To install the fonts, I ran:
 ;; $ cd $HOME/.fonts
 ;; $ ln -s ../all-the-icons/fonts all-the-icons
-(use-package all-the-icons)
+;; (use-package all-the-icons)
 
 ;; FIXME: not available in MELPA
 ;; (use-package any-ini-mode
@@ -63,6 +65,7 @@
 
 ;; https://github.com/magnars/smart-forward.el
 (use-package smart-forward
+  :pin melpa
   :bind
   ("C-s-<up>" . smart-up)
   ("C-s-<down>" . smart-down)
@@ -107,8 +110,10 @@
   :config
   (setq company-statistics-size 10000))
 
+
 ;; https://github.com/PythonNut/company-flx
 (use-package company-flx
+  :pin melpa
   :after (flx company))
 
 
@@ -116,23 +121,7 @@
 (use-package flx)
 
 
-;; https://github.com/areina/helm-dash
-(use-package helm-dash
-  :after helm
-  :config
-  ;; use firefox to open the documentation
-  (setq browse-url-browser-function 'browse-url-generic
-        browse-url-generic-program "firefox")
-  (setq helm-dash-browser-func 'browse-url-generic)
-  (setq helm-dash-docsets-path (concat emacs-user-directory "docsets")))
-
-
-;; https://github.com/syohex/emacs-helm-pydoc
-(use-package helm-pydoc
-  :after helm)
-
-
-;; https://github.com/flycheck/flycheck
+; https://github.com/flycheck/flycheck
 (use-package flycheck
   :config
   ;; Run flycheck only when the file is saved, idle or new line
@@ -142,37 +131,9 @@
   (setq flycheck-idle-change-delay 2)
   )
 
-;; https://github.com/yasuyk/helm-flycheck
-(use-package helm-flycheck
-  :after (helm flycheck))
-
-
-;; https://github.com/emacs-helm/helm-ls-git
-(use-package helm-ls-git
-  :after helm
-  :bind
-  ("C-x f" . helm-browse-project))
-
-;; https://github.com/syohex/emacs-helm-ag
-(use-package helm-ag
-  :after helm
-  :bind
-  ;; enable regex search using projectile and helm
-  ("C-c C-s" . helm-do-ag-project-root)
-  :config
-  (setq helm-ag-insert-at-point 'symbol)
-  (setq helm-ag-fuzzy-match t)
-  (setq helm-ag-use-grep-ignore-list t)
-  (setq helm-ag-use-agignore t)
-
-  (if (getenv "DOCKER")
-      (setq helm-ag-base-command (concat emacs-user-directory "ack --nocolor --nogroup"))
-    (setq helm-ag-base-command (concat emacs-user-directory "vendor/the_silver_searcher/" "ag --nocolor --nogroup --literal")))
-    ;; (setq helm-ag-base-command "rg --no-heading"))
- )
-
 ;; https://github.com/DarthFennec/highlight-indent-guides
 (use-package highlight-indent-guides
+  :pin melpa
   :hook (prog-mode . highlight-indent-guides-mode)
   :config
   (setq highlight-indent-guides-method 'character))
@@ -230,6 +191,7 @@
 
 ;; https://github.com/glyph/python-docstring-mode
 (use-package python-docstring
+  :pin melpa
   :hook (python-mode . python-docstring-mode)
   :config
   ;; do not use double spaces when formatting text
@@ -243,11 +205,13 @@
 
 ;; https://github.com/xuchunyang/region-state.el
 (use-package region-state
+  :pin melpa
   :config
   (region-state-mode +1))
 
 ;; https://github.com/pashky/restclient.el
 (use-package restclient
+  :pin melpa
   :mode "\\.restclient\\'")
 
 
@@ -290,6 +254,7 @@
 
 ;; https://github.com/mcandre/vimrc-mode
 (use-package vimrc-mode
+  :pin melpa
   :mode "\\.vim\\(rc\\)?\\'")
 
 
@@ -327,6 +292,7 @@
 
 ;; https://github.com/rooney/zencoding
 (use-package zencoding-mode
+  :pin melpa
   ;; auto-start on any markup modes
   :hook web-mode
   ;; use C-j to expand the option directly instead of showing the
@@ -360,6 +326,7 @@
 
 ;; https://github.com/dryman/toml-mode.el
 (use-package toml-mode
+  :pin melpa
   :mode "\\.toml")
 
 
@@ -409,4 +376,5 @@
   :hook (prog-mode . hl-todo-mode))
 
 
+;; https://github.com/pretty-mode/pretty-mode
 (use-package pretty-mode)

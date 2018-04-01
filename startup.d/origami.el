@@ -1,5 +1,6 @@
 ;; https://github.com/gregsexton/origami.el
 (use-package origami
+  :pin melpa
   :hook (python-mode . origami-mode)
   :bind
   (()
