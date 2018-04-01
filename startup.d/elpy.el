@@ -70,6 +70,8 @@
   ;; don't call `elpy-find-file' (use `helm-projectile-find-file')
   (define-key python-mode-map (kbd "C-c C-f") nil)
   (define-key elpy-mode-map (kbd "C-c C-f") nil)
+  ;; importmagic.el
+  (define-key elpy-mode-map (kbd "C-c RET") nil)
 
   ;; navigate between Flycheck errors (I'm not using Flymake)
   (define-key elpy-mode-map (kbd "C-c C-n") 'flycheck-next-error)
