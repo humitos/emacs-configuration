@@ -102,6 +102,9 @@
 
 
 (use-package helm
+  :init
+  (require 'helm-config)
+  (helm-mode 1)
   :bind
   ("M-x" . helm-M-x)
   ("C-x r b" . helm-filtered-bookmarks)
@@ -118,7 +121,6 @@
   ;; helm-occur in the buffer (default symbol)
   ("C-c s" . helm-occur)
   :config
-  (require 'helm-config)
   (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
   (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
   (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
