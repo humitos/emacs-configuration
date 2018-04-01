@@ -394,3 +394,9 @@
 (use-package gitattributes-mode)
 (use-package gitconfig-mode)
 (use-package gitignore-mode)
+
+
+;; https://github.com/Malabarba/aggressive-indent-mode
+(use-package aggressive-indent
+  :config
+  (add-to-list 'aggressive-indent-excluded-modes 'elpy-mode))
