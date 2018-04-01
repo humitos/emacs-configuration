@@ -14,9 +14,9 @@ git submodule foreach git pull
 # exclude helm and helm-projectile because I'm using rg
 # git submodule foreach 'if [ "$path" != "vendor/helm" ] && [ "$path" != "vendor/helm-projectile" ]; then git pull; fi'
 
-./bin/compile_helm
+# ./bin/compile_helm
 ./bin/compile_ctags
 ./bin/compile_silversearcher
 
 # Compile all new packages
-./bin/compile_el_files
+# ./bin/compile_el_files
