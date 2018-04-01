@@ -28,6 +28,7 @@
                              "SP"
                              "DS"
                              "Undo-Tree"
+                             "Anzu"
                              "ARev")
                            "\\|")))
   (sml/setup))

@@ -378,3 +378,13 @@
   (setq importmagic-style-configuration-alist
         '((multiline . parentheses)
           (max_columns . 80))))
+
+
+;; https://github.com/syohex/emacs-anzu
+(use-package anzu
+  :config
+  (setq anzu-replace-to-string-separator (if (char-displayable-p ?→) " → " " -> "))
+  (setq anzu-minimum-input-length 2)
+  (define-key isearch-mode-map [remap isearch-query-replace]  #'anzu-isearch-query-replace)
+  (define-key isearch-mode-map [remap isearch-query-replace-regexp] #'anzu-isearch-query-replace-regexp)
+  (global-anzu-mode +1))
