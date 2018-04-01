@@ -84,6 +84,7 @@
 
 ;; https://github.com/antham/helm-backup
 (use-package helm-backup
+  :after helm
   :config
   (setq helm-backup-excluded-entries
         '("/home/humitos/.emacs.d/recentf"
@@ -148,6 +149,7 @@
 
 ;; https://github.com/emacs-helm/helm-ls-git
 (use-package helm-ls-git
+  :after helm
   :bind
   ("C-x f" . helm-browse-project))
 
@@ -178,7 +180,7 @@
 
 ;; https://github.com/Fanael/highlight-numbers
 (use-package highlight-numbers
-  :hook (elpy-mode . highlight-numbers-mode))
+  :hook (prog-mode . highlight-numbers-mode))
 
 
 ;; https://github.com/nschum/highlight-symbol.el

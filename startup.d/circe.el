@@ -4,6 +4,7 @@
   :after circe)
 
 (use-package circe
+  :after nlinum
   :config
   ;; load nick and password from another file
   (load "~/.ercpass.el")
