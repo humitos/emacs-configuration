@@ -13,8 +13,10 @@
   (evil-set-initial-state 'imenu-list-mode 'emacs)
   ;; Disable evil on Fundamental buffers
   (evil-set-initial-state 'fundamental-mode 'emacs)
-  ;; Disable evil on Fundamental buffers
+  ;; Disable evil on Help buffers
   (evil-set-initial-state 'help-mode 'emacs)
+  ;; Disable evil on Twittering Edit Status
+  (evil-set-initial-state 'twittering-edit-mode 'emacs)
   :bind
   (()
    :map evil-insert-state-map
