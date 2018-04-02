@@ -23,7 +23,9 @@
                              "SP"
                              "DS"
                              "Undo-Tree"
-                             "Anzu"
-                             "ARev")
+                             "ARev"
+                             "import"
+                             "zf"
+                             "Anzu")
                            "\\|")))
   (sml/setup))
