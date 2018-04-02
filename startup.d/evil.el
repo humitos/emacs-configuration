@@ -17,6 +17,8 @@
   (evil-set-initial-state 'help-mode 'emacs)
   ;; Disable evil on Twittering Edit Status
   (evil-set-initial-state 'twittering-edit-mode 'emacs)
+  ;; Disable evil on Magithub Edit Status
+  (evil-set-initial-state 'magithub-edit-mode 'emacs)
   :bind
   (()
    :map evil-insert-state-map
