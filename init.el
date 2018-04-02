@@ -22,7 +22,7 @@
   (setq use-package-always-ensure t)
   (setq use-package-verbose t)
   (setq use-package-expand-minimally t) ;; debug
-  (setq use-package-always-pin "melpa-stable")
+  ;; (setq use-package-always-pin "melpa-stable")
   (require 'use-package))
 
 ;; Set path for all the libraries/plugins/packages installed
