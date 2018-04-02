@@ -4,7 +4,6 @@
   :after circe)
 
 (use-package circe
-  :disabled
   :after evil
   :init
   ;; load nick and password from another file
