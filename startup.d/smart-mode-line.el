@@ -1,15 +1,10 @@
 ;; https://github.com/Malabarba/smart-mode-line
-
-(use-package powerline
-  :disabled)
-
 (use-package smart-mode-line
-  ;; :after (powerline projectile)
   :config
   (setq sml/theme 'respectful)
   (setq sml/no-confirm-load-theme t)
   (setq rm-blacklist
-        (format "^ \\(%s\\)$"
+        (format "^ ?\\(%s\\)$"
                 (mapconcat #'identity
                            '("Fly.*"
                              "Projectile.*"
@@ -23,7 +18,7 @@
                              "GG"
                              "Hi"
                              "Spnxd"
-                             "WSC"
+                             "WSC!?"
                              "ws"
                              "SP"
                              "DS"

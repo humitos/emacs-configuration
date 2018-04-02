@@ -1,11 +1,7 @@
 ;; https://github.com/magit/magit
 (use-package magit
-  :commands magit-status
   :bind ("C-x g" . magit-status)
   :config
-  ;; Disable Native VC
-  (setq vc-handled-backends nil)
-
   ;; start *Magit* buffer maximized
   ;; http://stackoverflow.com/a/36603726
   (defun display-buffer-full-screen (buffer alist)

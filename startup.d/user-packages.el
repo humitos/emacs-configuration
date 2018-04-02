@@ -24,10 +24,10 @@
   :init
   ;; HACK: this needs to be inthe `:init' since it's not updated once
   ;; the mode is enabled
-  (setq nlinum-format "%4d \u2502"))
+  (setq nlinum-format "%4d \u2502")
   :hook
   ((prog-mode . nlinum-mode)
-   (text-mode . nlinum-mode))
+   (text-mode . nlinum-mode)))
 
 ;; https://github.com/domtronn/all-the-icons.el
 ;; To install the fonts, I ran:
@@ -170,6 +170,7 @@
 ;; https://github.com/nschum/highlight-symbol.el
 (use-package highlight-symbol
   :hook (prog-mode . highlight-symbol-mode)
+  :pin melpa
   :config
   (setq highlight-symbol-idle-delay 0.2)
   (setq highlight-symbol-ignore-list

@@ -1,8 +1,16 @@
 ;; https://github.com/tmalsburg/guess-language.el
-
 (use-package guess-language
   :pin melpa
-  :init
+  :hook
+  ;; enable flyspell-mode on text modes and flyspell-prog-mode in
+  ;; programming modes
+  ((rst-mode . flyspell-mode)
+   (text-mode . flyspell-mode)
+   (prog-mode . flyspell-prog-mode)
+   (rst-mode . guess-language-mode)
+   (text-mode . guess-language-mode)
+   (prog-mode . guess-language-mode))
+  :config
   ;; set a default dictionary
   (setq ispell-dictionary "en")
 
@@ -22,23 +30,5 @@
   (setq flyspell-consider-dash-as-word-delimiter-flag t)
 
   (setq flyspell-mode-line-string "FlySpell")
-
-  ;; enable flyspell-mode on text modes
-  (add-hook 'rst-mode-hook 'flyspell-mode)
-  (add-hook 'text-mode-hook 'flyspell-mode)
-
-  ;; enable flyspell-prog-mode on Python code
-  (add-hook 'python-mode-hook 'flyspell-prog-mode)
-
-  ;; enable flyspell-prog-mode on HTML code
-  (add-hook 'web-mode-hook 'flyspell-prog-mode)
-
-  :config
   (setq guess-language-languages '(en es))
-  (setq guess-language-min-paragraph-length 35)
-
-  ;; enable guess-language for these modes
-  (add-hook 'rst-mode-hook (lambda () (guess-language-mode 1)))
-  (add-hook 'text-mode-hook (lambda () (guess-language-mode 1)))
-  (add-hook 'python-mode-hook (lambda () (guess-language-mode 1)))
-  (add-hook 'web-mode-hook (lambda () (guess-language-mode 1))))
+  (setq guess-language-min-paragraph-length 35))

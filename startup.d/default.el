@@ -1,6 +1,9 @@
 ;; Remove startup message
 (setq inhibit-startup-message t)
 
+;; Disable Native VC
+(setq vc-handled-backends nil)
+
 ;; insert-file-contents: Recursive load:
 ;; "/usr/share/emacs/25.1/lisp/jka-compr.el.gz",
 ;; "/usr/share/emacs/25.1/lisp/emacs-lisp/debug.el.gz",
@@ -50,12 +53,6 @@
 (add-to-list 'desktop-modes-not-to-save 'Info-mode)
 (add-to-list 'desktop-modes-not-to-save 'info-lookup-mode)
 (add-to-list 'desktop-modes-not-to-save 'fundamental-mode)
-
-;; http://gastonramos.wordpress.com/2014/10/09/emacs-show-trailing-whitespace
-;; show trailing whitespaces
-;; (show-ws-toggle-show-trailing-whitespace)
-;; remove trailing whitespaces
-;; (global-set-key (kbd "C-c x") 'whitespace-cleanup)
 
 (global-linum-mode 0) ;; disable default line numbers globally
 ;; (setq linum-format "%4d \u2502") ;; line numbers style
@@ -122,7 +119,7 @@
 
 ;; set maximun number of kills
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Kill-Ring.html
-(setq kill-ring-max 100)
+(setq kill-ring-max 500)
 
 ;; kill the whole line (including new line char) when `kill-line' is
 ;; ran from the beggining of the line
@@ -225,3 +222,7 @@
 
 ;; https://www.emacswiki.org/emacs/AlarmBell
  (setq ring-bell-function 'ignore)
+
+;; use firefox to open the documentation
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "firefox")

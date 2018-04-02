@@ -3,6 +3,18 @@
   :init
   (setq evil-want-integration nil)
   (evil-mode 1)
+  ;; Disable evil on Circe
+  (evil-set-initial-state 'circe-mode 'emacs)
+  (evil-set-initial-state 'circe-server-mode 'emacs)
+  (evil-set-initial-state 'circe-channel-mode 'emacs)
+  ;; Disable evil on Timemachig
+  (evil-set-initial-state 'git-timemachine-mode 'emacs)
+  ;; Disable evil on imenu-list
+  (evil-set-initial-state 'imenu-list-mode 'emacs)
+  ;; Disable evil on Fundamental buffers
+  (evil-set-initial-state 'fundamental-mode 'emacs)
+  ;; Disable evil on Fundamental buffers
+  (evil-set-initial-state 'help-mode 'emacs)
   :bind
   (()
    :map evil-insert-state-map
@@ -31,17 +43,6 @@
   ;; https://github.com/emacs-evil/evil#underscore-_-is-not-a-word-character
   ;; Add the "_" as a word character
   (modify-syntax-entry ?_ "w")
-  ;; Disable evil on Circe
-  (evil-set-initial-state 'circe-mode 'emacs)
-  ;; Disable evil on Timemachig
-  (evil-set-initial-state 'git-timemachine-mode 'emacs)
-  ;; Disable evil on imenu-list
-  (evil-set-initial-state 'imenu-list-mode 'emacs)
-  ;; Disable evil on Fundamental buffers
-  (evil-set-initial-state 'fundamental-mode 'emacs)
-  ;; Disable evil on Fundamental buffers
-  (evil-set-initial-state 'help-mode 'emacs)
-
   (setq evil-move-cursor-back nil)
   (setq evil-want-fine-undo t))
 

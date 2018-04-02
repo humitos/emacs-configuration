@@ -1,8 +1,7 @@
 ;; https://github.com/vermiculus/magithub
 (use-package magithub
+  :pin melpa
   :after (magit magit-popup)
-  ;; https://github.com/vermiculus/magithub/issues/286#issuecomment-366540058
-  :requires magithub-completion
   :config
   (load "~/.ghub.el")
 
@@ -61,6 +60,8 @@
                        (issue-filter-to-days limit "pull-requests")))))
 
     (add-to-list 'magit-status-mode-hook #'magithub-filter-maybe))
+
+  (message "Magithub :config")
 
   ;; (defun issue-number-greater-than (issue)
   ;;   (> (alist-get 'number issue) 3000))

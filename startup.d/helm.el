@@ -1,14 +1,8 @@
 ;; https://github.com/emacs-helm/helm
 ;; http://tuhdo.github.io/helm-intro.html
-
-;; https://github.com/areina/helm-dash
-;; search in dash documentation locally
-(use-package helm-dash
-  :after helm)
-
-
-  ;; https://github.com/hatschipuh/helm-better-defaults
+;; https://github.com/hatschipuh/helm-better-defaults
 (use-package helm-swoop
+  :disabled
   :after helm
   :config
   (setq helm-swoop-split-with-multiple-windows nil
@@ -37,6 +31,7 @@
 
 ;; https://github.com/emacs-helm/helm-firefox
 (use-package helm-firefox
+  :commands helm-firefox-bookmarks
   :after helm)
 
 
@@ -48,13 +43,14 @@
   ;; use a simpler shortcut to switch between current project opened buffers
   ("C-c b" . helm-projectile-switch-to-buffer)
   ("C-c p p " . helm-projectile-switch-project)
-  :config
+  :init
   ;; helm-projectile integration
   (helm-projectile-on))
 
 
 ;; https://github.com/yasuyk/helm-flycheck
 (use-package helm-flycheck
+  :commands helm-flycheck
   :after (helm flycheck))
 
 
@@ -67,11 +63,9 @@
 
 ;; https://github.com/areina/helm-dash
 (use-package helm-dash
+  :disabled
   :after helm
   :config
-  ;; use firefox to open the documentation
-  (setq browse-url-browser-function 'browse-url-generic
-        browse-url-generic-program "firefox")
   (setq helm-dash-browser-func 'browse-url-generic)
   (setq helm-dash-docsets-path (concat emacs-user-directory "docsets")))
 
@@ -153,13 +147,6 @@
           "~/mozio/mozio-commons"
           "~/mozio/data-entry"
           ))
-
-  ;; Disable line numbers in helm buffers
-  ;; (when nlinum-mode
-  ;;   (add-hook 'helm-after-initialize-hook (lambda ()
-  ;;                                      (with-helm-buffer
-  ;;                                        (nlinum-mode 0)))))
-
 
   ;; The following snippet will configure helm to always pop up at the
   ;; bottom.

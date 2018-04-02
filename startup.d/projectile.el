@@ -1,5 +1,6 @@
 ;; https://github.com/bbatsov/projectile
 (use-package projectile
+  :init (projectile-global-mode)
   :config
   ;; http://projectile.readthedocs.io/en/latest/configuration/#caching
   ;; http://emacs.stackexchange.com/a/2169
@@ -57,9 +58,9 @@
      (cl-search "rtfd/repos" project-root)
      (cl-search "readthedocs.org/user_builds" project-root)
      (cl-search "vendor" project-root)
+     (cl-search "elpa" project-root)
      (cl-search ".helm-backup" project-root)
      (cl-search "./cache/pre-commit" project-root)
      (cl-search "3rdparty" project-root)))
 
-  (setq projectile-ignored-project-function #'my-ignore-project)
-  (projectile-global-mode))
+  (setq projectile-ignored-project-function #'my-ignore-project))

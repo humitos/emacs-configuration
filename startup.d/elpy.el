@@ -2,7 +2,7 @@
 (use-package elpy
   ;; Load all Elpy modules
   ;; https://emacs.stackexchange.com/questions/10065/how-can-i-defer-loading-elpy-using-use-package
-  :init (with-eval-after-load 'python (elpy-enable))
+  :init (elpy-enable)
   :hook (python-mode . elpy-mode)
   :config
   ;; Use rope as backend for Elpy
@@ -56,6 +56,8 @@
   ;; Remove flymake (I use flycheck)
   (setq elpy-modules (delete 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode)
+
+  (message "Elpy Configuration")
 
 
   ;; Need to define these here otherwise they are not "undefined"

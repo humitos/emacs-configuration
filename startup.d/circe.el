@@ -4,11 +4,29 @@
   :after circe)
 
 (use-package circe
-  :after nlinum
-  :config
+  :disabled
+  :after evil
+  :init
   ;; load nick and password from another file
   (load "~/.ercpass.el")
+  (setq circe-network-options
+        `(("Freenode"
+           :nick ,freenode-nick
+           :channels (:after-auth "#pyar" "#readthedocs" "#python")
+           :nickserv-password ,freenode-password)
+          ("Gitter"
+           :host "irc.gitter.im"
+           :port 6667
+           :use-tls t
+           :pass ,gitter-token
+           :channels ("#rtfd/readthedocs.org")
+           :user "reydelhumo_twitter"
+           :realname "Manuel Kaufamnn"
+           :nick "humitos")))
 
+  (circe "Freenode")
+  (circe "Gitter")
+  :config
   (setq circe-use-cycle-completion t)
 
   ;; Adds the ability to assign a color to each nick in a channel
@@ -59,8 +77,8 @@
   (enable-lui-logging-globally)
 
   ;; disable linum-mode in circe
-  (add-hook 'circe-mode-hook
-            '(lambda () (nlinum-mode -1)))
+  ;; (add-hook 'circe-mode-hook
+  ;;           '(lambda () (nlinum-mode -1)))
 
   ;; track bar for unread messages
   (require 'lui-track-bar)
@@ -124,24 +142,6 @@
 
 
   (setq circe-format-server-topic "*** Topic change by {userhost}: {topic-diff}")
-  (setq circe-network-options
-        `(("Freenode"
-           :nick ,freenode-nick
-           :channels (:after-auth "#pyar" "#readthedocs" "#python")
-           :nickserv-password ,freenode-password)
-          ("Gitter"
-           :host "irc.gitter.im"
-           :port 6667
-           :use-tls t
-           :pass ,gitter-token
-           :channels ("#rtfd/readthedocs.org")
-           :user "reydelhumo_twitter"
-           :realname "Manuel Kaufamnn"
-           :nick "humitos")))
-
-  (circe "Freenode")
-  (circe "Gitter")
-
   ;; switch between current buffer and CIRCE channel
   (defvar circe-previous-buffer nil)
   (defun switch-circe-channel-and-back (channel)
