@@ -1,3 +1,0 @@
-;; https://github.com/nex3/haml-mode
-;; http://haml.info/
-(require 'haml-mode)

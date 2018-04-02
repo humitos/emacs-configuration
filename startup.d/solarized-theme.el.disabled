@@ -1,4 +1,0 @@
-(add-to-list 'custom-theme-load-path (concat emacs-user-directory "vendor/emacs-color-theme-solarized"))
-(set-frame-parameter nil 'background-mode 'dark)
-(load-theme 'solarized t)
-(enable-theme 'solarized)
