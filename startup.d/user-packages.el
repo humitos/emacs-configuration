@@ -6,7 +6,8 @@
   :config
   (setq auto-package-update-delete-old-versions t)
   (setq auto-package-update-hide-results t)
-  (setq auto-package-update-prompt-before-update t)
+  (if (not (getenv "DOCKER"))
+      (setq auto-package-update-prompt-before-update t))
   (auto-package-update-maybe))
 
 ;; https://github.com/rmuslimov/browse-at-remote
