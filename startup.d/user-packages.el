@@ -168,16 +168,11 @@
   :hook (prog-mode . highlight-numbers-mode))
 
 
-;; https://github.com/nschum/highlight-symbol.el
-(use-package highlight-symbol
-  :hook (prog-mode . highlight-symbol-mode)
-  :pin melpa
+;; https://github.com/wolray/symbol-overlay
+(use-package symbol-overlay
+  :hook (prog-mode . symbol-overlay-mode)
   :config
-  (setq highlight-symbol-idle-delay 0.2)
-  (setq highlight-symbol-ignore-list
-        '("False" "True" "None" "self" "def" "import" "from" "if" "else" "for"
-          "while" "class" "print" "and" "not" "is" "param" "rtype" "async"
-          "with" ".")))
+  (setq symbol-overlay-idle-time 0.2))
 
 
 ;; https://github.com/purcell/less-css-mode.git
