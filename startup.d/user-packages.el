@@ -363,10 +363,13 @@
 
 ;; https://github.com/anachronic/importmagic.el
 (use-package importmagic
-  :hook (python-mode . importmagic-mode)
+  ;; TODO: re-enable this package when it does not consumes 100% CPU
+  ;; immediately a Python file is opened (maybe I can remove the hook)
+  ;; :disabled
+  ;; :hook (python-mode . importmagic-mode)
   :bind
   (()
-   :map importmagic-mode-map
+   :map python-mode-map
    ("C-c RET" . importmagic-fix-symbol-at-point))
   :config
   (setq importmagic-style-configuration-alist
