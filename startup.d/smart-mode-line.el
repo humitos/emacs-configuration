@@ -25,6 +25,7 @@
                              "Undo-Tree"
                              "ARev"
                              "import"
+                             "SO"
                              "zf"
                              "Anzu")
                            "\\|")))
