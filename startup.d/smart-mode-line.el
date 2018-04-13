@@ -25,6 +25,7 @@
                              "Undo-Tree"
                              "ARev"
                              "import"
+                             "WK"
                              "SO"
                              "zf"
                              "Anzu")

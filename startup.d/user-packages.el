@@ -397,3 +397,9 @@
 
 ;; https://github.com/pretty-mode/pretty-mode
 (use-package pretty-mode)
+
+
+;; https://github.com/justbur/emacs-which-key
+(use-package which-key
+  :disabled
+  :init (which-key-mode))
