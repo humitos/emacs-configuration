@@ -150,7 +150,7 @@
 
 ;; https://bitbucket.org/jpkotta/highlight-operators
 (use-package highlight-operators
-  :hook (prog-mode . highlight-operators-mode))
+  :hook (python-mode . highlight-operators-mode))
 
 
 ;; https://github.com/Fanael/highlight-numbers
