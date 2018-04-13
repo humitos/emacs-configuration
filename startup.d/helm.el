@@ -10,6 +10,17 @@
         helm-swoop-split-window-function 'helm-default-display-buffer))
 
 
+;; https://github.com/antham/helm-backup
+(use-package helm-backup
+  :after helm
+  :config
+  (setq helm-backup-excluded-entries
+        '("/home/humitos/.emacs.d/recentf"
+          ))
+  :hook
+  (after-save . helm-backup-versioning))
+
+
 (use-package helm-flx
   :pin melpa
   :after (helm flx))

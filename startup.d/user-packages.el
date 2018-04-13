@@ -87,20 +87,6 @@
 (use-package git-timemachine)
 
 
-;; https://github.com/antham/helm-backup
-(use-package helm-backup
-  :after helm
-  :config
-  (setq helm-backup-excluded-entries
-        '("/home/humitos/.emacs.d/recentf"
-          "/home/humitos/mozio/mozio/.*"
-          "/home/humitos/mozio/ondemand/.*"
-          "/home/humitos/mozio/data-entry/.*"
-          ))
-  :hook
-  (after-save . helm-backup-versioning))
-
-
 ;; https://github.com/company-mode/company-mode
 (use-package company
   :hook (prog-mode . company-mode)
