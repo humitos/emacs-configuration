@@ -310,6 +310,11 @@
   (yas-global-mode 1))
 
 
+;; https://github.com/AndreaCrotti/yasnippet-snippets
+(use-package yasnippet-snippets
+  :after yasnippet)
+
+
 ;; https://github.com/rooney/zencoding
 (use-package zencoding-mode
   :pin melpa
