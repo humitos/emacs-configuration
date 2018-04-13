@@ -277,7 +277,7 @@
 
 ;; https://github.com/purcell/whitespace-cleanup-mode
 (use-package whitespace-cleanup-mode
-  :hook (prog-mode rst-mode))
+  :hook (prog-mode rst-mode web-mode))
 
 
 ;; https://github.com/yoshiki/yaml-mode
