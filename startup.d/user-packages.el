@@ -57,7 +57,7 @@
 
 ;; https://github.com/spotify/dockerfile-mode
 (use-package dockerfile-mode
-  :mode "Dockerfile\\'")
+  :mode "Dockerfile")
 
 
 ;; https://github.com/magnars/expand-region.el
