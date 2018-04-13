@@ -32,9 +32,8 @@
 
 ;; https://github.com/domtronn/all-the-icons.el
 ;; To install the fonts, I ran:
-;; $ cd $HOME/.fonts
-;; $ ln -s ../all-the-icons/fonts all-the-icons
-;; (use-package all-the-icons)
+;; M-x all-the-icons-install-fonts
+(use-package all-the-icons)
 
 ;; FIXME: not available in MELPA
 ;; (use-package any-ini-mode
@@ -188,6 +187,7 @@
 
 ;; https://github.com/jaypei/emacs-neotree
 (use-package neotree
+  :after all-the-icons
   :bind ([f8] . neotree-toggle)
   :config
   (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
