@@ -148,6 +148,11 @@
   (setq highlight-indent-guides-method 'character))
 
 
+;; https://bitbucket.org/jpkotta/highlight-operators
+(use-package highlight-operators
+  :hook (prog-mode . highlight-operators-mode))
+
+
 ;; https://github.com/Fanael/highlight-numbers
 (use-package highlight-numbers
   :hook (prog-mode . highlight-numbers-mode))
