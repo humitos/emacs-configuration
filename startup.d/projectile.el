@@ -59,6 +59,7 @@
      (cl-search "readthedocs.org/user_builds" project-root)
      (cl-search "vendor" project-root)
      (cl-search "elpa" project-root)
+     (cl-search ".tox" project-root)
      (cl-search ".helm-backup" project-root)
      (cl-search "./cache/pre-commit" project-root)
      (cl-search "3rdparty" project-root)))
