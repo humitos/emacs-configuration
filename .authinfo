@@ -1,1 +1,2 @@
+machine api.github.com login <your-github-username>^magit password <your-password-or-token> port https
 host api.github.com user <your-github-username>^magithub password <your-password-or-token> port https
