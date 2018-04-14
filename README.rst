@@ -410,6 +410,13 @@ restclient-mode
 :C-c C-g: browse the queries / variables / etc with helm
 
 
+salt-mode
+---------
+
+:C-c C-d: open buffer with the documentation of the current state
+:salt-mode-browse-doc: open web documentation of the current state
+
+
 smart-forward.el
 ----------------
 
