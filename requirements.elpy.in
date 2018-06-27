@@ -54,7 +54,13 @@ path.py
 pep8
 pep8-naming
 pip
-pycodestyle
+
+# Pinned to avoid conflicts with flake8
+#
+# flake8 3.5.0 has requirement pycodestyle<2.4.0,>=2.0.0, but you'll
+# have pycodestyle 2.4.0 which is incompatible.
+pycodestyle<2.4.0
+
 pylint
 rope
 
@@ -72,7 +78,7 @@ unify
 #+            self, reservation, card_token_id, stored_card_id, save_card, coupon_code, stripe_origin):
 
 # better version
-yapf==0.20.0  # stable
+yapf==0.22.0  # stable
 
 # -e git+https://github.com/google/yapf.git@master#egg=yapf
 futures  # enable multiprocessing in py2
