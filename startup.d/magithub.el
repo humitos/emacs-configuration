@@ -1,6 +1,5 @@
 ;; https://github.com/vermiculus/magithub
 (use-package magithub
-  :pin melpa
   :after (magit magit-popup)
   :config
   (load "~/.ghub.el")
