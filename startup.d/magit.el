@@ -10,6 +10,9 @@
     (set-window-buffer nil buffer)
     (get-buffer-window buffer))
 
+  ;; sort listing of refs by creator date (e.g. branch listing)
+  (setq magit-list-refs-sortby "-creatordate")
+
   (setq magit-display-buffer-function
         (lambda (buffer)
           (if magit-display-buffer-noselect
