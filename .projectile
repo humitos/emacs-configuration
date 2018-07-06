@@ -25,6 +25,7 @@
 -/src
 -.style.yapf
 -elpa
+-/elpa
 
 -celerybeat-schedule
 
