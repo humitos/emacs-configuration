@@ -1,6 +1,6 @@
 ;; https://github.com/bbatsov/projectile
 (use-package projectile
-  :init (projectile-global-mode)
+  :init (projectile-mode)
   :config
   ;; http://projectile.readthedocs.io/en/latest/configuration/#caching
   ;; http://emacs.stackexchange.com/a/2169
