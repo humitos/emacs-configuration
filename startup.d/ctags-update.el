@@ -10,10 +10,9 @@
   :hook (python-mode . turn-on-ctags-if-tags-file)
   :after projectile
   :config
-  (message "ctags :config")
   (if (getenv "DOCKER")
       (setq ctags-update-command "ctags")
     (setq ctags-update-command (concat emacs-user-directory  "vendor/ctags/ctags")))
 
   (setq ctags-update-other-options (list (concat "--options=" emacs-user-directory ".ctags")))
-  (setq ctags-update-delay-seconds (* 5 60))) ;; 5 minutes
+  (setq ctags-update-delay-seconds 60)) ;; 1 minute
