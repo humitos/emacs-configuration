@@ -381,6 +381,12 @@
 (use-package gitignore-mode)
 
 
+;; https://github.com/alphapapa/magit-todos
+(use-package magit-todos
+  :after magit
+  :init (magit-todos-mode))
+
+
 ;; https://github.com/Malabarba/aggressive-indent-mode
 (use-package aggressive-indent
   :config
