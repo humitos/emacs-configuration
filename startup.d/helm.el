@@ -23,12 +23,8 @@
 
 (use-package helm-flx
   :pin melpa
-  :after (helm flx))
-
-
-(use-package helm-fuzzier
-  :pin melpa
-  :after helm)
+  :after (helm flx)
+  :config (helm-flx-mode +1))
 
 
 ;; https://github.com/nonsequitur/smex
