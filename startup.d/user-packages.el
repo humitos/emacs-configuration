@@ -38,11 +38,6 @@
 ;; M-x all-the-icons-install-fonts
 (use-package all-the-icons)
 
-;; FIXME: not available in MELPA
-;; (use-package any-ini-mode
-;;              :mode ("\\.ini\\'" "\\.rc\\'"))
-
-
 ;; https://github.com/abo-abo/avy
 (use-package avy
   :bind
