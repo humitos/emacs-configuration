@@ -386,3 +386,9 @@
 (use-package which-key
   :disabled
   :init (which-key-mode))
+
+
+;; https://github.com/syohex/emacs-terraform-mode
+(use-package terraform-mode
+  :config
+  (setq terraform-indent-level 4))
