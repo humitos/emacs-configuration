@@ -1,7 +1,14 @@
 ;; https://github.com/emacs-evil/evil
+
+;; Evil mode dependencies
+;; (I'm not sure they are installed automatically)
+(use-package undo-tree)
+(use-package goto-chg)
+
 (use-package evil
+  :after (undo-tree goto-chg)
   :init
-  (setq evil-want-integration nil)
+  (setq evil-want-integration t)
   (evil-mode 1)
   ;; Disable evil on Circe
   (evil-set-initial-state 'circe-mode 'emacs)
