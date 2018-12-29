@@ -2,7 +2,7 @@
 (use-package projectile
   :init (projectile-mode)
   :config
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+  (define-key global-map (kbd "C-c p") 'projectile-command-map)
   ;; http://projectile.readthedocs.io/en/latest/configuration/#caching
   ;; http://emacs.stackexchange.com/a/2169
   (setq projectile-enable-caching t)
