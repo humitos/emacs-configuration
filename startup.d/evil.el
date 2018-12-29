@@ -26,6 +26,12 @@
   (evil-set-initial-state 'twittering-edit-mode 'emacs)
   ;; Disable evil on Magithub Edit Status
   (evil-set-initial-state 'magithub-edit-mode 'emacs)
+  ;; Disable evil on Magit modes
+  ;; magit-blame-mode is a minor mode. The evil-set-initial-state doesn't work in this case:
+  ;; https://emacs.stackexchange.com/questions/10732/start-in-insert-state-based-on-minor-mode
+  (add-hook 'magit-blame-mode-hook 'evil-emacs-state)
+  ;; Disable evil on IList buffers
+  (evil-set-initial-state 'ilist 'emacs)
   :bind
   (()
    :map evil-insert-state-map
