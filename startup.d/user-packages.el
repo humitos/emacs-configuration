@@ -333,7 +333,7 @@
 (use-package importmagic
   ;; TODO: re-enable this package when it does not consumes 100% CPU
   ;; immediately a Python file is opened (maybe I can remove the hook)
-  ;; :disabled
+  :disabled
   ;; :hook (python-mode . importmagic-mode)
   :bind
   (()
