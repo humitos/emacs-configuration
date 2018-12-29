@@ -212,7 +212,7 @@
   (setq helm-grep-preferred-ext ".py")
 
   ;; When using "C-c h e" match in all the text (including filename)
-  (setq helm-etags-match-part-only 'all)
+  (setq helm-etags-match-part-only 'tag)
 
   ;; Define the length of the helm buffer
   (setq helm-buffer-max-length 50)
