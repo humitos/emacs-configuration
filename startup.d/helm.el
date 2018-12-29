@@ -97,7 +97,8 @@
 
   (if (getenv "DOCKER")
       (setq helm-ag-base-command (concat emacs-user-directory "ack --nocolor --nogroup"))
-    (setq helm-ag-base-command (concat emacs-user-directory "vendor/the_silver_searcher/" "ag --nocolor --nogroup --literal")))
+    (setq helm-ag-base-command "ag --nocolor --nogroup --literal"))
+    ;; (setq helm-ag-base-command (concat emacs-user-directory "vendor/the_silver_searcher/" "ag --nocolor --nogroup --literal")))
     ;; (setq helm-ag-base-command "rg --no-heading"))
  )
 
