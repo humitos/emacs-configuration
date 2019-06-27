@@ -10,6 +10,9 @@
   ;; prefered method for indexing
   (setq projectile-indexing-method 'alien)
 
+  ;; sorting does not work on 'alien method
+  ;; (setq projectile-sort-order 'recently-active)
+
   ;; http://projectile.readthedocs.io/en/latest/configuration/#mode-line-indicator
   (setq projectile-mode-line '(:eval (format " [%s]" (projectile-project-name))))
 
@@ -22,6 +25,9 @@
           "bak"
           "gitignore"
           ))
+
+  ;; sort by modification date
+  (setq projectile-git-command "git ls-files -z --cached --others --exclude-standard | xargs -0 ls -1 -t | tr '\\n' '\\0'")
 
   ;; TODO: work in progress to try to exclude files defined in
   ;; `.projectile' file when using a `git' repostory with projectile
