@@ -364,6 +364,8 @@
 ;; https://github.com/alphapapa/magit-todos
 (use-package magit-todos
   :after magit
+  ;; It's producing Stack overflow
+  :disabled
   :init (magit-todos-mode))
 
 
