@@ -394,3 +394,9 @@
 (use-package terraform-mode
   :config
   (setq terraform-indent-level 4))
+
+
+(use-package exec-path-from-shell
+  :init
+  (exec-path-from-shell-copy-env "SSH_AGENT_PID")
+  (exec-path-from-shell-copy-env "SSH_AUTH_SOCK"))
