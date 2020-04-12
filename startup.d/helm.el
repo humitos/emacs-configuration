@@ -27,6 +27,12 @@
   :config (helm-flx-mode +1))
 
 
+;; https://github.com/EphramPerdition/helm-fuzzier
+(use-package helm-fuzzier
+  :after (helm flx helm-flx)
+  :config (helm-fuzzier-mode 1))
+
+
 ;; https://github.com/nonsequitur/smex
 (use-package smex
   :disabled)

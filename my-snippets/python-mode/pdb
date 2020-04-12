@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: pdb
-# key: pdb
-# group: debug
-# --
-import pdb; pdb.set_trace()  # yapf: disable

@@ -2,7 +2,7 @@
 (require 'recentf)
 
 ;; allow 15 menu items in the recent file list
-(setq recentf-max-menu-items 15)
+(setq recentf-max-menu-items 35)
 (setq recentf-max-saved-items 500)
 
 ;; https://github.com/bbatsov/emacs.d/blob/master/init.el

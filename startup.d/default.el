@@ -19,7 +19,7 @@
 ;; (find-file "/home/humitos/Dropbox/TODO.org")
 
 ;; Save the session
-(desktop-save-mode 1)
+(desktop-save-mode -1)
 
 ;; You can specify the maximum number of buffers to restore
 ;; immediately with the variable desktop-restore-eager; the remaining
@@ -59,8 +59,8 @@
 
 ;; saves the location of the point when you kill a buffer and returns
 ;; to it next time you visit the associated file.
-(require 'saveplace)
-(setq-default save-place t)
+;; (require 'saveplace)
+;; (setq-default save-place t)
 
 ;; Mouse yanking inserts at the point instead of the location of the
 ;; click.
@@ -74,8 +74,8 @@
 (setq load-prefer-newer t)
 
 ;; starts emacs maximized
-(custom-set-variables
- '(initial-frame-alist (quote ((fullscreen . maximized)))))
+;; (custom-set-variables
+;;  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
 ;; show line and column number in the status bar
 (setq line-number-mode t)
@@ -100,7 +100,7 @@
 (tooltip-mode -1)
 
 ;; replace text on selected region
-(delete-selection-mode 1)
+;; (delete-selection-mode 1)
 
 ;; highlight current line
 (global-hl-line-mode 1)
@@ -159,8 +159,8 @@
 
 ;; https://github.com/bbatsov/emacs.d/blob/master/init.el
 ;; reduce the frequency of garbage collection by making it happen on
-;; each 50MB of allocated data (the default is on every 0.76MB)
-(setq gc-cons-threshold 50000000)
+;; each 25MB of allocated data (the default is on every 0.76MB)
+(setq gc-cons-threshold 25000000)
 
 ;; no blinking cursor
 (blink-cursor-mode -1)
@@ -226,3 +226,11 @@
 ;; use firefox to open the documentation
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "firefox")
+
+
+(modify-syntax-entry ?_ "w")
+(modify-syntax-entry ?- "w")
+
+;; Disable help on bottom bar
+;; It makes salt-mode to go super slow
+(global-eldoc-mode -1)

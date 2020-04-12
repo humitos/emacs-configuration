@@ -13,6 +13,25 @@
   ;; Set timeout for backend rpc
   (setq elpy-rpc-timeout 5)
 
+  (setq company-backends '(
+                          elpy-company-backend
+                          elpy-company-backend
+                          ;; company-bbdb
+                          ;; company-eclim
+                          ;; company-clang
+                          ;; company-xcode
+                          ;; company-cmake
+                          company-files
+                          (
+                           ;; company-dabbrev-code
+                           company-gtags
+                           company-etags
+                           company-keywords
+                           )
+                          ;; company-oddmuse
+                          ;; company-dabbrev
+                          ))
+
   ;; https://masteringemacs.org/article/compiling-running-scripts-emacs
   (defun python--add-debug-highlight ()
     "Adds a highlighter for '# DEBUG #' string"

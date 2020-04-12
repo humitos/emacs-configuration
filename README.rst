@@ -134,6 +134,7 @@ Main modules included in this configuration
 * evil-mode
 * expand-region
 * flycheck
+* forge
 * gist.el
 * git-gutter-fringe.el
 * git-timemachine

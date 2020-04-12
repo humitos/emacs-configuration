@@ -26,6 +26,8 @@
 -.style.yapf
 -elpa
 -/elpa
+-ops
+-/ops
 
 -celerybeat-schedule
 

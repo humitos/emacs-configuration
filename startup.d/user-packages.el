@@ -26,7 +26,7 @@
 (use-package nlinum-hl
   :pin melpa
   :init
-  ;; HACK: this needs to be inthe `:init' since it's not updated once
+  ;; HACK: this needs to be in the `:init' since it's not updated once
   ;; the mode is enabled
   (setq nlinum-format "%4d \u2502")
   :hook
@@ -64,17 +64,17 @@
   ("C-=" . er/expand-region))
 
 ;; https://github.com/magnars/smart-forward.el
-(use-package smart-forward
-  :pin melpa
-  :bind
-  ("C-s-<up>" . smart-up)
-  ("C-s-<down>" . smart-down)
-  ("C-s-<left>" . smart-backward)
-  ("C-s-<right>" . smart-forward))
+;; (use-package smart-forward
+;;   :pin melpa
+;;   :bind
+;;   ("C-s-<up>" . smart-up)
+;;   ("C-s-<down>" . smart-down)
+;;   ("C-s-<left>" . smart-backward)
+;;   ("C-s-<right>" . smart-forward))
 
 
 ;; https://github.com/Floobits/floobits-emacs
-(use-package floobits)
+;; (use-package floobits)
 
 
 ;; https://github.com/defunkt/gist.el
@@ -166,6 +166,9 @@
 ;; https://github.com/purcell/less-css-mode.git
 (use-package less-css-mode)
 
+;; https://github.com/AdamNiederer/ssass-mode
+(use-package ssass-mode)
+
 
 ;; https://github.com/jrblevin/markdown-mode
 (use-package markdown-mode
@@ -210,12 +213,13 @@
 
 
 ;; https://github.com/glynnforrest/salt-mode
+;; Disabled because it eats CPU
+;; See https://github.com/glynnforrest/salt-mode/issues/22
 (use-package salt-mode)
 
-
 ;; https://github.com/Fuco1/smartparens
-(use-package smartparens
-  :hook (prog-mode . smartparens-mode))
+;; (use-package smartparens
+;;   :hook (prog-mode . smartparens-mode))
 
 
 ;; https://github.com/naiquevin/sphinx-doc.el
@@ -300,11 +304,11 @@
 
 
 ;; https://github.com/bmag/imenu-list
-(use-package imenu-list
-  :bind
-  ("C-'" . imenu-list-smart-toggle)
-  :config
-  (setq imenu-list-focus-after-activation t))
+;; (use-package imenu-list
+;;   :bind
+;;   ("C-'" . imenu-list-smart-toggle)
+;;   :config
+;;   (setq imenu-list-focus-after-activation t))
 
 
 ;; https://github.com/mooz/js2-mode
@@ -321,28 +325,6 @@
 (use-package toml-mode
   :pin melpa
   :mode "\\.toml")
-
-
-;; https://github.com/galaunay/howdoi.el
-(use-package howdoi
-  ;; FIXME: doesn't work properly. Answer are not shown at all.
-  :disabled)
-
-
-;; https://github.com/anachronic/importmagic.el
-(use-package importmagic
-  ;; TODO: re-enable this package when it does not consumes 100% CPU
-  ;; immediately a Python file is opened (maybe I can remove the hook)
-  :disabled
-  ;; :hook (python-mode . importmagic-mode)
-  :bind
-  (()
-   :map python-mode-map
-   ("C-c RET" . importmagic-fix-symbol-at-point))
-  :config
-  (setq importmagic-style-configuration-alist
-        '((multiline . parentheses)
-          (max_columns . 80))))
 
 
 ;; https://github.com/syohex/emacs-anzu
@@ -362,17 +344,17 @@
 
 
 ;; https://github.com/alphapapa/magit-todos
-(use-package magit-todos
-  :after magit
-  ;; It's producing Stack overflow
-  :disabled
-  :init (magit-todos-mode))
+;; (use-package magit-todos
+;;   :after magit
+;;   ;; It's producing Stack overflow
+;;   :disabled
+;;   :init (magit-todos-mode))
 
 
 ;; https://github.com/Malabarba/aggressive-indent-mode
-(use-package aggressive-indent
-  :config
-  (add-to-list 'aggressive-indent-excluded-modes 'elpy-mode))
+;; (use-package aggressive-indent
+;;   :config
+;;   (add-to-list 'aggressive-indent-excluded-modes 'elpy-mode))
 
 
 ;; https://github.com/tarsius/hl-todo
@@ -396,7 +378,20 @@
   (setq terraform-indent-level 4))
 
 
+;; https://github.com/purcell/exec-path-from-shell
 (use-package exec-path-from-shell
   :init
   (exec-path-from-shell-copy-env "SSH_AGENT_PID")
   (exec-path-from-shell-copy-env "SSH_AUTH_SOCK"))
+
+
+;; https://github.com/magit/ssh-agency
+(use-package ssh-agency)
+
+
+;; https://github.com/preetpalS/emacs-dotenv-mode
+(use-package dotenv-mode)
+
+
+;; https://github.com/haskell/haskell-mode
+(use-package haskell-mode)

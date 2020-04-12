@@ -1,7 +1,7 @@
 (require 'server)
 
 ;; save the position inside the file
-(setq server-visit-hook (quote (save-place-find-file-hook)))
+;; (setq server-visit-hook (quote (save-place-find-file-hook)))
 
 ;; end an emacsclient session
 (add-hook 'server-switch-hook

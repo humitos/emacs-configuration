@@ -59,7 +59,9 @@
   :config
   ;; https://github.com/emacs-evil/evil#underscore-_-is-not-a-word-character
   ;; Add the "_" as a word character
-  (modify-syntax-entry ?_ "w")
+  (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+  (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?- "w")))
+
   (setq evil-move-cursor-back nil)
   (setq evil-want-fine-undo t))
 
@@ -68,12 +70,13 @@
 ;; https://github.com/emacs-evil/evil-collection
 (use-package evil-collection
   :after (evil neotree)
-  :pin melpa
   :config
   (require 'evil-collection-neotree)
   (evil-collection-neotree-setup)
   ;; quick look with TAB key instead of "g O"
   (evil-define-key 'normal neotree-mode-map (kbd "<tab>") 'neotree-quick-look)
+  ;; (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
+  ;; (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
 
   ;; (require 'evil-collection-helm)
   ;; (evil-collection-helm-setup)

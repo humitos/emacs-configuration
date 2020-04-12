@@ -1,7 +1,12 @@
 ;; https://github.com/roman/golden-ratio.el
 (use-package golden-ratio
   :config
-  (setq golden-ratio-auto-scale t)
+  ;; Laptop screen
+  ;; (setq golden-ratio-auto-scale t)
+
+  ;; Ultrawide screen
+  (setq golden-ratio-auto-scale nil)
+  (setq golden-ratio-adjust-factor .8)
 
   ;; same as defaults but added `ignore-error-wrapper' since it's what
   ;; I'm using
