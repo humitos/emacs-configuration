@@ -39,9 +39,7 @@ This function should only modify configuration layer settings."
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-sort-by-usage t)
      python
-     humitos
-     ;; (python :variables
-     ;;         python-backend 'lsp)
+     ranger
      ;; lsp
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
