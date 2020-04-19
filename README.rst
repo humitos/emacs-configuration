@@ -13,7 +13,7 @@ better and **maintained by other people**.
 
 
 *NOTE: there is other branches in this repository with the old configurations,
- in case you care about them or you (**) want to know a specific variable/function
+ in case you care about them or you (1) want to know a specific variable/function
  that I was using*
 
-(**) that's me!
+(1) that's me!
