@@ -501,7 +501,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq require-final-newline t)
   (setq tags-add-tables nil)
   (setq auto-completion-private-snippets-directory "~/.emacs.d/elpa/yasnippet-snippets-20200410.1128/snippets")
-  ;; (setq warning-minimum-level :error)
+  (setq warning-minimum-level :error)
   ;; make emacs don't cut words on _
   (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
   ;; do not create .# files
