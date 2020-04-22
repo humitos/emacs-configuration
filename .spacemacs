@@ -564,6 +564,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; sort listing of refs by creator date (e.g. branch listing)
   (setq magit-list-refs-sortby "-creatordate")
 
+  ;; do not list submodule files
+  (setq projectile-git-submodule-command nil)
+
   ;; sorting only works with 'native
   ;; (setq projectile-indexing-method 'native)
   ;; (setq projectile-sort-order 'recently-active)
