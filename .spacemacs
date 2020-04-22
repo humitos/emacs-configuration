@@ -555,6 +555,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
     ;; (add-hook 'python-mode-hook 'turn-on-ctags-auto-update-mode)
     )
 
+  (setq git-link-use-commit t)
   (setq git-link-open-in-browser nil)
   (setq twittering-use-master-password t)
 
