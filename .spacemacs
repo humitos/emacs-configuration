@@ -567,6 +567,10 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; do not list submodule files
   (setq projectile-git-submodule-command nil)
 
+  ;; expand column width in helm to show the full name of the file
+  ;; https://github.com/emacs-helm/helm/issues/514#issuecomment-418015625
+  (setq helm-buffer-max-length 60)
+
   ;; sorting only works with 'native
   ;; (setq projectile-indexing-method 'native)
   ;; (setq projectile-sort-order 'recently-active)
