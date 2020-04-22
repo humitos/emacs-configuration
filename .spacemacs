@@ -571,6 +571,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; https://github.com/emacs-helm/helm/issues/514#issuecomment-418015625
   (setq helm-buffer-max-length 60)
 
+  ;; avoid asking to follow a symbolic link in VCS
+  (setq vc-follow-symlinks t)
+
   ;; sorting only works with 'native
   ;; (setq projectile-indexing-method 'native)
   ;; (setq projectile-sort-order 'recently-active)
