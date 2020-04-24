@@ -563,6 +563,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq magit-diff-refine-hunk t)
   ;; sort listing of refs by creator date (e.g. branch listing)
   (setq magit-list-refs-sortby "-creatordate")
+  ;; open magit in full screen
+  (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
 
   ;; do not list submodule files
   (setq projectile-git-submodule-command nil)
