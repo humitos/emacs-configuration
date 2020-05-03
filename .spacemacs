@@ -38,7 +38,8 @@ This function should only modify configuration layer settings."
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-sort-by-usage t)
-     python
+     (python :variables
+             python-test-runner 'pytest)
      ranger
      ;; lsp
      ;; ----------------------------------------------------------------
@@ -584,6 +585,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
   (add-to-list 'auto-mode-alist '("\\.po\\'" . po-mode))
 
+  (load "~/.emacs.d/private/local/docker-tox-pytest.el")
   )
 
 (defun dotspacemacs/emacs-custom-settings ()
