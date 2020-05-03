@@ -107,6 +107,8 @@ This function should only modify configuration layer settings."
      sphinx-doc
      python-docstring
 
+     po-mode
+
      yasnippet-snippets
      visual-regexp-steroids
      )
@@ -579,6 +581,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; sorting only works with 'native
   ;; (setq projectile-indexing-method 'native)
   ;; (setq projectile-sort-order 'recently-active)
+
+  (add-to-list 'auto-mode-alist '("\\.po\\'" . po-mode))
+
   )
 
 (defun dotspacemacs/emacs-custom-settings ()
