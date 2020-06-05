@@ -526,7 +526,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;;   (add-to-list 'ctags-update-other-options "--gtagslabel=pygments")
   ;;   )
 
-            ;; (add-hook 'after-save-hook 'helm-backup-versioning)
+  (add-hook 'after-save-hook 'helm-backup-versioning)
 
   ;; exec-path-from-shell
   (exec-path-from-shell-copy-env "SSH_AGENT_PID")
