@@ -537,7 +537,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
     (setq flycheck-highlighting-mode nil)
     (setq flycheck-check-syntax-automatically '(save idle-change))
     (setq flycheck-idle-change-delay 1.5)
-    (setq flycheck-checker-error-threshold 10)
+    (setq flycheck-checker-error-threshold 25)
     )
 
   (spacemacs/toggle-automatic-symbol-highlight-on)
