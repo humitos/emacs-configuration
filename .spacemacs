@@ -33,6 +33,7 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     systemd
      ;; cscope
      command-log
      copy-as-format
@@ -538,8 +539,10 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq tags-add-tables nil)
   (setq auto-completion-private-snippets-directory "~/.emacs.d/elpa/yasnippet-snippets-20200410.1128/snippets")
   (setq warning-minimum-level :error)
+
   ;; make emacs don't cut words on _
   (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+
   ;; do not create .# files
   (setq create-lockfiles nil)
 
@@ -555,6 +558,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; automatically create TAGS in your project
   (setq ctags-update-prompt-create-tags t)
   (setq ctags-update-delay-seconds (* 30 60))
+
   ;; (with-eval-after-load 'ctags-update
   ;;   (add-to-list 'ctags-update-other-options "--gtagslabel=pygments")
   ;;   )
@@ -593,7 +597,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
   (setq git-link-use-commit t)
   (setq git-link-open-in-browser nil)
-  (setq twittering-use-master-password t)
 
   ;; try to show differences as diff-highlight (yeah, it's kind of poor)
   (setq magit-diff-refine-hunk t)
@@ -617,13 +620,4 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; (setq projectile-sort-order 'recently-active)
 
   (add-to-list 'auto-mode-alist '("\\.po\\'" . po-mode))
-
-  (load "~/.emacs.d/private/local/docker-tox-pytest.el")
   )
-
-(defun dotspacemacs/emacs-custom-settings ()
-  "Emacs custom settings.
-This is an auto-generated function, do not modify its content directly, use
-Emacs customize menu instead.
-This function is called at the very end of Spacemacs initialization."
-)
